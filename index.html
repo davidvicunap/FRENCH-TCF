@@ -1,0 +1,3564 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Objectif TCF — préparation complète et gratuite au Test de connaissance du français : compréhension orale et écrite, structures de la langue, expression écrite et orale, examen blanc chronométré." />
+<title>Objectif TCF — préparation au Test de connaissance du français</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%87%AB%F0%9F%87%B7%3C/text%3E%3C/svg%3E" />
+<!-- Le thème est appliqué avant tout rendu pour éviter le flash de couleurs. -->
+<script>
+(function () {
+  try {
+    var raw = localStorage.getItem("tcf.state.v1");
+    var theme = raw ? (JSON.parse(raw).settings || {}).theme : null;
+    if (!theme) theme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", theme);
+  } catch (e) {
+    document.documentElement.setAttribute("data-theme", "dark");
+  }
+})();
+</script>
+<style>
+/* ==========================================================================
+   Objectif TCF — styles
+   Mobile-first. Theme via [data-theme="dark|light"] on <html>.
+   ========================================================================== */
+
+:root {
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --radius: 14px;
+  --radius-sm: 9px;
+  --max-width: 940px;
+}
+
+:root[data-theme="dark"] {
+  --bg: #0f1420;
+  --bg-raised: #171d2c;
+  --bg-inset: #0a0e17;
+  --border: #2b3446;
+  --text: #e8edf7;
+  --text-dim: #98a3b8;
+  --accent: #5b8def;          /* bleu */
+  --accent-contrast: #0f1420;
+  --green: #3fb950;
+  --red: #f2545b;             /* rouge */
+  --amber: #d9a441;
+  --purple: #b18cff;
+  --grad: linear-gradient(90deg, #5b8def, #b18cff);
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+:root[data-theme="light"] {
+  --bg: #f5f7fb;
+  --bg-raised: #ffffff;
+  --bg-inset: #eceff5;
+  --border: #d5dbe6;
+  --text: #131722;
+  --text-dim: #5a6478;
+  --accent: #2a5fd0;
+  --accent-contrast: #ffffff;
+  --green: #1a7f37;
+  --red: #cf2230;
+  --amber: #8a6100;
+  --purple: #6f42d1;
+  --grad: linear-gradient(90deg, #2a5fd0, #6f42d1);
+  --shadow: 0 4px 20px rgba(120, 132, 158, 0.22);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4 { line-height: 1.25; }
+a { color: var(--accent); }
+button { font-family: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+main:focus, main:focus-visible { outline: none; }
+
+code {
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+  background: var(--bg-inset);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.08em 0.35em;
+}
+
+.skip-link { position: absolute; left: -999px; top: 0; background: var(--accent);
+  color: var(--accent-contrast); padding: .5rem 1rem; z-index: 100; }
+.skip-link:focus { left: .5rem; top: .5rem; }
+
+/* ---------- Header ---------- */
+.site-header { position: sticky; top: 0; z-index: 20; background: var(--bg-raised);
+  border-bottom: 1px solid var(--border); }
+.header-inner {
+  max-width: var(--max-width); margin: 0 auto; padding: .5rem 1rem;
+  display: grid; grid-template-columns: 1fr auto;
+  grid-template-areas: "brand nav" "hud hud";
+  gap: .4rem .75rem; align-items: center;
+}
+.brand { grid-area: brand; display: flex; align-items: center; gap: .45rem;
+  text-decoration: none; color: var(--text); font-weight: 800; min-width: 0; }
+.brand-mark { font-size: 1.1rem; }
+.brand-name { font-size: .98rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hud { grid-area: hud; display: flex; flex-direction: column; gap: .15rem; min-width: 0; }
+.hud-top { display: flex; align-items: center; gap: .4rem; font-size: .74rem; }
+.hud-badge { background: var(--accent); color: var(--accent-contrast); font-weight: 800;
+  border-radius: 999px; min-width: 1.4rem; height: 1.4rem; display: inline-flex;
+  align-items: center; justify-content: center; padding: 0 .35rem; }
+.hud-title { color: var(--text-dim); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hud-streak { margin-left: auto; color: var(--amber); white-space: nowrap; font-weight: 700; }
+.hud-bar-row { display: flex; align-items: center; gap: .5rem; }
+.bar { flex: 1; height: .45rem; background: var(--bg-inset); border: 1px solid var(--border);
+  border-radius: 999px; overflow: hidden; min-width: 3rem; }
+.bar-fill { height: 100%; width: 0; background: var(--grad); border-radius: 999px;
+  transition: width .4s ease; }
+.hud-xp { font-size: .7rem; color: var(--text-dim); white-space: nowrap; }
+.site-nav { grid-area: nav; display: flex; align-items: center; gap: .5rem;
+  justify-content: flex-end; min-width: 0; }
+.site-nav a { text-decoration: none; color: var(--text-dim); font-size: .84rem;
+  font-weight: 700; border-bottom: 2px solid transparent; padding: .2rem 0; }
+.site-nav a:hover { color: var(--text); }
+.site-nav a.active { color: var(--text); border-bottom-color: var(--accent); }
+.icon-btn { background: transparent; border: 1px solid var(--border); border-radius: var(--radius-sm);
+  width: 2.05rem; height: 2.05rem; cursor: pointer; color: var(--text);
+  display: inline-flex; align-items: center; justify-content: center; }
+.icon-btn:hover { background: var(--bg-inset); }
+:root[data-theme="dark"] .theme-icon::before { content: "☀"; }
+:root[data-theme="light"] .theme-icon::before { content: "☾"; }
+
+main { max-width: var(--max-width); margin: 0 auto; padding: 1.25rem 1rem 4rem; }
+.site-footer { border-top: 1px solid var(--border); color: var(--text-dim);
+  font-size: .78rem; text-align: center; padding: 1.5rem 1rem 2.5rem; }
+
+/* ---------- Buttons ---------- */
+.btn { display: inline-flex; align-items: center; gap: .4rem; border: 1px solid var(--border);
+  background: var(--bg-raised); color: var(--text); border-radius: var(--radius-sm);
+  padding: .5rem 1rem; font-size: .88rem; font-weight: 700; cursor: pointer; text-decoration: none; }
+.btn:hover { background: var(--bg-inset); }
+.btn-primary { background: var(--accent); border-color: var(--accent); color: var(--accent-contrast); }
+.btn-primary:hover { background: var(--accent); filter: brightness(1.08); }
+.btn-success { background: var(--green); border-color: var(--green); color: #fff; }
+.btn-success:hover { background: var(--green); filter: brightness(1.08); }
+.btn-danger { background: var(--red); border-color: var(--red); color: #fff; }
+.btn[disabled] { opacity: .5; cursor: not-allowed; }
+.btn-sm { padding: .3rem .7rem; font-size: .78rem; }
+
+/* ---------- Hero / dashboard ---------- */
+.hero { text-align: center; padding: 1.25rem 0 .25rem; }
+.hero h1 { font-size: 1.85rem; margin: 0 0 .4rem; }
+.hero h1 .grad { background: var(--grad); -webkit-background-clip: text;
+  background-clip: text; color: transparent; }
+.hero p.lede { color: var(--text-dim); max-width: 40rem; margin: 0 auto 1rem; }
+
+.stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: .7rem; margin: 1.5rem 0; }
+.stat { background: var(--bg-raised); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: .85rem 1rem; }
+.stat .k { font-size: 1.5rem; font-weight: 800; line-height: 1.1; }
+.stat .l { font-size: .72rem; color: var(--text-dim); text-transform: uppercase;
+  letter-spacing: .04em; }
+.stat.accent .k { color: var(--accent); }
+.stat.green .k { color: var(--green); }
+.stat.amber .k { color: var(--amber); }
+
+/* ---------- Section cards / roadmap ---------- */
+.track { list-style: none; margin: 1.5rem 0 0; padding: 0; position: relative; }
+.track::before { content: ""; position: absolute; left: 1.35rem; top: 1rem; bottom: 1rem;
+  width: 3px; background: var(--border); border-radius: 3px; }
+.track-item { position: relative; padding: 0 0 1.1rem 3.4rem; }
+.track-node { position: absolute; left: 0; top: .35rem; width: 2.75rem; height: 2.75rem;
+  border-radius: 50%; border: 3px solid var(--border); background: var(--bg-raised);
+  display: flex; align-items: center; justify-content: center; font-size: 1.15rem; z-index: 1; }
+.track-item.done .track-node { border-color: var(--green); }
+.track-item.active .track-node { border-color: var(--accent); }
+
+.card { display: block; background: var(--bg-raised); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: .9rem 1.1rem; text-decoration: none; color: var(--text);
+  transition: border-color .15s ease, transform .15s ease; }
+a.card:hover { border-color: var(--accent); transform: translateX(3px); }
+.card h3 { margin: 0 0 .2rem; font-size: 1.03rem; }
+.card p { margin: 0 0 .5rem; color: var(--text-dim); font-size: .85rem; }
+.card-meta { display: flex; flex-wrap: wrap; gap: .35rem .8rem; align-items: center;
+  font-size: .73rem; color: var(--text-dim); }
+.mini-bar { height: .3rem; background: var(--bg-inset); border-radius: 999px;
+  overflow: hidden; margin-top: .6rem; }
+.mini-bar-fill { height: 100%; background: var(--grad); border-radius: 999px; }
+
+.badge { display: inline-flex; align-items: center; gap: .25rem; font-size: .68rem;
+  font-weight: 800; border-radius: 999px; padding: .1rem .6rem; border: 1px solid var(--border);
+  color: var(--text-dim); }
+.badge-done { border-color: var(--green); color: var(--green); }
+.badge-live { border-color: var(--accent); color: var(--accent); }
+.badge-cefr { border-color: var(--purple); color: var(--purple); font-family: var(--font-mono); }
+
+/* ---------- Lists ---------- */
+.crumbs { font-size: .78rem; color: var(--text-dim); margin-bottom: .75rem; }
+.crumbs a { color: var(--text-dim); }
+.page-head h1 { margin: 0 0 .25rem; font-size: 1.5rem; }
+.page-head .tagline { color: var(--text-dim); margin: 0 0 1.25rem; }
+
+.rows { list-style: none; padding: 0; margin: 1rem 0; display: grid; gap: .55rem; }
+.row { display: flex; align-items: center; gap: .8rem; background: var(--bg-raised);
+  border: 1px solid var(--border); border-radius: var(--radius); padding: .7rem 1rem;
+  text-decoration: none; color: var(--text); }
+a.row:hover { border-color: var(--accent); }
+.row .ico { font-size: 1.15rem; width: 1.7rem; text-align: center; flex-shrink: 0; }
+.row .grow { flex: 1; min-width: 0; }
+.row h4 { margin: 0; font-size: .93rem; }
+.row .sub { font-size: .74rem; color: var(--text-dim); }
+.check { color: var(--green); font-weight: 800; flex-shrink: 0; }
+
+/* ---------- Lesson prose ---------- */
+.prose { max-width: 44rem; }
+.prose h2 { font-size: 1.15rem; margin-top: 2rem; }
+.prose p, .prose li { font-size: .94rem; }
+.prose blockquote { margin: 1rem 0; padding: .6rem 1rem; border-left: 3px solid var(--accent);
+  background: var(--bg-raised); border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  color: var(--text-dim); }
+.callout { border: 1px solid var(--border); border-left: 4px solid var(--purple);
+  background: var(--bg-raised); border-radius: var(--radius-sm); padding: .75rem 1rem;
+  margin: 1.25rem 0; font-size: .89rem; }
+.callout strong:first-child { color: var(--purple); }
+.callout-warn { border-left-color: var(--amber); }
+.callout-warn strong:first-child { color: var(--amber); }
+.callout-tip { border-left-color: var(--green); }
+.callout-tip strong:first-child { color: var(--green); }
+
+/* French example blocks */
+.fr-ex { background: var(--bg-inset); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: .7rem .9rem; margin: .9rem 0; font-size: .9rem; }
+.fr-ex .fr { font-weight: 600; }
+.fr-ex .en { color: var(--text-dim); font-size: .85em; font-style: italic; }
+.fr-ex .bad { color: var(--red); text-decoration: line-through; }
+.fr-ex .good { color: var(--green); }
+
+table.tbl { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: .85rem; }
+table.tbl th, table.tbl td { border: 1px solid var(--border); padding: .45rem .6rem; text-align: left; }
+table.tbl th { background: var(--bg-inset); font-size: .78rem; text-transform: uppercase;
+  letter-spacing: .03em; color: var(--text-dim); }
+.scroll-x { overflow-x: auto; }
+
+/* ---------- Drill / quiz ---------- */
+.drill { margin-top: 2rem; border: 1px solid var(--border); border-radius: var(--radius);
+  background: var(--bg-raised); overflow: hidden; }
+.drill-head { padding: .8rem 1rem; border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; gap: .6rem; flex-wrap: wrap; }
+.drill-head h3 { margin: 0; font-size: .98rem; flex: 1; }
+.drill-body { padding: 1rem; }
+.q-meta { display: flex; align-items: center; gap: .5rem; font-size: .72rem;
+  color: var(--text-dim); margin-bottom: .5rem; }
+.q-text { font-size: 1.02rem; font-weight: 600; margin: 0 0 .9rem; }
+.q-context { background: var(--bg-inset); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: .8rem .95rem; margin-bottom: .9rem;
+  font-size: .9rem; white-space: pre-wrap; }
+
+.opts { list-style: none; padding: 0; margin: 0; display: grid; gap: .5rem; }
+.opt { width: 100%; text-align: left; display: flex; gap: .65rem; align-items: flex-start;
+  background: var(--bg-inset); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: .65rem .85rem; cursor: pointer; color: var(--text); font-size: .92rem; }
+.opt:hover:not(:disabled) { border-color: var(--accent); }
+.opt:disabled { cursor: default; }
+.opt .key { font-family: var(--font-mono); font-weight: 800; color: var(--text-dim);
+  flex-shrink: 0; }
+.opt.correct { border-color: var(--green); background: color-mix(in srgb, var(--green) 12%, var(--bg-inset)); }
+.opt.correct .key { color: var(--green); }
+.opt.wrong { border-color: var(--red); background: color-mix(in srgb, var(--red) 12%, var(--bg-inset)); }
+.opt.wrong .key { color: var(--red); }
+
+.gap-input { width: 100%; background: var(--bg-inset); color: var(--text);
+  border: 1px solid var(--border); border-radius: var(--radius-sm); padding: .6rem .8rem;
+  font-size: 1rem; font-family: inherit; }
+.gap-input:focus-visible { border-color: var(--accent); }
+
+.feedback { margin-top: .9rem; border-radius: var(--radius-sm); padding: .7rem .9rem;
+  font-size: .88rem; border: 1px solid var(--border); }
+.feedback.ok { border-color: var(--green);
+  background: color-mix(in srgb, var(--green) 10%, transparent); }
+.feedback.no { border-color: var(--red);
+  background: color-mix(in srgb, var(--red) 10%, transparent); }
+.feedback .verdict { font-weight: 800; display: block; margin-bottom: .25rem; }
+.feedback.ok .verdict { color: var(--green); }
+.feedback.no .verdict { color: var(--red); }
+.feedback .gloss { color: var(--text-dim); font-size: .93em; display: block; margin-top: .35rem; }
+
+.drill-foot { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap;
+  padding: 0 1rem 1rem; }
+.drill-progress { margin-left: auto; font-size: .78rem; color: var(--text-dim); }
+
+/* ---------- Audio (TTS) ---------- */
+.audio-box { background: var(--bg-inset); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); padding: .85rem; margin-bottom: .9rem; }
+.audio-controls { display: flex; gap: .5rem; align-items: center; flex-wrap: wrap; }
+.speed { display: flex; align-items: center; gap: .35rem; font-size: .75rem; color: var(--text-dim); }
+.speed input { width: 5.5rem; accent-color: var(--accent); }
+.plays-left { font-size: .74rem; color: var(--text-dim); }
+.transcript { margin-top: .7rem; font-size: .88rem; padding-top: .7rem;
+  border-top: 1px dashed var(--border); }
+.no-voice { color: var(--amber); font-size: .8rem; margin-top: .5rem; }
+
+/* ---------- Writing ---------- */
+.editor { width: 100%; min-height: 15rem; resize: vertical; background: var(--bg-inset);
+  color: var(--text); border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: .8rem; font-family: inherit; font-size: .95rem; line-height: 1.6; }
+.wc-row { display: flex; gap: .8rem; align-items: center; flex-wrap: wrap;
+  font-size: .78rem; color: var(--text-dim); margin-top: .5rem; }
+.wc { font-weight: 800; font-family: var(--font-mono); }
+.wc.in-range { color: var(--green); }
+.wc.out-range { color: var(--amber); }
+.timer { font-family: var(--font-mono); font-weight: 800; font-size: 1.05rem; }
+.timer.warn { color: var(--amber); }
+.timer.danger { color: var(--red); }
+
+.chips { display: flex; flex-wrap: wrap; gap: .35rem; margin: .6rem 0; }
+.chip { font-size: .76rem; background: var(--bg-inset); border: 1px solid var(--border);
+  border-radius: 999px; padding: .2rem .6rem; cursor: pointer; color: var(--text); }
+.chip:hover { border-color: var(--accent); }
+
+/* ---------- Checklist ---------- */
+.checklist { list-style: none; padding: 0; margin: 1rem 0; display: grid; gap: .45rem; }
+.checklist li { background: var(--bg-raised); border: 1px solid var(--border);
+  border-radius: var(--radius-sm); }
+.checklist label { display: flex; gap: .7rem; align-items: flex-start; padding: .65rem .85rem;
+  cursor: pointer; font-size: .88rem; }
+.checklist input { accent-color: var(--green); width: 1.05rem; height: 1.05rem;
+  margin-top: .15rem; flex-shrink: 0; }
+.checklist li.ticked { border-color: var(--green); }
+.checklist li.ticked label { color: var(--text-dim); }
+
+/* ---------- Flashcards ---------- */
+.flash { background: var(--bg-raised); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 2rem 1.2rem; text-align: center; min-height: 11rem;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: .6rem; }
+.flash .front { font-size: 1.5rem; font-weight: 800; }
+.flash .back { font-size: 1.05rem; color: var(--accent); }
+.flash .note { font-size: .84rem; color: var(--text-dim); max-width: 30rem; }
+.srs-actions { display: grid; grid-template-columns: repeat(3, 1fr); gap: .5rem; margin-top: .8rem; }
+.box-pills { display: flex; gap: .3rem; justify-content: center; margin-top: .8rem; flex-wrap: wrap; }
+.box-pill { font-size: .7rem; font-family: var(--font-mono); border: 1px solid var(--border);
+  border-radius: 999px; padding: .1rem .55rem; color: var(--text-dim); }
+
+/* ---------- Exam ---------- */
+.exam-bar { position: sticky; top: 3.9rem; z-index: 10; background: var(--bg-raised);
+  border: 1px solid var(--border); border-radius: var(--radius); padding: .6rem .9rem;
+  display: flex; align-items: center; gap: .8rem; flex-wrap: wrap; margin-bottom: 1rem; }
+.exam-bar .grow { flex: 1; min-width: 6rem; }
+.result-band { text-align: center; padding: 1.5rem 1rem; background: var(--bg-raised);
+  border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 1.5rem; }
+.result-level { font-size: 3rem; font-weight: 800; background: var(--grad);
+  -webkit-background-clip: text; background-clip: text; color: transparent; line-height: 1.1; }
+.result-sub { color: var(--text-dim); font-size: .88rem; }
+
+.review-item { border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: .7rem .9rem; margin-bottom: .55rem; background: var(--bg-raised); font-size: .88rem; }
+.review-item.ok { border-left: 4px solid var(--green); }
+.review-item.no { border-left: 4px solid var(--red); }
+
+/* ---------- Achievements ---------- */
+.shelf { display: grid; grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+  gap: .75rem; margin-top: 1.5rem; padding: 0; list-style: none; }
+.trophy { background: var(--bg-raised); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: .95rem; display: flex; gap: .75rem; align-items: flex-start; }
+.trophy .emoji { font-size: 1.6rem; line-height: 1; }
+.trophy h4 { margin: 0 0 .15rem; font-size: .92rem; }
+.trophy p { margin: 0; font-size: .76rem; color: var(--text-dim); }
+.trophy.locked { opacity: .45; filter: grayscale(1); }
+.trophy.earned { border-color: var(--purple); }
+.trophy .when { display: block; margin-top: .3rem; font-size: .68rem; color: var(--purple); }
+
+/* ---------- Toasts ---------- */
+.toasts { position: fixed; bottom: 1rem; right: 1rem; left: 1rem; display: flex;
+  flex-direction: column; gap: .5rem; z-index: 50; pointer-events: none; }
+.toast { background: var(--bg-raised); border: 1px solid var(--accent); border-radius: var(--radius-sm);
+  padding: .65rem 1rem; box-shadow: var(--shadow); font-size: .84rem; margin-left: auto;
+  max-width: 22rem; animation: tin .25s ease, tout .4s ease 3.6s forwards; }
+.toast-achv { border-color: var(--purple); }
+@keyframes tin { from { transform: translateY(10px); opacity: 0; } }
+@keyframes tout { to { transform: translateY(10px); opacity: 0; } }
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+  html { scroll-behavior: auto; }
+}
+
+@media (min-width: 700px) {
+  .hero h1 { font-size: 2.3rem; }
+  .header-inner { padding: .6rem 1.5rem; grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-areas: "brand hud nav"; }
+  .brand-name { font-size: 1.02rem; }
+  .site-nav { gap: .8rem; }
+  .site-nav a { font-size: .88rem; }
+  main { padding: 2rem 1.5rem 5rem; }
+  .toasts { left: auto; }
+  .track::before { left: 1.6rem; }
+  .track-item { padding-left: 4rem; }
+  .track-node { width: 3.25rem; height: 3.25rem; }
+}
+
+</style>
+</head>
+<body>
+<a class="skip-link" href="#app">Aller au contenu</a>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#/" aria-label="Objectif TCF — accueil">
+      <span class="brand-mark" aria-hidden="true">🇫🇷</span>
+      <span class="brand-name">Objectif&nbsp;TCF</span>
+    </a>
+
+    <!-- Progression : niveau, XP, jours d'affilée -->
+    <div class="hud" role="status" aria-live="polite">
+      <div class="hud-top">
+        <span class="hud-badge" id="hud-level">1</span>
+        <span class="hud-title" id="hud-title">Grand débutant</span>
+        <span class="hud-streak" id="hud-streak"></span>
+      </div>
+      <div class="hud-bar-row">
+        <div class="bar" aria-hidden="true"><div class="bar-fill" id="hud-fill"></div></div>
+        <span class="hud-xp" id="hud-xp">0 XP</span>
+      </div>
+    </div>
+
+    <nav class="site-nav" aria-label="Navigation principale">
+      <a href="#/" data-nav="home">Parcours</a>
+      <a href="#/succes" data-nav="succes">Succès</a>
+      <button id="theme-toggle" class="icon-btn" type="button"
+              aria-label="Basculer entre le thème clair et sombre" title="Thème">
+        <span class="theme-icon" aria-hidden="true"></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main id="app" tabindex="-1"></main>
+
+<footer class="site-footer">
+  <p>Préparation au TCF — 100 % dans votre navigateur. Votre progression est
+     stockée sur cet appareil et n'est envoyée nulle part.<br>
+     Site d'entraînement indépendant, sans lien avec France Éducation international.
+     Vérifiez toujours le format et les exigences en vigueur sur le site officiel.</p>
+</footer>
+
+<div id="toasts" class="toasts" aria-live="polite"></div>
+
+<script>
+/* ==========================================================================
+   CONTENU — sections, leçons et exercices
+   --------------------------------------------------------------------------
+   Content schema (documented in README.md):
+
+   SECTIONS = [{
+     id, icon, title, tagline, kind: "study" | "produce",
+     lessons: [{
+       id, title, minutes,
+       content: `<HTML>`,          // the teaching — explains WHY
+       drill: { title, items: [ item, ... ] }   // optional
+     }]
+   }]
+
+   An `item` is one of:
+     { type:"mcq",    id, level, q, options:[...], a:<index>, why, gloss? }
+     { type:"gap",    id, level, q:"... ___ ...", answers:[...], why, gloss? }
+     { type:"read",   id, level, context:"<text>", q, options, a, why, gloss? }
+     { type:"listen", id, level, audio:"<French read aloud>", q, options, a, why,
+                      transcript }
+   `level` is the CEFR band the item targets (A1…C2).
+   `why` is in French (exam language); `gloss` adds an English clarification.
+   ========================================================================== */
+
+const SECTIONS = [
+  /* ================================================================== */
+  {
+    id: "intro",
+    icon: "🧭",
+    title: "Comprendre le TCF",
+    tagline: "Le format, le barème sur 699 et la stratégie. Savoir comment on est noté change la façon de répondre.",
+    kind: "study",
+    lessons: [
+      {
+        id: "l1",
+        title: "Quel TCF passer, et pourquoi",
+        minutes: 8,
+        content: `
+<p>The TCF (<em>Test de connaissance du français</em>) is the French proficiency
+test run by <strong>France Éducation international</strong>. Before studying a
+single verb, get this right: <strong>there are several TCF versions</strong>, and
+signing up for the wrong one is an expensive mistake.</p>
+
+<div class="scroll-x">
+<table class="tbl">
+  <tr><th>Version</th><th>What it's for</th><th>Typical sections</th></tr>
+  <tr><td><strong>TCF Tout Public</strong></td><td>General proof of level (studies, work, personal)</td><td>3 compulsory + optional writing/speaking</td></tr>
+  <tr><td><strong>TCF Canada</strong></td><td>Canadian immigration (IRCC — permanent residence, citizenship)</td><td>All 4: listening, speaking, reading, writing</td></tr>
+  <tr><td><strong>TCF Québec</strong></td><td>Quebec immigration programs</td><td>Chosen per program requirements</td></tr>
+  <tr><td><strong>TCF IRN</strong></td><td>Integration, residence card, French nationality</td><td>Listening, speaking, reading, writing</td></tr>
+  <tr><td><strong>TCF DAP</strong></td><td>Applying to the 1st year of a French university</td><td>Compulsory + a specific writing test</td></tr>
+</table>
+</div>
+
+<h2>The three compulsory tests (épreuves obligatoires)</h2>
+<p>All multiple-choice, 4 options, one correct answer:</p>
+<ul>
+  <li><strong>Compréhension orale</strong> — 29 questions, 25 minutes.</li>
+  <li><strong>Maîtrise des structures de la langue</strong> (grammar &amp; vocabulary)
+      — 18 questions, 15 minutes.</li>
+  <li><strong>Compréhension écrite</strong> — 29 questions, 45 minutes.</li>
+</ul>
+<p>That's <strong>76 questions in 1 h 25</strong>. The optional tests are
+<strong>expression écrite</strong> (3 tasks, 60 minutes) and
+<strong>expression orale</strong> (3 tasks, 12 minutes including preparation time).</p>
+
+<h2>The single most important fact</h2>
+<p><strong>There is no pass or fail.</strong> The TCF is a <em>positioning</em>
+test: it places you somewhere from A1 to C2. What "passing" means is defined by
+whoever asked you for the test — the immigration program, the university, the
+prefecture. So step one is never "study French"; it is:</p>
+<blockquote>Find the exact level <em>your</em> institution requires, in <em>each</em>
+skill, then aim one band above it. Requirements change — always confirm on the
+official France Éducation international site and on your programme's own page.</blockquote>
+
+<div class="callout"><strong>Résultats :</strong> your attestation is valid for
+<strong>two years</strong>. Plan the test date so it still covers the whole
+application window — an expired result is worth exactly nothing.</div>
+`,
+        drill: {
+          title: "Vérifiez votre compréhension du format",
+          items: [
+            {
+              type: "mcq", id: "in-1", level: "A2",
+              q: "Combien de questions comporte l'épreuve de compréhension orale ?",
+              options: ["18 questions", "29 questions", "39 questions", "76 questions"],
+              a: 1,
+              why: "La compréhension orale compte 29 questions en 25 minutes. 18 questions correspondent à la maîtrise des structures de la langue, et 76 est le total des trois épreuves obligatoires.",
+            },
+            {
+              type: "mcq", id: "in-2", level: "A2",
+              q: "Quelle est la durée de validité de l'attestation TCF ?",
+              options: ["6 mois", "1 an", "2 ans", "5 ans"],
+              a: 2,
+              why: "L'attestation est valable deux ans. Il faut donc choisir la date de l'examen en fonction du calendrier de votre dossier.",
+            },
+            {
+              type: "mcq", id: "in-3", level: "B1",
+              q: "Que signifie « le TCF est un test de positionnement » ?",
+              options: [
+                "Il faut obtenir au moins 50 % de bonnes réponses pour réussir",
+                "Le test situe votre niveau de A1 à C2, sans note éliminatoire",
+                "On ne peut le passer qu'une seule fois dans sa vie",
+                "Seules les épreuves obligatoires sont notées",
+              ],
+              a: 1,
+              why: "Le TCF ne comporte ni réussite ni échec : il situe le candidat sur l'échelle du CECRL (A1 à C2). C'est l'organisme qui vous demande le test qui fixe le niveau exigé.",
+              gloss: "There is no pass mark in the test itself — only the level you land on.",
+            },
+          ],
+        },
+      },
+
+      {
+        id: "l2",
+        title: "Le score sur 699 et l'échelle du CECRL",
+        minutes: 9,
+        content: `
+<p>Each compulsory test gives a score from <strong>0 to 699 points</strong>, which
+maps onto the six levels of the CEFR (<em>Cadre européen commun de référence pour
+les langues</em>):</p>
+
+<div class="scroll-x">
+<table class="tbl">
+  <tr><th>Points</th><th>Niveau</th><th>En clair</th></tr>
+  <tr><td>600–699</td><td><strong>C2</strong></td><td>Maîtrise — comme un locuteur très cultivé</td></tr>
+  <tr><td>500–599</td><td><strong>C1</strong></td><td>Autonome — études supérieures, milieu professionnel exigeant</td></tr>
+  <tr><td>400–499</td><td><strong>B2</strong></td><td>Indépendant — débat, argumentation, nuance</td></tr>
+  <tr><td>300–399</td><td><strong>B1</strong></td><td>Seuil — se débrouiller seul dans la vie quotidienne</td></tr>
+  <tr><td>200–299</td><td><strong>A2</strong></td><td>Élémentaire — échanges simples et habituels</td></tr>
+  <tr><td>100–199</td><td><strong>A1</strong></td><td>Découverte — expressions familières de base</td></tr>
+</div>
+
+<h2>Why the questions get harder as you go</h2>
+<p>Within each test, items are ordered roughly from A1 to C2. The score isn't a
+simple percentage: <strong>a hard item is worth more evidence than an easy one</strong>.
+Two practical consequences:</p>
+<ul>
+  <li>Getting easy items wrong is <em>expensive</em>. Careless mistakes at the
+      start cost you more than heroics at the end.</li>
+  <li>The last items are meant to be hard. Not knowing them is normal — panicking
+      about them and losing time is what actually hurts your score.</li>
+</ul>
+
+<h2>The rule that wins free points</h2>
+<p><strong>There is no penalty for a wrong answer.</strong> A blank and a wrong
+answer score exactly the same: zero. Therefore:</p>
+<blockquote>Never leave a question unanswered. With four options, a blind guess is
+worth 25 %; eliminating one option makes it 33 %. Over 76 questions, guessing
+well is worth real points.</blockquote>
+
+<div class="callout callout-warn"><strong>Attention :</strong> "no penalty" is not
+"answer randomly and hope". It means: <em>answer everything</em>, but spend your
+thinking time where elimination actually works.</div>
+
+<h2>Writing and speaking are marked differently</h2>
+<p>Expression écrite and expression orale are graded by trained examiners against
+level descriptors, not by counting right answers. They assess: does the response
+<strong>do the task</strong>, is it <strong>coherent</strong>, is the
+<strong>language range</strong> and <strong>accuracy</strong> good enough for a
+given band. This matters enormously: a short, correct, well-organised text
+outranks a long, ambitious, chaotic one.</p>
+`,
+        drill: {
+          title: "Barème et stratégie",
+          items: [
+            {
+              type: "mcq", id: "sc-1", level: "A2",
+              q: "Un candidat obtient 430 points en compréhension écrite. Quel est son niveau ?",
+              options: ["A2", "B1", "B2", "C1"],
+              a: 2,
+              why: "La tranche 400–499 correspond au niveau B2. B1 va de 300 à 399 et C1 commence à 500.",
+            },
+            {
+              type: "mcq", id: "sc-2", level: "B1",
+              q: "Il vous reste 40 secondes et deux questions sans réponse. Que faire ?",
+              options: [
+                "Laisser les deux questions vides pour éviter les erreurs",
+                "Répondre aux deux, même en devinant",
+                "Répondre soigneusement à une seule et laisser l'autre vide",
+                "Cocher systématiquement la réponse B",
+              ],
+              a: 1,
+              why: "Une mauvaise réponse ne fait perdre aucun point : elle vaut autant qu'une case vide. Il faut donc toujours répondre à toutes les questions.",
+              gloss: "Wrong answers cost nothing, so a blank is a wasted 25% chance.",
+            },
+            {
+              type: "mcq", id: "sc-3", level: "B2",
+              q: "Pourquoi une erreur sur une question facile est-elle particulièrement coûteuse ?",
+              options: [
+                "Parce que les premières questions valent le double de points",
+                "Parce que le score tient compte de la difficulté : rater une question facile pèse plus lourd qu'en rater une difficile",
+                "Parce qu'on ne peut plus revenir en arrière ensuite",
+                "Parce que l'examinateur commence par corriger les premières réponses",
+              ],
+              a: 1,
+              why: "Le score n'est pas un simple pourcentage : il est pondéré par la difficulté des items. Une erreur d'inattention sur un item facile envoie un signal fort sur votre niveau réel.",
+            },
+          ],
+        },
+      },
+
+      {
+        id: "l3",
+        title: "Gérer le temps le jour J",
+        minutes: 7,
+        content: `
+<p>Most candidates lose more points to the clock than to their French. Do the
+arithmetic <em>before</em> the exam, so pacing becomes automatic:</p>
+
+<div class="scroll-x">
+<table class="tbl">
+  <tr><th>Épreuve</th><th>Questions</th><th>Durée</th><th>Temps moyen</th></tr>
+  <tr><td>Compréhension orale</td><td>29</td><td>25 min</td><td>~50 s (imposé par l'audio)</td></tr>
+  <tr><td>Structures de la langue</td><td>18</td><td>15 min</td><td>~50 s</td></tr>
+  <tr><td>Compréhension écrite</td><td>29</td><td>45 min</td><td>~93 s</td></tr>
+</table>
+</div>
+
+<h2>Section by section</h2>
+<ul>
+  <li><strong>Compréhension orale.</strong> You don't control the pace — the audio
+      does, and in the real test each recording is played <em>once</em>. The whole
+      skill is being ready <em>before</em> it starts: read the question, predict
+      what to listen for. Once an item is gone, it is gone — dwelling on it costs
+      you the <em>next</em> one too. This is the section where regret is most
+      expensive.</li>
+  <li><strong>Structures de la langue.</strong> You either know the point or you
+      don't. If nothing clicks in ~30 seconds, eliminate, choose, move on. Banking
+      time here buys nothing later (sections are separately timed) — but losing
+      time here means rushing items you <em>could</em> have got.</li>
+  <li><strong>Compréhension écrite.</strong> The one place where time management
+      really pays. Short documents at the start take 30–40 s; long texts at the end
+      need 2–3 minutes. Do <em>not</em> read the long texts like a novel: read the
+      question first, then hunt.</li>
+</ul>
+
+<div class="callout callout-tip"><strong>La règle des 90 secondes :</strong> if a
+reading question has taken 90 seconds with no answer in sight, mark your best
+guess and move on. You can come back if time allows. Students who "just finish
+this one" routinely leave 4–5 easier questions unread at the end.</div>
+
+<h2>Train under real conditions</h2>
+<p>Reading French calmly at home and answering 29 questions in 45 minutes are
+different skills. Use the <strong>Examen blanc</strong> in this app at least twice
+before the real thing: the first time you'll discover your pace, the second time
+you'll actually control it.</p>
+`,
+        drill: {
+          title: "Gestion du temps",
+          items: [
+            {
+              type: "mcq", id: "tm-1", level: "B1",
+              q: "En compréhension écrite, vous bloquez depuis presque deux minutes sur une question. Que faire ?",
+              options: [
+                "Continuer jusqu'à trouver : abandonner serait perdre le travail déjà fait",
+                "Cocher la meilleure hypothèse, la repérer, et passer à la suite",
+                "Sauter les trois questions suivantes pour rattraper le retard",
+                "Relire le texte entier depuis le début",
+              ],
+              a: 1,
+              why: "Le temps perdu sur une question difficile est pris sur des questions plus faciles qui restent à lire. On coche une hypothèse raisonnable et on avance, quitte à revenir s'il reste du temps.",
+              gloss: "Sunk cost is not a reason to keep spending.",
+            },
+            {
+              type: "mcq", id: "tm-2", level: "B1",
+              q: "Pendant la compréhension orale, vous ratez une question. Quel est le vrai danger ?",
+              options: [
+                "Perdre confiance et rater aussi la question suivante",
+                "Devoir recommencer l'épreuve depuis le début",
+                "Être pénalisé de deux points",
+                "Ne plus pouvoir modifier vos réponses précédentes",
+              ],
+              a: 0,
+              why: "L'audio continue sans vous attendre. Rester bloqué sur la question ratée fait manquer l'enregistrement suivant : une erreur en entraîne alors plusieurs.",
+            },
+          ],
+        },
+      },
+    ],
+  },
+
+  /* ================================================================== */
+  {
+    id: "msl",
+    icon: "🔧",
+    title: "Maîtrise des structures",
+    tagline: "Grammaire et vocabulaire — la section la plus « rentable » : les règles sont finies et se travaillent vite.",
+    kind: "study",
+    lessons: [
+      {
+        id: "l1",
+        title: "Passé composé ou imparfait ?",
+        minutes: 14,
+        content: `
+<p>English speakers hunt for a rule about "how long ago" or "how long for". That's
+the wrong axis. French past tenses encode <strong>aspect</strong>: not
+<em>when</em> something happened, but <strong>how you are looking at it</strong>.</p>
+
+<h2>The two camera angles</h2>
+<ul>
+  <li><strong>Passé composé</strong> = a <em>bounded event</em>. Something happened,
+      it finished, the story moved forward one step. Think: a photo, a dot on a
+      timeline.</li>
+  <li><strong>Imparfait</strong> = an <em>unbounded situation</em>. Description,
+      habit, ongoing state, the scenery the events happen in. Think: a film
+      running in the background, no start or end in view.</li>
+</ul>
+
+<div class="fr-ex">
+  <div class="fr">Je <span class="good">regardais</span> la télévision quand le téléphone <span class="good">a sonné</span>.</div>
+  <div class="en">I was watching TV when the phone rang.</div>
+  <div class="en">Background (imparfait) interrupted by an event (passé composé) — the classic pairing.</div>
+</div>
+
+<h2>Signals that tip the balance</h2>
+<div class="scroll-x">
+<table class="tbl">
+  <tr><th>→ Passé composé</th><th>→ Imparfait</th></tr>
+  <tr><td>soudain, tout à coup, hier, ce matin-là</td><td>toujours, souvent, d'habitude, chaque jour</td></tr>
+  <tr><td>une fois, deux fois, plusieurs fois</td><td>pendant que, tandis que</td></tr>
+  <tr><td>puis, ensuite, enfin (récit qui avance)</td><td>description : il faisait beau, elle portait…</td></tr>
+</table>
+</div>
+
+<h2>The C1 trick: state verbs change meaning</h2>
+<p>With <em>savoir, vouloir, pouvoir, devoir, connaître</em>, the two tenses don't
+just change the framing — <strong>they change the meaning</strong>. Examiners love
+this:</p>
+<div class="fr-ex">
+  <div class="fr">Je <span class="good">savais</span> la vérité. → I knew the truth <em>(state)</em></div>
+  <div class="fr">J'<span class="good">ai su</span> la vérité. → I found out the truth <em>(event)</em></div>
+  <div class="fr">Il <span class="good">pouvait</span> partir. → He was able to leave <em>(capacity)</em></div>
+  <div class="fr">Il <span class="good">a pu</span> partir. → He managed to leave <em>(achieved it)</em></div>
+  <div class="fr">Je <span class="good">voulais</span> l'aider. → I wanted to help <em>(intention)</em></div>
+  <div class="fr">J'<span class="good">ai voulu</span> l'aider. → I tried to help <em>(and acted on it)</em></div>
+</div>
+
+<div class="callout"><strong>Le test rapide :</strong> ask yourself
+"<em>et ensuite ?</em>" (and then what happened?). If the sentence moves the story
+forward, it's the passé composé. If it sets the scene and nothing advances, it's
+the imparfait.</div>
+`,
+        drill: {
+          title: "Passé composé / imparfait",
+          items: [
+            {
+              type: "mcq", id: "pc-1", level: "A2",
+              q: "Quand je suis arrivé à la maison, ma sœur ___ la télévision.",
+              options: ["a regardé", "regardait", "regarde", "regardera"],
+              a: 1,
+              why: "L'action de la sœur est le décor, en cours au moment où l'on arrive : c'est l'imparfait. « Je suis arrivé » est l'événement ponctuel qui vient l'interrompre.",
+            },
+            {
+              type: "mcq", id: "pc-2", level: "A2",
+              q: "Quand j'étais enfant, nous ___ à la mer chaque été.",
+              options: ["sommes allés", "allions", "irons", "allâmes"],
+              a: 1,
+              why: "« Chaque été » signale une habitude passée : l'imparfait s'impose. Le passé composé décrirait un voyage unique et terminé.",
+            },
+            {
+              type: "mcq", id: "pc-3", level: "B1",
+              q: "Il faisait très beau, les oiseaux chantaient, et soudain l'orage ___.",
+              options: ["éclatait", "a éclaté", "éclate", "avait éclaté"],
+              a: 1,
+              why: "« Soudain » annonce une rupture ponctuelle dans le décor décrit à l'imparfait : c'est le passé composé qui fait avancer le récit.",
+            },
+            {
+              type: "mcq", id: "pc-4", level: "B2",
+              q: "Je ne connaissais pas son adresse, mais je l'___ par un ami commun.",
+              options: ["savais", "ai su", "connaissais", "aurais su"],
+              a: 1,
+              why: "Au passé composé, « savoir » exprime le moment où l'on apprend une information : « j'ai su » = j'ai appris. À l'imparfait, il décrirait un état de connaissance déjà installé.",
+              gloss: "j'ai su = I found out; je savais = I knew.",
+            },
+            {
+              type: "mcq", id: "pc-5", level: "B2",
+              q: "Malgré la grève, il ___ arriver à l'heure à son entretien.",
+              options: ["pouvait", "a pu", "peut", "pourrait"],
+              a: 1,
+              why: "« Il a pu » exprime une réussite effective malgré l'obstacle. « Il pouvait » décrirait seulement une capacité, sans dire si l'action a réellement eu lieu.",
+              gloss: "il a pu = he managed to; il pouvait = he was able to (in principle).",
+            },
+          ],
+        },
+      },
+
+      {
+        id: "l2",
+        title: "Le subjonctif sans douleur",
+        minutes: 14,
+        content: `
+<p>The subjunctive terrifies learners because it's taught as a list to memorise.
+There <em>is</em> a list, but there's also one idea underneath it that makes the
+list make sense.</p>
+
+<h2>The core idea</h2>
+<blockquote>The indicative <strong>asserts reality</strong>: this is how things are.
+The subjunctive <strong>refuses to assert</strong>: the fact is filtered through
+someone's will, emotion, doubt, or necessity.</blockquote>
+<div class="fr-ex">
+  <div class="fr">Je sais qu'il <span class="good">vient</span>. → I'm asserting it: he's coming. (indicatif)</div>
+  <div class="fr">Je veux qu'il <span class="good">vienne</span>. → I'm not saying he comes; I'm saying what I want. (subjonctif)</div>
+</div>
+
+<h2>The triggers that actually appear in the TCF</h2>
+<ul>
+  <li><strong>Volonté / nécessité :</strong> il faut que, vouloir que, exiger que,
+      il est important / nécessaire que</li>
+  <li><strong>Émotion :</strong> être content / triste / surpris que, avoir peur que,
+      regretter que</li>
+  <li><strong>Doute / négation d'opinion :</strong> douter que, il est possible que,
+      je ne pense pas que, il n'est pas sûr que</li>
+  <li><strong>Conjonctions :</strong> bien que, quoique, pour que, afin que,
+      avant que, jusqu'à ce que, à condition que, sans que, à moins que</li>
+</ul>
+
+<h2>The traps — verbs that look like triggers but are not</h2>
+<div class="scroll-x">
+<table class="tbl">
+  <tr><th>Indicatif (pas de subjonctif !)</th><th>Pourquoi</th></tr>
+  <tr><td><strong>espérer que</strong> → j'espère qu'il <em>vient</em></td><td>En français, l'espoir est présenté comme probable</td></tr>
+  <tr><td><strong>il est probable que</strong> → il est probable qu'il <em>viendra</em></td><td>Probable = quasi affirmé (mais « il est possible que » → subjonctif)</td></tr>
+  <tr><td><strong>penser / croire que</strong> (affirmatif)</td><td>On affirme ; à la forme négative ou interrogative, le doute ramène le subjonctif</td></tr>
+  <tr><td><strong>parce que, puisque, après que</strong></td><td>On donne un fait établi</td></tr>
+</table>
+</div>
+
+<h2>Forming it: one rule and eight irregulars</h2>
+<p>Take the <strong>ils/elles</strong> form of the present, remove
+<code>-ent</code>, add <code>-e, -es, -e, -ions, -iez, -ent</code>:
+<em>ils finiss<span class="good">ent</span> → que je finiss<span class="good">e</span></em>.
+Then learn these by heart, because they're everywhere:</p>
+<div class="fr-ex">
+  <div class="fr">être → que je <strong>sois</strong> · avoir → que j'<strong>aie</strong> · aller → que j'<strong>aille</strong> · faire → que je <strong>fasse</strong></div>
+  <div class="fr">pouvoir → que je <strong>puisse</strong> · savoir → que je <strong>sache</strong> · vouloir → que je <strong>veuille</strong> · falloir → qu'il <strong>faille</strong></div>
+</div>
+
+<div class="callout callout-tip"><strong>Pour l'expression écrite :</strong> one
+correctly-placed <em>bien que + subjonctif</em> signals B2 to an examiner far more
+efficiently than three risky complex sentences. Learn two or three and use them
+deliberately.</div>
+`,
+        drill: {
+          title: "Subjonctif : déclencheurs et pièges",
+          items: [
+            {
+              type: "mcq", id: "sb-1", level: "B1",
+              q: "Il faut que tu ___ avant huit heures.",
+              options: ["pars", "partes", "partiras", "partais"],
+              a: 1,
+              why: "« Il faut que » exprime la nécessité et entraîne toujours le subjonctif : que tu partes.",
+            },
+            {
+              type: "mcq", id: "sb-2", level: "B1",
+              q: "Bien qu'il ___ fatigué, il a terminé la réunion.",
+              options: ["est", "était", "soit", "sera"],
+              a: 2,
+              why: "« Bien que » (concession) est suivi du subjonctif : bien qu'il soit fatigué. C'est l'un des déclencheurs les plus fréquents au TCF.",
+            },
+            {
+              type: "mcq", id: "sb-3", level: "B2",
+              q: "J'espère que vous ___ passer nous voir cet été.",
+              options: ["puissiez", "pouvez", "pussiez", "ayez pu"],
+              a: 1,
+              why: "Piège classique : « espérer que » à la forme affirmative est suivi de l'INDICATIF. C'est « souhaiter que » qui demande le subjonctif.",
+              gloss: "espérer que + indicative; souhaiter que + subjunctive.",
+            },
+            {
+              type: "mcq", id: "sb-4", level: "B2",
+              q: "Je ne pense pas qu'il ___ raison sur ce point.",
+              options: ["a", "ait", "aura", "avait"],
+              a: 1,
+              why: "À la forme négative, « penser que » introduit un doute : le subjonctif s'impose. À la forme affirmative (« je pense qu'il a raison »), on garde l'indicatif.",
+            },
+            {
+              type: "gap", id: "sb-5", level: "B2",
+              q: "Complétez au subjonctif : « Il est important que vous ___ (savoir) la vérité. »",
+              answers: ["sachiez"],
+              why: "« Savoir » est irrégulier au subjonctif : que je sache, que tu saches, qu'il sache, que nous sachions, que vous sachiez, qu'ils sachent.",
+            },
+          ],
+        },
+      },
+
+      {
+        id: "l3",
+        title: "Les pronoms : COD, COI, y, en",
+        minutes: 15,
+        content: `
+<p>Pronouns are where fluent-sounding French is won or lost. The whole system rests
+on one question: <strong>does the verb attach its object directly, or through a
+preposition?</strong></p>
+
+<h2>Direct or indirect — and why English lies to you</h2>
+<p>You cannot translate to decide. Several very common verbs are direct in French
+and indirect in English, or the reverse:</p>
+<div class="scroll-x">
+<table class="tbl">
+  <tr><th>Verbe</th><th>Construction française</th><th>Piège</th></tr>
+  <tr><td>écouter, regarder, attendre, chercher</td><td><strong>direct</strong> → le / la / les</td><td>Anglais : listen <em>to</em>, wait <em>for</em></td></tr>
+  <tr><td>téléphoner à, répondre à, plaire à</td><td><strong>indirect</strong> → lui / leur</td><td>Anglais : phone / answer <em>someone</em> (direct)</td></tr>
+  <tr><td>demander à qqn de faire</td><td><strong>indirect</strong> → lui / leur</td><td>« demander » ≠ to demand ; = to ask</td></tr>
+</table>
+</div>
+<div class="fr-ex">
+  <div class="fr"><span class="bad">Je l'ai téléphoné.</span> → <span class="good">Je lui ai téléphoné.</span></div>
+  <div class="fr"><span class="bad">Je lui attends.</span> → <span class="good">Je l'attends.</span></div>
+</div>
+
+<h2>Y and EN: the preposition decides</h2>
+<ul>
+  <li><strong>y</strong> replaces <em>à + chose / lieu</em> :
+      « Tu penses à ton examen ? — Oui, j'<strong>y</strong> pense. »</li>
+  <li><strong>en</strong> replaces <em>de + chose</em> or a quantity :
+      « Tu as besoin de ce dossier ? — J'<strong>en</strong> ai besoin. » /
+      « Combien de frères as-tu ? — J'<strong>en</strong> ai deux. »</li>
+</ul>
+<p>Note the last one: with a number or quantity, <strong>en is compulsory</strong>
+in French even though English drops it ("I have two").</p>
+
+<h2>The order, when there are two</h2>
+<p>Before the verb, always in this fixed sequence:</p>
+<div class="fr-ex">
+  <div class="fr">me / te / se / nous / vous → le / la / les → lui / leur → y → en</div>
+  <div class="fr">Le livre à Marie ? Je <span class="good">le lui</span> ai donné.</div>
+  <div class="fr">Des conseils ? Il <span class="good">m'en</span> a donné.</div>
+</div>
+
+<h2>Agreement: the rule that catches everyone</h2>
+<p>With <em>avoir</em>, the past participle agrees with a direct object
+<strong>only when that object comes before the verb</strong>:</p>
+<div class="fr-ex">
+  <div class="fr">J'ai écrit <strong>des lettres</strong>. <span class="en">(object after → no agreement)</span></div>
+  <div class="fr">Les lettres que j'ai <span class="good">écrites</span>. <span class="en">(que = COD placed before → agreement)</span></div>
+  <div class="fr">Je <strong>les</strong> ai <span class="good">vues</span>. <span class="en">(les = COD before → agreement)</span></div>
+</div>
+`,
+        drill: {
+          title: "Pronoms",
+          items: [
+            {
+              type: "mcq", id: "pr-1", level: "A2",
+              q: "Tu as téléphoné à tes parents ? — Oui, je ___ ai téléphoné hier.",
+              options: ["les", "leur", "y", "en"],
+              a: 1,
+              why: "« Téléphoner à quelqu'un » est une construction indirecte : le pronom est « leur » (pluriel de « lui »). En anglais, on téléphone quelqu'un directement — d'où l'erreur fréquente.",
+            },
+            {
+              type: "mcq", id: "pr-2", level: "B1",
+              q: "Tu attends le bus ? — Oui, je ___ attends depuis dix minutes.",
+              options: ["lui", "y", "l'", "en"],
+              a: 2,
+              why: "« Attendre quelque chose » est direct en français (sans préposition) : je l'attends. L'anglais « to wait for » induit en erreur.",
+            },
+            {
+              type: "mcq", id: "pr-3", level: "B1",
+              q: "Tu as besoin de mon aide ? — Oui, j'___ ai vraiment besoin.",
+              options: ["y", "en", "la", "lui"],
+              a: 1,
+              why: "« Avoir besoin DE quelque chose » : la préposition « de » impose le pronom « en ».",
+            },
+            {
+              type: "mcq", id: "pr-4", level: "B2",
+              q: "Ce document, tu l'as envoyé au directeur ? — Oui, je ___ ai envoyé ce matin.",
+              options: ["lui le", "le lui", "l'y", "lui en"],
+              a: 1,
+              why: "L'ordre des pronoms est fixe : le/la/les précèdent lui/leur. On dit donc « je le lui ai envoyé ».",
+            },
+            {
+              type: "mcq", id: "pr-5", level: "B2",
+              q: "Voici les photos que j'ai ___ pendant le voyage.",
+              options: ["pris", "prise", "prises", "prisent"],
+              a: 2,
+              why: "Le COD « que » (= les photos, féminin pluriel) est placé AVANT le verbe : avec l'auxiliaire « avoir », le participe s'accorde donc → prises.",
+            },
+          ],
+        },
+      },
+
+      {
+        id: "l4",
+        title: "Relatifs et connecteurs logiques",
+        minutes: 13,
+        content: `
+<p>Two grammar families do most of the work in the MSL section — and both pay off
+immediately in your writing.</p>
+
+<h2>Pronoms relatifs: pick by the hole in the sentence</h2>
+<p>Don't ask "which word means <em>which</em>?" Ask <strong>what job the missing
+word does</strong> in the second clause:</p>
+<div class="scroll-x">
+<table class="tbl">
+  <tr><th>Pronom</th><th>Rôle</th><th>Exemple</th></tr>
+  <tr><td><strong>qui</strong></td><td>sujet</td><td>La femme <em>qui</em> parle est ma sœur.</td></tr>
+  <tr><td><strong>que</strong></td><td>complément direct</td><td>Le film <em>que</em> j'ai vu était long.</td></tr>
+  <tr><td><strong>dont</strong></td><td>remplace <em>de</em> + qqch</td><td>Le livre <em>dont</em> je t'ai parlé.</td></tr>
+  <tr><td><strong>où</strong></td><td>lieu ou temps</td><td>Le jour <em>où</em> il est arrivé.</td></tr>
+  <tr><td><strong>ce qui / ce que</strong></td><td>antécédent indéfini</td><td>Je ne comprends pas <em>ce que</em> tu veux.</td></tr>
+</table>
+</div>
+<p><strong>dont</strong> is the money-maker: any verb or noun built with
+<em>de</em> (parler <em>de</em>, avoir besoin <em>de</em>, être fier <em>de</em>,
+le prix <em>de</em>) takes <em>dont</em>. Using it correctly once in an essay is a
+visible B2 marker.</p>
+
+<h2>Connecteurs: the skeleton of an argument</h2>
+<div class="scroll-x">
+<table class="tbl">
+  <tr><th>Fonction</th><th>Connecteurs</th></tr>
+  <tr><td>Opposition</td><td>cependant, toutefois, néanmoins, en revanche, pourtant</td></tr>
+  <tr><td>Cause</td><td>car, parce que, puisque, comme, étant donné que</td></tr>
+  <tr><td>Conséquence</td><td>donc, par conséquent, c'est pourquoi, ainsi</td></tr>
+  <tr><td>Addition</td><td>de plus, en outre, par ailleurs, d'ailleurs</td></tr>
+  <tr><td>Concession</td><td>certes… mais, bien que, même si</td></tr>
+</table>
+</div>
+
+<h2>Three traps worth more than they look</h2>
+<div class="fr-ex">
+  <div class="fr"><strong>en effet</strong> ≠ <strong>en fait</strong></div>
+  <div class="en">en effet = indeed / because (it confirms what was just said)</div>
+  <div class="en">en fait = actually / in fact (it corrects what was just said)</div>
+</div>
+<div class="fr-ex">
+  <div class="fr"><strong>or</strong> is not English "or"!</div>
+  <div class="en">French « or » = now, yet — it introduces a decisive new fact: « Il affirmait être seul. Or, un témoin l'a vu accompagné. »</div>
+</div>
+<div class="fr-ex">
+  <div class="fr"><strong>certes… mais</strong> = the concession move</div>
+  <div class="en">« Certes, le télétravail isole. Mais il fait gagner un temps considérable. » The real opinion is always after « mais ».</div>
+</div>
+
+<div class="callout"><strong>À retenir pour la compréhension écrite :</strong>
+connectors tell you where the author's real position is. In a text built on
+<em>certes… mais…</em>, whatever follows <em>mais</em> is the thesis. Questions
+about "l'opinion de l'auteur" are usually answered there.</div>
+`,
+        drill: {
+          title: "Relatifs et connecteurs",
+          items: [
+            {
+              type: "mcq", id: "rc-1", level: "B1",
+              q: "C'est le collègue ___ je t'ai parlé la semaine dernière.",
+              options: ["que", "qui", "dont", "où"],
+              a: 2,
+              why: "On dit « parler DE quelqu'un ». Le pronom relatif qui remplace « de + complément » est « dont ».",
+            },
+            {
+              type: "mcq", id: "rc-2", level: "B1",
+              q: "Je n'ai pas bien compris ___ vous voulez dire.",
+              options: ["ce qui", "ce que", "ce dont", "qui"],
+              a: 1,
+              why: "« Vouloir dire quelque chose » : le complément est direct, et l'antécédent est indéfini → « ce que ». « Ce qui » serait sujet (ex. : ce qui m'inquiète).",
+            },
+            {
+              type: "mcq", id: "rc-3", level: "B2",
+              q: "Le train était annulé ; ___, nous sommes arrivés avec trois heures de retard.",
+              options: ["en revanche", "par conséquent", "bien que", "en effet"],
+              a: 1,
+              why: "La deuxième proposition est la conséquence de la première : « par conséquent ». « En revanche » marquerait une opposition, ce qui n'a pas de sens ici.",
+            },
+            {
+              type: "mcq", id: "rc-4", level: "C1",
+              q: "Il prétendait n'avoir jamais quitté son bureau. ___, plusieurs témoins l'ont aperçu dehors.",
+              options: ["Or", "Ou", "Donc", "Ainsi"],
+              a: 0,
+              why: "« Or » introduit un fait nouveau qui contredit ce qui précède — rien à voir avec l'anglais « or ». C'est un marqueur d'argumentation très fréquent aux niveaux C1-C2.",
+              gloss: "French « or » = and yet / now, never « or » in the English sense.",
+            },
+            {
+              type: "mcq", id: "rc-5", level: "B2",
+              q: "« Ce quartier a mauvaise réputation. ___, je m'y sens parfaitement en sécurité. » Quel connecteur convient ?",
+              options: ["En effet", "Par ailleurs", "En fait", "C'est pourquoi"],
+              a: 2,
+              why: "Le locuteur corrige l'impression donnée : « en fait » rectifie. « En effet » confirmerait la mauvaise réputation, ce qui contredirait la suite de la phrase.",
+            },
+          ],
+        },
+      },
+
+      {
+        id: "l5",
+        title: "Faux amis et registres de langue",
+        minutes: 12,
+        content: `
+<p>The vocabulary items in the MSL section are rarely about rare words. They test
+two things: <strong>false friends</strong> and <strong>register</strong> — because
+both reveal whether you actually live in the language or translate from English.</p>
+
+<h2>Les faux amis les plus rentables</h2>
+<div class="scroll-x">
+<table class="tbl">
+  <tr><th>Français</th><th>Signifie</th><th>Ne signifie PAS</th></tr>
+  <tr><td>actuellement</td><td>currently, right now</td><td>actually (→ <em>en fait</em>)</td></tr>
+  <tr><td>éventuellement</td><td>possibly, if need be</td><td>eventually (→ <em>finalement</em>)</td></tr>
+  <tr><td>assister à</td><td>to attend</td><td>to assist (→ <em>aider</em>)</td></tr>
+  <tr><td>sensible</td><td>sensitive</td><td>sensible (→ <em>raisonnable</em>)</td></tr>
+  <tr><td>une librairie</td><td>a bookshop</td><td>a library (→ <em>une bibliothèque</em>)</td></tr>
+  <tr><td>demander</td><td>to ask</td><td>to demand (→ <em>exiger</em>)</td></tr>
+  <tr><td>passer un examen</td><td>to sit an exam</td><td>to pass (→ <em>réussir</em>)</td></tr>
+  <tr><td>ignorer</td><td>not to know</td><td>to ignore (→ <em>ne pas tenir compte de</em>)</td></tr>
+  <tr><td>un délai</td><td>a deadline, a time frame</td><td>a delay (→ <em>un retard</em>)</td></tr>
+  <tr><td>prétendre</td><td>to claim</td><td>to pretend (→ <em>faire semblant</em>)</td></tr>
+</table>
+</div>
+<div class="callout callout-warn"><strong>Le piège vedette :</strong>
+« J'ai passé mon examen » does <em>not</em> mean you passed. It means you sat it.
+If you passed, say « <strong>j'ai réussi</strong> mon examen ». Examiners test this
+one constantly.</div>
+
+<h2>Les trois registres</h2>
+<p>The TCF asks you to recognise which register fits a situation — a job
+application, a text to a friend, a complaint to an administration:</p>
+<div class="scroll-x">
+<table class="tbl">
+  <tr><th>Registre</th><th>Exemple</th><th>Contexte</th></tr>
+  <tr><td><strong>familier</strong></td><td>Tu peux me filer un coup de main ?</td><td>Amis, famille, oral détendu</td></tr>
+  <tr><td><strong>courant</strong></td><td>Est-ce que tu peux m'aider ?</td><td>Neutre, la plupart des situations</td></tr>
+  <tr><td><strong>soutenu</strong></td><td>Auriez-vous l'obligeance de m'aider ?</td><td>Écrit formel, administration, lettre de motivation</td></tr>
+</table>
+</div>
+<p>Familiar markers: <em>bagnole</em> (voiture), <em>bouquin</em> (livre),
+<em>boulot</em> (travail), <em>fringues</em> (vêtements), dropping <em>ne</em>
+(« je sais pas »), <em>ça</em> instead of <em>cela</em>.<br>
+Formal markers: conditional politeness (<em>je souhaiterais</em>,
+<em>auriez-vous</em>), <em>veuillez</em>, inversion questions
+(<em>pourriez-vous ?</em>), <em>cela</em>, full negation.</p>
+
+<div class="callout callout-tip"><strong>Pour l'expression écrite :</strong> the
+single most common register mistake is writing a formal letter with
+<em>Est-ce que vous pouvez…</em>. Use <em>Pourriez-vous…</em> or
+<em>Je vous serais reconnaissant de…</em> and you instantly sound a level higher.</div>
+`,
+        drill: {
+          title: "Vocabulaire et registre",
+          items: [
+            {
+              type: "mcq", id: "fa-1", level: "B1",
+              q: "« Actuellement, je travaille dans une école. » Que signifie « actuellement » ?",
+              options: ["En réalité", "En ce moment", "Finalement", "Autrefois"],
+              a: 1,
+              why: "« Actuellement » signifie « en ce moment, à présent ». Pour traduire l'anglais « actually », on emploie « en fait » ou « en réalité ».",
+            },
+            {
+              type: "mcq", id: "fa-2", level: "B1",
+              q: "Choisissez la phrase correcte pour dire que l'examen a été un succès.",
+              options: [
+                "J'ai passé mon examen.",
+                "J'ai réussi mon examen.",
+                "J'ai supporté mon examen.",
+                "J'ai assisté mon examen.",
+              ],
+              a: 1,
+              why: "« Passer un examen » signifie seulement s'y présenter. Le succès se dit « réussir un examen » (ou « être reçu »).",
+              gloss: "passer = to sit; réussir = to pass.",
+            },
+            {
+              type: "mcq", id: "fa-3", level: "B2",
+              q: "Dans une lettre de motivation, quelle formule est la plus appropriée ?",
+              options: [
+                "Je veux savoir si le poste est toujours libre.",
+                "Est-ce que vous pouvez me dire si le poste est libre ?",
+                "Je souhaiterais savoir si le poste est toujours à pourvoir.",
+                "Dites-moi vite si le poste est encore dispo.",
+              ],
+              a: 2,
+              why: "Le registre soutenu emploie le conditionnel de politesse (« je souhaiterais ») et un vocabulaire précis (« à pourvoir »). Les autres formulations relèvent du courant ou du familier.",
+            },
+            {
+              type: "mcq", id: "fa-4", level: "B2",
+              q: "« J'ignore la date de son arrivée. » Cela signifie que :",
+              options: [
+                "je ne connais pas la date",
+                "je refuse de tenir compte de la date",
+                "j'oublie souvent la date",
+                "je conteste la date",
+              ],
+              a: 0,
+              why: "« Ignorer » signifie « ne pas savoir ». Le sens anglais « to ignore » se rend par « ne pas tenir compte de » ou « faire abstraction de ».",
+            },
+            {
+              type: "mcq", id: "fa-5", level: "C1",
+              q: "Quelle phrase relève du registre familier ?",
+              options: [
+                "Je vous prie de bien vouloir m'excuser.",
+                "Il m'a prêté sa bagnole pour le week-end.",
+                "Nous vous remercions de votre compréhension.",
+                "Veuillez patienter quelques instants.",
+              ],
+              a: 1,
+              why: "« Bagnole » est le mot familier pour « voiture ». Les trois autres phrases relèvent du registre soutenu (formules de politesse administratives).",
+            },
+          ],
+        },
+      },
+    ],
+  },
+
+  /* ================================================================== */
+  {
+    id: "co",
+    icon: "👂",
+    title: "Compréhension orale",
+    tagline: "L'audio ne passe qu'une fois. Écouter, ce n'est pas tout comprendre : c'est trouver l'information utile.",
+    kind: "study",
+    lessons: [
+      {
+        id: "l1",
+        title: "Stratégie d'écoute : anticiper, cibler, lâcher",
+        minutes: 10,
+        content: `
+<p>The listening section punishes a very specific habit: trying to understand
+<em>everything</em>. You have one pass, no rewind. The skill being tested is
+<strong>selective listening</strong> — deciding in advance what matters and
+letting the rest wash over you.</p>
+
+<h2>The three-beat routine</h2>
+<ol>
+  <li><strong>Anticiper.</strong> Read the question before the audio starts. A
+      question beginning <em>« Où… »</em> means you're hunting for a place;
+      <em>« Pourquoi… »</em> means you need a reason, usually signalled by
+      <em>parce que, car, comme, pour</em>.</li>
+  <li><strong>Cibler.</strong> Listen for that one thing. Numbers, times, places,
+      and negations carry most answers. Ignore the vocabulary you don't know —
+      it's usually decoration.</li>
+  <li><strong>Lâcher.</strong> The instant an item is over, drop it. The next
+      recording has already started for someone who is still thinking about the
+      last one.</li>
+</ol>
+
+<h2>The distractor trap</h2>
+<p>The wrong options are <strong>designed to reuse words you just heard</strong>.
+The correct option usually <em>paraphrases</em> the audio instead of repeating it:</p>
+<div class="fr-ex">
+  <div class="fr">Audio : « Le magasin est fermé le lundi. »</div>
+  <div class="fr"><span class="bad">Distracteur : « Le magasin est ouvert le lundi. »</span> (mêmes mots, sens inversé)</div>
+  <div class="fr"><span class="good">Réponse : « Le magasin n'accueille pas de clients en début de semaine. »</span> (paraphrase)</div>
+</div>
+<blockquote>If an option repeats the audio word for word, be suspicious. Test
+writers use word-matching as bait for people who recognised sounds but didn't
+process meaning.</blockquote>
+
+<h2>Listen for the negation</h2>
+<p>A huge proportion of errors come from missing one small word: <em>ne… pas</em>,
+<em>ne… plus</em> (not any more), <em>ne… jamais</em>, <em>ne… personne</em>,
+<em>sans</em>. In fast speech <em>ne</em> often disappears entirely
+(« j'ai pas le temps »), so the meaning hangs on <em>pas</em> alone. Train your
+ear to flag it.</p>
+
+<div class="callout"><strong>Comment s'entraîner :</strong> use the audio exercises
+below. Play each one at normal speed first, exactly like the exam. Only after
+answering should you slow it down or read the transcript — otherwise you're
+training reading, not listening.</div>
+`,
+        drill: {
+          title: "Écoute ciblée",
+          items: [
+            {
+              type: "listen", id: "co-1", level: "A1",
+              audio: "Mesdames et messieurs, le train à destination de Lyon partira à quatorze heures trente-cinq, voie B.",
+              q: "À quelle heure part le train ?",
+              options: ["14 h 15", "14 h 35", "4 h 35", "14 h 45"],
+              a: 1,
+              why: "L'annonce précise « quatorze heures trente-cinq », soit 14 h 35. Les nombres sont l'information la plus fréquemment demandée en compréhension orale.",
+              transcript: "Mesdames et messieurs, le train à destination de Lyon partira à quatorze heures trente-cinq, voie B.",
+            },
+            {
+              type: "listen", id: "co-2", level: "A2",
+              audio: "Bonjour, vous êtes bien au cabinet du docteur Meunier. Nous sommes fermés le samedi. Pour une urgence, composez le quinze.",
+              q: "Que doit faire une personne en cas d'urgence ?",
+              options: [
+                "Rappeler le samedi matin",
+                "Se rendre directement au cabinet",
+                "Appeler le 15",
+                "Laisser un message après le signal",
+              ],
+              a: 2,
+              why: "Le répondeur indique clairement : « Pour une urgence, composez le quinze. » Le samedi est mentionné pour dire que le cabinet est FERMÉ : c'est un distracteur.",
+              transcript: "Bonjour, vous êtes bien au cabinet du docteur Meunier. Nous sommes fermés le samedi. Pour une urgence, composez le quinze.",
+            },
+            {
+              type: "listen", id: "co-3", level: "B1",
+              audio: "Je ne prends plus le métro depuis que j'ai déménagé. Maintenant, je vais au bureau à vélo, c'est plus rapide.",
+              q: "Comment cette personne se rend-elle au travail aujourd'hui ?",
+              options: ["En métro", "À vélo", "En voiture", "À pied"],
+              a: 1,
+              why: "« Je ne prends PLUS le métro » signale un changement : c'était le cas avant, ce ne l'est plus. La personne va désormais au bureau à vélo.",
+              gloss: "ne… plus = not any more — the key word in the whole item.",
+              transcript: "Je ne prends plus le métro depuis que j'ai déménagé. Maintenant, je vais au bureau à vélo, c'est plus rapide.",
+            },
+          ],
+        },
+      },
+
+      {
+        id: "l2",
+        title: "Sous-entendus, intentions et ton",
+        minutes: 11,
+        content: `
+<p>From B1 upwards, the listening section stops asking <em>what was said</em> and
+starts asking <strong>what was meant</strong>. French is a language of indirection:
+a refusal is rarely « non ».</p>
+
+<h2>Reading a polite refusal</h2>
+<div class="fr-ex">
+  <div class="fr">— On se voit ce soir ?<br>— <strong>J'aimerais bien, mais</strong> j'ai un dossier à rendre demain matin.</div>
+  <div class="en">This is a refusal. « J'aimerais bien, mais… » = no, softened. The conditional + « mais » pattern is the standard French no.</div>
+</div>
+<p>Other signals that mean <em>no</em>: « <em>Ça va être compliqué</em> »,
+« <em>Je vais voir ce que je peux faire</em> », « <em>On verra</em> »,
+« <em>Pourquoi pas, un de ces jours</em> ».</p>
+
+<h2>Mitigated criticism</h2>
+<div class="fr-ex">
+  <div class="fr"><strong>Ce n'est pas que</strong> le film soit mauvais, <strong>mais</strong> je m'attendais à mieux.</div>
+  <div class="en">Verdict: disappointed. « Ce n'est pas que… mais… » concedes something minor in order to criticise. The real opinion is always after « mais ».</div>
+</div>
+
+<h2>Reproach hidden in a tense</h2>
+<div class="fr-ex">
+  <div class="fr">Tu <strong>aurais pu</strong> me prévenir ! · Vous <strong>auriez dû</strong> nous appeler.</div>
+  <div class="en">Conditional past = reproach about something that didn't happen. Not a question about ability — a complaint.</div>
+</div>
+
+<h2>Questions typiques du TCF</h2>
+<ul>
+  <li><em>Quelle est l'intention du locuteur ?</em> → s'excuser, se plaindre,
+      proposer, refuser, reprocher, féliciter, rassurer</li>
+  <li><em>Quel est le ton de la personne ?</em> → enthousiaste, ironique, agacé,
+      hésitant, déçu, rassurant</li>
+  <li><em>Que peut-on déduire ?</em> → the answer is never literally in the audio;
+      it's the logical consequence of it</li>
+</ul>
+
+<div class="callout callout-tip"><strong>L'astuce :</strong> when a question asks
+about intention or tone, ignore the topic words entirely and listen to the
+<em>structure</em>: hesitation, conditional, « mais », « quand même »,
+« franchement ». That's where attitude lives.</div>
+`,
+        drill: {
+          title: "Comprendre l'implicite",
+          items: [
+            {
+              type: "listen", id: "co-4", level: "B1",
+              audio: "Tu viens à la soirée samedi ? — Écoute, j'aimerais bien, mais j'ai un rapport à finir pour lundi matin.",
+              q: "Que veut dire la deuxième personne ?",
+              options: [
+                "Elle viendra à la soirée",
+                "Elle refuse poliment de venir",
+                "Elle propose de reporter la soirée à lundi",
+                "Elle demande de l'aide pour son rapport",
+              ],
+              a: 1,
+              why: "« J'aimerais bien, mais… » est la formule type du refus poli en français. Le conditionnel exprime le regret, et « mais » introduit l'obstacle réel.",
+              transcript: "— Tu viens à la soirée samedi ? — Écoute, j'aimerais bien, mais j'ai un rapport à finir pour lundi matin.",
+            },
+            {
+              type: "listen", id: "co-5", level: "B2",
+              audio: "Alors, ce nouveau restaurant ? — Ce n'est pas que la cuisine soit mauvaise, mais pour ce prix-là, franchement, j'attendais autre chose.",
+              q: "Quel est l'avis de la personne sur le restaurant ?",
+              options: [
+                "Elle a trouvé la cuisine excellente",
+                "Elle est déçue par le rapport qualité-prix",
+                "Elle trouve le restaurant trop bon marché",
+                "Elle n'a pas d'opinion",
+              ],
+              a: 1,
+              why: "« Ce n'est pas que… mais… » atténue la critique sans l'annuler. L'ajout « pour ce prix-là » et « j'attendais autre chose » exprime clairement une déception sur le rapport qualité-prix.",
+              transcript: "— Alors, ce nouveau restaurant ? — Ce n'est pas que la cuisine soit mauvaise, mais pour ce prix-là, franchement, j'attendais autre chose.",
+            },
+            {
+              type: "listen", id: "co-6", level: "B2",
+              audio: "Le colis devait arriver mardi et nous sommes vendredi. Vous auriez quand même pu me prévenir du retard !",
+              q: "Quelle est l'intention de la personne qui parle ?",
+              options: [
+                "Elle s'excuse d'un retard",
+                "Elle exprime un reproche",
+                "Elle demande un remboursement",
+                "Elle félicite le service de livraison",
+              ],
+              a: 1,
+              why: "« Vous auriez pu… » au conditionnel passé exprime le reproche : la personne signale que l'on n'a pas fait ce qu'il fallait. « Quand même » renforce l'agacement.",
+              transcript: "Le colis devait arriver mardi et nous sommes vendredi. Vous auriez quand même pu me prévenir du retard !",
+            },
+          ],
+        },
+      },
+    ],
+  },
+
+  /* ================================================================== */
+  {
+    id: "ce",
+    icon: "📖",
+    title: "Compréhension écrite",
+    tagline: "45 minutes, 29 questions. On ne lit pas : on cherche. Repérage, paraphrase, implicite.",
+    kind: "study",
+    lessons: [
+      {
+        id: "l1",
+        title: "Documents courts : le repérage",
+        minutes: 10,
+        content: `
+<p>The first two thirds of the reading section are short authentic documents:
+notices, small ads, emails, timetables, forum posts. They are not hard — they are
+<em>fast</em>. The whole game is repérage: locating one piece of information
+without reading everything.</p>
+
+<h2>The 10-second identification</h2>
+<p>Before reading a word of the body, answer three questions:</p>
+<ul>
+  <li><strong>Quel type de document ?</strong> (petite annonce, courriel, affiche,
+      règlement…)</li>
+  <li><strong>Qui écrit à qui ?</strong> (un service à un client ? un ami à un
+      ami ?) — this instantly tells you the register and the likely purpose.</li>
+  <li><strong>Pour quoi faire ?</strong> (informer, interdire, proposer, s'excuser,
+      inviter…)</li>
+</ul>
+<p>Half the questions are answered by that alone, because TCF question stems are
+often exactly <em>« Ce document sert à… »</em> or <em>« Qui a écrit ce
+message ? »</em>.</p>
+
+<h2>Read the question first — always</h2>
+<blockquote>Reading the text then the question means reading everything twice.
+Reading the question then the text means reading once, with a target.</blockquote>
+
+<h2>Attention aux mots-outils</h2>
+<p>In short documents the decisive information is usually carried by a tiny word
+that's easy to skim past:</p>
+<div class="fr-ex">
+  <div class="fr"><strong>sauf</strong> = except · <strong>uniquement / seulement</strong> = only</div>
+  <div class="fr"><strong>à partir de</strong> = from (starting) · <strong>jusqu'à</strong> = until</div>
+  <div class="fr"><strong>dès</strong> = as early as · <strong>au plus tard</strong> = at the latest</div>
+  <div class="fr"><strong>gratuit pour les moins de 18 ans</strong> = under-18s only</div>
+</div>
+<p>« Ouvert tous les jours <strong>sauf</strong> le mardi » and « Ouvert le mardi »
+differ by four letters and are complete opposites. Those four letters are the
+question.</p>
+`,
+        drill: {
+          title: "Documents courts",
+          items: [
+            {
+              type: "read", id: "ce-1", level: "A2",
+              context: "MÉDIATHÈQUE MUNICIPALE\n\nHoraires d'ouverture :\nDu mardi au vendredi : 10 h – 18 h\nSamedi : 10 h – 17 h\nFermée le dimanche et le lundi.\n\nL'inscription est gratuite pour les habitants de la commune et pour les moins de 26 ans.",
+              q: "Quand la médiathèque est-elle ouverte ?",
+              options: [
+                "Tous les jours de la semaine",
+                "Du mardi au samedi",
+                "Uniquement le week-end",
+                "Du lundi au vendredi",
+              ],
+              a: 1,
+              why: "Le document indique « du mardi au vendredi » et « samedi », puis précise « fermée le dimanche et le lundi ». La médiathèque est donc ouverte du mardi au samedi.",
+            },
+            {
+              type: "read", id: "ce-2", level: "A2",
+              context: "MÉDIATHÈQUE MUNICIPALE\n\nHoraires d'ouverture :\nDu mardi au vendredi : 10 h – 18 h\nSamedi : 10 h – 17 h\nFermée le dimanche et le lundi.\n\nL'inscription est gratuite pour les habitants de la commune et pour les moins de 26 ans.",
+              q: "Qui peut s'inscrire gratuitement ?",
+              options: [
+                "Tout le monde, sans condition",
+                "Uniquement les étudiants",
+                "Les habitants de la commune et les personnes de moins de 26 ans",
+                "Les personnes de plus de 26 ans seulement",
+              ],
+              a: 2,
+              why: "Le texte précise deux catégories : « les habitants de la commune » ET « les moins de 26 ans ». Il faut lire les deux conditions, reliées par « et ».",
+            },
+            {
+              type: "read", id: "ce-3", level: "B1",
+              context: "De : service-clients@voyaz.fr\nÀ : m.durand@courriel.fr\nObjet : Votre réservation n° 4471\n\nMadame, Monsieur,\n\nNous vous informons que votre vol Paris–Montréal du 14 mars a été modifié. Le départ est avancé de 11 h 20 à 9 h 45. Aucune démarche n'est nécessaire de votre part : votre billet reste valable.\n\nSi ce nouvel horaire ne vous convient pas, vous pouvez demander un remboursement intégral avant le 1er mars en répondant à ce message.\n\nCordialement,\nLe service clients",
+              q: "Que doit faire le client s'il accepte le nouvel horaire ?",
+              options: [
+                "Répondre au message avant le 1er mars",
+                "Rien du tout : son billet reste valable",
+                "Réserver un nouveau billet",
+                "Se présenter à l'aéroport trois heures avant",
+              ],
+              a: 1,
+              why: "Le message précise : « Aucune démarche n'est nécessaire de votre part : votre billet reste valable. » La réponse avant le 1er mars ne concerne que le cas d'un REFUS du nouvel horaire.",
+              gloss: "Classic trap: the deadline in the text applies to the other scenario.",
+            },
+            {
+              type: "read", id: "ce-4", level: "B1",
+              context: "De : service-clients@voyaz.fr\nÀ : m.durand@courriel.fr\nObjet : Votre réservation n° 4471\n\nMadame, Monsieur,\n\nNous vous informons que votre vol Paris–Montréal du 14 mars a été modifié. Le départ est avancé de 11 h 20 à 9 h 45. Aucune démarche n'est nécessaire de votre part : votre billet reste valable.\n\nSi ce nouvel horaire ne vous convient pas, vous pouvez demander un remboursement intégral avant le 1er mars en répondant à ce message.\n\nCordialement,\nLe service clients",
+              q: "Que s'est-il passé avec le vol ?",
+              options: [
+                "Il a été annulé",
+                "Il partira plus tôt que prévu",
+                "Il partira plus tard que prévu",
+                "Sa destination a changé",
+              ],
+              a: 1,
+              why: "« Le départ est AVANCÉ de 11 h 20 à 9 h 45 » : avancer un horaire, c'est le rendre plus tôt. « Retardé » ou « reporté » signifierait l'inverse.",
+              gloss: "avancer = to bring forward; retarder = to push back.",
+            },
+          ],
+        },
+      },
+
+      {
+        id: "l2",
+        title: "Textes longs : implicite, ton et opinion",
+        minutes: 12,
+        content: `
+<p>The final reading items are argumentative texts — press articles, opinion
+columns, forum debates. The questions are no longer <em>where is the information</em>
+but <strong>what does the author actually think</strong>, and the answer is almost
+never stated in one sentence.</p>
+
+<h2>The concession structure gives away the thesis</h2>
+<p>French argumentative writing is built on a predictable move:</p>
+<div class="fr-ex">
+  <div class="fr"><strong>Certes</strong>, le télétravail réduit les temps de transport. <strong>Mais</strong> il brouille la frontière entre vie professionnelle et vie privée.</div>
+  <div class="en">The author's real position is the second half. « Certes / Il est vrai que / Bien sûr » announce a concession the author is about to overturn.</div>
+</div>
+<blockquote>Rule: whatever follows <em>mais, cependant, toutefois, néanmoins,
+il n'en reste pas moins que</em> is the thesis. What precedes it is the opponent's
+argument being politely acknowledged.</blockquote>
+
+<h2>The correct answer paraphrases; the wrong one quotes</h2>
+<p>Exactly as in listening, distractors recycle the text's own words. A correct
+option restates the idea in different vocabulary. If one option looks
+suspiciously identical to a sentence in the text, check it for a reversed
+negation, an exaggeration (<em>tous, toujours, jamais, aucun</em>), or a shift
+from opinion to fact.</p>
+
+<h2>Repérer le ton</h2>
+<div class="scroll-x">
+<table class="tbl">
+  <tr><th>Ton</th><th>Indices dans le texte</th></tr>
+  <tr><td>critique</td><td>vocabulaire dévalorisant, questions rhétoriques, « prétendu », « soi-disant »</td></tr>
+  <tr><td>ironique</td><td>décalage entre les mots et la situation, guillemets, exagération</td></tr>
+  <tr><td>nuancé</td><td>« en partie », « dans une certaine mesure », « il conviendrait de »</td></tr>
+  <tr><td>engagé</td><td>impératifs, « il faut », « nous devons », première personne du pluriel</td></tr>
+</table>
+</div>
+
+<div class="callout"><strong>Méthode pour un texte long :</strong> read the
+question, then read <em>only</em> the first and last sentence of each paragraph —
+in French argumentative prose these carry the argument. Dive into the middle only
+when you've located the right paragraph.</div>
+`,
+        drill: {
+          title: "Texte argumentatif",
+          items: [
+            {
+              type: "read", id: "ce-5", level: "B2",
+              context: "Le télétravail s'est imposé en quelques mois comme une évidence. Certes, il a permis à des millions de salariés d'économiser un temps de transport considérable et de mieux organiser leurs journées. Mais on aurait tort de n'y voir qu'un progrès.\n\nÀ mesure que le bureau entre dans le salon, la frontière entre vie professionnelle et vie privée s'efface. Les études le montrent : les salariés en télétravail travaillent en moyenne plus longtemps, et se déconnectent plus difficilement. Les plus jeunes, privés des échanges informels qui font l'apprentissage d'un métier, en paient le prix le plus fort.\n\nLa vraie question n'est donc pas de savoir s'il faut télétravailler, mais à quelles conditions.",
+              q: "Quelle est l'opinion de l'auteur sur le télétravail ?",
+              options: [
+                "Il y est totalement opposé",
+                "Il le considère comme un progrès sans réserve",
+                "Il en reconnaît les avantages mais insiste sur ses risques",
+                "Il estime que le sujet n'a aucune importance",
+              ],
+              a: 2,
+              why: "L'auteur emploie la structure « Certes… Mais… » : il concède les avantages (temps de transport) avant d'exposer sa véritable thèse, les risques (effacement de la frontière vie privée / vie professionnelle). Sa position est donc nuancée, ni pour ni contre.",
+            },
+            {
+              type: "read", id: "ce-6", level: "B2",
+              context: "Le télétravail s'est imposé en quelques mois comme une évidence. Certes, il a permis à des millions de salariés d'économiser un temps de transport considérable et de mieux organiser leurs journées. Mais on aurait tort de n'y voir qu'un progrès.\n\nÀ mesure que le bureau entre dans le salon, la frontière entre vie professionnelle et vie privée s'efface. Les études le montrent : les salariés en télétravail travaillent en moyenne plus longtemps, et se déconnectent plus difficilement. Les plus jeunes, privés des échanges informels qui font l'apprentissage d'un métier, en paient le prix le plus fort.\n\nLa vraie question n'est donc pas de savoir s'il faut télétravailler, mais à quelles conditions.",
+              q: "Selon le texte, qui est le plus pénalisé par le télétravail ?",
+              options: [
+                "Les cadres dirigeants",
+                "Les salariés les plus jeunes",
+                "Les personnes vivant loin de leur travail",
+                "Les employeurs",
+              ],
+              a: 1,
+              why: "Le texte précise : « Les plus jeunes, privés des échanges informels qui font l'apprentissage d'un métier, en paient le prix le plus fort. »",
+            },
+            {
+              type: "read", id: "ce-7", level: "C1",
+              context: "Le télétravail s'est imposé en quelques mois comme une évidence. Certes, il a permis à des millions de salariés d'économiser un temps de transport considérable et de mieux organiser leurs journées. Mais on aurait tort de n'y voir qu'un progrès.\n\nÀ mesure que le bureau entre dans le salon, la frontière entre vie professionnelle et vie privée s'efface. Les études le montrent : les salariés en télétravail travaillent en moyenne plus longtemps, et se déconnectent plus difficilement. Les plus jeunes, privés des échanges informels qui font l'apprentissage d'un métier, en paient le prix le plus fort.\n\nLa vraie question n'est donc pas de savoir s'il faut télétravailler, mais à quelles conditions.",
+              q: "Que signifie la dernière phrase du texte ?",
+              options: [
+                "Le débat sur le télétravail est définitivement clos",
+                "Il faudrait interdire le télétravail dans certains secteurs",
+                "Le débat doit porter sur les modalités du télétravail, non sur son principe",
+                "Les entreprises devraient laisser chaque salarié décider seul",
+              ],
+              a: 2,
+              why: "« Non pas s'il faut télétravailler, mais à quelles conditions » déplace le débat : le principe est acquis, ce qui reste à discuter, ce sont les modalités (encadrement, droit à la déconnexion, accompagnement des jeunes).",
+            },
+          ],
+        },
+      },
+    ],
+  },
+];
+
+
+/* ==========================================================================
+   CONTENU — production écrite et orale, vocabulaire, gamification
+   ========================================================================== */
+
+/* ---------- Expression écrite : 3 tâches, 60 minutes ---------------------
+   { id, n, title, minutes, min, max, prompt, plan[], connectors[], model,
+     checklist[] }
+   `min`/`max` = the official word range. The editor counts words live.
+   ------------------------------------------------------------------------ */
+const WRITING_TASKS = [
+  {
+    id: "ee1",
+    n: 1,
+    title: "Tâche 1 — Message personnel",
+    minutes: 15,
+    min: 60,
+    max: 120,
+    audience: "Un proche (ami, membre de la famille). Registre courant.",
+    prompt: `Vous venez d'emménager dans une nouvelle ville. Vous écrivez à un(e) ami(e)
+francophone pour lui décrire votre nouveau quartier, lui dire ce que vous aimez et ce qui
+vous manque, puis l'inviter à venir vous rendre visite.`,
+    goal: "Décrire, raconter, inviter — dans un message simple mais structuré.",
+    plan: [
+      "Salutation + la nouvelle (« Ça y est, j'ai emménagé ! »)",
+      "Décrire le lieu : 2 ou 3 détails concrets, pas une liste",
+      "Donner un avis : ce qui vous plaît / ce qui vous manque",
+      "Inviter clairement + proposer une date ou poser une question",
+      "Formule de clôture",
+    ],
+    connectors: ["Ça y est,", "d'abord", "ensuite", "en revanche", "par contre", "du coup", "en tout cas", "À très vite,"],
+    model: `Salut Camille,
+
+Ça y est, j'ai emménagé ! Je suis installée à Lyon depuis samedi dernier et je commence
+enfin à me repérer.
+
+Le quartier me plaît beaucoup : il y a un marché le mercredi, une boulangerie au coin de
+la rue et un grand parc à cinq minutes à pied. En revanche, c'est assez bruyant le soir,
+et mes anciens voisins me manquent un peu.
+
+Est-ce que tu voudrais venir passer un week-end ici ? Je peux te loger sans problème et je
+te ferais visiter la vieille ville. Dis-moi quelles dates t'arrangent en septembre.
+
+À très vite,
+Léa`,
+    checklist: [
+      { id: "c1", text: "J'ai respecté la longueur demandée (60 à 120 mots) — comptée, pas estimée." },
+      { id: "c2", text: "J'ai traité les TROIS consignes : décrire, donner mon avis, inviter." },
+      { id: "c3", text: "J'ai utilisé un registre adapté à un ami (tu, ton courant) et une formule d'ouverture et de clôture." },
+      { id: "c4", text: "J'ai relu en cherchant uniquement les accords (sujet-verbe, adjectifs) — ma faute la plus fréquente." },
+      { id: "c5", text: "J'ai vérifié les temps du passé : passé composé pour les événements, imparfait pour les descriptions." },
+    ],
+  },
+  {
+    id: "ee2",
+    n: 2,
+    title: "Tâche 2 — Article / message public",
+    minutes: 20,
+    min: 120,
+    max: 150,
+    audience: "Un lectorat inconnu (forum, journal, blog). Registre courant à soutenu.",
+    prompt: `Le site d'un magazine francophone vous invite à réagir à la question suivante :
+« Faut-il interdire le téléphone portable dans les établissements scolaires ? »
+Vous rédigez un message pour le forum : vous exposez la situation, vous donnez votre point
+de vue et vous l'illustrez par au moins un exemple concret.`,
+    goal: "Exposer des faits ET défendre une opinion, pour un public que vous ne connaissez pas.",
+    plan: [
+      "Une phrase d'accroche qui pose le sujet (jamais « je vais parler de »)",
+      "Annoncer votre position clairement",
+      "Argument 1 + exemple concret",
+      "Argument 2, ou concession : « Certes… mais… »",
+      "Conclusion brève qui ouvre ou nuance",
+    ],
+    connectors: ["Il me semble que", "tout d'abord", "de plus", "en effet", "certes", "cependant", "par conséquent", "en définitive"],
+    model: `La question du téléphone portable à l'école revient chaque année dans le débat public,
+et elle divise autant les parents que les enseignants.
+
+Il me semble qu'une interdiction pendant les heures de cours est justifiée. Tout d'abord,
+l'attention des élèves est fragile : une notification suffit à rompre la concentration
+d'une classe entière. De plus, plusieurs établissements qui ont adopté cette règle
+constatent que les élèves se parlent davantage pendant les pauses, ce qui n'est pas un
+détail à l'adolescence.
+
+Certes, le téléphone peut devenir un outil pédagogique utile, et interdire n'éduque pas.
+Cependant, rien n'empêche d'autoriser son usage ponctuellement, sous la responsabilité
+d'un professeur.
+
+En définitive, je ne suis pas favorable à une interdiction totale, mais à un cadre clair :
+le téléphone rangé par défaut, utilisé seulement lorsqu'il sert vraiment à apprendre.`,
+    checklist: [
+      { id: "c1", text: "J'ai respecté la longueur (120 à 150 mots)." },
+      { id: "c2", text: "Ma position est explicite dès le début — le lecteur n'a pas à la deviner." },
+      { id: "c3", text: "J'ai donné au moins un exemple CONCRET, pas seulement des généralités." },
+      { id: "c4", text: "J'ai utilisé au moins trois connecteurs logiques différents et corrects." },
+      { id: "c5", text: "J'ai construit des paragraphes séparés (pas un bloc unique)." },
+      { id: "c6", text: "J'ai employé au moins une structure de niveau B2 (subjonctif après « bien que », concession « certes… mais »)." },
+    ],
+  },
+  {
+    id: "ee3",
+    n: 3,
+    title: "Tâche 3 — Comparaison et synthèse",
+    minutes: 25,
+    min: 120,
+    max: 180,
+    audience: "Public large. Registre soutenu, ton objectif puis personnel.",
+    prompt: `Vous lisez ces deux avis publiés sur un site d'actualité locale.
+
+DOCUMENT A — Sophie, 34 ans, usagère :
+« La gratuité des transports en commun devrait être la règle. Dans les villes qui l'ont
+adoptée, la fréquentation a bondi et les habitants les plus modestes ont retrouvé une
+véritable liberté de déplacement. C'est aussi le moyen le plus simple de réduire le trafic
+automobile et la pollution en centre-ville. »
+
+DOCUMENT B — Marc, économiste :
+« La gratuité n'est jamais gratuite : quelqu'un paie, et c'est le contribuable. L'argent
+qui manque, ce sont les nouvelles lignes et les rames supplémentaires qu'on ne construira
+pas. Un réseau ponctuel et fréquent attire davantage d'automobilistes qu'un réseau gratuit
+mais saturé. »
+
+Rédigez un texte dans lequel vous rendez compte des deux points de vue, puis vous exposez
+le vôtre en le justifiant.`,
+    goal: "Restituer objectivement deux positions opposées, PUIS prendre parti. Les deux mouvements doivent être visibles.",
+    plan: [
+      "Poser le sujet en une phrase neutre",
+      "Rendre compte du document A (sans le recopier : reformuler)",
+      "Rendre compte du document B, en marquant l'opposition",
+      "Transition explicite vers votre avis (« Pour ma part… »)",
+      "Votre position + justification, éventuellement une nuance",
+    ],
+    connectors: ["Pour le premier auteur", "à l'inverse", "quant à", "tandis que", "Pour ma part", "il n'en reste pas moins que", "en revanche", "c'est pourquoi"],
+    model: `La gratuité des transports en commun fait l'objet d'un débat récurrent dans les villes
+françaises, comme en témoignent ces deux avis opposés.
+
+Pour Sophie, usagère, la gratuité constitue avant tout une mesure sociale et écologique :
+elle rendrait leur mobilité aux ménages les plus modestes et permettrait de réduire la
+circulation automobile en centre-ville. À l'inverse, Marc, économiste, rappelle qu'une
+telle mesure a un coût, supporté par le contribuable, et que les sommes engagées ne
+seraient plus disponibles pour développer le réseau. Selon lui, c'est la qualité du
+service, et non son prix, qui décide les automobilistes à changer d'habitude.
+
+Pour ma part, l'argument économique me paraît le plus solide. J'ai longtemps habité une
+ville où le bus était bon marché mais passait toutes les quarante minutes : personne ne le
+prenait. Il n'en reste pas moins que la question sociale soulevée par Sophie est réelle.
+C'est pourquoi je défendrais plutôt une tarification très réduite pour les revenus
+modestes, financée par un réseau dense et fiable pour tous.`,
+    checklist: [
+      { id: "c1", text: "J'ai respecté la longueur (120 à 180 mots)." },
+      { id: "c2", text: "J'ai rendu compte des DEUX documents avant de donner mon avis." },
+      { id: "c3", text: "J'ai reformulé les documents au lieu de recopier des phrases entières." },
+      { id: "c4", text: "La transition vers mon opinion est explicite (« Pour ma part », « Quant à moi »)." },
+      { id: "c5", text: "J'ai justifié ma position par un argument ou un exemple, pas seulement affirmé." },
+      { id: "c6", text: "J'ai employé des marqueurs d'opposition variés (à l'inverse, tandis que, en revanche)." },
+      { id: "c7", text: "J'ai relu une dernière fois uniquement pour la ponctuation et les majuscules." },
+    ],
+  },
+];
+
+/* ---------- Expression orale : 3 tâches, 12 minutes -------------------- */
+const SPEAKING_TASKS = [
+  {
+    id: "eo1",
+    n: 1,
+    title: "Tâche 1 — Entretien dirigé",
+    prepSec: 0,
+    speakSec: 120,
+    goal: "Se présenter et répondre à des questions simples sur soi. Sans préparation.",
+    prompt: `L'examinateur vous pose des questions personnelles : votre parcours, votre travail
+ou vos études, vos loisirs, vos projets. Répondez naturellement, en développant.`,
+    questions: [
+      "Pouvez-vous vous présenter en quelques mots ?",
+      "Que faites-vous dans la vie ?",
+      "Qu'est-ce qui vous a amené à apprendre le français ?",
+      "Quels sont vos projets pour les prochaines années ?",
+    ],
+    phrases: [
+      "Je m'appelle… et je viens de…",
+      "Actuellement, je travaille comme… / j'étudie…",
+      "Ce qui me plaît le plus dans ce métier, c'est…",
+      "J'ai commencé à apprendre le français parce que…",
+      "À moyen terme, j'aimerais…",
+    ],
+    tips: [
+      "Ne répondez jamais par une seule phrase : donnez une réponse + une raison ou un exemple. « Oui » est une réponse perdue.",
+      "Préparez à l'avance 4 ou 5 phrases sur vous — elles tomberont forcément.",
+      "Parlez lentement et clairement plutôt que vite et approximativement : la fluidité compte moins que l'intelligibilité.",
+    ],
+    checklist: [
+      { id: "c1", text: "J'ai parlé pendant les 2 minutes complètes sans blanc prolongé." },
+      { id: "c2", text: "J'ai développé chaque réponse (réponse + raison ou exemple), sans jamais m'arrêter à « oui » ou « non »." },
+      { id: "c3", text: "Je me suis enregistré(e) et réécouté(e) au moins une fois." },
+      { id: "c4", text: "J'ai repéré à la réécoute une erreur récurrente et je l'ai notée pour la corriger." },
+    ],
+  },
+  {
+    id: "eo2",
+    n: 2,
+    title: "Tâche 2 — Interaction : obtenir des informations",
+    prepSec: 120,
+    speakSec: 210,
+    goal: "Poser des questions pertinentes pour obtenir des informations précises. 2 minutes de préparation.",
+    prompt: `Vous souhaitez vous inscrire à un cours de cuisine dans une association de votre
+quartier. Vous téléphonez pour obtenir toutes les informations nécessaires avant de vous
+décider. L'examinateur joue le rôle de l'employé(e) : posez-lui vos questions.`,
+    questions: [
+      "Horaires et jours : quand les cours ont-ils lieu ?",
+      "Tarif, réductions, modalités de paiement",
+      "Niveau requis, matériel à apporter",
+      "Nombre de participants, durée, lieu exact",
+      "Inscription : date limite, annulation possible ?",
+    ],
+    phrases: [
+      "Bonjour, je vous appelle au sujet de…",
+      "Je voudrais savoir si…",
+      "Pourriez-vous me dire combien coûte… ?",
+      "Est-ce qu'il faut apporter quelque chose ?",
+      "Une dernière question : …",
+      "Je vous remercie, c'est très clair.",
+    ],
+    tips: [
+      "C'est VOUS qui menez : l'examinateur attend vos questions. Le silence vous coûte des points, pas lui.",
+      "Pendant les 2 minutes de préparation, notez 5 ou 6 questions par mots-clés — jamais des phrases entières que vous liriez.",
+      "Variez les formes interrogatives : « Est-ce que… ? », « Pourriez-vous… ? », « Quel est… ? ». Répéter la même structure plafonne votre note.",
+    ],
+    checklist: [
+      { id: "c1", text: "J'ai posé au moins cinq questions différentes et pertinentes." },
+      { id: "c2", text: "J'ai varié les formes interrogatives (inversion, est-ce que, mot interrogatif)." },
+      { id: "c3", text: "J'ai réagi aux réponses au lieu de dérouler ma liste mécaniquement." },
+      { id: "c4", text: "J'ai ouvert et clôturé l'échange poliment (salutation, remerciement)." },
+      { id: "c5", text: "J'ai tenu les 3 min 30 sans blanc prolongé." },
+    ],
+  },
+  {
+    id: "eo3",
+    n: 3,
+    title: "Tâche 3 — Exprimer un point de vue",
+    prepSec: 120,
+    speakSec: 150,
+    goal: "Défendre une opinion de façon structurée, à partir d'un court document déclencheur.",
+    prompt: `Vous lisez ce titre de presse :
+« De plus en plus de villes limitent la vitesse à 30 km/h dans tout leur centre. »
+
+Donnez votre point de vue sur cette mesure : ses avantages, ses limites, et votre position
+personnelle. Vous disposez de 2 minutes de préparation.`,
+    questions: [
+      "Reformuler le sujet en une phrase",
+      "Un argument POUR, avec un exemple",
+      "Un argument CONTRE, ou une limite",
+      "Votre position, nuancée et justifiée",
+    ],
+    phrases: [
+      "Ce document aborde la question de…",
+      "À première vue, cette mesure présente un avantage évident :…",
+      "On peut cependant lui objecter que…",
+      "Personnellement, je suis plutôt favorable à… dans la mesure où…",
+      "Pour conclure, il me semble que tout dépend de…",
+    ],
+    tips: [
+      "Structurez à voix haute : « D'abord… ensuite… enfin ». Le jury entend la structure autant que la langue.",
+      "Une opinion nuancée vaut mieux qu'une opinion tranchée mal défendue : « favorable, à condition que… » est une phrase de niveau B2.",
+      "Gardez 15 secondes pour une vraie conclusion. Un exposé qui s'arrête net donne l'impression d'un hors-temps.",
+    ],
+    checklist: [
+      { id: "c1", text: "J'ai annoncé une structure et je m'y suis tenu(e) (d'abord / ensuite / enfin)." },
+      { id: "c2", text: "J'ai donné au moins un argument POUR et un argument CONTRE." },
+      { id: "c3", text: "J'ai illustré au moins un argument par un exemple concret." },
+      { id: "c4", text: "J'ai conclu explicitement avant la fin du temps imparti." },
+      { id: "c5", text: "Je me suis enregistré(e) et j'ai vérifié que je tenais 2 min 30." },
+    ],
+  },
+];
+
+/* ---------- Vocabulaire : cartes à répétition espacée (Leitner) --------- */
+const FLASHCARDS = [
+  { id: "v1", theme: "Faux amis", front: "actuellement", back: "currently, at the moment", note: "≠ actually. « Actually » se dit « en fait »." },
+  { id: "v2", theme: "Faux amis", front: "éventuellement", back: "possibly, if need be", note: "≠ eventually (= finalement, à terme)." },
+  { id: "v3", theme: "Faux amis", front: "assister à", back: "to attend", note: "≠ to assist (= aider). « J'ai assisté à la réunion. »" },
+  { id: "v4", theme: "Faux amis", front: "sensible", back: "sensitive", note: "≠ sensible (= raisonnable). « Un sujet sensible. »" },
+  { id: "v5", theme: "Faux amis", front: "une librairie", back: "a bookshop", note: "≠ a library (= une bibliothèque)." },
+  { id: "v6", theme: "Faux amis", front: "passer un examen", back: "to sit / take an exam", note: "Réussir un examen = to pass. Piège classique du TCF." },
+  { id: "v7", theme: "Faux amis", front: "ignorer", back: "not to know", note: "« J'ignore son adresse » = I don't know it." },
+  { id: "v8", theme: "Faux amis", front: "prétendre", back: "to claim", note: "≠ to pretend (= faire semblant)." },
+  { id: "v9", theme: "Faux amis", front: "un délai", back: "a deadline, a time frame", note: "≠ a delay (= un retard)." },
+  { id: "v10", theme: "Faux amis", front: "rester", back: "to stay, to remain", note: "≠ to rest (= se reposer)." },
+
+  { id: "v11", theme: "Connecteurs", front: "en revanche", back: "on the other hand", note: "Opposition nette entre deux idées." },
+  { id: "v12", theme: "Connecteurs", front: "en effet", back: "indeed (confirms)", note: "Confirme ce qui précède. À ne pas confondre avec « en fait » (rectifie)." },
+  { id: "v13", theme: "Connecteurs", front: "or", back: "and yet, now (new decisive fact)", note: "Jamais « or » au sens anglais ! Marqueur d'argumentation." },
+  { id: "v14", theme: "Connecteurs", front: "néanmoins", back: "nevertheless", note: "Registre soutenu, idéal à l'écrit." },
+  { id: "v15", theme: "Connecteurs", front: "par ailleurs", back: "moreover, besides", note: "Ajoute un argument d'un autre ordre." },
+  { id: "v16", theme: "Connecteurs", front: "d'autant plus que", back: "all the more so because", note: "Renforce une cause. Structure très B2." },
+  { id: "v17", theme: "Connecteurs", front: "il n'en reste pas moins que", back: "the fact remains that", note: "Concession haut de gamme, C1." },
+  { id: "v18", theme: "Connecteurs", front: "quant à", back: "as for", note: "« Quant à moi, je pense que… »" },
+
+  { id: "v19", theme: "Expression écrite", front: "Je vous serais reconnaissant(e) de…", back: "I would be grateful if you would…", note: "Formule soutenue pour une demande écrite." },
+  { id: "v20", theme: "Expression écrite", front: "Veuillez agréer, Madame, Monsieur, mes salutations distinguées.", back: "Yours faithfully", note: "Clôture standard d'une lettre formelle." },
+  { id: "v21", theme: "Expression écrite", front: "à pourvoir", back: "(position) to be filled", note: "« Le poste est-il toujours à pourvoir ? »" },
+  { id: "v22", theme: "Expression écrite", front: "dans la mesure où", back: "insofar as, given that", note: "Justifie une opinion avec élégance." },
+  { id: "v23", theme: "Expression écrite", front: "force est de constater que", back: "one cannot help but note that", note: "Registre soutenu, très apprécié en tâche 3." },
+
+  { id: "v24", theme: "Oral courant", front: "Ça va être compliqué.", back: "That's going to be difficult (= no)", note: "Refus poli à l'oral. Le TCF teste ce sous-entendu." },
+  { id: "v25", theme: "Oral courant", front: "J'aimerais bien, mais…", back: "I'd love to, but… (= polite no)", note: "Conditionnel + mais = refus." },
+  { id: "v26", theme: "Oral courant", front: "Tu aurais pu me prévenir !", back: "You could have told me!", note: "Conditionnel passé = reproche." },
+  { id: "v27", theme: "Oral courant", front: "du coup", back: "so, as a result", note: "Très fréquent à l'oral, à éviter à l'écrit formel." },
+  { id: "v28", theme: "Oral courant", front: "ça m'arrange", back: "that suits me / that works for me", note: "« Mardi, ça m'arrange. »" },
+
+  { id: "v29", theme: "Vie pratique", front: "un justificatif de domicile", back: "proof of address", note: "Vocabulaire administratif indispensable." },
+  { id: "v30", theme: "Vie pratique", front: "une démarche", back: "a procedure, an administrative step", note: "« Aucune démarche n'est nécessaire. »" },
+  { id: "v31", theme: "Vie pratique", front: "un délai de rétractation", back: "cooling-off period", note: "Fréquent dans les documents de compréhension écrite." },
+  { id: "v32", theme: "Vie pratique", front: "avancer / retarder un horaire", back: "to bring forward / to push back", note: "Le vol est avancé = il part PLUS TÔT." },
+];
+
+/* ---------- Niveaux : 120 XP par palier ------------------------------- */
+const XP_PER_LEVEL = 120;
+const LEVEL_TITLES = [
+  "Grand débutant",   // niveau 1
+  "Découverte",
+  "Curieux",
+  "Apprenti",
+  "Persévérant",
+  "Indépendant",
+  "Confirmé",
+  "Aisé",
+  "Autonome",
+  "Francophile",      // niveau 10+
+];
+
+/* ---------- Récompenses XP -------------------------------------------- */
+const XP = { lesson: 20, drill: 40, perfect: 15, writing: 60, speaking: 60, exam: 80 };
+
+/* ---------- Succès : chacun correspond à une compétence réelle --------- */
+const ACHIEVEMENTS = [
+  { id: "premier-pas", emoji: "🎯", name: "Premier pas",
+    desc: "Première leçon terminée. Le plus dur est fait.",
+    check: (c) => Object.keys(c.lessonsDone).length >= 1 },
+  { id: "sans-faute", emoji: "💯", name: "Sans faute",
+    desc: "Une série d'exercices réussie sans aucune erreur.",
+    check: (c) => c.perfectDrills >= 1 },
+  { id: "serie-10", emoji: "🔥", name: "Série de 10",
+    desc: "Dix bonnes réponses d'affilée : la régularité, pas la chance.",
+    check: (c) => c.bestStreak >= 10 },
+  { id: "oreille-fine", emoji: "👂", name: "Oreille fine",
+    desc: "Compréhension orale maîtrisée : les deux leçons et leurs exercices.",
+    check: (c) => c.sectionDone("co") },
+  { id: "subjonctif", emoji: "🧩", name: "Subjonctif dompté",
+    desc: "Déclencheurs et pièges du subjonctif identifiés sans erreur.",
+    check: (c) => c.drillsDone["msl-l2"] },
+  { id: "pieges-dejoues", emoji: "🪤", name: "Pièges déjoués",
+    desc: "Faux amis et registres de langue maîtrisés.",
+    check: (c) => c.drillsDone["msl-l5"] },
+  { id: "mecanique", emoji: "🔧", name: "Mécanique de la langue",
+    desc: "Toute la section « Maîtrise des structures » terminée.",
+    check: (c) => c.sectionDone("msl") },
+  { id: "lecteur", emoji: "📖", name: "Lecteur efficace",
+    desc: "Repérage et implicite : la compréhension écrite terminée.",
+    check: (c) => c.sectionDone("ce") },
+  { id: "redacteur", emoji: "✍️", name: "Rédacteur",
+    desc: "Une tâche d'expression écrite rédigée et auto-évaluée.",
+    check: (c) => Object.keys(c.writingDone).length >= 1 },
+  { id: "plume-complete", emoji: "🖋️", name: "Plume complète",
+    desc: "Les trois tâches de l'expression écrite réalisées.",
+    check: (c) => Object.keys(c.writingDone).length >= 3 },
+  { id: "prise-parole", emoji: "🎙️", name: "Prise de parole",
+    desc: "Une tâche d'expression orale préparée et enregistrée.",
+    check: (c) => Object.keys(c.speakingDone).length >= 1 },
+  { id: "memoire-vive", emoji: "🗂️", name: "Mémoire vive",
+    desc: "Vingt cartes de vocabulaire arrivées en dernière boîte.",
+    check: (c) => c.masteredCards >= 20 },
+  { id: "conditions-reelles", emoji: "⏱️", name: "Conditions réelles",
+    desc: "Un examen blanc chronométré mené jusqu'au bout.",
+    check: (c) => c.examsTaken >= 1 },
+  { id: "cap-b2", emoji: "🏅", name: "Cap sur le B2",
+    desc: "Niveau B2 ou plus estimé à un examen blanc.",
+    check: (c) => c.bestExamPct >= 70 },
+  { id: "regularite", emoji: "📅", name: "Régularité",
+    desc: "Sept jours de travail — la seule méthode qui fonctionne vraiment.",
+    check: (c) => c.bestStreakDays >= 7 },
+];
+
+/* ---------- Examen blanc ----------------------------------------------
+   A shortened mock: 20 questions in 22 minutes, drawn from every section,
+   in ascending difficulty like the real test. See the README for how the
+   estimated band is computed (and why it is only an estimate).
+   ---------------------------------------------------------------------- */
+const EXAM_CONFIG = {
+  questionCount: 20,
+  minutes: 22,
+  /* Raw-percentage → indicative CEFR band. Deliberately conservative:
+     the real TCF weights items by difficulty (item-response theory), so a
+     raw percentage can only ever be a rough signal. */
+  bands: [
+    { min: 90, level: "C1+", label: "Excellent — vous visez le haut du barème", points: "≈ 500+" },
+    { min: 78, level: "B2+", label: "Solide — au-dessus du seuil B2", points: "≈ 450–500" },
+    { min: 70, level: "B2", label: "Niveau B2 atteint", points: "≈ 400–450" },
+    { min: 58, level: "B1+", label: "B1 confirmé, B2 en vue", points: "≈ 350–400" },
+    { min: 45, level: "B1", label: "Niveau seuil atteint", points: "≈ 300–350" },
+    { min: 30, level: "A2", label: "Niveau élémentaire", points: "≈ 200–300" },
+    { min: 0, level: "A1", label: "Les bases sont à consolider", points: "≈ 100–200" },
+  ],
+};
+
+
+/* ==========================================================================
+   APPLICATION — état, moteurs d'exercices, vues, routage
+   Tout tourne dans le navigateur. Aucune donnée ne quitte votre appareil.
+   ========================================================================== */
+
+/* ======================= 1. ÉTAT (localStorage) ======================== */
+
+const STORE_KEY = "tcf.state.v1";
+
+function defaultState() {
+  return {
+    xp: 0,
+    lessonsDone: {},       // "msl-l1" -> true
+    drillsDone: {},        // "msl-l1" -> true (série terminée au moins une fois)
+    drillBest: {},         // "msl-l1" -> meilleur score (0..1)
+    perfectDrills: 0,      // nombre de séries réussies sans faute
+    bestStreak: 0,         // plus longue série de bonnes réponses
+    writingDrafts: {},     // "ee1" -> texte en cours
+    writingChecks: {},     // "ee1" -> { c1: true }
+    writingDone: {},       // "ee1" -> true
+    speakingChecks: {},
+    speakingDone: {},
+    cards: {},             // "v1" -> { box: 1..5, due: timestamp }
+    exams: [],             // [{ at, pct, level }]
+    bestExamPct: 0,
+    days: {},              // "2026-07-24" -> true (jours travaillés)
+    achievements: {},      // id -> timestamp
+    settings: { theme: null, rate: 1 },
+  };
+}
+
+let S = loadState();
+
+function loadState() {
+  try {
+    const raw = localStorage.getItem(STORE_KEY);
+    if (!raw) return defaultState();
+    // Fusion avec les valeurs par défaut : ajouter un champ plus tard
+    // ne cassera jamais une sauvegarde existante.
+    return Object.assign(defaultState(), JSON.parse(raw));
+  } catch {
+    return defaultState();
+  }
+}
+
+function save() {
+  try {
+    localStorage.setItem(STORE_KEY, JSON.stringify(S));
+  } catch {
+    /* Stockage plein ou navigation privée : l'app continue de fonctionner,
+       la progression ne survivra simplement pas à la session. */
+  }
+}
+
+const hudListeners = [];
+function onChange(fn) { hudListeners.push(fn); }
+function notify() { hudListeners.forEach((f) => f()); }
+
+/* ---------- XP et niveaux ---------- */
+function levelInfo() {
+  const level = Math.floor(S.xp / XP_PER_LEVEL) + 1;
+  const title = LEVEL_TITLES[Math.min(level, LEVEL_TITLES.length) - 1];
+  const into = S.xp % XP_PER_LEVEL;
+  return { level, title, into, pct: (into / XP_PER_LEVEL) * 100 };
+}
+
+function addXP(amount, reason) {
+  S.xp += amount;
+  markToday();
+  save();
+  notify();
+  toast(`+${amount} XP — ${reason}`);
+}
+
+/* ---------- Assiduité : suite de jours travaillés ---------- */
+function todayKey(d = new Date()) {
+  // Clé locale AAAA-MM-JJ (et non UTC, pour coller au vécu de l'utilisateur).
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
+function markToday() {
+  S.days[todayKey()] = true;
+}
+
+/** Nombre de jours consécutifs travaillés, en terminant aujourd'hui ou hier. */
+function dayStreak() {
+  let streak = 0;
+  const d = new Date();
+  if (!S.days[todayKey(d)]) {
+    d.setDate(d.getDate() - 1);            // la série peut s'être arrêtée hier
+    if (!S.days[todayKey(d)]) return 0;
+  }
+  while (S.days[todayKey(d)]) {
+    streak++;
+    d.setDate(d.getDate() - 1);
+  }
+  return streak;
+}
+
+/* ---------- Succès ---------- */
+function achievementContext() {
+  return {
+    lessonsDone: S.lessonsDone,
+    drillsDone: S.drillsDone,
+    writingDone: S.writingDone,
+    speakingDone: S.speakingDone,
+    perfectDrills: S.perfectDrills,
+    bestStreak: S.bestStreak,
+    examsTaken: S.exams.length,
+    bestExamPct: S.bestExamPct,
+    bestStreakDays: dayStreak(),
+    masteredCards: Object.values(S.cards).filter((c) => c.box >= 5).length,
+    sectionDone: (id) => {
+      const sec = SECTIONS.find((s) => s.id === id);
+      if (!sec) return false;
+      return sec.lessons.every((l) => {
+        const key = `${id}-${l.id}`;
+        if (!S.lessonsDone[key]) return false;
+        if (l.drill && !S.drillsDone[key]) return false;
+        return true;
+      });
+    },
+  };
+}
+
+function checkAchievements() {
+  const ctx = achievementContext();
+  for (const a of ACHIEVEMENTS) {
+    if (!S.achievements[a.id] && a.check(ctx)) {
+      S.achievements[a.id] = Date.now();
+      save();
+      notify();
+      toast(`${a.emoji} Succès débloqué : ${a.name}`, "toast-achv");
+    }
+  }
+}
+
+/* ---------- Notifications ---------- */
+function toast(message, extra = "") {
+  const holder = document.getElementById("toasts");
+  if (!holder) return;
+  const el = document.createElement("div");
+  el.className = `toast ${extra}`;
+  el.textContent = message;
+  holder.appendChild(el);
+  setTimeout(() => el.remove(), 4200);
+}
+
+/* ---------- Thème ---------- */
+function currentTheme() {
+  return S.settings.theme ||
+    (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+}
+function toggleTheme() {
+  S.settings.theme = currentTheme() === "dark" ? "light" : "dark";
+  save();
+  document.documentElement.setAttribute("data-theme", S.settings.theme);
+}
+
+/* ======================= 2. OUTILS ==================================== */
+
+/** Compte les mots comme le fait un correcteur : suites de caractères non blancs. */
+function countWords(text) {
+  const t = text.trim();
+  return t ? t.split(/\s+/).length : 0;
+}
+
+/** mm:ss */
+function fmtTime(totalSeconds) {
+  const s = Math.max(0, Math.round(totalSeconds));
+  return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+}
+
+/** Normalise une réponse écrite : minuscules, espaces réduits, ponctuation finale ôtée. */
+function normalize(str) {
+  return str.trim().toLowerCase().replace(/\s+/g, " ").replace(/[.!?;,]+$/, "");
+}
+/** Même chose, mais sans les accents — sert à détecter l'erreur d'accent. */
+function stripAccents(str) {
+  // U+0300–U+036F = les signes diacritiques isolés par la décomposition NFD.
+  return str.normalize("NFD").replace(new RegExp("[\\u0300-\\u036f]", "g"), "");
+}
+
+/** Mélange (Fisher-Yates) — utilisé pour l'ordre des cartes et de l'examen. */
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+/** Tous les items « à choix » de toutes les sections (pour l'examen blanc). */
+function allExamItems() {
+  const out = [];
+  for (const sec of SECTIONS) {
+    for (const lesson of sec.lessons) {
+      if (!lesson.drill) continue;
+      for (const item of lesson.drill.items) {
+        if (item.type !== "gap") out.push({ ...item, section: sec.title });
+      }
+    }
+  }
+  return out;
+}
+
+const LEVEL_ORDER = ["A1", "A2", "B1", "B2", "C1", "C2"];
+
+/* ======================= 3. SYNTHÈSE VOCALE (écoute) ================== */
+
+/* Le navigateur lit les enregistrements : aucun fichier audio à héberger,
+   et tout fonctionne hors ligne. Les voix se chargent de façon asynchrone. */
+let voicesReady = false;
+function frenchVoice() {
+  const voices = window.speechSynthesis ? speechSynthesis.getVoices() : [];
+  return voices.find((v) => v.lang === "fr-FR") ||
+         voices.find((v) => v.lang && v.lang.startsWith("fr")) || null;
+}
+if (window.speechSynthesis) {
+  speechSynthesis.getVoices();
+  speechSynthesis.onvoiceschanged = () => { voicesReady = true; };
+}
+
+function speak(text, rate, onEnd) {
+  if (!window.speechSynthesis) return false;
+  speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  const v = frenchVoice();
+  if (v) u.voice = v;
+  u.lang = "fr-FR";
+  u.rate = rate;
+  if (onEnd) u.onend = onEnd;
+  speechSynthesis.speak(u);
+  return true;
+}
+
+/* ======================= 4. MOTEUR D'EXERCICES ======================== */
+
+/**
+ * Affiche une série d'items dans `host`.
+ * opts = { items, onFinish(correct, total), immediate: true|false }
+ *   immediate = true  → correction après chaque réponse (entraînement)
+ *   immediate = false → aucune correction avant la fin (examen blanc)
+ */
+function runDrill(host, opts) {
+  const items = opts.items;
+  let index = 0;
+  let correct = 0;
+  let streak = 0;
+  const answers = [];          // { item, given, ok }
+
+  function finish() {
+    if (opts.onFinish) opts.onFinish(correct, items.length, answers);
+  }
+
+  function record(item, given, ok) {
+    answers.push({ item, given, ok });
+    if (ok) {
+      correct++;
+      streak++;
+      if (streak > S.bestStreak) { S.bestStreak = streak; save(); }
+    } else {
+      streak = 0;
+    }
+    // L'examen blanc a besoin du score en direct : si le temps expire, il faut
+    // pouvoir compter les réponses déjà données au lieu de tout mettre à zéro.
+    if (opts.onProgress) opts.onProgress(correct, answers);
+  }
+
+  function next() {
+    index++;
+    if (index >= items.length) finish();
+    else render();
+  }
+
+  function render() {
+    const item = items[index];
+    host.innerHTML = "";
+
+    const wrap = document.createElement("div");
+    wrap.className = "drill-body";
+
+    /* -- en-tête : niveau + progression -- */
+    const meta = document.createElement("div");
+    meta.className = "q-meta";
+    meta.innerHTML =
+      `<span class="badge badge-cefr">${item.level}</span>` +
+      `<span>Question ${index + 1} / ${items.length}</span>`;
+    wrap.appendChild(meta);
+
+    /* -- audio (compréhension orale) -- */
+    if (item.type === "listen") wrap.appendChild(audioBox(item));
+
+    /* -- texte support (compréhension écrite) -- */
+    if (item.context) {
+      const ctx = document.createElement("div");
+      ctx.className = "q-context";
+      ctx.textContent = item.context;   // textContent : les retours à la ligne sont préservés par le CSS
+      wrap.appendChild(ctx);
+    }
+
+    /* -- question -- */
+    const q = document.createElement("p");
+    q.className = "q-text";
+    q.textContent = item.q;
+    wrap.appendChild(q);
+
+    if (item.type === "gap") wrap.appendChild(gapUI(item));
+    else wrap.appendChild(mcqUI(item));
+
+    host.appendChild(wrap);
+
+    /* -- pied : progression -- */
+    const foot = document.createElement("div");
+    foot.className = "drill-foot";
+    const prog = document.createElement("span");
+    prog.className = "drill-progress";
+    prog.textContent = opts.immediate
+      ? `${correct} bonne(s) réponse(s) · série : ${streak}`
+      : `${index + 1} / ${items.length}`;
+    foot.appendChild(prog);
+    host.appendChild(foot);
+  }
+
+  /* ---- QCM ---- */
+  function mcqUI(item) {
+    const list = document.createElement("ul");
+    list.className = "opts";
+    const buttons = [];
+
+    item.options.forEach((text, i) => {
+      const li = document.createElement("li");
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "opt";
+      btn.innerHTML = `<span class="key">${"ABCD"[i]}</span>`;
+      const span = document.createElement("span");
+      span.textContent = text;
+      btn.appendChild(span);
+
+      btn.addEventListener("click", () => {
+        const ok = i === item.a;
+        record(item, i, ok);
+        buttons.forEach((b) => (b.disabled = true));
+
+        if (opts.immediate) {
+          buttons[item.a].classList.add("correct");
+          if (!ok) btn.classList.add("wrong");
+          showFeedback(ok, item, list.parentElement);
+        } else {
+          btn.classList.add("correct");       // simple marque de sélection
+          setTimeout(next, 120);
+        }
+      });
+
+      buttons.push(btn);
+      li.appendChild(btn);
+      list.appendChild(li);
+    });
+
+    const box = document.createElement("div");
+    box.appendChild(list);
+    return box;
+  }
+
+  /* ---- Texte à compléter ---- */
+  function gapUI(item) {
+    const box = document.createElement("div");
+    const input = document.createElement("input");
+    input.type = "text";
+    input.className = "gap-input";
+    input.placeholder = "Votre réponse…";
+    input.setAttribute("aria-label", "Votre réponse");
+    input.autocomplete = "off";
+    input.autocapitalize = "off";
+    input.spellcheck = false;
+
+    const actions = document.createElement("div");
+    actions.className = "drill-foot";
+    actions.style.padding = ".8rem 0 0";
+    const validate = document.createElement("button");
+    validate.className = "btn btn-primary";
+    validate.textContent = "Valider";
+    actions.appendChild(validate);
+
+    function submit() {
+      const given = input.value;
+      const target = item.answers.map(normalize);
+      const ok = target.includes(normalize(given));
+      // Bonne réponse mais accents manquants : on le dit explicitement.
+      const accentOnly = !ok &&
+        target.map(stripAccents).includes(stripAccents(normalize(given)));
+
+      record(item, given, ok);
+      input.disabled = true;
+      validate.disabled = true;
+      showFeedback(ok, item, box, accentOnly
+        ? "Presque ! La forme est bonne, mais il manque un accent."
+        : null, item.answers[0]);
+    }
+
+    validate.addEventListener("click", submit);
+    input.addEventListener("keydown", (e) => { if (e.key === "Enter") submit(); });
+
+    box.appendChild(input);
+    box.appendChild(actions);
+    setTimeout(() => input.focus(), 30);
+    return box;
+  }
+
+  /* ---- Correction + explication ---- */
+  function showFeedback(ok, item, container, extraNote, expected) {
+    const fb = document.createElement("div");
+    fb.className = `feedback ${ok ? "ok" : "no"}`;
+
+    const verdict = document.createElement("span");
+    verdict.className = "verdict";
+    verdict.textContent = ok ? "✓ Correct" : "✗ Incorrect";
+    fb.appendChild(verdict);
+
+    if (extraNote) {
+      const n = document.createElement("div");
+      n.textContent = extraNote;
+      fb.appendChild(n);
+    }
+    if (!ok && expected) {
+      const n = document.createElement("div");
+      n.textContent = `Réponse attendue : ${expected}`;
+      fb.appendChild(n);
+    }
+
+    const why = document.createElement("div");
+    why.textContent = item.why;
+    fb.appendChild(why);
+
+    if (item.gloss) {
+      const g = document.createElement("span");
+      g.className = "gloss";
+      g.textContent = item.gloss;
+      fb.appendChild(g);
+    }
+    if (item.transcript) {
+      const t = document.createElement("details");
+      t.className = "transcript";
+      t.innerHTML = "<summary>Transcription</summary>";
+      const p = document.createElement("div");
+      p.textContent = item.transcript;
+      t.appendChild(p);
+      fb.appendChild(t);
+    }
+
+    const cont = document.createElement("button");
+    cont.className = "btn btn-primary";
+    cont.style.marginTop = ".8rem";
+    cont.textContent = index === items.length - 1 ? "Voir le bilan" : "Question suivante";
+    cont.addEventListener("click", next);
+    fb.appendChild(cont);
+
+    container.appendChild(fb);
+    cont.focus();
+  }
+
+  render();
+}
+
+/* ---- Lecteur audio (synthèse vocale) ---- */
+function audioBox(item) {
+  const box = document.createElement("div");
+  box.className = "audio-box";
+
+  const controls = document.createElement("div");
+  controls.className = "audio-controls";
+
+  const play = document.createElement("button");
+  play.className = "btn btn-primary";
+  play.type = "button";
+  play.innerHTML = "▶ Écouter";
+
+  const plays = document.createElement("span");
+  plays.className = "plays-left";
+  let count = 0;
+  const updateCount = () => {
+    plays.textContent = count === 0
+      ? "Le jour de l'examen, l'audio n'est diffusé qu'une seule fois."
+      : `Écoutes : ${count}`;
+  };
+  updateCount();
+
+  const speedWrap = document.createElement("label");
+  speedWrap.className = "speed";
+  speedWrap.innerHTML = "<span>Vitesse</span>";
+  const speed = document.createElement("input");
+  speed.type = "range";
+  speed.min = "0.6";
+  speed.max = "1.1";
+  speed.step = "0.05";
+  speed.value = String(S.settings.rate || 1);
+  const speedVal = document.createElement("span");
+  speedVal.textContent = `${Number(speed.value).toFixed(2)}×`;
+  speed.addEventListener("input", () => {
+    speedVal.textContent = `${Number(speed.value).toFixed(2)}×`;
+    S.settings.rate = Number(speed.value);
+    save();
+  });
+  speedWrap.appendChild(speed);
+  speedWrap.appendChild(speedVal);
+
+  play.addEventListener("click", () => {
+    const okSpeak = speak(item.audio, Number(speed.value));
+    if (okSpeak) { count++; updateCount(); }
+  });
+
+  controls.appendChild(play);
+  controls.appendChild(speedWrap);
+  box.appendChild(controls);
+  box.appendChild(plays);
+
+  /* Si aucune voix française n'est installée, on le dit et on propose le texte. */
+  const warnIfNoVoice = () => {
+    if (!window.speechSynthesis) {
+      addWarn("Votre navigateur ne gère pas la synthèse vocale : utilisez la transcription.");
+    } else if (!frenchVoice() && speechSynthesis.getVoices().length > 0) {
+      addWarn("Aucune voix française détectée sur cet appareil. L'audio utilisera la voix par défaut ; la transcription reste disponible.");
+    }
+  };
+  function addWarn(msg) {
+    if (box.querySelector(".no-voice")) return;
+    const w = document.createElement("p");
+    w.className = "no-voice";
+    w.textContent = msg;
+    box.appendChild(w);
+    const show = document.createElement("details");
+    show.className = "transcript";
+    show.innerHTML = "<summary>Afficher la transcription</summary>";
+    const p = document.createElement("div");
+    p.textContent = item.transcript || item.audio;
+    show.appendChild(p);
+    box.appendChild(show);
+  }
+  warnIfNoVoice();
+  setTimeout(warnIfNoVoice, 600);   // les voix arrivent parfois en retard
+
+  return box;
+}
+
+/* ======================= 5. VUES ====================================== */
+
+const app = document.getElementById("app");
+
+/* ---------- Accueil ---------- */
+function viewHome() {
+  const lessonsTotal = SECTIONS.reduce((n, s) => n + s.lessons.length, 0);
+  const lessonsDone = Object.keys(S.lessonsDone).length;
+  const cardsMastered = Object.values(S.cards).filter((c) => c.box >= 5).length;
+  const best = S.exams.length ? S.exams[S.exams.length - 1] : null;
+
+  const track = SECTIONS.map((sec) => {
+    const done = sec.lessons.filter((l) => S.lessonsDone[`${sec.id}-${l.id}`]).length;
+    const pct = Math.round((done / sec.lessons.length) * 100);
+    const complete = done === sec.lessons.length;
+    return `
+      <li class="track-item ${complete ? "done" : done ? "active" : ""}">
+        <div class="track-node" aria-hidden="true">${complete ? "✓" : sec.icon}</div>
+        <a class="card" href="#/section/${sec.id}">
+          <h3>${sec.title}</h3>
+          <p>${sec.tagline}</p>
+          <div class="card-meta">
+            ${complete ? '<span class="badge badge-done">Terminé</span>' : ""}
+            <span>${done}/${sec.lessons.length} leçons</span>
+          </div>
+          <div class="mini-bar"><div class="mini-bar-fill" style="width:${pct}%"></div></div>
+        </a>
+      </li>`;
+  }).join("");
+
+  app.innerHTML = `
+    <section class="hero">
+      <h1>Objectif <span class="grad">TCF</span></h1>
+      <p class="lede">Préparation complète au Test de connaissance du français :
+         compréhension orale et écrite, structures de la langue, expression écrite
+         et orale. Tout fonctionne dans votre navigateur, hors ligne.</p>
+    </section>
+
+    <div class="stat-grid">
+      <div class="stat accent"><div class="k">${lessonsDone}<span style="font-size:.9rem;color:var(--text-dim)">/${lessonsTotal}</span></div><div class="l">Leçons</div></div>
+      <div class="stat green"><div class="k">${cardsMastered}</div><div class="l">Mots acquis</div></div>
+      <div class="stat amber"><div class="k">${dayStreak()}</div><div class="l">Jours d'affilée</div></div>
+      <div class="stat"><div class="k">${best ? best.level : "—"}</div><div class="l">Dernier examen blanc</div></div>
+    </div>
+
+    <h2 style="font-size:1.1rem;margin-bottom:.2rem">Le parcours</h2>
+    <ol class="track">${track}</ol>
+
+    <h2 style="font-size:1.1rem;margin-top:2rem">S'entraîner</h2>
+    <ul class="rows">
+      <li><a class="row" href="#/ecrit">
+        <span class="ico" aria-hidden="true">✍️</span>
+        <div class="grow"><h4>Expression écrite</h4>
+        <span class="sub">3 tâches chronométrées, modèles et grilles d'auto-évaluation</span></div>
+        <span class="sub">${Object.keys(S.writingDone).length}/3</span></a></li>
+      <li><a class="row" href="#/oral">
+        <span class="ico" aria-hidden="true">🎙️</span>
+        <div class="grow"><h4>Expression orale</h4>
+        <span class="sub">Préparation minutée et enregistrement de votre voix</span></div>
+        <span class="sub">${Object.keys(S.speakingDone).length}/3</span></a></li>
+      <li><a class="row" href="#/vocabulaire">
+        <span class="ico" aria-hidden="true">🗂️</span>
+        <div class="grow"><h4>Vocabulaire</h4>
+        <span class="sub">Cartes à répétition espacée : faux amis, connecteurs, registres</span></div>
+        <span class="sub">${cardsMastered}/${FLASHCARDS.length}</span></a></li>
+      <li><a class="row" href="#/examen">
+        <span class="ico" aria-hidden="true">⏱️</span>
+        <div class="grow"><h4>Examen blanc</h4>
+        <span class="sub">${EXAM_CONFIG.questionCount} questions en ${EXAM_CONFIG.minutes} minutes, sans correction avant la fin</span></div>
+        <span class="sub">${S.exams.length} passé(s)</span></a></li>
+      <li><a class="row" href="#/bareme">
+        <span class="ico" aria-hidden="true">📊</span>
+        <div class="grow"><h4>Barème et niveaux</h4>
+        <span class="sub">Convertir un score sur 699 en niveau du CECRL</span></div></a></li>
+    </ul>
+  `;
+}
+
+/* ---------- Section ---------- */
+function viewSection(id) {
+  const sec = SECTIONS.find((s) => s.id === id);
+  if (!sec) return view404();
+
+  const rows = sec.lessons.map((l) => {
+    const key = `${sec.id}-${l.id}`;
+    const bits = [`${l.minutes} min`];
+    if (l.drill) {
+      bits.push(S.drillsDone[key]
+        ? `exercices : ${Math.round((S.drillBest[key] || 0) * 100)} %`
+        : `${l.drill.items.length} exercices`);
+    }
+    return `
+      <li><a class="row" href="#/lecon/${sec.id}/${l.id}">
+        <span class="ico" aria-hidden="true">${S.lessonsDone[key] ? "📗" : "📘"}</span>
+        <div class="grow"><h4>${l.title}</h4><span class="sub">${bits.join(" · ")}</span></div>
+        ${S.lessonsDone[key] ? '<span class="check" aria-label="Leçon terminée">✓</span>' : ""}
+      </a></li>`;
+  }).join("");
+
+  app.innerHTML = `
+    <p class="crumbs"><a href="#/">Accueil</a> / ${sec.title}</p>
+    <div class="page-head">
+      <h1>${sec.icon} ${sec.title}</h1>
+      <p class="tagline">${sec.tagline}</p>
+    </div>
+    <ul class="rows">${rows}</ul>`;
+}
+
+/* ---------- Leçon ---------- */
+function viewLesson(sectionId, lessonId) {
+  const sec = SECTIONS.find((s) => s.id === sectionId);
+  const lesson = sec && sec.lessons.find((l) => l.id === lessonId);
+  if (!lesson) return view404();
+
+  const key = `${sectionId}-${lessonId}`;
+  const idx = sec.lessons.findIndex((l) => l.id === lessonId);
+  const prev = idx > 0 ? sec.lessons[idx - 1] : null;
+  const next = idx < sec.lessons.length - 1 ? sec.lessons[idx + 1] : null;
+  const done = !!S.lessonsDone[key];
+
+  app.innerHTML = `
+    <p class="crumbs"><a href="#/">Accueil</a> /
+       <a href="#/section/${sec.id}">${sec.title}</a> / ${lesson.title}</p>
+    <div class="page-head">
+      <h1>${lesson.title}</h1>
+      <p class="tagline">${lesson.minutes} min · ${sec.title}</p>
+    </div>
+    <article class="prose">${lesson.content}</article>
+
+    <div style="display:flex;gap:.6rem;flex-wrap:wrap;margin-top:1.5rem">
+      <button class="btn ${done ? "" : "btn-primary"}" id="done-btn" ${done ? "disabled" : ""}>
+        ${done ? "✓ Leçon terminée" : "Marquer la leçon comme terminée"}
+      </button>
+      ${prev ? `<a class="btn" href="#/lecon/${sec.id}/${prev.id}">← Précédente</a>` : ""}
+      ${next ? `<a class="btn" href="#/lecon/${sec.id}/${next.id}">Suivante →</a>`
+             : `<a class="btn" href="#/section/${sec.id}">Fin de la section</a>`}
+    </div>
+
+    <div id="drill-slot"></div>`;
+
+  document.getElementById("done-btn").addEventListener("click", (e) => {
+    if (S.lessonsDone[key]) return;
+    S.lessonsDone[key] = true;
+    save();
+    addXP(XP.lesson, `leçon « ${lesson.title} »`);
+    checkAchievements();
+    e.target.disabled = true;
+    e.target.textContent = "✓ Leçon terminée";
+    e.target.classList.remove("btn-primary");
+  });
+
+  if (lesson.drill) mountDrill(document.getElementById("drill-slot"), sec, lesson, key);
+}
+
+function mountDrill(slot, sec, lesson, key) {
+  const drill = lesson.drill;
+
+  function intro() {
+    const bestPct = S.drillBest[key] ? Math.round(S.drillBest[key] * 100) : null;
+    slot.innerHTML = `
+      <section class="drill">
+        <div class="drill-head">
+          <h3>⚡ ${drill.title}</h3>
+          <span class="badge">${drill.items.length} questions</span>
+          ${bestPct !== null ? `<span class="badge badge-done">Record : ${bestPct} %</span>` : ""}
+        </div>
+        <div class="drill-body">
+          <p style="margin-top:0;font-size:.9rem;color:var(--text-dim)">
+            Correction et explication après chaque réponse. Les explications comptent
+            plus que le score : c'est là que le niveau se construit.</p>
+          <button class="btn btn-primary" id="start-drill">Commencer</button>
+        </div>
+      </section>`;
+    slot.querySelector("#start-drill").addEventListener("click", start);
+  }
+
+  function start() {
+    slot.innerHTML = `<section class="drill">
+      <div class="drill-head"><h3>⚡ ${drill.title}</h3></div>
+      <div id="drill-host"></div></section>`;
+    runDrill(slot.querySelector("#drill-host"), {
+      items: drill.items,
+      immediate: true,
+      onFinish: summary,
+    });
+  }
+
+  function summary(correct, total) {
+    const pct = correct / total;
+    const first = !S.drillsDone[key];
+    S.drillsDone[key] = true;
+    if (!S.drillBest[key] || pct > S.drillBest[key]) S.drillBest[key] = pct;
+
+    const perfect = correct === total;
+    if (perfect) S.perfectDrills++;
+    save();
+
+    if (first) addXP(XP.drill, `exercices « ${drill.title} »`);
+    if (perfect) addXP(XP.perfect, "série sans faute");
+    checkAchievements();
+
+    slot.innerHTML = `
+      <section class="drill">
+        <div class="drill-head"><h3>Bilan — ${drill.title}</h3></div>
+        <div class="drill-body">
+          <p style="font-size:1.6rem;font-weight:800;margin:.2rem 0">
+            ${correct} / ${total}
+            <span style="font-size:1rem;color:var(--text-dim)">(${Math.round(pct * 100)} %)</span>
+          </p>
+          <p style="color:var(--text-dim);font-size:.9rem">${
+            perfect ? "Sans faute. Relancez la série dans quelques jours pour vérifier que c'est acquis."
+            : pct >= 0.7 ? "Bon niveau. Reprenez les explications des questions ratées : ce sont elles qui font progresser."
+            : "Relisez la leçon, puis refaites la série. L'objectif n'est pas le score du jour mais la règle comprise."}</p>
+          <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem">
+            <button class="btn btn-primary" id="again">Refaire la série</button>
+            <a class="btn" href="#/section/${sec.id}">Retour à la section</a>
+          </div>
+        </div>
+      </section>`;
+    slot.querySelector("#again").addEventListener("click", start);
+  }
+
+  intro();
+}
+
+/* ---------- Expression écrite ---------- */
+function viewWritingList() {
+  const rows = WRITING_TASKS.map((t) => `
+    <li><a class="row" href="#/ecrit/${t.id}">
+      <span class="ico" aria-hidden="true">${S.writingDone[t.id] ? "✅" : "✍️"}</span>
+      <div class="grow"><h4>${t.title}</h4>
+      <span class="sub">${t.min}–${t.max} mots · ${t.minutes} min · ${t.audience}</span></div>
+      ${S.writingDone[t.id] ? '<span class="check">✓</span>' : ""}
+    </a></li>`).join("");
+
+  app.innerHTML = `
+    <p class="crumbs"><a href="#/">Accueil</a> / Expression écrite</p>
+    <div class="page-head">
+      <h1>✍️ Expression écrite</h1>
+      <p class="tagline">3 tâches, 60 minutes au total. Chaque tâche a son public,
+         sa longueur et son objectif : les confondre coûte plus de points que les fautes.</p>
+    </div>
+    <div class="callout"><strong>Comment travailler :</strong> rédigez d'abord sans
+      regarder le modèle, chronomètre lancé. Comparez ensuite, puis cochez la grille
+      d'auto-évaluation honnêtement — c'est elle qui vous apprend à vous relire.</div>
+    <ul class="rows">${rows}</ul>`;
+}
+
+function viewWritingTask(id) {
+  const task = WRITING_TASKS.find((t) => t.id === id);
+  if (!task) return view404();
+
+  const checks = S.writingChecks[task.id] || {};
+  app.innerHTML = `
+    <p class="crumbs"><a href="#/">Accueil</a> /
+      <a href="#/ecrit">Expression écrite</a> / Tâche ${task.n}</p>
+    <div class="page-head">
+      <h1>${task.title}</h1>
+      <p class="tagline">${task.min}–${task.max} mots · ${task.minutes} minutes conseillées · ${task.audience}</p>
+    </div>
+
+    <div class="q-context" style="white-space:pre-wrap">${task.prompt}</div>
+    <p style="font-size:.9rem;color:var(--text-dim)"><strong>Objectif :</strong> ${task.goal}</p>
+
+    <details style="margin:1rem 0">
+      <summary style="cursor:pointer;font-weight:700">Plan conseillé</summary>
+      <ol style="font-size:.9rem">${task.plan.map((p) => `<li>${p}</li>`).join("")}</ol>
+    </details>
+
+    <div class="exam-bar">
+      <button class="btn btn-primary" id="timer-btn">▶ Lancer le chronomètre</button>
+      <span class="timer grow" id="timer">${fmtTime(task.minutes * 60)}</span>
+    </div>
+
+    <p style="font-size:.85rem;color:var(--text-dim);margin-bottom:.3rem">
+      Connecteurs utiles — cliquez pour les insérer :</p>
+    <div class="chips">${task.connectors.map((c) => `<button class="chip" data-ins="${c}">${c}</button>`).join("")}</div>
+
+    <label for="editor" style="display:block;font-size:.8rem;color:var(--text-dim);margin:.6rem 0 .3rem">
+      Votre texte (enregistré automatiquement)</label>
+    <textarea class="editor" id="editor" spellcheck="false"
+      placeholder="Rédigez ici, sans regarder le modèle…"></textarea>
+    <div class="wc-row">
+      <span>Mots : <span class="wc" id="wc">0</span> <span style="color:var(--text-dim)">(cible ${task.min}–${task.max})</span></span>
+      <button class="btn btn-sm" id="clear">Effacer</button>
+    </div>
+
+    <details style="margin:1.5rem 0">
+      <summary style="cursor:pointer;font-weight:700">Voir un exemple de production réussie</summary>
+      <div class="q-context" style="margin-top:.7rem">${task.model}</div>
+      <p style="font-size:.82rem;color:var(--text-dim)">Ce modèle n'est pas « la » bonne
+      réponse : c'est une production qui coche les critères. Comparez la STRUCTURE
+      avant le vocabulaire.</p>
+    </details>
+
+    <h2 style="font-size:1.05rem">Grille d'auto-évaluation</h2>
+    <ul class="checklist" id="checklist">
+      ${task.checklist.map((c) => `
+        <li class="${checks[c.id] ? "ticked" : ""}">
+          <label><input type="checkbox" data-c="${c.id}" ${checks[c.id] ? "checked" : ""}>
+          <span>${c.text}</span></label>
+        </li>`).join("")}
+    </ul>
+    <p id="w-status" class="tagline" role="status">${
+      S.writingDone[task.id] ? "✓ Tâche validée — bravo." : ""}</p>`;
+
+  /* -- éditeur : compteur de mots + sauvegarde -- */
+  const editor = document.getElementById("editor");
+  const wc = document.getElementById("wc");
+  editor.value = S.writingDrafts[task.id] || "";
+
+  function updateCount() {
+    const n = countWords(editor.value);
+    wc.textContent = n;
+    wc.className = "wc " + (n >= task.min && n <= task.max ? "in-range" : "out-range");
+  }
+  updateCount();
+
+  let saveTimer;
+  editor.addEventListener("input", () => {
+    updateCount();
+    clearTimeout(saveTimer);
+    saveTimer = setTimeout(() => {
+      S.writingDrafts[task.id] = editor.value;
+      save();
+    }, 400);
+  });
+
+  document.getElementById("clear").addEventListener("click", () => {
+    if (!editor.value || confirm("Effacer votre texte ?")) {
+      editor.value = "";
+      S.writingDrafts[task.id] = "";
+      save();
+      updateCount();
+    }
+  });
+
+  /* -- insertion de connecteurs au curseur -- */
+  app.querySelectorAll("[data-ins]").forEach((chip) => {
+    chip.addEventListener("click", () => {
+      const text = chip.dataset.ins + " ";
+      const start = editor.selectionStart;
+      editor.value = editor.value.slice(0, start) + text + editor.value.slice(editor.selectionEnd);
+      editor.selectionStart = editor.selectionEnd = start + text.length;
+      editor.focus();
+      updateCount();
+      S.writingDrafts[task.id] = editor.value;
+      save();
+    });
+  });
+
+  /* -- chronomètre -- */
+  mountCountdown(document.getElementById("timer"), document.getElementById("timer-btn"),
+    task.minutes * 60, () => toast("Temps écoulé — posez le stylo, comme le jour J."));
+
+  /* -- grille -- */
+  app.querySelectorAll('#checklist input').forEach((box) => {
+    box.addEventListener("change", () => {
+      if (!S.writingChecks[task.id]) S.writingChecks[task.id] = {};
+      S.writingChecks[task.id][box.dataset.c] = box.checked;
+      box.closest("li").classList.toggle("ticked", box.checked);
+      save();
+
+      const all = task.checklist.every((c) => S.writingChecks[task.id][c.id]);
+      if (all && !S.writingDone[task.id]) {
+        S.writingDone[task.id] = true;
+        save();
+        addXP(XP.writing, `${task.title}`);
+        checkAchievements();
+        document.getElementById("w-status").textContent = "✓ Tâche validée — bravo.";
+      }
+    });
+  });
+}
+
+/** Chronomètre réutilisable : bouton démarrer / pause, remise à zéro à la fin. */
+function mountCountdown(display, button, totalSec, onEnd) {
+  let remaining = totalSec;
+  let handle = null;
+
+  function paint() {
+    display.textContent = fmtTime(remaining);
+    display.classList.toggle("warn", remaining <= totalSec * 0.25 && remaining > 60);
+    display.classList.toggle("danger", remaining <= 60);
+  }
+
+  function stop() {
+    clearInterval(handle);
+    handle = null;
+    button.innerHTML = "▶ Reprendre";
+  }
+
+  button.addEventListener("click", () => {
+    if (handle) { stop(); return; }
+    button.innerHTML = "⏸ Pause";
+    handle = setInterval(() => {
+      remaining--;
+      paint();
+      if (remaining <= 0) {
+        stop();
+        button.innerHTML = "▶ Relancer";
+        remaining = totalSec;
+        if (onEnd) onEnd();
+      }
+    }, 1000);
+  });
+
+  // Un changement de page doit arrêter le compte à rebours.
+  timersToClear.push(() => clearInterval(handle));
+  paint();
+}
+
+let timersToClear = [];
+function clearTimers() {
+  timersToClear.forEach((f) => f());
+  timersToClear = [];
+  if (window.speechSynthesis) speechSynthesis.cancel();
+}
+
+/* ---------- Expression orale ---------- */
+function viewSpeakingList() {
+  const rows = SPEAKING_TASKS.map((t) => `
+    <li><a class="row" href="#/oral/${t.id}">
+      <span class="ico" aria-hidden="true">${S.speakingDone[t.id] ? "✅" : "🎙️"}</span>
+      <div class="grow"><h4>${t.title}</h4>
+      <span class="sub">${t.prepSec ? `${fmtTime(t.prepSec)} de préparation · ` : "sans préparation · "}${fmtTime(t.speakSec)} de parole</span></div>
+      ${S.speakingDone[t.id] ? '<span class="check">✓</span>' : ""}
+    </a></li>`).join("");
+
+  app.innerHTML = `
+    <p class="crumbs"><a href="#/">Accueil</a> / Expression orale</p>
+    <div class="page-head">
+      <h1>🎙️ Expression orale</h1>
+      <p class="tagline">3 tâches, 12 minutes au total, préparation comprise.
+         La difficulté n'est pas la langue : c'est de parler sans s'arrêter.</p>
+    </div>
+    <div class="callout"><strong>La règle d'or :</strong> le silence coûte plus cher
+      qu'une erreur. Un candidat qui parle avec quelques fautes obtient un meilleur
+      niveau qu'un candidat parfait mais muet la moitié du temps.</div>
+    <ul class="rows">${rows}</ul>`;
+}
+
+function viewSpeakingTask(id) {
+  const task = SPEAKING_TASKS.find((t) => t.id === id);
+  if (!task) return view404();
+  const checks = S.speakingChecks[task.id] || {};
+
+  app.innerHTML = `
+    <p class="crumbs"><a href="#/">Accueil</a> /
+      <a href="#/oral">Expression orale</a> / Tâche ${task.n}</p>
+    <div class="page-head">
+      <h1>${task.title}</h1>
+      <p class="tagline">${task.prepSec ? `${fmtTime(task.prepSec)} de préparation · ` : "Sans préparation · "}${fmtTime(task.speakSec)} de parole</p>
+    </div>
+
+    <div class="q-context" style="white-space:pre-wrap">${task.prompt}</div>
+    <p style="font-size:.9rem;color:var(--text-dim)"><strong>Objectif :</strong> ${task.goal}</p>
+
+    <h2 style="font-size:1.05rem">${task.n === 1 ? "Questions probables" : task.n === 2 ? "Points à couvrir" : "Structure attendue"}</h2>
+    <ul style="font-size:.92rem">${task.questions.map((q) => `<li>${q}</li>`).join("")}</ul>
+
+    <h2 style="font-size:1.05rem">Formulations utiles</h2>
+    <ul style="font-size:.92rem">${task.phrases.map((p) => `<li><em>${p}</em></li>`).join("")}</ul>
+
+    <div class="callout callout-tip"><strong>Conseils :</strong>
+      <ul style="margin:.4rem 0 0;padding-left:1.1rem">
+        ${task.tips.map((t) => `<li>${t}</li>`).join("")}</ul></div>
+
+    <h2 style="font-size:1.05rem">Passer la tâche</h2>
+    ${task.prepSec ? `
+      <div class="exam-bar">
+        <button class="btn" id="prep-btn">▶ Préparation</button>
+        <span class="timer grow" id="prep-timer">${fmtTime(task.prepSec)}</span>
+      </div>` : ""}
+    <div class="exam-bar">
+      <button class="btn btn-primary" id="speak-btn">▶ Temps de parole</button>
+      <span class="timer grow" id="speak-timer">${fmtTime(task.speakSec)}</span>
+    </div>
+
+    <div class="exam-bar" id="rec-bar">
+      <button class="btn btn-danger" id="rec-btn">⏺ S'enregistrer</button>
+      <span class="grow sub" id="rec-status" style="font-size:.82rem;color:var(--text-dim)">
+        L'enregistrement reste sur votre appareil : rien n'est envoyé nulle part.</span>
+    </div>
+    <div id="playback"></div>
+
+    <h2 style="font-size:1.05rem">Grille d'auto-évaluation</h2>
+    <ul class="checklist" id="checklist">
+      ${task.checklist.map((c) => `
+        <li class="${checks[c.id] ? "ticked" : ""}">
+          <label><input type="checkbox" data-c="${c.id}" ${checks[c.id] ? "checked" : ""}>
+          <span>${c.text}</span></label>
+        </li>`).join("")}
+    </ul>
+    <p id="s-status" class="tagline" role="status">${
+      S.speakingDone[task.id] ? "✓ Tâche validée — bravo." : ""}</p>`;
+
+  if (task.prepSec) {
+    mountCountdown(document.getElementById("prep-timer"),
+      document.getElementById("prep-btn"), task.prepSec,
+      () => toast("Fin de la préparation — à vous de parler."));
+  }
+  mountCountdown(document.getElementById("speak-timer"),
+    document.getElementById("speak-btn"), task.speakSec,
+    () => toast("Temps de parole écoulé."));
+
+  mountRecorder();
+
+  app.querySelectorAll("#checklist input").forEach((box) => {
+    box.addEventListener("change", () => {
+      if (!S.speakingChecks[task.id]) S.speakingChecks[task.id] = {};
+      S.speakingChecks[task.id][box.dataset.c] = box.checked;
+      box.closest("li").classList.toggle("ticked", box.checked);
+      save();
+      const all = task.checklist.every((c) => S.speakingChecks[task.id][c.id]);
+      if (all && !S.speakingDone[task.id]) {
+        S.speakingDone[task.id] = true;
+        save();
+        addXP(XP.speaking, task.title);
+        checkAchievements();
+        document.getElementById("s-status").textContent = "✓ Tâche validée — bravo.";
+      }
+    });
+  });
+}
+
+/** Enregistrement local via MediaRecorder ; dégradation propre si indisponible. */
+function mountRecorder() {
+  const btn = document.getElementById("rec-btn");
+  const status = document.getElementById("rec-status");
+  const playback = document.getElementById("playback");
+  if (!btn) return;
+
+  if (!navigator.mediaDevices || !window.MediaRecorder) {
+    btn.disabled = true;
+    status.textContent = "Enregistrement non disponible dans ce navigateur — utilisez l'enregistreur vocal de votre téléphone.";
+    return;
+  }
+
+  let recorder = null;
+  let chunks = [];
+  let stream = null;
+
+  btn.addEventListener("click", async () => {
+    if (recorder && recorder.state === "recording") {
+      recorder.stop();
+      return;
+    }
+    try {
+      stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    } catch {
+      status.textContent = "Micro refusé. Autorisez le microphone pour vous enregistrer.";
+      return;
+    }
+    chunks = [];
+    recorder = new MediaRecorder(stream);
+    recorder.ondataavailable = (e) => { if (e.data.size) chunks.push(e.data); };
+    recorder.onstop = () => {
+      stream.getTracks().forEach((t) => t.stop());
+      const url = URL.createObjectURL(new Blob(chunks, { type: chunks[0]?.type || "audio/webm" }));
+      playback.innerHTML = "";
+      const audio = document.createElement("audio");
+      audio.controls = true;
+      audio.src = url;
+      audio.style.width = "100%";
+      playback.appendChild(audio);
+      const hint = document.createElement("p");
+      hint.style.cssText = "font-size:.82rem;color:var(--text-dim)";
+      hint.textContent = "Réécoutez-vous : repérez UNE erreur récurrente, pas dix. C'est ainsi qu'on progresse à l'oral.";
+      playback.appendChild(hint);
+      btn.innerHTML = "⏺ S'enregistrer";
+      btn.classList.remove("btn-primary");
+      btn.classList.add("btn-danger");
+      status.textContent = "Enregistrement terminé. Il reste sur votre appareil.";
+    };
+    recorder.start();
+    btn.innerHTML = "⏹ Arrêter";
+    btn.classList.remove("btn-danger");
+    btn.classList.add("btn-primary");
+    status.textContent = "Enregistrement en cours…";
+  });
+
+  timersToClear.push(() => {
+    if (recorder && recorder.state === "recording") recorder.stop();
+    if (stream) stream.getTracks().forEach((t) => t.stop());
+  });
+}
+
+/* ---------- Vocabulaire (répétition espacée) ---------- */
+
+/* Système de Leitner : 5 boîtes. Une carte sue monte d'une boîte et revient
+   plus tard ; une carte ratée retombe en boîte 1. Les intervalles sont en jours. */
+const BOX_DAYS = [0, 1, 3, 7, 21];
+
+function cardState(id) {
+  return S.cards[id] || { box: 1, due: 0 };
+}
+function dueCards() {
+  const now = Date.now();
+  return FLASHCARDS.filter((c) => cardState(c.id).due <= now);
+}
+
+function viewVocab() {
+  const due = shuffle(dueCards());
+  const mastered = Object.values(S.cards).filter((c) => c.box >= 5).length;
+  const counts = [1, 2, 3, 4, 5].map((b) =>
+    FLASHCARDS.filter((c) => cardState(c.id).box === b).length);
+
+  if (due.length === 0) {
+    app.innerHTML = `
+      <p class="crumbs"><a href="#/">Accueil</a> / Vocabulaire</p>
+      <div class="page-head"><h1>🗂️ Vocabulaire</h1>
+        <p class="tagline">Répétition espacée — chaque carte revient juste avant que vous ne l'oubliiez.</p></div>
+      <div class="flash">
+        <div class="front">Rien à réviser 🎉</div>
+        <p class="note">Toutes vos cartes sont à jour. Revenez demain : c'est
+          l'espacement qui fait la mémorisation, pas la quantité d'un seul jour.</p>
+      </div>
+      <div class="box-pills">${counts.map((n, i) => `<span class="box-pill">Boîte ${i + 1} : ${n}</span>`).join("")}</div>
+      <p style="text-align:center;margin-top:1rem"><a class="btn" href="#/">Retour à l'accueil</a></p>`;
+    return;
+  }
+
+  let i = 0;
+  let revealed = false;
+
+  function render() {
+    if (i >= due.length) {
+      app.innerHTML = `
+        <div class="page-head"><h1>🗂️ Session terminée</h1>
+        <p class="tagline">${due.length} carte(s) révisée(s). ${mastered} mot(s) en dernière boîte.</p></div>
+        <p><a class="btn btn-primary" href="#/vocabulaire">Nouvelle session</a>
+           <a class="btn" href="#/">Accueil</a></p>`;
+      markToday(); save(); checkAchievements();
+      return;
+    }
+    const card = due[i];
+    const st = cardState(card.id);
+
+    app.innerHTML = `
+      <p class="crumbs"><a href="#/">Accueil</a> / Vocabulaire</p>
+      <div class="page-head"><h1>🗂️ Vocabulaire</h1>
+        <p class="tagline">Carte ${i + 1} / ${due.length} · thème : ${card.theme}</p></div>
+
+      <div class="flash">
+        <div class="front">${card.front}</div>
+        ${revealed ? `<div class="back">${card.back}</div>
+                      <p class="note">${card.note}</p>` : ""}
+      </div>
+
+      <div style="margin-top:.8rem">
+        ${revealed ? `
+          <p style="font-size:.85rem;color:var(--text-dim);text-align:center;margin:.2rem 0">
+            Soyez honnête : c'est vous que vous trompez.</p>
+          <div class="srs-actions">
+            <button class="btn btn-danger" data-r="0">Oublié</button>
+            <button class="btn" data-r="1">Hésitant</button>
+            <button class="btn btn-success" data-r="2">Su</button>
+          </div>`
+        : `<button class="btn btn-primary" id="reveal" style="width:100%">Afficher la réponse</button>`}
+      </div>
+
+      <div class="box-pills"><span class="box-pill">Cette carte : boîte ${st.box}/5</span></div>
+      <p style="text-align:center;margin-top:1rem"><button class="btn btn-sm" id="speak-card">🔊 Prononcer</button></p>`;
+
+    const speakBtn = document.getElementById("speak-card");
+    if (speakBtn) speakBtn.addEventListener("click", () => speak(card.front, 0.9));
+
+    if (!revealed) {
+      document.getElementById("reveal").addEventListener("click", () => {
+        revealed = true;
+        render();
+      });
+    } else {
+      app.querySelectorAll("[data-r]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const rating = Number(btn.dataset.r);
+          const cur = cardState(card.id);
+          let box = cur.box;
+          if (rating === 2) box = Math.min(5, box + 1);
+          else if (rating === 1) box = Math.max(1, box);
+          else box = 1;
+          const days = BOX_DAYS[box - 1];
+          S.cards[card.id] = { box, due: Date.now() + days * 86400000 };
+          markToday();
+          save();
+          i++;
+          revealed = false;
+          render();
+        });
+      });
+    }
+  }
+  render();
+}
+
+/* ---------- Examen blanc ---------- */
+function viewExam() {
+  app.innerHTML = `
+    <p class="crumbs"><a href="#/">Accueil</a> / Examen blanc</p>
+    <div class="page-head">
+      <h1>⏱️ Examen blanc</h1>
+      <p class="tagline">${EXAM_CONFIG.questionCount} questions en ${EXAM_CONFIG.minutes} minutes,
+        toutes sections confondues, difficulté croissante.</p>
+    </div>
+    <div class="callout callout-warn"><strong>Conditions réelles :</strong> aucune
+      correction avant la fin, le chronomètre ne s'arrête pas, et l'audio est à écouter
+      une seule fois. Installez-vous comme le jour J : téléphone loin, porte fermée.</div>
+    <div class="callout"><strong>Ce que vaut le résultat :</strong> le vrai TCF pondère
+      chaque question par sa difficulté. Le niveau affiché ici est une
+      <em>estimation indicative</em> fondée sur votre pourcentage de bonnes réponses,
+      utile pour suivre vos progrès — pas une conversion officielle.</div>
+    ${S.exams.length ? `
+      <h2 style="font-size:1.05rem">Vos tentatives</h2>
+      <ul class="rows">${S.exams.slice().reverse().slice(0, 5).map((e) => `
+        <li class="row"><span class="ico">📊</span>
+        <div class="grow"><h4>${e.level} — ${e.pct} %</h4>
+        <span class="sub">${new Date(e.at).toLocaleDateString("fr-FR")}</span></div></li>`).join("")}</ul>` : ""}
+    <p><button class="btn btn-primary" id="start-exam">Commencer l'examen blanc</button></p>`;
+
+  document.getElementById("start-exam").addEventListener("click", startExam);
+}
+
+function startExam() {
+  // Tirage : on mélange, on prend N, puis on trie par difficulté croissante
+  // — comme dans le vrai test.
+  const pool = shuffle(allExamItems()).slice(0, EXAM_CONFIG.questionCount);
+  pool.sort((a, b) => LEVEL_ORDER.indexOf(a.level) - LEVEL_ORDER.indexOf(b.level));
+
+  let remaining = EXAM_CONFIG.minutes * 60;
+  app.innerHTML = `
+    <div class="exam-bar">
+      <strong>Examen blanc</strong>
+      <span class="grow"></span>
+      <span class="timer" id="exam-timer">${fmtTime(remaining)}</span>
+    </div>
+    <section class="drill"><div id="exam-host"></div></section>`;
+
+  const timerEl = document.getElementById("exam-timer");
+  let finished = false;
+
+  const handle = setInterval(() => {
+    remaining--;
+    timerEl.textContent = fmtTime(remaining);
+    timerEl.classList.toggle("warn", remaining <= 300 && remaining > 60);
+    timerEl.classList.toggle("danger", remaining <= 60);
+    if (remaining <= 0 && !finished) {
+      clearInterval(handle);
+      toast("Temps écoulé !");
+      // Les réponses déjà données sont conservées ; le reste compte comme faux.
+      finishExam(collected.correct, pool.length, collected.answers, true);
+    }
+  }, 1000);
+  timersToClear.push(() => clearInterval(handle));
+
+  const collected = { correct: 0, answers: [] };
+
+  runDrill(document.getElementById("exam-host"), {
+    items: pool,
+    immediate: false,
+    onProgress: (correct, answers) => {
+      collected.correct = correct;
+      collected.answers = answers;
+    },
+    onFinish: (correct, total, answers) => {
+      finished = true;
+      clearInterval(handle);
+      finishExam(correct, total, answers, false);
+    },
+  });
+}
+
+function finishExam(correct, total, answers, timedOut) {
+  const pct = Math.round((correct / total) * 100);
+  const band = EXAM_CONFIG.bands.find((b) => pct >= b.min) ||
+               EXAM_CONFIG.bands[EXAM_CONFIG.bands.length - 1];
+
+  S.exams.push({ at: Date.now(), pct, level: band.level });
+  if (pct > S.bestExamPct) S.bestExamPct = pct;
+  markToday();
+  save();
+  addXP(XP.exam, "examen blanc terminé");
+  checkAchievements();
+
+  const review = answers.map((a, i) => `
+    <div class="review-item ${a.ok ? "ok" : "no"}">
+      <strong>${i + 1}. ${a.ok ? "✓" : "✗"}</strong>
+      <span class="badge badge-cefr" style="margin-left:.4rem">${a.item.level}</span>
+      <div style="margin-top:.3rem">${a.item.q}</div>
+      ${!a.ok ? `<div style="margin-top:.3rem;color:var(--text-dim)">
+          <strong>Réponse correcte :</strong> ${a.item.options ? a.item.options[a.item.a] : a.item.answers[0]}<br>${a.item.why}</div>` : ""}
+    </div>`).join("");
+
+  app.innerHTML = `
+    <div class="page-head"><h1>Résultat de l'examen blanc</h1>
+      ${timedOut ? '<p class="tagline">⏱️ Temps écoulé — les questions non traitées comptent comme fausses, exactement comme le jour J.</p>' : ""}</div>
+
+    <div class="result-band">
+      <div class="result-level">${band.level}</div>
+      <p style="margin:.3rem 0;font-size:1.1rem"><strong>${correct} / ${total}</strong> — ${pct} %</p>
+      <p class="result-sub">${band.label}<br>Ordre de grandeur : ${band.points} points sur 699</p>
+    </div>
+
+    <div class="callout"><strong>À lire avant de vous réjouir (ou de paniquer) :</strong>
+      cette estimation repose sur un pourcentage brut, alors que le TCF pondère les
+      questions selon leur difficulté et comporte 76 questions au lieu de ${total}.
+      Servez-vous-en pour mesurer vos <em>progrès d'une fois sur l'autre</em>,
+      pas pour prédire un score officiel.</div>
+
+    <h2 style="font-size:1.05rem">Correction détaillée</h2>
+    <p style="font-size:.88rem;color:var(--text-dim)">C'est ici que se gagne l'examen
+      suivant : lisez l'explication de chaque erreur, pas seulement le score.</p>
+    ${review}
+
+    <p style="margin-top:1.5rem">
+      <a class="btn btn-primary" href="#/examen">Refaire un examen blanc</a>
+      <a class="btn" href="#/">Accueil</a></p>`;
+  window.scrollTo(0, 0);
+}
+
+/* ---------- Barème / convertisseur ---------- */
+function viewBareme() {
+  app.innerHTML = `
+    <p class="crumbs"><a href="#/">Accueil</a> / Barème</p>
+    <div class="page-head"><h1>📊 Barème et niveaux</h1>
+      <p class="tagline">Le TCF note chaque épreuve de 0 à 699 points, convertis en
+        niveaux du CECRL. Il n'y a ni réussite ni échec : seulement un positionnement.</p></div>
+
+    <label for="pts" style="font-size:.9rem;font-weight:700">Votre score (0–699)</label>
+    <input type="number" id="pts" class="gap-input" min="0" max="699" value="400"
+      style="margin:.4rem 0 1rem">
+    <div class="result-band">
+      <div class="result-level" id="lvl">B2</div>
+      <p class="result-sub" id="lvl-desc">Utilisateur indépendant — débat, argumentation, nuance</p>
+    </div>
+
+    <div class="scroll-x"><table class="tbl">
+      <tr><th>Points</th><th>Niveau</th><th>Ce que vous savez faire</th></tr>
+      <tr><td>600–699</td><td>C2</td><td>Comprendre sans effort, nuancer finement</td></tr>
+      <tr><td>500–599</td><td>C1</td><td>S'exprimer spontanément sur des sujets complexes</td></tr>
+      <tr><td>400–499</td><td>B2</td><td>Argumenter, débattre, comprendre un texte de presse</td></tr>
+      <tr><td>300–399</td><td>B1</td><td>Se débrouiller seul, raconter, expliquer un projet</td></tr>
+      <tr><td>200–299</td><td>A2</td><td>Échanges simples sur des sujets habituels</td></tr>
+      <tr><td>100–199</td><td>A1</td><td>Expressions familières et besoins concrets</td></tr>
+    </table></div>
+
+    <div class="callout callout-warn"><strong>Avant de vous inscrire :</strong>
+      vérifiez le niveau exigé par <em>votre</em> programme (immigration, université,
+      naturalisation) et pour <em>chaque</em> épreuve — les exigences diffèrent souvent
+      entre l'oral et l'écrit, et elles évoluent. Confirmez toujours sur le site
+      officiel de France Éducation international et auprès de l'organisme concerné.</div>`;
+
+  const input = document.getElementById("pts");
+  const lvl = document.getElementById("lvl");
+  const desc = document.getElementById("lvl-desc");
+  const table = [
+    [600, "C2", "Maîtrise — comprendre sans effort, nuancer finement"],
+    [500, "C1", "Autonome — s'exprimer spontanément sur des sujets complexes"],
+    [400, "B2", "Indépendant — argumenter, débattre, comprendre la presse"],
+    [300, "B1", "Seuil — se débrouiller seul dans la vie quotidienne"],
+    [200, "A2", "Élémentaire — échanges simples et habituels"],
+    [100, "A1", "Découverte — expressions familières et besoins concrets"],
+    [0, "< A1", "Niveau A1 non encore atteint"],
+  ];
+  function update() {
+    const v = Math.max(0, Math.min(699, Number(input.value) || 0));
+    const row = table.find((r) => v >= r[0]);
+    lvl.textContent = row[1];
+    desc.textContent = row[2];
+  }
+  input.addEventListener("input", update);
+  update();
+}
+
+/* ---------- Succès ---------- */
+function viewAchievements() {
+  const earned = Object.keys(S.achievements).length;
+  const shelf = ACHIEVEMENTS.map((a) => {
+    const at = S.achievements[a.id];
+    return `
+      <li class="trophy ${at ? "earned" : "locked"}">
+        <span class="emoji" aria-hidden="true">${a.emoji}</span>
+        <div><h4>${a.name}</h4><p>${a.desc}</p>
+        ${at ? `<span class="when">Obtenu le ${new Date(at).toLocaleDateString("fr-FR")}</span>` : ""}</div>
+      </li>`;
+  }).join("");
+
+  const { level, title } = levelInfo();
+  app.innerHTML = `
+    <div class="page-head"><h1>🏆 Succès</h1>
+      <p class="tagline">${earned} / ${ACHIEVEMENTS.length} obtenus · Niveau ${level} — ${title}
+        · ${S.xp} XP · meilleure série : ${S.bestStreak} bonnes réponses</p></div>
+    <ul class="shelf">${shelf}</ul>
+    <div class="callout" style="margin-top:2rem"><strong>Vos données :</strong>
+      toute votre progression est enregistrée dans le stockage local de ce navigateur.
+      Elle ne quitte jamais votre appareil — et disparaîtra si vous effacez les données
+      du site. <button class="btn btn-sm" id="reset" style="margin-left:.5rem">Réinitialiser ma progression</button></div>`;
+
+  document.getElementById("reset").addEventListener("click", () => {
+    if (confirm("Effacer toute votre progression (XP, succès, textes rédigés, cartes) ? Cette action est irréversible.")) {
+      localStorage.removeItem(STORE_KEY);
+      S = defaultState();
+      save();
+      notify();
+      location.hash = "#/";
+      toast("Progression réinitialisée.");
+    }
+  });
+}
+
+function view404() {
+  app.innerHTML = `
+    <div class="page-head"><h1>Page introuvable</h1>
+      <p class="tagline">Cette adresse n'existe pas.</p></div>
+    <a class="btn btn-primary" href="#/">Retour à l'accueil</a>`;
+}
+
+/* ======================= 6. ROUTAGE =================================== */
+
+function route() {
+  clearTimers();
+  const parts = location.hash.replace(/^#\/?/, "").split("/").filter(Boolean);
+  const [head, a, b] = parts;
+
+  if (!head) viewHome();
+  else if (head === "section" && a) viewSection(a);
+  else if (head === "lecon" && a && b) viewLesson(a, b);
+  else if (head === "ecrit" && a) viewWritingTask(a);
+  else if (head === "ecrit") viewWritingList();
+  else if (head === "oral" && a) viewSpeakingTask(a);
+  else if (head === "oral") viewSpeakingList();
+  else if (head === "vocabulaire") viewVocab();
+  else if (head === "examen") viewExam();
+  else if (head === "bareme") viewBareme();
+  else if (head === "succes") viewAchievements();
+  else view404();
+
+  document.querySelectorAll(".site-nav a[data-nav]").forEach((link) => {
+    link.classList.toggle("active",
+      link.dataset.nav === (head || "home") ||
+      (link.dataset.nav === "home" && ["section", "lecon"].includes(head)));
+  });
+
+  window.scrollTo(0, 0);
+  app.focus({ preventScroll: true });
+}
+
+/* ======================= 7. DÉMARRAGE ================================= */
+
+function updateHUD() {
+  const { level, title, pct } = levelInfo();
+  document.getElementById("hud-level").textContent = level;
+  document.getElementById("hud-title").textContent = title;
+  document.getElementById("hud-fill").style.width = pct + "%";
+  document.getElementById("hud-xp").textContent = S.xp + " XP";
+  const streak = dayStreak();
+  document.getElementById("hud-streak").textContent = streak > 0 ? `🔥 ${streak} j` : "";
+}
+
+onChange(updateHUD);
+updateHUD();
+
+document.getElementById("theme-toggle").addEventListener("click", toggleTheme);
+checkAchievements();          // au cas où des succès aient été ajoutés depuis la dernière visite
+window.addEventListener("hashchange", route);
+route();
+
+</script>
+</body>
+</html>
