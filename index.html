@@ -519,7 +519,7 @@ table.tbl th { background: var(--bg-inset); font-size: .78rem; text-transform: u
    Content schema (documented in README.md):
 
    SECTIONS = [{
-     id, icon, title, tagline, kind: "study" | "produce",
+     id, icon, title, tagline, level?, kind: "study" | "produce",
      lessons: [{
        id, title, minutes,
        content: `<HTML>`,          // the teaching — explains WHY
@@ -829,7 +829,434 @@ you'll actually control it. Each test has its own clock, exactly as on the day.<
 
   /* ================================================================== */
   {
+    id: "bases",
+    icon: "🧱",
+    title: "Les fondations",
+    level: "A1–A2",
+    tagline: "Présent, articles, questions, négation, futur, passé : le socle sans lequel le reste ne tient pas. À parcourir vite si vous l'avez déjà.",
+    kind: "study",
+    lessons: [
+      {
+        id: "l1",
+        title: "Le présent et les verbes indispensables",
+        minutes: 12,
+        content: `
+<p>Four verbs carry half of everyday French: <strong>être, avoir, aller, faire</strong>.
+They are irregular, they are everywhere, and they also build the other tenses. Learn
+them cold before anything else.</p>
+
+<div class="scroll-x">
+<table class="tbl">
+  <tr><th></th><th>être</th><th>avoir</th><th>aller</th><th>faire</th></tr>
+  <tr><td>je / j'</td><td>suis</td><td>ai</td><td>vais</td><td>fais</td></tr>
+  <tr><td>tu</td><td>es</td><td>as</td><td>vas</td><td>fais</td></tr>
+  <tr><td>il / elle / on</td><td>est</td><td>a</td><td>va</td><td>fait</td></tr>
+  <tr><td>nous</td><td>sommes</td><td>avons</td><td>allons</td><td>faisons</td></tr>
+  <tr><td>vous</td><td>êtes</td><td>avez</td><td>allez</td><td>faites</td></tr>
+  <tr><td>ils / elles</td><td>sont</td><td>ont</td><td>vont</td><td>font</td></tr>
+</table>
+</div>
+
+<h2>Where English says "to be" and French says "avoir"</h2>
+<p>French <em>has</em> an age, hunger, thirst, heat, cold, fear and need:</p>
+<div class="fr-ex">
+  <div class="fr">J'<span class="good">ai</span> trente ans. <span class="en">I am thirty.</span></div>
+  <div class="fr">Elle <span class="good">a</span> faim / soif / froid / chaud / peur / sommeil.</div>
+  <div class="fr">Nous <span class="good">avons</span> besoin d'aide. <span class="en">We need help.</span></div>
+  <div class="fr"><span class="bad">Je suis 30 ans.</span> <span class="bad">Je suis faim.</span></div>
+</div>
+
+<h2>Regular -er verbs: one pattern, thousands of verbs</h2>
+<p>Remove <code>-er</code>, add <code>-e, -es, -e, -ons, -ez, -ent</code>.
+Four of the six forms <em>sound identical</em> (parle, parles, parle, parlent): the
+written ending is what the grammar test checks.</p>
+<div class="fr-ex">
+  <div class="fr">parler → je parl<strong>e</strong>, tu parl<strong>es</strong>, il parl<strong>e</strong>, nous parl<strong>ons</strong>, vous parl<strong>ez</strong>, ils parl<strong>ent</strong></div>
+</div>
+
+<h2>The irregular verbs you cannot avoid</h2>
+<div class="fr-ex">
+  <div class="fr">pouvoir → je peux, tu peux, il peut, nous pouvons, vous pouvez, ils peuvent</div>
+  <div class="fr">vouloir → je veux, tu veux, il veut, nous voulons, vous voulez, ils veulent</div>
+  <div class="fr">devoir → je dois, tu dois, il doit, nous devons, vous devez, ils doivent</div>
+  <div class="fr">prendre → je prends, tu prends, il prend, nous prenons, vous prenez, ils prennent</div>
+  <div class="fr">venir → je viens, tu viens, il vient, nous venons, vous venez, ils viennent</div>
+</div>
+<p>Notice the shape: <em>nous</em> and <em>vous</em> keep the stem of the infinitive
+(pouv-, voul-, dev-, pren-, ven-); the other four change it. That "boot" pattern
+returns in dozens of verbs.</p>
+
+<div class="callout"><strong>On = nous.</strong> In spoken French, <em>on</em> replaces
+<em>nous</em> almost everywhere — and takes the <em>il</em> form: « On va au cinéma ? »
+= Shall we go to the cinema? You will hear it constantly in the listening test.</div>
+`,
+        drill: {
+          title: "Le présent",
+          items: [
+            { type: "mcq", id: "pres-1", level: "A1",
+              q: "Mon frère ___ médecin à Toulouse.",
+              options: ["es", "est", "a", "sont"], a: 1,
+              why: "Verbe « être » avec « il / mon frère » : il est. Pour une profession, pas d'article : il est médecin.",
+              gloss: "il est médecin — no article before a profession." },
+            { type: "mcq", id: "pres-2", level: "A1",
+              q: "J'___ très faim, on mange ?",
+              options: ["suis", "ai", "es", "fais"], a: 1,
+              why: "On dit « avoir faim » : j'ai faim.",
+              gloss: "French says « to have hunger », never « je suis faim »." },
+            { type: "mcq", id: "pres-3", level: "A1",
+              q: "Les enfants ___ à l'école à pied.",
+              options: ["va", "allons", "vont", "allez"], a: 2,
+              why: "Verbe « aller » avec « ils / les enfants » : ils vont.",
+              gloss: "ils vont — third person plural of aller." },
+            { type: "mcq", id: "pres-4", level: "A2",
+              q: "Vous ___ quoi ce week-end ?",
+              options: ["faisez", "faites", "faisons", "font"], a: 1,
+              why: "« Faire » est irrégulier : vous faites (et non « faisez »).",
+              gloss: "vous faites, vous êtes, vous dites: the three « -tes » forms." },
+            { type: "mcq", id: "pres-5", level: "A2",
+              q: "Ils ne ___ pas venir ce soir : ils travaillent.",
+              options: ["peut", "pouvons", "peuvent", "pouvez"], a: 2,
+              why: "« Pouvoir » avec « ils » : ils peuvent.",
+              gloss: "je peux, il peut, ils peuvent — but nous pouvons, vous pouvez." },
+            { type: "mcq", id: "pres-6", level: "A2",
+              q: "Ce soir, on ___ le dernier train.",
+              options: ["prenons", "prend", "prennent", "prends"], a: 1,
+              why: "« On » se conjugue comme « il » : on prend.",
+              gloss: "on = we, but with the il/elle verb form." },
+          ],
+        },
+      },
+
+      {
+        id: "l2",
+        title: "Articles, genre et quantités",
+        minutes: 12,
+        content: `
+<p>English has "the", "a" and often nothing at all. French almost never leaves a noun
+bare: it needs an article, and the article tells you whether you mean the thing in
+general, one unit of it, or some amount of it.</p>
+
+<div class="scroll-x">
+<table class="tbl">
+  <tr><th></th><th>masculin</th><th>féminin</th><th>pluriel</th><th>sens</th></tr>
+  <tr><td>défini</td><td>le / l'</td><td>la / l'</td><td>les</td><td>the — or the thing in general</td></tr>
+  <tr><td>indéfini</td><td>un</td><td>une</td><td>des</td><td>a / some (countable)</td></tr>
+  <tr><td>partitif</td><td>du / de l'</td><td>de la / de l'</td><td>des</td><td>some (an amount of)</td></tr>
+</table>
+</div>
+
+<div class="fr-ex">
+  <div class="fr">J'aime <span class="good">le</span> café. <span class="en">I like coffee (in general) → definite</span></div>
+  <div class="fr">Je bois <span class="good">du</span> café. <span class="en">I drink (some) coffee → partitive</span></div>
+  <div class="fr">Je voudrais <span class="good">un</span> café. <span class="en">I'd like a coffee (one cup) → indefinite</span></div>
+</div>
+<p>The rule of thumb: after verbs of <strong>liking</strong> (aimer, adorer, détester,
+préférer) use <em>le / la / les</em>; after verbs of <strong>consuming or having</strong>
+(manger, boire, acheter, avoir) use <em>du / de la / des</em>.</p>
+
+<h2>The two contractions you must hear and write</h2>
+<div class="fr-ex">
+  <div class="fr">à + le = <strong>au</strong> · à + les = <strong>aux</strong> → Je vais <span class="good">au</span> marché, <span class="good">aux</span> États-Unis.</div>
+  <div class="fr">de + le = <strong>du</strong> · de + les = <strong>des</strong> → Je viens <span class="good">du</span> bureau, <span class="good">des</span> Pays-Bas.</div>
+  <div class="fr">à la, à l', de la, de l' never contract: <span class="good">à la</span> gare, <span class="good">de l'</span>école.</div>
+</div>
+
+<h2>After a negation or a quantity: just « de »</h2>
+<div class="fr-ex">
+  <div class="fr">J'ai <strong>un</strong> vélo. → Je n'ai pas <span class="good">de</span> vélo.</div>
+  <div class="fr">Il boit <strong>du</strong> lait. → Il ne boit pas <span class="good">de</span> lait.</div>
+  <div class="fr">beaucoup <span class="good">de</span> travail · un peu <span class="good">de</span> sucre · un kilo <span class="good">de</span> pommes · trop <span class="good">d'</span>erreurs</div>
+  <div class="fr"><span class="bad">beaucoup des amis</span> → beaucoup <span class="good">d'</span>amis</div>
+</div>
+<p>Exception: with <em>être</em>, nothing changes — « Ce n'est pas <strong>un</strong>
+problème. »</p>
+
+<div class="callout callout-tip"><strong>Le genre :</strong> learn every noun with its
+article, as one block (<em>la voiture</em>, never just <em>voiture</em>). Useful clues:
+nouns in <em>-tion, -sion, -té, -ure, -ette</em> are feminine; nouns in <em>-ment,
+-age, -eau, -isme</em> are usually masculine.</div>
+`,
+        drill: {
+          title: "Articles et quantités",
+          items: [
+            { type: "mcq", id: "art-1", level: "A1",
+              q: "Le matin, je bois ___ thé.",
+              options: ["le", "du", "de", "un peu"], a: 1,
+              why: "Une quantité indéterminée d'un produit : article partitif « du » (masculin).",
+              gloss: "du = some: an unspecified amount." },
+            { type: "mcq", id: "art-2", level: "A1",
+              q: "Elle adore ___ chocolat.",
+              options: ["du", "le", "un", "de"], a: 1,
+              why: "Après « aimer, adorer, détester, préférer », on parle de la chose en général : article défini « le ».",
+              gloss: "liking verbs take le / la / les." },
+            { type: "mcq", id: "art-3", level: "A2",
+              q: "Nous n'avons pas ___ voiture.",
+              options: ["une", "la", "de", "des"], a: 2,
+              why: "Après une négation, « un / une / des » deviennent « de » : nous n'avons pas de voiture.",
+              gloss: "pas de — the article collapses after a negation." },
+            { type: "mcq", id: "art-4", level: "A2",
+              q: "Il y a beaucoup ___ monde dans le métro ce matin.",
+              options: ["du", "de", "des", "le"], a: 1,
+              why: "Après une expression de quantité (beaucoup, peu, trop, assez), on emploie « de » seul.",
+              gloss: "beaucoup de, never beaucoup du / des." },
+            { type: "mcq", id: "art-5", level: "A2",
+              q: "Je rentre ___ bureau vers dix-huit heures.",
+              options: ["de le", "du", "de la", "au"], a: 1,
+              why: "« Rentrer de » + « le bureau » : de + le se contracte en « du ».",
+              gloss: "de + le = du." },
+            { type: "mcq", id: "art-6", level: "A2",
+              q: "Tu penses souvent ___ vacances ?",
+              options: ["à les", "aux", "au", "des"], a: 1,
+              why: "« Penser à » + « les vacances » : à + les se contracte en « aux ».",
+              gloss: "à + les = aux." },
+          ],
+        },
+      },
+
+      {
+        id: "l3",
+        title: "Poser une question, dire non",
+        minutes: 11,
+        content: `
+<p>Two things you do in every conversation — and the second speaking task is nothing
+<em>but</em> questions.</p>
+
+<h2>Three ways to ask the same question</h2>
+<div class="scroll-x">
+<table class="tbl">
+  <tr><th>Forme</th><th>Exemple</th><th>Registre</th></tr>
+  <tr><td>Intonation</td><td>Vous habitez ici ?</td><td>familier, oral</td></tr>
+  <tr><td>Est-ce que</td><td>Est-ce que vous habitez ici ?</td><td>courant — toujours correct</td></tr>
+  <tr><td>Inversion</td><td>Habitez-vous ici ?</td><td>soutenu, écrit</td></tr>
+</table>
+</div>
+<p>With a third-person verb ending in a vowel, inversion adds a <strong>-t-</strong>:
+« Où habite<span class="good">-t-</span>il ? », « Y a<span class="good">-t-</span>il un bus ? »</p>
+
+<h2>The question words</h2>
+<div class="fr-ex">
+  <div class="fr"><strong>qui</strong> who · <strong>que / qu'est-ce que</strong> what · <strong>où</strong> where · <strong>quand</strong> when</div>
+  <div class="fr"><strong>comment</strong> how · <strong>pourquoi</strong> why · <strong>combien (de)</strong> how much / many</div>
+  <div class="fr"><strong>quel / quelle / quels / quelles</strong> + nom : which, what → <span class="good">Quelle</span> heure est-il ? <span class="good">Quel</span> est votre nom ?</div>
+</div>
+<p><em>Quel</em> agrees with its noun. <em>Que</em> becomes <em>quoi</em> at the end or
+after a preposition: « Tu fais <strong>quoi</strong> ? », « De <strong>quoi</strong>
+parlez-vous ? »</p>
+
+<h2>Negation wraps around the verb</h2>
+<div class="fr-ex">
+  <div class="fr">ne … <strong>pas</strong> not · ne … <strong>plus</strong> no longer · ne … <strong>jamais</strong> never</div>
+  <div class="fr">ne … <strong>rien</strong> nothing · ne … <strong>personne</strong> nobody · ne … <strong>que</strong> only</div>
+  <div class="fr">Je <span class="good">ne</span> fume <span class="good">plus</span>. Il <span class="good">n'</span>a <span class="good">rien</span> dit. Je <span class="good">n'</span>ai vu <span class="good">personne</span>.</div>
+</div>
+<p>In compound tenses, the second word goes right after the auxiliary (<em>je n'ai
+<strong>pas</strong> mangé, je n'ai <strong>jamais</strong> vu</em>) — except
+<em>personne</em>, which follows the participle.</p>
+
+<div class="callout callout-warn"><strong>« Si », pas « oui » :</strong> to contradict a
+negative question, French uses <em>si</em>. « Tu ne viens pas ? — <strong>Si</strong>,
+j'arrive ! » Answering <em>oui</em> there is a classic A2 mistake.</div>
+`,
+        drill: {
+          title: "Questions et négation",
+          items: [
+            { type: "mcq", id: "qn-1", level: "A1",
+              q: "___ habitez-vous ? — À Bruxelles.",
+              options: ["Quand", "Où", "Qui", "Combien"], a: 1,
+              why: "La réponse donne un lieu (« à Bruxelles ») : la question porte sur « où ».",
+              gloss: "où = where." },
+            { type: "mcq", id: "qn-2", level: "A1",
+              q: "___ heure est-il ?",
+              options: ["Quel", "Quelle", "Quels", "Qu'est-ce que"], a: 1,
+              why: "« Heure » est féminin singulier : quelle heure.",
+              gloss: "quel agrees with its noun: quelle heure, quel jour." },
+            { type: "mcq", id: "qn-3", level: "A2",
+              q: "Tu n'as pas faim ? — ___, j'ai très faim !",
+              options: ["Oui", "Si", "Non", "Pas"], a: 1,
+              why: "Pour répondre affirmativement à une question négative, on emploie « si » et non « oui ».",
+              gloss: "si = yes, contradicting a negative." },
+            { type: "mcq", id: "qn-4", level: "A2",
+              q: "Depuis son accident, il ne conduit ___.",
+              options: ["pas encore", "plus", "rien", "personne"], a: 1,
+              why: "« Ne… plus » indique qu'une habitude a cessé : il ne conduit plus.",
+              gloss: "ne… plus = no longer." },
+            { type: "mcq", id: "qn-5", level: "A2",
+              q: "Je suis arrivé trop tard : il n'y avait ___ dans la salle.",
+              options: ["rien", "personne", "jamais", "pas"], a: 1,
+              why: "On parle de gens absents : « ne… personne ». « Rien » s'emploie pour les choses.",
+              gloss: "personne = nobody; rien = nothing." },
+            { type: "mcq", id: "qn-6", level: "A2",
+              q: "Où ___ ? (registre soutenu)",
+              options: ["travaille il", "travaille-t-il", "il travaille-t", "est-ce il travaille"], a: 1,
+              why: "À l'inversion, un « -t- » s'intercale quand le verbe se termine par une voyelle : travaille-t-il.",
+              gloss: "the -t- is only there to make it pronounceable." },
+          ],
+        },
+      },
+
+      {
+        id: "l4",
+        title: "Parler du futur et du passé proche",
+        minutes: 10,
+        content: `
+<p>French has two futures, and a neat way of saying "just did". All three appear from
+the very first listening items.</p>
+
+<h2>Le futur proche : aller + infinitif</h2>
+<p>Like English "going to". It is the default future in conversation.</p>
+<div class="fr-ex">
+  <div class="fr">Je <span class="good">vais appeler</span> le médecin. <span class="en">I'm going to call the doctor.</span></div>
+  <div class="fr">Il <span class="good">ne va pas venir</span>. <span class="en">The negation wraps « aller », not the infinitive.</span></div>
+</div>
+
+<h2>Le futur simple : infinitif + terminaisons</h2>
+<p>Add <code>-ai, -as, -a, -ons, -ez, -ont</code> to the infinitive (drop the final
+<em>e</em> of -re verbs): <em>parler → je parlerai · finir → je finirai · prendre → je
+prendrai</em>. It is used for plans, promises, forecasts and in writing.</p>
+<div class="fr-ex">
+  <div class="fr">Irréguliers à connaître : être → je <strong>serai</strong> · avoir → j'<strong>aurai</strong> · aller → j'<strong>irai</strong> · faire → je <strong>ferai</strong></div>
+  <div class="fr">pouvoir → je <strong>pourrai</strong> · vouloir → je <strong>voudrai</strong> · venir → je <strong>viendrai</strong> · voir → je <strong>verrai</strong> · devoir → je <strong>devrai</strong></div>
+</div>
+
+<h2>After « quand », French uses the future</h2>
+<div class="fr-ex">
+  <div class="fr">Je t'appellerai quand j'<span class="good">arriverai</span>. <span class="en">I'll call you when I arrive.</span></div>
+  <div class="fr"><span class="bad">quand j'arrive</span> — English uses the present here; French does not.</div>
+</div>
+<p>But after <strong>si</strong> (if), never a future: « <em>S'il <span class="good">pleut</span>,
+je resterai à la maison.</em> »</p>
+
+<h2>Le passé récent : venir de + infinitif</h2>
+<div class="fr-ex">
+  <div class="fr">Elle <span class="good">vient de partir</span>. <span class="en">She has just left.</span></div>
+  <div class="fr">Je <span class="good">viens de</span> finir mon rapport. <span class="en">I've just finished my report.</span></div>
+</div>
+
+<div class="callout"><strong>Les marqueurs :</strong> <em>demain, ce soir, la semaine
+prochaine, dans deux jours, bientôt</em> → futur. <em>À l'instant, tout juste</em> →
+passé récent. In the listening test these little words are often the whole answer.</div>
+`,
+        drill: {
+          title: "Futur et passé récent",
+          items: [
+            { type: "mcq", id: "fut-1", level: "A1",
+              q: "Ce soir, nous ___ regarder un film.",
+              options: ["allons", "avons", "sommes", "faisons"], a: 0,
+              why: "Futur proche : « aller » au présent + infinitif → nous allons regarder.",
+              gloss: "aller + infinitive = going to." },
+            { type: "mcq", id: "fut-2", level: "A2",
+              q: "L'année prochaine, je ___ en Belgique.",
+              options: ["habite", "habiterai", "habitais", "ai habité"], a: 1,
+              why: "« L'année prochaine » situe l'action dans l'avenir : futur simple, j'habiterai.",
+              gloss: "infinitive + -ai." },
+            { type: "mcq", id: "fut-3", level: "A2",
+              q: "Tu ___ me voir quand tu seras à Paris ?",
+              options: ["viendras", "venais", "es venu", "viens de"], a: 0,
+              why: "Futur simple de « venir », radical irrégulier : tu viendras.",
+              gloss: "venir → viendr-." },
+            { type: "mcq", id: "fut-4", level: "A2",
+              q: "Le directeur n'est pas là : il ___ sortir.",
+              options: ["va de", "vient de", "est", "a"], a: 1,
+              why: "Passé récent : « venir de » + infinitif → il vient de sortir (= il est sorti il y a un instant).",
+              gloss: "venir de + infinitive = to have just." },
+            { type: "mcq", id: "fut-5", level: "B1",
+              q: "Je vous écrirai dès que j'___ des nouvelles.",
+              options: ["ai", "aurai", "avais", "aurais"], a: 1,
+              why: "Après « quand, dès que, lorsque », une action future se met au futur en français : dès que j'aurai.",
+              gloss: "English: « as soon as I have »; French: future." },
+            { type: "mcq", id: "fut-6", level: "B1",
+              q: "Si tu ___ avant midi, on déjeunera ensemble.",
+              options: ["arriveras", "arrives", "arriverais", "arrivais"], a: 1,
+              why: "Après « si » exprimant une condition réelle, on emploie le présent, jamais le futur : si tu arrives…, on déjeunera.",
+              gloss: "si + present → future. Never « si tu arriveras »." },
+          ],
+        },
+      },
+
+      {
+        id: "l5",
+        title: "Former le passé composé et l'imparfait",
+        minutes: 13,
+        content: `
+<p>Before choosing between the two past tenses (that is the first lesson of the next
+section), you have to be able to <em>build</em> them without thinking.</p>
+
+<h2>Le passé composé = auxiliaire + participe passé</h2>
+<p>Most verbs take <strong>avoir</strong>: <em>j'ai mangé, tu as fini, il a vendu</em>.
+Participles: <code>-er → -é</code>, <code>-ir → -i</code>, <code>-re → -u</code>.</p>
+<div class="fr-ex">
+  <div class="fr">Participes irréguliers fréquents : avoir → <strong>eu</strong> · être → <strong>été</strong> · faire → <strong>fait</strong> · prendre → <strong>pris</strong> · mettre → <strong>mis</strong></div>
+  <div class="fr">voir → <strong>vu</strong> · pouvoir → <strong>pu</strong> · vouloir → <strong>voulu</strong> · devoir → <strong>dû</strong> · dire → <strong>dit</strong> · écrire → <strong>écrit</strong> · ouvrir → <strong>ouvert</strong></div>
+</div>
+
+<h2>The verbs that take « être »</h2>
+<p>About fifteen verbs of <strong>movement or change of state</strong>, plus all
+reflexive verbs:</p>
+<div class="fr-ex">
+  <div class="fr">aller, venir, arriver, partir, entrer, sortir, monter, descendre, rester, tomber, retourner, naître, mourir, devenir, passer (par)</div>
+  <div class="fr">se lever → je me <span class="good">suis</span> levé · se tromper → elle s'<span class="good">est</span> trompée</div>
+</div>
+<p>With <em>être</em>, the participle <strong>agrees with the subject</strong>:</p>
+<div class="fr-ex">
+  <div class="fr">Il est arrivé · Elle est arrivé<span class="good">e</span> · Ils sont arrivé<span class="good">s</span> · Elles sont arrivé<span class="good">es</span></div>
+  <div class="fr"><span class="bad">J'ai allé</span> → Je <span class="good">suis</span> allé(e) · <span class="bad">Elle a resté</span> → Elle <span class="good">est</span> restée</div>
+</div>
+
+<h2>L'imparfait : one stem, one set of endings</h2>
+<p>Take the <strong>nous</strong> form of the present, remove <code>-ons</code>, add
+<code>-ais, -ais, -ait, -ions, -iez, -aient</code>:</p>
+<div class="fr-ex">
+  <div class="fr">nous finiss<del>ons</del> → je finiss<strong>ais</strong> · nous pren<del>ons</del> → je pren<strong>ais</strong> · nous fais<del>ons</del> → je fais<strong>ais</strong></div>
+  <div class="fr">Seule exception : être → j'<strong>étais</strong>, tu étais, il était, nous étions, vous étiez, ils étaient</div>
+</div>
+
+<div class="callout callout-tip"><strong>Négation et pronoms :</strong> everything wraps
+around the <em>auxiliary</em>. « Je <strong>n'</strong>ai <strong>pas</strong> compris »,
+« Il <strong>ne s'</strong>est <strong>pas</strong> réveillé », « Je <strong>l'</strong>ai vu ».</div>
+`,
+        drill: {
+          title: "Passé composé et imparfait : la forme",
+          items: [
+            { type: "mcq", id: "ppc-1", level: "A2",
+              q: "Hier soir, j'___ un très bon film.",
+              options: ["ai vu", "suis vu", "ai voir", "voyais vu"], a: 0,
+              why: "« Voir » se conjugue avec « avoir » ; participe passé irrégulier « vu » : j'ai vu.",
+              gloss: "voir → vu." },
+            { type: "mcq", id: "ppc-2", level: "A2",
+              q: "Ma mère ___ à Dakar en 1970.",
+              options: ["a né", "est née", "est né", "a née"], a: 1,
+              why: "« Naître » se conjugue avec « être » et le participe s'accorde avec le sujet féminin : elle est née.",
+              gloss: "être verbs agree with the subject." },
+            { type: "mcq", id: "ppc-3", level: "A2",
+              q: "Ce matin, je ___ à six heures.",
+              options: ["m'ai levé", "me suis levé", "suis levé", "ai levé"], a: 1,
+              why: "Les verbes pronominaux (se lever) prennent toujours l'auxiliaire « être » : je me suis levé.",
+              gloss: "all reflexive verbs take être." },
+            { type: "mcq", id: "ppc-4", level: "A2",
+              q: "Quand j'étais petit, nous ___ un chien.",
+              options: ["avons", "avions", "aurons", "avez"], a: 1,
+              why: "Imparfait de « avoir » : nous avions (radical « av- » + -ions).",
+              gloss: "imparfait endings: -ais, -ais, -ait, -ions, -iez, -aient." },
+            { type: "mcq", id: "ppc-5", level: "B1",
+              q: "Elles ___ tard à cause des embouteillages.",
+              options: ["sont arrivé", "ont arrivé", "sont arrivées", "ont arrivées"], a: 2,
+              why: "« Arriver » prend « être » ; le sujet est féminin pluriel, donc « arrivées ».",
+              gloss: "elles sont arrivées — feminine plural agreement." },
+            { type: "gap", id: "ppc-6", level: "B1",
+              q: "Complétez au passé composé : « Je n'___ pas ___ (comprendre) la question. » Écrivez les deux mots.",
+              answers: ["ai compris", "ai pas compris"],
+              why: "« Comprendre » suit le modèle de « prendre » : participe passé « compris ». La négation entoure l'auxiliaire : je n'ai pas compris.",
+              gloss: "prendre → pris; comprendre → compris; apprendre → appris." },
+          ],
+        },
+      },
+    ],
+  },
+
+  /* ================================================================== */
+  {
     id: "msl",
+    level: "B1–C1",
     icon: "🔧",
     title: "Maîtrise des structures",
     tagline: "Grammaire et vocabulaire — la section la plus « rentable » : les règles sont finies et se travaillent vite.",
@@ -1344,12 +1771,171 @@ single most common register mistake is writing a formal letter with
           ],
         },
       },
+
+      {
+        id: "l6",
+        title: "Le conditionnel et l'hypothèse",
+        minutes: 13,
+        content: `
+<p>"If" sentences are a fixed-price item in the structures test: there are three
+patterns, the tenses come in pairs, and one combination is simply forbidden.</p>
+
+<h2>The three pairs</h2>
+<div class="scroll-x">
+<table class="tbl">
+  <tr><th>Hypothèse</th><th>Après « si »</th><th>Dans l'autre proposition</th></tr>
+  <tr><td>réelle, possible</td><td>présent</td><td>futur (ou présent, impératif)</td></tr>
+  <tr><td>imaginaire, sur le présent</td><td>imparfait</td><td>conditionnel présent</td></tr>
+  <tr><td>regret, sur le passé</td><td>plus-que-parfait</td><td>conditionnel passé</td></tr>
+</table>
+</div>
+<div class="fr-ex">
+  <div class="fr">S'il <span class="good">fait</span> beau, nous <span class="good">irons</span> à la plage. <span class="en">It may well happen.</span></div>
+  <div class="fr">S'il <span class="good">faisait</span> beau, nous <span class="good">irions</span> à la plage. <span class="en">But it isn't.</span></div>
+  <div class="fr">S'il <span class="good">avait fait</span> beau, nous <span class="good">serions allés</span> à la plage. <span class="en">It didn't; too late.</span></div>
+</div>
+
+<div class="callout callout-warn"><strong>La règle d'or :</strong> never a future or a
+conditional right after <em>si</em>. French schoolchildren learn it as « les <em>si</em>
+n'aiment pas les <em>-rais</em> ». <span class="bad">Si j'aurais su</span> →
+<span class="good">Si j'avais su</span>.</div>
+
+<h2>Forming the conditional</h2>
+<p>The <strong>future stem</strong> + the <strong>imparfait endings</strong>
+(<code>-ais, -ais, -ait, -ions, -iez, -aient</code>): <em>je parlerais, je finirais,
+je prendrais</em>. The irregular future stems carry over: <em>je serais, j'aurais,
+j'irais, je ferais, je pourrais, je voudrais, je devrais, je viendrais, il faudrait</em>.</p>
+<p>The past conditional is <em>avoir / être</em> in the conditional + past participle:
+<em>j'aurais aimé, je serais venu(e)</em>.</p>
+
+<h2>Its three other jobs</h2>
+<div class="fr-ex">
+  <div class="fr"><strong>Politesse :</strong> Je <span class="good">voudrais</span> un renseignement. <span class="good">Pourriez</span>-vous m'aider ?</div>
+  <div class="fr"><strong>Conseil :</strong> Tu <span class="good">devrais</span> te reposer. À ta place, je <span class="good">refuserais</span>.</div>
+  <div class="fr"><strong>Information non confirmée (presse) :</strong> Le ministre <span class="good">aurait démissionné</span>. <span class="en">is said to have resigned</span></div>
+</div>
+<p>That last one matters in reading: a conditional in a news article means the
+journalist is <em>not</em> vouching for the fact.</p>
+`,
+        drill: {
+          title: "Conditionnel et hypothèse",
+          items: [
+            { type: "mcq", id: "cond-1", level: "B1",
+              q: "Si tu ___ plus tôt, tu ne serais pas fatigué.",
+              options: ["te couches", "te couchais", "te coucherais", "te coucheras"], a: 1,
+              why: "Hypothèse imaginaire sur le présent : si + imparfait, puis conditionnel présent. Après « si », jamais de conditionnel." },
+            { type: "mcq", id: "cond-2", level: "B1",
+              q: "Quelle forme est la plus polie ? « Bonjour, je ___ réserver une table pour deux personnes. »",
+              options: ["veux", "voudrais", "veuille", "voudrai"], a: 1,
+              why: "Le conditionnel de politesse adoucit une demande : je voudrais. « Je veux » est trop direct avec un inconnu." },
+            { type: "mcq", id: "cond-3", level: "B1",
+              q: "S'il pleut demain, nous ___ le pique-nique.",
+              options: ["annulerions", "annulerons", "annulions", "avons annulé"], a: 1,
+              why: "Hypothèse réelle : si + présent, puis futur simple. « Annulerions » supposerait « s'il pleuvait »." },
+            { type: "mcq", id: "cond-4", level: "B2",
+              q: "Si j'___ que tu venais, j'aurais préparé un dîner.",
+              options: ["aurais su", "avais su", "savais", "ai su"], a: 1,
+              why: "Regret sur le passé : si + plus-que-parfait (j'avais su), puis conditionnel passé (j'aurais préparé).",
+              gloss: "Never « si j'aurais su » — the most famous mistake in French." },
+            { type: "mcq", id: "cond-5", level: "B2",
+              q: "« Selon nos informations, l'entreprise fermerait deux usines. » Que signifie le conditionnel ?",
+              options: [
+                "La fermeture est certaine",
+                "L'information n'est pas confirmée",
+                "La fermeture a déjà eu lieu",
+                "Le journaliste souhaite cette fermeture",
+              ], a: 1,
+              why: "Dans la presse, le conditionnel signale une information non vérifiée, rapportée avec prudence." },
+            { type: "mcq", id: "cond-6", level: "B2",
+              q: "À ta place, je ne lui ___ rien.",
+              options: ["dirai", "dirais", "disais", "dis"], a: 1,
+              why: "« À ta place » introduit un conseil, donc une situation imaginaire : conditionnel présent, je dirais." },
+          ],
+        },
+      },
+
+      {
+        id: "l7",
+        title: "Discours rapporté et voix passive",
+        minutes: 13,
+        content: `
+<p>Two transformations that the reading and structures tests love, because they change
+the shape of a sentence without changing its meaning — exactly what a paraphrase does.</p>
+
+<h2>Le discours rapporté : who said what</h2>
+<div class="fr-ex">
+  <div class="fr">« Je suis fatigué. » → Il dit <span class="good">qu'</span>il est fatigué.</div>
+  <div class="fr">« Tu viens ? » → Elle demande <span class="good">si</span> je viens. <span class="en">yes / no question → si</span></div>
+  <div class="fr">« Qu'est-ce que tu fais ? » → Il demande <span class="good">ce que</span> je fais.</div>
+  <div class="fr">« Où habites-tu ? » → Il demande <span class="good">où</span> j'habite. <span class="en">no inversion, no « est-ce que »</span></div>
+  <div class="fr">« Ferme la porte ! » → Il me demande <span class="good">de fermer</span> la porte.</div>
+</div>
+
+<h2>When the reporting verb is in the past, the tenses shift back</h2>
+<div class="scroll-x">
+<table class="tbl">
+  <tr><th>Paroles d'origine</th><th>Il a dit que…</th></tr>
+  <tr><td>présent : « Je <em>pars</em>. »</td><td>imparfait : il <em>partait</em></td></tr>
+  <tr><td>passé composé : « J'<em>ai fini</em>. »</td><td>plus-que-parfait : il <em>avait fini</em></td></tr>
+  <tr><td>futur : « Je <em>viendrai</em>. »</td><td>conditionnel : il <em>viendrait</em></td></tr>
+</table>
+</div>
+<p>Time words shift too: <em>demain → le lendemain · hier → la veille · aujourd'hui →
+ce jour-là · la semaine prochaine → la semaine suivante</em>.</p>
+
+<h2>La voix passive : the object takes the lead</h2>
+<p><strong>être</strong> (in any tense) + <strong>past participle</strong>, which agrees
+with the subject. The doer, if mentioned, comes after <em>par</em>.</p>
+<div class="fr-ex">
+  <div class="fr">Le maire inaugure la bibliothèque. → La bibliothèque <span class="good">est inaugurée</span> par le maire.</div>
+  <div class="fr">On a volé mon vélo. → Mon vélo <span class="good">a été volé</span>.</div>
+  <div class="fr">On construira une école. → Une école <span class="good">sera construite</span>.</div>
+</div>
+<p>The tense is carried by <em>être</em> alone: <em>est fait, a été fait, était fait,
+sera fait, serait fait</em>. Spoken French often prefers <strong>on</strong>
+(« On a volé mon vélo ») or a reflexive (« Ce vin <strong>se boit</strong> frais »).</p>
+
+<div class="callout"><strong>En compréhension écrite :</strong> correct options are very
+often the passive or reported version of a sentence in the text. « La direction a
+refusé la proposition » and « La proposition a été rejetée » are the same fact.</div>
+`,
+        drill: {
+          title: "Discours rapporté et passif",
+          items: [
+            { type: "mcq", id: "dr-1", level: "B1",
+              q: "« Tu as faim ? » → Il me demande ___ j'ai faim.",
+              options: ["que", "si", "est-ce que", "ce que"], a: 1,
+              why: "Une question à laquelle on répond par oui ou non se rapporte avec « si »." },
+            { type: "mcq", id: "dr-2", level: "B1",
+              q: "« Qu'est-ce que vous cherchez ? » → Elle veut savoir ___ nous cherchons.",
+              options: ["qu'est-ce que", "ce que", "quoi", "que"], a: 1,
+              why: "Au discours indirect, « qu'est-ce que » devient « ce que »." },
+            { type: "mcq", id: "dr-3", level: "B2",
+              q: "« Je viendrai demain. » → Il a promis qu'il ___ le lendemain.",
+              options: ["viendra", "viendrait", "venait", "est venu"], a: 1,
+              why: "Verbe introducteur au passé : le futur devient un conditionnel (futur dans le passé), et « demain » devient « le lendemain »." },
+            { type: "mcq", id: "dr-4", level: "B2",
+              q: "« J'ai perdu mes clés. » → Elle a expliqué qu'elle ___ ses clés.",
+              options: ["a perdu", "avait perdu", "perdait", "perdrait"], a: 1,
+              why: "Verbe introducteur au passé : le passé composé devient un plus-que-parfait." },
+            { type: "mcq", id: "dr-5", level: "B1",
+              q: "Ce roman ___ en vingt langues l'année dernière.",
+              options: ["a traduit", "a été traduit", "est traduisant", "traduisait"], a: 1,
+              why: "Le roman subit l'action : passif au passé composé, « a été » + participe passé." },
+            { type: "mcq", id: "dr-6", level: "B2",
+              q: "Les résultats ___ demain par le jury.",
+              options: ["seront annoncés", "annonceront", "sont annonçant", "auront annoncé"], a: 0,
+              why: "Passif au futur : « seront » + participe accordé avec le sujet masculin pluriel → seront annoncés." },
+          ],
+        },
+      },
     ],
   },
 
   /* ================================================================== */
   {
     id: "co",
+    level: "A1–C1",
     icon: "👂",
     title: "Compréhension orale",
     tagline: "L'audio ne passe qu'une fois. Écouter, ce n'est pas tout comprendre : c'est trouver l'information utile.",
@@ -1542,6 +2128,7 @@ about intention or tone, ignore the topic words entirely and listen to the
   /* ================================================================== */
   {
     id: "ce",
+    level: "A2–C1",
     icon: "📖",
     title: "Compréhension écrite",
     tagline: "45 minutes, 29 questions. On ne lit pas : on cherche. Repérage, paraphrase, implicite.",
@@ -1750,9 +2337,340 @@ when you've located the right paragraph.</div>
      skill: "msl" → type "mcq"      (maîtrise des structures de la langue)
      skill: "ce"  → type "read"     (compréhension écrite)
    In a `listen` item, « — » separates the speakers of a dialogue: the player
-   alternates two voices. Do not use it as ordinary punctuation in `audio`.
+   alternates two voices. Do not use it as ordinary punctuation in `audio`,
+   and avoid abbreviations with a full stop (write « monsieur », not « M. »).
+   Options are shuffled when displayed, so `a` can stay wherever it is clearest.
    ========================================================================== */
 const EXAM_BANK = [
+  /* ====================== COMPRÉHENSION ORALE ====================== */
+  { skill: "co", type: "listen", id: "x-co-01", level: "A1",
+    audio: "Bonjour, je voudrais un café et un croissant, s'il vous plaît.",
+    q: "Où se passe cette scène ?",
+    options: ["Dans un café", "Dans une pharmacie", "Dans une gare", "Dans une banque"], a: 0,
+    why: "La personne commande « un café et un croissant » : on est dans un café ou une boulangerie." },
+  { skill: "co", type: "listen", id: "x-co-02", level: "A1",
+    audio: "Salut, c'est Marie. On se retrouve demain à dix-huit heures devant le cinéma ?",
+    q: "Quand Marie propose-t-elle le rendez-vous ?",
+    options: ["Ce soir à 18 h", "Demain à 18 h", "Demain à 8 h", "Samedi à 18 h"], a: 1,
+    why: "Marie dit « demain à dix-huit heures ». Dix-huit heures, c'est 18 h, et non 8 h." },
+  { skill: "co", type: "listen", id: "x-co-03", level: "A1",
+    audio: "Ma sœur s'appelle Julie. Elle a vingt-deux ans et elle habite à Marseille.",
+    q: "Quel âge a Julie ?",
+    options: ["12 ans", "20 ans", "22 ans", "32 ans"], a: 2,
+    why: "On entend « vingt-deux ans », soit 22." },
+  { skill: "co", type: "listen", id: "x-co-04", level: "A1",
+    audio: "Il fait très froid aujourd'hui. Prends ton manteau et ton écharpe avant de sortir.",
+    q: "Que conseille la personne ?",
+    options: ["De rester à la maison", "De s'habiller chaudement", "De prendre un parapluie", "De sortir plus tard"], a: 1,
+    why: "« Prends ton manteau et ton écharpe » : il s'agit de s'habiller chaudement parce qu'il fait froid. Il n'est pas question de pluie." },
+
+  { skill: "co", type: "listen", id: "x-co-05", level: "A2",
+    audio: "Chers clients, votre magasin fermera ses portes dans quinze minutes. Nous vous invitons à vous diriger vers les caisses. Nous vous souhaitons une bonne soirée.",
+    q: "Que doivent faire les clients ?",
+    options: ["Quitter le magasin immédiatement", "Aller payer leurs achats", "Revenir dans quinze minutes", "Attendre l'ouverture des caisses"], a: 1,
+    why: "« Nous vous invitons à vous diriger vers les caisses » : il faut aller payer, car le magasin ferme dans quinze minutes." },
+  { skill: "co", type: "listen", id: "x-co-06", level: "A2",
+    audio: "— Excusez-moi, la poste, s'il vous plaît ? — C'est tout près. Vous continuez tout droit, puis vous prenez la deuxième rue à gauche. La poste est en face de la boulangerie.",
+    q: "Où se trouve la poste ?",
+    options: ["À côté de la boulangerie", "En face de la boulangerie", "Dans la première rue à gauche", "Derrière la gare"], a: 1,
+    why: "La personne précise : « La poste est en face de la boulangerie », dans la deuxième rue à gauche." },
+  { skill: "co", type: "listen", id: "x-co-07", level: "A2",
+    audio: "Bonjour, c'est le garage Martin. Votre voiture est prête. Vous pouvez venir la chercher aujourd'hui jusqu'à dix-neuf heures, ou demain matin à partir de huit heures.",
+    q: "Pourquoi le garage appelle-t-il ?",
+    options: ["Pour annoncer que la réparation est terminée", "Pour demander un paiement", "Pour proposer un rendez-vous de réparation", "Pour annoncer un retard"], a: 0,
+    why: "« Votre voiture est prête » : la réparation est terminée, le client peut venir la chercher." },
+  { skill: "co", type: "listen", id: "x-co-08", level: "A2",
+    audio: "— Tu as passé de bonnes vacances ? — Oui, super. On est allés en Bretagne. Il a plu presque tous les jours, mais on a mangé des crêpes et on s'est bien reposés.",
+    q: "Quel temps a-t-il fait pendant les vacances ?",
+    options: ["Il a fait très chaud", "Il a souvent plu", "Il a neigé", "Il a fait beau tous les jours"], a: 1,
+    why: "« Il a plu presque tous les jours » : le temps était pluvieux, ce qui n'a pas empêché de bonnes vacances." },
+
+  { skill: "co", type: "listen", id: "x-co-09", level: "B1",
+    audio: "— Allô, bonjour, je voudrais déplacer mon rendez-vous de jeudi. — Bien sûr. Le docteur n'a plus de place cette semaine. Je peux vous proposer lundi prochain à neuf heures ou mercredi à seize heures trente. — Lundi, je travaille. Mercredi, ça ira.",
+    q: "Quand le patient verra-t-il le médecin ?",
+    options: ["Jeudi", "Lundi à 9 h", "Mercredi à 16 h 30", "Cette semaine"], a: 2,
+    why: "Le patient refuse lundi (« je travaille ») et accepte mercredi : « Mercredi, ça ira », soit mercredi à seize heures trente." },
+  { skill: "co", type: "listen", id: "x-co-10", level: "B1",
+    audio: "Flash info trafic. En raison d'un accident sur l'autoroute A six, la circulation est interrompue en direction de Paris. Les automobilistes sont invités à sortir à Mâcon et à suivre la déviation. Un retour à la normale est prévu en fin d'après-midi.",
+    q: "Que recommande-t-on aux automobilistes ?",
+    options: ["D'attendre sur l'autoroute", "De quitter l'autoroute et de suivre un autre itinéraire", "De reporter leur voyage au lendemain", "De rouler plus lentement"], a: 1,
+    why: "Les automobilistes « sont invités à sortir à Mâcon et à suivre la déviation » : ils doivent quitter l'autoroute et prendre un autre itinéraire." },
+  { skill: "co", type: "listen", id: "x-co-11", level: "B1",
+    audio: "Moi, j'ai arrêté de prendre la voiture pour aller travailler. Avec le prix de l'essence et les embouteillages, ça ne valait plus la peine. Le train me coûte moins cher, et en plus je peux lire pendant le trajet.",
+    q: "Pourquoi cette personne a-t-elle changé de moyen de transport ?",
+    options: ["Sa voiture est en panne", "Le train est plus économique et plus agréable", "Elle a déménagé près de son travail", "Son employeur le lui a demandé"], a: 1,
+    why: "Elle cite le prix de l'essence et les embouteillages, puis les avantages du train : « moins cher » et la possibilité de lire." },
+  { skill: "co", type: "listen", id: "x-co-12", level: "B1",
+    audio: "— Alors, tu viens avec nous au concert vendredi ? — J'hésite. Les places sont chères, et je dois me lever tôt samedi. — Allez, ça fait des mois qu'on n'est pas sortis ensemble ! — Bon, d'accord, mais je ne rentre pas tard.",
+    q: "Que décide finalement la deuxième personne ?",
+    options: ["Elle refuse de venir", "Elle accepte, à une condition", "Elle propose une autre date", "Elle n'a pas encore décidé"], a: 1,
+    why: "Après avoir hésité, elle dit « Bon, d'accord, mais je ne rentre pas tard » : elle accepte, à condition de ne pas rentrer tard." },
+  { skill: "co", type: "listen", id: "x-co-13", level: "B1",
+    audio: "Votre attention, s'il vous plaît. Le vol à destination de Montréal, initialement prévu à dix heures quarante, est retardé d'une heure en raison des conditions météorologiques. L'embarquement se fera porte vingt-trois et non porte douze.",
+    q: "Qu'est-ce qui a changé pour ce vol ?",
+    options: ["Seulement l'heure de départ", "Seulement la porte d'embarquement", "L'heure de départ et la porte d'embarquement", "La destination"], a: 2,
+    why: "Deux changements sont annoncés : le vol est « retardé d'une heure » et l'embarquement se fait « porte vingt-trois et non porte douze »." },
+
+  { skill: "co", type: "listen", id: "x-co-14", level: "B2",
+    audio: "On nous répète que les jeunes ne lisent plus. C'est faux. Ils lisent autrement : des articles en ligne, des bandes dessinées, des romans sur leur téléphone. Ce qui recule, ce n'est pas la lecture, c'est le temps long qu'on lui consacrait autrefois.",
+    q: "Quelle est l'idée principale de la personne ?",
+    options: ["Les jeunes ne lisent plus du tout", "Les jeunes lisent toujours, mais d'une autre manière", "Les écrans ont remplacé les livres à l'école", "Il faut interdire les téléphones aux jeunes"], a: 1,
+    why: "La personne conteste l'idée reçue (« C'est faux ») et précise : « Ils lisent autrement ». Ce qui diminue, c'est le temps long de lecture, pas la lecture elle-même." },
+  { skill: "co", type: "listen", id: "x-co-15", level: "B2",
+    audio: "— Tu as vu le nouveau planning ? On passe tous au travail le samedi matin. — Oui, enfin, c'est provisoire, d'après la direction. — Provisoire, provisoire… La dernière fois, le provisoire a duré deux ans.",
+    q: "Quelle est l'attitude de la première personne face à l'annonce de la direction ?",
+    options: ["Elle est rassurée", "Elle est sceptique", "Elle est enthousiaste", "Elle est indifférente"], a: 1,
+    why: "En répétant « provisoire, provisoire… » puis en rappelant que la dernière fois cela avait duré deux ans, elle montre qu'elle ne croit pas la direction." },
+  { skill: "co", type: "listen", id: "x-co-16", level: "B2",
+    audio: "Le maire a annoncé hier la piétonnisation du centre-ville à partir du mois de juin. Si les associations de riverains s'en réjouissent, les commerçants, eux, redoutent une baisse de leur chiffre d'affaires et réclament des parkings supplémentaires en périphérie.",
+    q: "Comment les commerçants réagissent-ils au projet ?",
+    options: ["Ils le soutiennent sans réserve", "Ils s'inquiètent de ses conséquences économiques", "Ils demandent qu'il soit avancé", "Ils n'ont pas donné leur avis"], a: 1,
+    why: "Les commerçants « redoutent une baisse de leur chiffre d'affaires » : ils craignent les conséquences économiques. Ce sont les riverains qui se réjouissent." },
+  { skill: "co", type: "listen", id: "x-co-17", level: "B2",
+    audio: "— Je vous rappelle au sujet de ma commande. On m'avait promis une livraison sous quarante-huit heures, et cela fait dix jours. — Je comprends, madame. Votre colis a été bloqué à l'entrepôt. Je vous propose soit un remboursement, soit une nouvelle expédition gratuite en express. — Envoyez-le en express, mais c'est la dernière fois que je commande chez vous.",
+    q: "Que choisit la cliente ?",
+    options: ["Le remboursement de sa commande", "Un nouvel envoi rapide", "L'annulation sans remboursement", "Un bon d'achat"], a: 1,
+    why: "Entre le remboursement et la nouvelle expédition, la cliente répond : « Envoyez-le en express ». Elle ajoute seulement qu'elle ne commandera plus." },
+  { skill: "co", type: "listen", id: "x-co-18", level: "B2",
+    audio: "Contrairement à ce qu'on pourrait croire, travailler plus longtemps ne signifie pas produire davantage. Plusieurs entreprises qui ont testé la semaine de quatre jours constatent que la productivité se maintient, tandis que les arrêts maladie diminuent nettement.",
+    q: "Que montrent les expériences évoquées ?",
+    options: ["La semaine de quatre jours fait baisser la production", "On peut réduire le temps de travail sans perdre en efficacité", "Les salariés refusent de travailler quatre jours", "Les arrêts maladie augmentent"], a: 1,
+    why: "Avec la semaine de quatre jours, « la productivité se maintient » et les arrêts maladie « diminuent » : moins de temps de travail, sans perte d'efficacité." },
+
+  { skill: "co", type: "listen", id: "x-co-19", level: "C1",
+    audio: "On présente souvent le télétravail comme une conquête sociale. Je n'en suis pas si sûr. À y regarder de près, il a surtout permis aux entreprises de réduire leurs surfaces de bureaux, en reportant sur les salariés le coût du chauffage, de l'équipement et, disons-le, de l'isolement.",
+    q: "Que sous-entend l'intervenant ?",
+    options: ["Le télétravail profite avant tout aux employeurs", "Le télétravail devrait devenir obligatoire", "Les salariés ont obtenu le télétravail par la grève", "Les bureaux coûtent de moins en moins cher"], a: 0,
+    why: "L'intervenant doute que ce soit une « conquête sociale » : selon lui, le télétravail a « surtout permis aux entreprises » de faire des économies, les coûts étant reportés sur les salariés." },
+  { skill: "co", type: "listen", id: "x-co-20", level: "C1",
+    audio: "— Votre dernier roman a été très bien accueilli par la critique. — Oui, enfin, la critique… Disons qu'elle m'a découvert au sixième livre. Les cinq premiers, apparemment, elle ne les avait pas lus.",
+    q: "Quel est le ton de l'écrivain ?",
+    options: ["Reconnaissant", "Ironique", "Inquiet", "Admiratif"], a: 1,
+    why: "L'écrivain se moque de la critique, qui l'aurait « découvert au sixième livre » : la remarque est ironique, il lui reproche de l'avoir longtemps ignoré." },
+  { skill: "co", type: "listen", id: "x-co-21", level: "C1",
+    audio: "La gratuité des musées, tout le monde y est favorable sur le principe. Or les études sont formelles : elle profite d'abord à ceux qui y allaient déjà. Si l'on veut vraiment élargir le public, c'est dans les écoles et les quartiers qu'il faut investir, pas dans le prix du billet.",
+    q: "Quelle est la position de la personne ?",
+    options: ["La gratuité suffit à attirer de nouveaux visiteurs", "La gratuité n'atteint pas son objectif ; il faut agir autrement", "Les musées devraient augmenter leurs tarifs", "Les écoles n'ont pas à s'occuper de culture"], a: 1,
+    why: "« Or » introduit l'objection : la gratuité profite à ceux qui venaient déjà. Pour élargir le public, il faut investir ailleurs, « pas dans le prix du billet »." },
+  { skill: "co", type: "listen", id: "x-co-22", level: "C1",
+    audio: "— Il paraît que la réunion de ce matin s'est bien passée ? — Bien passée, si l'on veut. Personne n'a claqué la porte, c'est déjà ça. Quant à savoir si quelque chose a été décidé, c'est une autre histoire.",
+    q: "Que faut-il comprendre de cette réunion ?",
+    options: ["Elle a abouti à des décisions importantes", "Elle s'est déroulée sans conflit ouvert, mais sans résultat", "Elle a été annulée", "Elle s'est terminée par une dispute"], a: 1,
+    why: "« Personne n'a claqué la porte » : pas de conflit ouvert. Mais « quant à savoir si quelque chose a été décidé, c'est une autre histoire » : rien n'a vraiment été décidé." },
+
+  { skill: "co", type: "listen", id: "x-co-23", level: "C2",
+    audio: "Que la croissance verte soit possible, je veux bien l'admettre, encore faudrait-il s'entendre sur ce qu'on met derrière les mots. Car enfin, à force de repeindre en vert les mêmes recettes, on finit par croire qu'on a changé de modèle, alors qu'on n'a guère changé que de vocabulaire.",
+    q: "Que reproche l'intervenant au discours sur la croissance verte ?",
+    options: ["D'être trop pessimiste sur l'avenir", "De masquer l'absence de changement réel derrière de nouveaux mots", "De proposer des réformes trop rapides", "De nier toute possibilité de croissance"], a: 1,
+    why: "L'intervenant concède que la croissance verte est possible, mais dénonce un changement purement verbal : on n'a « guère changé que de vocabulaire »." },
+  { skill: "co", type: "listen", id: "x-co-24", level: "C2",
+    audio: "Loin de moi l'idée de minimiser le travail accompli par mon prédécesseur. Simplement, on ne m'en voudra pas de constater que les comptes qu'il m'a laissés ne ressemblent que de très loin à ceux qu'il avait présentés au conseil.",
+    q: "Que laisse entendre la personne qui parle ?",
+    options: ["Son prédécesseur a remarquablement géré les finances", "Les comptes présentés par son prédécesseur n'étaient pas fidèles à la réalité", "Elle refuse de reprendre le poste", "Le conseil a approuvé les comptes sans les lire"], a: 1,
+    why: "Sous une formule de politesse (« loin de moi l'idée de minimiser… »), la personne affirme que les comptes réels diffèrent fortement de ceux présentés : c'est une critique à peine voilée." },
+  { skill: "co", type: "listen", id: "x-co-25", level: "C2",
+    audio: "On aurait tort de voir dans cette réforme une simple mesure technique. Sous couvert d'harmonisation, elle déplace discrètement le pouvoir de décision des communes vers la région, et ce sans que le moindre débat public ait eu lieu.",
+    q: "Selon la personne, quel est l'effet réel de la réforme ?",
+    options: ["Elle simplifie les démarches des habitants", "Elle retire du pouvoir aux communes sans le dire ouvertement", "Elle renforce l'autonomie des communes", "Elle a été longuement débattue en public"], a: 1,
+    why: "« Sous couvert d'harmonisation », la réforme « déplace discrètement le pouvoir de décision des communes vers la région » : un transfert de pouvoir non assumé, et sans débat." },
+
+  /* ====================== COMPRÉHENSION ÉCRITE ====================== */
+  { skill: "ce", type: "read", id: "x-ce-01", level: "A1",
+    context: "BOULANGERIE DU MARCHÉ\nOuvert du mardi au dimanche\nde 7 h à 13 h\nFermé le lundi",
+    q: "Quel jour la boulangerie est-elle fermée ?",
+    options: ["Le dimanche", "Le lundi", "Le mardi", "Le samedi"], a: 1,
+    why: "Le panneau indique « Fermé le lundi »." },
+  { skill: "ce", type: "read", id: "x-ce-02", level: "A1",
+    context: "Salut Tom,\nJe suis au supermarché. Tu veux quelque chose ?\nRéponds-moi vite !\nLéa",
+    q: "Pourquoi Léa écrit-elle à Tom ?",
+    options: ["Pour l'inviter au restaurant", "Pour savoir s'il a besoin de quelque chose", "Pour lui demander de l'argent", "Pour annuler un rendez-vous"], a: 1,
+    why: "Léa est au supermarché et demande : « Tu veux quelque chose ? »" },
+  { skill: "ce", type: "read", id: "x-ce-03", level: "A1",
+    context: "À VENDRE\nVélo bleu pour enfant (6–8 ans)\nTrès bon état — 40 euros\nTéléphone : 06 12 34 56 78",
+    q: "Que propose cette annonce ?",
+    options: ["La location d'un vélo", "La vente d'un vélo d'enfant", "La réparation de vélos", "Un cours de vélo"], a: 1,
+    why: "« À vendre : vélo bleu pour enfant » : il s'agit de la vente d'un vélo d'enfant." },
+  { skill: "ce", type: "read", id: "x-ce-04", level: "A1",
+    context: "CINÉMA LE REX\nTarif normal : 9 euros\nÉtudiants et moins de 18 ans : 6 euros\nLe mercredi : 5 euros pour tous",
+    q: "Combien paie un adulte le mercredi ?",
+    options: ["5 euros", "6 euros", "9 euros", "Rien"], a: 0,
+    why: "Le mercredi, le tarif est de « 5 euros pour tous », donc aussi pour un adulte." },
+
+  { skill: "ce", type: "read", id: "x-ce-05", level: "A2",
+    context: "Bonjour Madame Petit,\n\nJe vous écris pour vous informer que mon fils Hugo sera absent demain matin : il a rendez-vous chez le dentiste à 9 h. Il reviendra à l'école pour le déjeuner.\n\nCordialement,\nClaire Morel",
+    q: "Quand Hugo retournera-t-il à l'école ?",
+    options: ["Demain à 9 h", "Demain, pour le repas de midi", "Après-demain", "La semaine prochaine"], a: 1,
+    why: "« Il reviendra à l'école pour le déjeuner » : il sera de retour à midi, après son rendez-vous du matin." },
+  { skill: "ce", type: "read", id: "x-ce-06", level: "A2",
+    context: "PISCINE MUNICIPALE — RÈGLEMENT\n• Le bonnet de bain est obligatoire.\n• Les enfants de moins de 10 ans doivent être accompagnés d'un adulte.\n• Il est interdit de manger au bord des bassins.\n• Douche obligatoire avant la baignade.",
+    q: "Que doit faire un enfant de 8 ans pour entrer ?",
+    options: ["Venir avec un adulte", "Présenter une carte d'identité", "Payer un supplément", "Savoir nager"], a: 0,
+    why: "« Les enfants de moins de 10 ans doivent être accompagnés d'un adulte » : un enfant de 8 ans ne peut pas entrer seul." },
+  { skill: "ce", type: "read", id: "x-ce-07", level: "A2",
+    context: "Résidence Les Tilleuls\n\nAVIS AUX HABITANTS\nL'ascenseur sera en panne du lundi 3 au mercredi 5 mars pour travaux d'entretien. Merci d'utiliser les escaliers. Nous nous excusons pour la gêne occasionnée.\n\nLe gardien",
+    q: "Que doivent faire les habitants pendant trois jours ?",
+    options: ["Quitter l'immeuble", "Monter à pied", "Appeler le gardien avant de sortir", "Payer les travaux"], a: 1,
+    why: "L'ascenseur est hors service : « Merci d'utiliser les escaliers ». Les habitants doivent donc monter à pied." },
+  { skill: "ce", type: "read", id: "x-ce-08", level: "A2",
+    context: "Cherche personne sérieuse pour garder deux enfants (4 et 7 ans) le mercredi après-midi, de 13 h à 18 h. Aller les chercher à l'école, aide aux devoirs. Expérience souhaitée. 12 euros de l'heure. Écrire à famille.roux@courriel.fr",
+    q: "Que recherche cette famille ?",
+    options: ["Un professeur de mathématiques", "Une personne pour s'occuper des enfants une fois par semaine", "Un chauffeur à plein temps", "Une femme de ménage"], a: 1,
+    why: "L'annonce cherche quelqu'un « pour garder deux enfants le mercredi après-midi » : une garde d'enfants hebdomadaire." },
+
+  { skill: "ce", type: "read", id: "x-ce-09", level: "B1",
+    context: "Objet : Votre abonnement\n\nMadame, Monsieur,\n\nVotre abonnement à notre salle de sport arrive à échéance le 30 juin. Sans réponse de votre part avant cette date, il sera renouvelé automatiquement pour un an, au tarif de 39 euros par mois.\n\nSi vous ne souhaitez pas le prolonger, il vous suffit de nous envoyer un courriel au plus tard le 15 juin.\n\nSportivement,\nL'équipe Tonic Club",
+    q: "Que se passe-t-il si le client ne fait rien ?",
+    options: ["Son abonnement s'arrête le 30 juin", "Son abonnement est prolongé d'un an", "Il reçoit un remboursement", "Il doit payer une amende"], a: 1,
+    why: "« Sans réponse de votre part […], il sera renouvelé automatiquement pour un an. » Ne rien faire, c'est accepter le renouvellement." },
+  { skill: "ce", type: "read", id: "x-ce-10", level: "B1",
+    context: "Avis de Nadia — ★★☆☆☆\n\nL'hôtel est bien situé, à deux pas de la plage, et le personnel est aimable. Malheureusement, notre chambre donnait sur une rue très passante et nous avons mal dormi. De plus, le petit-déjeuner, annoncé comme « copieux », se limitait à du pain et du café. Pour ce prix, nous attendions mieux.",
+    q: "Que reproche Nadia à l'hôtel ?",
+    options: ["Son emplacement et l'accueil", "Le bruit et la qualité du petit-déjeuner", "La saleté de la chambre", "L'éloignement de la plage"], a: 1,
+    why: "Nadia apprécie l'emplacement et le personnel, mais critique la chambre bruyante (« une rue très passante ») et un petit-déjeuner décevant." },
+  { skill: "ce", type: "read", id: "x-ce-11", level: "B1",
+    context: "La mairie lance une collecte de vêtements du 10 au 20 novembre. Vous pouvez déposer manteaux, pulls et chaussures en bon état dans le hall de l'hôtel de ville, du lundi au vendredi. Les dons seront remis à une association qui les distribuera aux familles en difficulté avant l'hiver. Les vêtements déchirés ou sales ne seront pas acceptés.",
+    q: "Quel est l'objectif de cette opération ?",
+    options: ["Vendre des vêtements d'occasion", "Aider des familles à s'habiller pour l'hiver", "Recycler de vieux tissus", "Organiser un défilé de mode"], a: 1,
+    why: "Les dons « seront remis à une association qui les distribuera aux familles en difficulté avant l'hiver » : c'est une action de solidarité." },
+  { skill: "ce", type: "read", id: "x-ce-12", level: "B1",
+    context: "Chère Élise,\n\nJe suis bien arrivée à Montréal. Les premiers jours ont été compliqués : ma valise est restée à Paris et je n'ai pu la récupérer qu'au bout d'une semaine. Heureusement, ma colocataire m'a prêté des vêtements. Depuis, tout va mieux : j'ai commencé mes cours lundi et les étudiants sont très accueillants.\n\nJe t'embrasse,\nManon",
+    q: "Quel problème Manon a-t-elle rencontré à son arrivée ?",
+    options: ["Elle n'avait pas de logement", "Ses bagages ne sont pas arrivés avec elle", "Elle a raté son avion", "Ses cours ont été annulés"], a: 1,
+    why: "« Ma valise est restée à Paris et je n'ai pu la récupérer qu'au bout d'une semaine » : ses bagages n'ont pas suivi." },
+  { skill: "ce", type: "read", id: "x-ce-13", level: "B1",
+    context: "De plus en plus de Français choisissent de faire réparer leurs appareils plutôt que de les remplacer. Dans les « cafés de réparation », des bénévoles aident gratuitement les habitants à remettre en état un grille-pain, un téléphone ou un vélo. On y vient pour économiser de l'argent, mais aussi pour réduire ses déchets et rencontrer ses voisins.",
+    q: "Pourquoi les gens fréquentent-ils ces cafés ?",
+    options: ["Pour acheter des appareils neufs moins chers", "Pour des raisons économiques, écologiques et sociales", "Pour apprendre un métier", "Pour vendre leurs vieux objets"], a: 1,
+    why: "Le texte cite trois raisons : « économiser de l'argent », « réduire ses déchets » et « rencontrer ses voisins »." },
+
+  { skill: "ce", type: "read", id: "x-ce-14", level: "B2",
+    context: "Longtemps réservé aux grandes villes, le vélo en libre-service gagne désormais les communes moyennes. Le bilan est pourtant contrasté. Là où les pistes cyclables ont été aménagées en amont, le succès est réel. Ailleurs, les vélos restent sur leurs bornes : les habitants, peu rassurés par la circulation, ne changent pas leurs habitudes. Les élus découvrent qu'il ne suffit pas d'offrir un service pour créer un usage.",
+    q: "Que montre l'expérience des communes moyennes ?",
+    options: ["Le vélo en libre-service réussit partout", "Sans aménagements cyclables, le service est peu utilisé", "Les habitants préfèrent acheter leur propre vélo", "Les élus veulent supprimer ces services"], a: 1,
+    why: "Le succès dépend des pistes cyclables « aménagées en amont ». Ailleurs, les vélos ne sont pas utilisés, car les habitants craignent la circulation." },
+  { skill: "ce", type: "read", id: "x-ce-15", level: "B2",
+    context: "Certes, les supermarchés ont fait des efforts pour réduire le plastique, et l'on ne peut que s'en féliciter. Mais remplacer un sachet par une barquette en carton, elle-même enveloppée d'un film, relève davantage de la communication que de l'écologie. Tant que les produits continueront de parcourir des milliers de kilomètres, l'emballage restera le détail qui cache l'essentiel.",
+    q: "Quelle est l'opinion de l'auteur ?",
+    options: ["Les supermarchés ont résolu le problème du plastique", "Les efforts sur les emballages détournent l'attention du vrai problème", "Le carton pollue davantage que le plastique", "Il faut interdire tous les emballages"], a: 1,
+    why: "Après la concession (« Certes… »), l'auteur donne sa thèse : ces changements relèvent « de la communication », et l'emballage est « le détail qui cache l'essentiel », le transport des produits." },
+  { skill: "ce", type: "read", id: "x-ce-16", level: "B2",
+    context: "Une enquête menée auprès de 2 000 salariés révèle un paradoxe. Près de 70 % d'entre eux se disent satisfaits de leur travail ; pourtant, un sur deux affirme qu'il changerait de poste s'il en avait la possibilité. Pour les chercheurs, cette contradiction n'est qu'apparente : on peut aimer son métier tout en souffrant de ses conditions d'exercice, qu'il s'agisse des horaires, du salaire ou du manque de reconnaissance.",
+    q: "Comment les chercheurs expliquent-ils ce paradoxe ?",
+    options: ["Les salariés ont menti aux enquêteurs", "On peut apprécier son métier sans apprécier ses conditions de travail", "La majorité des salariés détestent leur travail", "Les salariés satisfaits sont les mieux payés"], a: 1,
+    why: "Pour les chercheurs, « on peut aimer son métier tout en souffrant de ses conditions d'exercice » : la contradiction n'est qu'apparente." },
+  { skill: "ce", type: "read", id: "x-ce-17", level: "B2",
+    context: "Le succès des podcasts tient moins à la nouveauté du format qu'à la place qu'il a su prendre dans nos journées. On l'écoute en cuisinant, en courant, dans les transports — autant de moments où lire est impossible et où l'écran fatigue. Là où la télévision exige qu'on s'arrête, le podcast accompagne. Il ne vole pas de temps : il occupe celui qui était perdu.",
+    q: "Selon l'auteur, pourquoi les podcasts ont-ils du succès ?",
+    options: ["Parce que leur format est entièrement nouveau", "Parce qu'ils s'écoutent pendant d'autres activités", "Parce qu'ils sont plus courts que les émissions de télévision", "Parce qu'ils sont gratuits"], a: 1,
+    why: "Le podcast « accompagne » : on l'écoute en cuisinant, en courant, dans les transports. Il occupe un temps « qui était perdu »." },
+  { skill: "ce", type: "read", id: "x-ce-18", level: "B2",
+    context: "Chers collègues,\n\nÀ la suite de plusieurs remarques, je souhaite rappeler que la salle de réunion du deuxième étage doit être réservée au moins 24 heures à l'avance sur l'intranet. Trop souvent, des équipes se retrouvent devant une porte fermée ou une salle déjà occupée. À compter de lundi, toute réunion non enregistrée pourra être déplacée sans préavis au profit d'une réunion réservée.\n\nMerci de votre compréhension,\nLa direction",
+    q: "Qu'est-ce qui change à partir de lundi ?",
+    options: ["La salle de réunion sera fermée", "Une réunion non réservée pourra perdre la salle", "Il faudra réserver une semaine à l'avance", "Les réunions seront limitées à une heure"], a: 1,
+    why: "« Toute réunion non enregistrée pourra être déplacée sans préavis au profit d'une réunion réservée » : sans réservation, on risque de perdre la salle." },
+
+  { skill: "ce", type: "read", id: "x-ce-19", level: "C1",
+    context: "On aurait tort de réduire l'engouement pour les jardins partagés à une mode citadine. Derrière le plaisir de cultiver quelques tomates se joue une forme discrète de réappropriation : celle d'un espace que la ville avait rendu purement fonctionnel, et d'un temps soustrait à la logique du rendement. Qu'importe, au fond, que la récolte soit maigre ; ce que ces jardiniers viennent chercher ne se pèse pas.",
+    q: "Que veut dire l'auteur dans la dernière phrase ?",
+    options: ["Ces jardins ne produisent pas assez pour être utiles", "L'intérêt de ces jardins n'est pas dans la quantité récoltée", "Les jardiniers devraient mesurer leur production", "Les récoltes sont trop légères pour être vendues"], a: 1,
+    why: "« Ce que ces jardiniers viennent chercher ne se pèse pas » : la valeur de l'expérience (espace retrouvé, temps libéré) n'est pas mesurable en kilos de légumes." },
+  { skill: "ce", type: "read", id: "x-ce-20", level: "C1",
+    context: "La prétendue « fuite des cerveaux » mérite d'être nuancée. S'il est exact que de jeunes diplômés partent travailler à l'étranger, la plupart reviennent au bout de quelques années, forts d'une expérience et d'un réseau dont leur pays d'origine tire ensuite profit. Plutôt que de déplorer ces départs, mieux vaudrait se demander ce qui est fait pour faciliter les retours.",
+    q: "Quelle est la position de l'auteur sur la « fuite des cerveaux » ?",
+    options: ["C'est une catastrophe qu'il faut empêcher", "Le phénomène est exagéré et l'enjeu réel est le retour des diplômés", "Les diplômés ne devraient jamais revenir", "Le phénomène n'existe pas du tout"], a: 1,
+    why: "« Prétendue » et « mérite d'être nuancée » marquent la distance de l'auteur. Il reconnaît les départs, mais déplace la question vers les conditions du retour." },
+  { skill: "ce", type: "read", id: "x-ce-21", level: "C1",
+    context: "Le ministre a salué, je cite, « une réforme courageuse et attendue ». Courageuse, sans doute — il en faut, du courage, pour annoncer une hausse des tarifs à trois mois d'une élection. Attendue, c'est moins certain : on cherche encore, parmi les usagers, ceux qui la réclamaient.",
+    q: "Quel est le ton de ce passage ?",
+    options: ["Neutre et informatif", "Ironique et critique", "Enthousiaste", "Résigné"], a: 1,
+    why: "L'auteur reprend les mots du ministre pour les retourner contre lui : le « courage » est celui d'annoncer une mesure impopulaire, et personne ne la « réclamait ». Le ton est ironique." },
+  { skill: "ce", type: "read", id: "x-ce-22", level: "C1",
+    context: "Longtemps, l'orthographe a servi de frontière sociale : la faute désignait celui qui n'avait pas fait les « bonnes » études. Les correcteurs automatiques auraient pu abolir cette frontière. Ils l'ont déplacée. Ce qui distingue désormais, ce n'est plus de savoir écrire sans faute, mais de savoir quand la machine se trompe — compétence qui suppose précisément la maîtrise qu'elle était censée rendre inutile.",
+    q: "Quelle idée l'auteur défend-il ?",
+    options: ["Les correcteurs automatiques ont supprimé les inégalités face à l'orthographe", "Les correcteurs n'ont pas fait disparaître l'avantage de ceux qui maîtrisent la langue", "Il faut interdire les correcteurs à l'école", "L'orthographe n'a plus aucune importance"], a: 1,
+    why: "La frontière sociale n'a pas été abolie mais « déplacée » : repérer les erreurs de la machine exige justement de maîtriser l'orthographe." },
+
+  { skill: "ce", type: "read", id: "x-ce-23", level: "C2",
+    context: "Il n'est pas de formule plus commode, ni de plus trompeuse, que celle qui oppose la tradition à la modernité. Car ce que nous appelons tradition n'est bien souvent qu'une innovation qui a réussi à faire oublier sa date de naissance ; et ce que nous célébrons comme moderne, une vieille idée qui a changé de costume. À y regarder de près, l'une n'en finit pas de se déguiser en l'autre.",
+    q: "Que soutient l'auteur ?",
+    options: ["La tradition doit être défendue contre la modernité", "L'opposition entre tradition et modernité est largement illusoire", "La modernité finira par faire disparaître les traditions", "Les traditions sont toujours plus anciennes qu'on ne le croit"], a: 1,
+    why: "L'opposition est dite « trompeuse » : la tradition est une ancienne innovation, la modernité une vieille idée renouvelée. Les deux notions se confondent sans cesse." },
+  { skill: "ce", type: "read", id: "x-ce-24", level: "C2",
+    context: "On reproche volontiers aux experts de se contredire, comme si le désaccord trahissait l'incompétence. C'est méconnaître la nature même du savoir, qui ne progresse qu'en se disputant. Le véritable motif d'inquiétude serait plutôt l'unanimité : là où plus personne n'objecte, il y a fort à parier que l'on a cessé de chercher.",
+    q: "Selon l'auteur, que révèle le désaccord entre experts ?",
+    options: ["Leur manque de compétence", "Le fonctionnement normal de la recherche", "Leur volonté de tromper le public", "L'inutilité de leurs travaux"], a: 1,
+    why: "Le savoir « ne progresse qu'en se disputant » : le désaccord est normal. C'est l'unanimité qui devrait inquiéter, car elle signale que l'on a « cessé de chercher »." },
+  { skill: "ce", type: "read", id: "x-ce-25", level: "C2",
+    context: "L'auteur a beau se défendre d'avoir écrit un roman à thèse, chaque page plaide. Les personnages n'existent guère que pour avoir tort ou raison, et le lecteur, dûment informé de ce qu'il convient de penser, referme le livre avec le sentiment d'avoir assisté à un procès dont le verdict était rédigé d'avance. On regrette d'autant plus ce parti pris que le style, lui, ne manque ni de nerf ni d'élégance.",
+    q: "Quel jugement le critique porte-t-il sur ce roman ?",
+    options: ["Un livre remarquable en tous points", "Une écriture de qualité au service d'une démonstration trop appuyée", "Un livre mal écrit mais passionnant", "Un roman sans aucune idée"], a: 1,
+    why: "Le critique reproche au roman de « plaider » à chaque page, avec un verdict « rédigé d'avance », tout en reconnaissant un style qui « ne manque ni de nerf ni d'élégance »." },
+
+  /* ============== MAÎTRISE DES STRUCTURES DE LA LANGUE ============== */
+  { skill: "msl", type: "mcq", id: "x-ms-01", level: "A1",
+    q: "Nous ___ français et espagnol.",
+    options: ["parle", "parlons", "parlez", "parlent"], a: 1,
+    why: "Avec « nous », le verbe se termine par -ons : nous parlons." },
+  { skill: "msl", type: "mcq", id: "x-ms-02", level: "A1",
+    q: "Elle ___ trente ans.",
+    options: ["est", "a", "fait", "va"], a: 1,
+    why: "En français, on « a » un âge : elle a trente ans.", gloss: "French uses avoir for age, not être." },
+  { skill: "msl", type: "mcq", id: "x-ms-03", level: "A1",
+    q: "Je vais ___ cinéma ce soir.",
+    options: ["à la", "au", "à l'", "en"], a: 1,
+    why: "« Cinéma » est masculin : à + le = au. On dit « au cinéma »." },
+  { skill: "msl", type: "mcq", id: "x-ms-04", level: "A1",
+    q: "Tu ___ un frère ou une sœur ?",
+    options: ["es", "as", "a", "ont"], a: 1,
+    why: "Verbe « avoir » avec « tu » : tu as." },
+  { skill: "msl", type: "mcq", id: "x-ms-05", level: "A2",
+    q: "Hier, nous ___ au restaurant avec des amis.",
+    options: ["avons allé", "sommes allés", "allons", "irons"], a: 1,
+    why: "« Aller » se conjugue avec l'auxiliaire « être » au passé composé, et le participe s'accorde : nous sommes allés." },
+  { skill: "msl", type: "mcq", id: "x-ms-06", level: "A2",
+    q: "Je ne mange pas ___ viande.",
+    options: ["de la", "de", "la", "des"], a: 1,
+    why: "Après une négation, « du, de la, des » deviennent « de » : je ne mange pas de viande." },
+  { skill: "msl", type: "mcq", id: "x-ms-07", level: "B1",
+    q: "Si j'avais plus de temps, je ___ du piano.",
+    options: ["ferai", "ferais", "faisais", "fais"], a: 1,
+    why: "Hypothèse sur le présent : si + imparfait, puis conditionnel présent. « Si j'avais…, je ferais… »" },
+  { skill: "msl", type: "mcq", id: "x-ms-08", level: "B1",
+    q: "J'habite à Lyon ___ cinq ans.",
+    options: ["il y a", "depuis", "pendant", "dans"], a: 1,
+    why: "L'action dure encore : « depuis » + durée avec un verbe au présent. « Il y a cinq ans » situerait un événement terminé." },
+  { skill: "msl", type: "mcq", id: "x-ms-09", level: "B2",
+    q: "Elle m'a demandé ___ je voulais venir avec eux.",
+    options: ["que", "si", "est-ce que", "quoi"], a: 1,
+    why: "Au discours indirect, une question fermée (réponse oui / non) est introduite par « si »." },
+  { skill: "msl", type: "mcq", id: "x-ms-10", level: "B2",
+    q: "Le projet ___ par le conseil municipal la semaine dernière.",
+    options: ["a adopté", "a été adopté", "est adoptant", "avait adopté"], a: 1,
+    why: "Le projet subit l'action : voix passive, « être » + participe passé, ici au passé composé : a été adopté." },
+  { skill: "msl", type: "mcq", id: "x-ms-11", level: "C1",
+    q: "C'est une décision ___ je ne m'attendais pas du tout.",
+    options: ["dont", "que", "à laquelle", "pour laquelle"], a: 2,
+    why: "On dit « s'attendre à quelque chose » : le relatif reprend la préposition « à » → à laquelle." },
+  { skill: "msl", type: "mcq", id: "x-ms-12", level: "C1",
+    q: "Quoi qu'il ___, je ne changerai pas d'avis.",
+    options: ["dit", "dise", "dira", "disait"], a: 1,
+    why: "« Quoi que » (en deux mots, = quelle que soit la chose que) est toujours suivi du subjonctif : quoi qu'il dise." },
+  { skill: "msl", type: "mcq", id: "x-ms-13", level: "C1",
+    q: "Il a agi ___ personne ne s'en aperçoive.",
+    options: ["sans que", "sans", "après que", "parce que"], a: 0,
+    why: "« Sans que » introduit une subordonnée au subjonctif (« s'en aperçoive »). « Sans » seul serait suivi d'un infinitif ou d'un nom." },
+  { skill: "msl", type: "mcq", id: "x-ms-14", level: "C2",
+    q: "Je crains qu'il ___ trop tard pour intervenir.",
+    options: ["n'est", "ne soit", "ne sera", "n'était"], a: 1,
+    why: "« Craindre que » demande le subjonctif ; le « ne » est ici explétif (langue soutenue) et n'a pas de valeur négative : je crains qu'il ne soit trop tard." },
+  { skill: "msl", type: "mcq", id: "x-ms-15", level: "C2",
+    q: "___ brillant qu'il soit, il lui arrive de se tromper.",
+    options: ["Si", "Bien", "Tant", "Autant"], a: 0,
+    why: "La concession soutenue se construit avec « si + adjectif + que + subjonctif » : si brillant qu'il soit (= bien qu'il soit très brillant)." },
+  { skill: "msl", type: "mcq", id: "x-ms-16", level: "C2",
+    q: "À peine ___ que le téléphone s'est mis à sonner.",
+    options: ["il était rentré", "était-il rentré", "il rentrait", "est-il rentrant"], a: 1,
+    why: "Placé en tête de phrase, « à peine » entraîne l'inversion du sujet dans la langue soutenue : à peine était-il rentré que…" },
 ];
 
 
@@ -2333,6 +3251,87 @@ const FLASHCARDS = [
   { id: "v30", theme: "Vie pratique", front: "une démarche", back: "a procedure, an administrative step", note: "« Aucune démarche n'est nécessaire. »" },
   { id: "v31", theme: "Vie pratique", front: "un délai de rétractation", back: "cooling-off period", note: "Fréquent dans les documents de compréhension écrite." },
   { id: "v32", theme: "Vie pratique", front: "avancer / retarder un horaire", back: "to bring forward / to push back", note: "Le vol est avancé = il part PLUS TÔT." },
+
+  { id: "v33", theme: "Donner son avis", front: "à mon avis", back: "in my opinion", note: "Variante : selon moi, d'après moi. Jamais « dans mon opinion »." },
+  { id: "v34", theme: "Donner son avis", front: "il me semble que", back: "it seems to me that", note: "+ indicatif. Plus nuancé que « je pense que »." },
+  { id: "v35", theme: "Donner son avis", front: "je suis favorable à", back: "I am in favour of", note: "Contraire : je suis opposé(e) à." },
+  { id: "v36", theme: "Donner son avis", front: "un avantage / un inconvénient", back: "an advantage / a drawback", note: "Le couple de base de toute argumentation.", ex: "Le principal inconvénient, c'est le prix." },
+  { id: "v37", theme: "Donner son avis", front: "un enjeu", back: "an issue, what is at stake", note: "« L'enjeu de ce débat » — mot très fréquent en B2-C1." },
+  { id: "v38", theme: "Donner son avis", front: "remettre en cause", back: "to call into question", note: "« Cette étude remet en cause une idée reçue. »" },
+  { id: "v39", theme: "Donner son avis", front: "une idée reçue", back: "a common misconception", note: "≠ a received idea. = un préjugé, un cliché." },
+  { id: "v40", theme: "Donner son avis", front: "nuancer", back: "to qualify (a statement)", note: "« Il faut nuancer ce constat. »" },
+  { id: "v41", theme: "Donner son avis", front: "en ce qui concerne", back: "as far as … is concerned", note: "Pour changer de sujet proprement." },
+  { id: "v42", theme: "Donner son avis", front: "avoir tendance à", back: "to tend to", note: "« Les jeunes ont tendance à lire moins de romans. »" },
+  { id: "v43", theme: "Donner son avis", front: "à condition que", back: "provided that", note: "+ subjonctif : « à condition qu'il soit d'accord »." },
+  { id: "v44", theme: "Donner son avis", front: "tout dépend de", back: "it all depends on", note: "Très utile pour nuancer à l'oral, tâche 3." },
+
+  { id: "v45", theme: "Travail", front: "un entretien d'embauche", back: "a job interview", note: "« Passer un entretien. »" },
+  { id: "v46", theme: "Travail", front: "postuler à", back: "to apply for", note: "≠ appliquer. « J'ai postulé à ce poste. »" },
+  { id: "v47", theme: "Travail", front: "une lettre de motivation", back: "a cover letter", note: "Accompagne le CV." },
+  { id: "v48", theme: "Travail", front: "un CDI / un CDD", back: "a permanent / fixed-term contract", note: "Contrat à durée indéterminée / déterminée." },
+  { id: "v49", theme: "Travail", front: "le chômage", back: "unemployment", note: "« Être au chômage » ; un chômeur." },
+  { id: "v50", theme: "Travail", front: "démissionner", back: "to resign", note: "≠ être licencié (to be laid off)." },
+  { id: "v51", theme: "Travail", front: "un congé", back: "leave, time off", note: "« Être en congé », « les congés payés »." },
+  { id: "v52", theme: "Travail", front: "un salarié", back: "an employee", note: "≠ un employeur (employer). Féminin : une salariée." },
+  { id: "v53", theme: "Travail", front: "une formation", back: "a training course", note: "≠ formation au sens anglais. « Suivre une formation. »" },
+  { id: "v54", theme: "Travail", front: "un stage", back: "an internship", note: "≠ a stage (= une scène). Un(e) stagiaire." },
+  { id: "v55", theme: "Travail", front: "à temps partiel", back: "part-time", note: "Contraire : à temps plein." },
+  { id: "v56", theme: "Travail", front: "une grève", back: "a strike", note: "« Faire grève », « être en grève »." },
+
+  { id: "v57", theme: "Logement", front: "le loyer", back: "the rent", note: "« Payer son loyer. » ≠ louer (to rent)." },
+  { id: "v58", theme: "Logement", front: "les charges", back: "service charges, utilities", note: "« Charges comprises » = included." },
+  { id: "v59", theme: "Logement", front: "un locataire / un propriétaire", back: "a tenant / an owner, landlord", note: "Le locataire paie le loyer au propriétaire." },
+  { id: "v60", theme: "Logement", front: "une caution", back: "a deposit; a guarantor", note: "Somme versée à l'entrée dans le logement." },
+  { id: "v61", theme: "Logement", front: "emménager / déménager", back: "to move in / to move out", note: "Piège d'écoute : les deux se ressemblent." },
+  { id: "v62", theme: "Logement", front: "un bail", back: "a lease", note: "« Signer un bail. » Pluriel : des baux." },
+  { id: "v63", theme: "Logement", front: "meublé", back: "furnished", note: "« Un studio meublé. »" },
+  { id: "v64", theme: "Logement", front: "le rez-de-chaussée", back: "the ground floor", note: "Le premier étage français = first floor UK, second floor US." },
+  { id: "v65", theme: "Logement", front: "une panne", back: "a breakdown, a failure", note: "« L'ascenseur est en panne. »" },
+  { id: "v66", theme: "Logement", front: "le voisinage", back: "the neighbourhood, the neighbours", note: "Un voisin, une voisine." },
+
+  { id: "v67", theme: "Santé et démarches", front: "une ordonnance", back: "a prescription", note: "≠ prescription. Donnée par le médecin." },
+  { id: "v68", theme: "Santé et démarches", front: "prendre rendez-vous", back: "to make an appointment", note: "« Déplacer / annuler un rendez-vous. »" },
+  { id: "v69", theme: "Santé et démarches", front: "un arrêt maladie", back: "sick leave", note: "« Être en arrêt maladie. »" },
+  { id: "v70", theme: "Santé et démarches", front: "un formulaire", back: "a form", note: "« Remplir un formulaire. »" },
+  { id: "v71", theme: "Santé et démarches", front: "un dossier", back: "a file, an application", note: "« Déposer un dossier complet. »" },
+  { id: "v72", theme: "Santé et démarches", front: "une pièce d'identité", back: "an identity document", note: "Passeport, carte d'identité, titre de séjour." },
+  { id: "v73", theme: "Santé et démarches", front: "un titre de séjour", back: "a residence permit", note: "Vocabulaire central du TCF IRN." },
+  { id: "v74", theme: "Santé et démarches", front: "la mairie / la préfecture", back: "the town hall / the prefecture", note: "Les deux guichets administratifs les plus cités." },
+  { id: "v75", theme: "Santé et démarches", front: "un remboursement", back: "a refund", note: "« Demander un remboursement intégral. »" },
+  { id: "v76", theme: "Santé et démarches", front: "valable", back: "valid", note: "« Votre billet reste valable. »" },
+  { id: "v77", theme: "Santé et démarches", front: "au plus tard", back: "at the latest", note: "« Avant le 15 juin au plus tard. »" },
+  { id: "v78", theme: "Santé et démarches", front: "à compter de", back: "as from, starting", note: "= à partir de. « À compter de lundi. »" },
+
+  { id: "v79", theme: "Transports et ville", front: "un embouteillage", back: "a traffic jam", note: "Synonyme familier : un bouchon." },
+  { id: "v80", theme: "Transports et ville", front: "une correspondance", back: "a connection (train, metro)", note: "« J'ai raté ma correspondance. »" },
+  { id: "v81", theme: "Transports et ville", front: "un retard", back: "a delay", note: "« Le train a vingt minutes de retard. »" },
+  { id: "v82", theme: "Transports et ville", front: "une déviation", back: "a diversion, a detour", note: "Fréquent dans les annonces de trafic." },
+  { id: "v83", theme: "Transports et ville", front: "le centre-ville", back: "the town centre, downtown", note: "≠ la banlieue (the suburbs), la périphérie." },
+  { id: "v84", theme: "Transports et ville", front: "un riverain", back: "a local resident", note: "Qui habite le long d'une rue." },
+  { id: "v85", theme: "Transports et ville", front: "une piste cyclable", back: "a cycle lane", note: "« Aménager des pistes cyclables. »" },
+  { id: "v86", theme: "Transports et ville", front: "les transports en commun", back: "public transport", note: "Bus, métro, tramway, train." },
+
+  { id: "v87", theme: "Société", front: "la hausse / la baisse", back: "the rise / the fall", note: "« Une hausse des prix », « une baisse du chômage »." },
+  { id: "v88", theme: "Société", front: "une étude / une enquête", back: "a study / a survey", note: "« Selon une enquête récente… »" },
+  { id: "v89", theme: "Société", front: "le pouvoir d'achat", back: "purchasing power", note: "Sujet de presse permanent." },
+  { id: "v90", theme: "Société", front: "les déchets", back: "waste, rubbish", note: "« Trier, réduire ses déchets. »" },
+  { id: "v91", theme: "Société", front: "le réchauffement climatique", back: "global warming", note: "Thème fréquent en tâche 3." },
+  { id: "v92", theme: "Société", front: "un bénévole", back: "a volunteer", note: "Le bénévolat = volunteering." },
+  { id: "v93", theme: "Société", front: "une association", back: "a non-profit organisation, a club", note: "≠ association au sens large anglais." },
+  { id: "v94", theme: "Société", front: "une mesure", back: "a measure, a policy", note: "« Le gouvernement a annoncé une série de mesures. »" },
+  { id: "v95", theme: "Société", front: "interdire / autoriser", back: "to ban / to allow", note: "« Il est interdit de… », « être autorisé à… »." },
+  { id: "v96", theme: "Société", front: "se réjouir de / redouter", back: "to be delighted about / to dread", note: "Verbes d'attitude, clés des questions d'opinion." },
+  { id: "v97", theme: "Société", front: "déplorer", back: "to deplore, to regret", note: "Registre soutenu : « On ne peut que le déplorer. »" },
+  { id: "v98", theme: "Société", front: "sous couvert de", back: "under the guise of", note: "C1-C2 : annonce une critique voilée." },
+
+  { id: "v99", theme: "Oral courant", front: "Ça marche.", back: "OK, that works.", note: "Accord familier." },
+  { id: "v100", theme: "Oral courant", front: "Tant pis. / Tant mieux.", back: "Too bad. / So much the better.", note: "Deux réactions opposées qu'on confond à l'écoute." },
+  { id: "v101", theme: "Oral courant", front: "J'en ai marre.", back: "I'm fed up.", note: "Familier. Courant : j'en ai assez." },
+  { id: "v102", theme: "Oral courant", front: "Ça ne me dit rien.", back: "I don't feel like it; it doesn't ring a bell", note: "Deux sens selon le contexte." },
+  { id: "v103", theme: "Oral courant", front: "avoir du mal à", back: "to have trouble (doing)", note: "« J'ai du mal à comprendre l'accent québécois. »" },
+  { id: "v104", theme: "Oral courant", front: "Ce n'est pas la peine.", back: "There's no need; don't bother.", note: "Refus poli d'une proposition." },
+  { id: "v105", theme: "Oral courant", front: "quand même", back: "all the same, still", note: "Renforce un reproche ou une concession." },
+  { id: "v106", theme: "Oral courant", front: "On verra.", back: "We'll see. (often = probably not)", note: "Réponse évasive : le TCF teste ce sous-entendu." },
 ];
 
 /* ---------- Référentiels ------------------------------------------------- */
