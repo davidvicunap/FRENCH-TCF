@@ -101,7 +101,7 @@ listen and no going back; reading and structures allow free navigation.
 | --- | --- | --- |
 | Tout Public / DAP | listening 15 + structures 9 + reading 15, 44 min | up to 29 + 18 + 29, 85 min |
 | Canada / Québec | listening 20 + reading 20, 49 min | as many as the bank holds (real test: 39 + 39) |
-| IRN | listening 13 + reading 13, levels A1–B2 | 25 + 25 |
+| IRN | listening 13 + reading 13, levels A1–B2 | up to 25 + 25 |
 
 The result gives an estimated level and indicative score **per test**, a breakdown by
 difficulty level, the share of questions you had never seen, and a full correction.
