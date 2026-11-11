@@ -1,221 +1,179 @@
 # Objectif TCF 🇫🇷
 
-A complete, self-contained preparation site for the **TCF** (*Test de connaissance
-du français*) — the French proficiency test run by France Éducation international.
+A self-contained site for learning French and preparing the **TCF** (*Test de
+connaissance du français*, run by France Éducation international): grammar from
+A1 to C1, listening, reading, writing, speaking, vocabulary, and timed mock exams
+that follow the structure of the version you are sitting.
 
-Covers all five skills: **compréhension orale**, **maîtrise des structures de la
-langue**, **compréhension écrite**, **expression écrite** and **expression orale**,
-plus a timed mock exam and a spaced-repetition vocabulary trainer.
-
-**This is a single self-contained file.** All the HTML, CSS and JavaScript are
-inlined into `index.html` — nothing to install, bundle, or serve.
+**It is a single file.** All the HTML, CSS and JavaScript are inlined into
+`index.html` — nothing to install, bundle, or serve.
 
 - **No backend, no accounts, no build step, no tracking.**
-- **All progress persists in `localStorage`** — XP, levels, achievements, your
-  written drafts and your flashcard schedule. It stays on your device and is never
-  sent anywhere.
-- **Works offline.** Listening exercises use the browser's built-in speech
-  synthesis, so there are no audio files to download and no CDN to reach.
-- Dark/light theme, mobile-first responsive, keyboard navigable.
+- **Progress is saved automatically** in the browser (`localStorage`) and can be
+  **exported to a backup file** and restored on any device.
+- **Works offline.** Listening exercises use the browser's built-in French voice.
+- Dark/light theme, mobile-first, keyboard navigable (A–D to answer).
 
-## Run it locally
+## What it is — and what it is not
 
-Just **double-click `index.html`** — it opens in your browser and works
-immediately, including saved progress.
+| | |
+| --- | --- |
+| ✅ A structured course | 19 lessons that explain *why* before drilling, each with corrected exercises |
+| ✅ Exam practice | 154 questions, mock exams with one clock per test, a level estimate per skill |
+| ✅ Memory | spaced-repetition vocabulary (106 cards), and a queue that brings back every question you got wrong |
+| ✅ Production | the 3 writing and 3 speaking tasks in their real format, with several prompts, models, timers and recording |
+| ❌ Not a from-zero course | the *Fondations* section reviews A1–A2 grammar, but the interface and explanations assume you can already read simple French |
+| ❌ Not a grader | nothing here can mark your writing or speaking — have a teacher or a French speaker correct you regularly (the *Copier pour correction* button prepares the request) |
+| ❌ Not real exam audio | recordings are read by your device's synthetic voice: fine for training your ear to meaning, less varied than the accents of the real test |
+| ❌ Not an official score | see [About the estimated level](#about-the-estimated-level) |
 
-If you prefer a local server:
+## Run it
+
+Double-click `index.html`, or serve the folder:
 
 ```bash
 python -m http.server 8000
 ```
 
-Then open <http://localhost:8000>.
+To publish on GitHub Pages: **Settings → Pages → Deploy from a branch → `main` / root**.
 
-## Deploy to GitHub Pages
+## First steps
 
-1. Put `index.html` (and this `README.md`) in your repository and push:
+1. Open **⚙ Réglages** and set your TCF version, target level and exam date. The
+   mock exam and the dashboard adapt to them.
+2. Take a short mock exam to find your level.
+3. Follow **Aujourd'hui** on the home page each day: cards due, mistakes to
+   review, the next lesson, a writing or speaking prompt.
+4. **Export a backup** from *Réglages* once in a while.
 
-   ```bash
-   git add index.html README.md
-   git commit -m "Add Objectif TCF"
-   git push
-   ```
+## How your progress is saved
 
-2. On GitHub: **Settings** → **Pages**.
-3. Under **Build and deployment** — **Source:** `Deploy from a branch`;
-   **Branch:** `main`, folder `/ (root)` → **Save**.
-4. Wait ~1 minute (watch the **Actions** tab).
-5. Live at `https://<your-username>.github.io/<your-repo>/`.
+- Every answer, card rating, checklist tick and keystroke of a draft is written to
+  `localStorage` under the key `tcf.state.v1`. A mock exam in progress is saved
+  continuously and can be resumed after closing the tab.
+- If the browser refuses to store data (private browsing, blocked or full storage),
+  a red banner says so instead of failing silently.
+- Two tabs open at once stay in sync; neither overwrites the other.
+- Progress lives in **one browser on one device**. It does not sync, and clearing
+  site data erases it (Safari may also clear a site left unvisited for a week).
+  *Réglages → Exporter ma sauvegarde* downloads a JSON file you can restore
+  anywhere; *Protéger le stockage* asks the browser not to evict the data.
+- Voice recordings are not stored — download the ones you want to keep.
+- Save files from earlier versions of the app load unchanged.
 
-There is no build step, so nothing can fail to build. Adding an empty `.nojekyll`
-file alongside `index.html` is optional insurance against Jekyll processing.
+Reset from *Réglages*, or in the console: `localStorage.removeItem("tcf.state.v1")`.
 
 ## What's inside
 
-### Le parcours — 12 lessons across 4 sections
+### Le parcours — 19 lessons
 
 | Section | Lessons | Focus |
 | --- | --- | --- |
-| 🧭 **Comprendre le TCF** | 3 | Which TCF version to sit, the 0–699 scale and CEFR mapping, time management |
-| 🔧 **Maîtrise des structures** | 5 | Passé composé vs imparfait, subjunctive, pronouns (COD/COI/y/en), relatives &amp; connectors, false friends &amp; register |
-| 👂 **Compréhension orale** | 2 | Selective listening &amp; distractor traps, implied meaning / tone / intention |
-| 📖 **Compréhension écrite** | 2 | Fast scanning of short documents, implicit meaning in argumentative texts |
+| 🧭 **Comprendre le TCF** | 3 | Which version to sit, the 100–699 scale and the marks out of 20, time management |
+| 🧱 **Les fondations** (A1–A2) | 5 | Present tense, articles and quantities, questions and negation, future, forming the past tenses |
+| 🔧 **Maîtrise des structures** (B1–C1) | 7 | Passé composé vs imparfait, subjunctive, pronouns, relatives and connectors, false friends and register, conditional and hypothesis, reported speech and passive |
+| 👂 **Compréhension orale** | 2 | Selective listening and distractors, implied meaning and tone |
+| 📖 **Compréhension écrite** | 2 | Scanning short documents, implicit meaning in argumentative texts |
 
-Every lesson explains **why** the rule exists before drilling it, and ends with an
-exercise set that gives a full explanation after **every** answer — including why
-the wrong options are wrong.
+### S'entraîner
 
-### Entraînement
+- **🎯 Entraînement par épreuve** — sets of 10 questions per skill around your target
+  level, corrected one by one, least-seen questions first.
+- **🩹 Mes erreurs** — every question missed anywhere comes back until you get it right.
+- **✍️ Expression écrite** — the 3 task types (60–120, 120–150, 120–180 words), three
+  prompts each, timer, live word count using the official counting rule, automatic
+  indicators (length, paragraphs, connectors found), model answers, self-assessment grid.
+- **🎙️ Expression orale** — task 1 (2 min), task 2 (2 min preparation + 3 min 30),
+  task 3 (4 min 30, no preparation); several prompts, spoken examiner questions,
+  timers, in-browser recording with download.
+- **🗂️ Vocabulaire** — Leitner spaced repetition (5 boxes, 0/1/3/7/21 days), a daily
+  limit of new cards, French→English or English→French, searchable list.
+- **⏱️ Examen blanc** — see below.
+- **📊 Barème** — score-to-level converter, marks out of 20, NCLC table for TCF Canada.
 
-- **✍️ Expression écrite** — the 3 real task types (60–120, 120–150 and 120–180
-  words) with a countdown timer, a **live word counter** that turns green inside
-  the target range, clickable connector chips, a model answer, and a
-  self-assessment checklist.
-- **🎙️ Expression orale** — the 3 real tasks with separate preparation and
-  speaking timers, likely questions, useful phrases, and **in-browser voice
-  recording** (via `MediaRecorder`) so you can play yourself back. The recording
-  never leaves your device.
-- **🗂️ Vocabulaire** — 32 cards (false friends, connectors, formal register,
-  everyday administrative vocabulary) in a **Leitner spaced-repetition** system:
-  5 boxes at 0 / 1 / 3 / 7 / 21-day intervals. Click 🔊 to hear any word.
-- **⏱️ Examen blanc** — 20 questions in 22 minutes, drawn from every section and
-  sorted by ascending difficulty, with **no feedback until the end**, then a full
-  explained correction.
-- **📊 Barème** — interactive converter from a 0–699 score to a CEFR level.
+### The mock exam
 
-### Gamification
+Built like the real test: one test after another, each with its own clock, questions
+in increasing difficulty, no correction before the end. Listening allows a single
+listen and no going back; reading and structures allow free navigation.
 
-| Event | XP |
-| --- | --- |
-| Finish a lesson | +20 |
-| Complete an exercise set | +40 |
-| Perfect set (no mistakes) | +15 bonus |
-| Validate a writing or speaking task | +60 |
-| Finish a mock exam | +80 |
+| Version chosen | Short format | Long format |
+| --- | --- | --- |
+| Tout Public / DAP | listening 15 + structures 9 + reading 15, 44 min | up to 29 + 18 + 29, 85 min |
+| Canada / Québec | listening 20 + reading 20, 49 min | as many as the bank holds (real test: 39 + 39) |
+| IRN | listening 13 + reading 13, levels A1–B2 | up to 25 + 25 |
 
-Levels every 120 XP (*Grand débutant* → *Francophile*), a **day-streak counter**,
-and **15 achievements** tied to real competencies (*Subjonctif dompté*,
-*Pièges déjoués*, *Oreille fine*, *Conditions réelles*, *Régularité*…).
+The result gives an estimated level and indicative score **per test**, a breakdown by
+difficulty level, the share of questions you had never seen, and a full correction.
 
-## About the mock exam score
+### About the estimated level
 
-The estimated level is computed from your **raw percentage** of correct answers.
-The real TCF weights each question by its difficulty (item-response theory) and
-uses 76 questions rather than 20, so **this is an indicative estimate, not an
-official conversion**. Use it to track progress between attempts, not to predict
-your actual score.
+A raw percentage is misleading: 25 % is what random ticking earns. The estimate uses
+a fixed-parameter logistic model that accounts for each question's difficulty (its
+CEFR label) and for guessing, then maps the result onto the TCF scale (400 = start of
+B2). Random answers land below A2 in about 97 % of simulated exams.
 
-| Raw % | Estimated band |
-| --- | --- |
-| 90+ | C1+ |
-| 78–89 | B2+ |
-| 70–77 | B2 |
-| 58–69 | B1+ |
-| 45–57 | B1 |
-| 30–44 | A2 |
-| < 30 | A1 |
+It remains **an estimate, not an official conversion**: the questions were levelled by
+their author, not calibrated on thousands of candidates, and a short exam is
+imprecise — hence the range shown beside every score. After two or three mock exams
+questions start to repeat. Use it to track progress and find your weakest test.
 
-## Listening exercises and voices
+## Exam facts
 
-Audio is generated by your browser's speech synthesis (`speechSynthesis`) using a
-French voice. Voice availability varies by operating system and browser:
+Formats, timings and scales in the app were checked against France Éducation
+international's published information (and canada.ca for the NCLC table) in
+November 2026. They change — the TCF IRN changed in May 2025 and the TCF Québec is
+being adapted. This is an **independent practice tool with no affiliation to France
+Éducation international**: confirm the current format, the level required and the
+validity period on the official site and with the institution asking for the test.
 
-- **macOS / iOS, Windows, and most Android devices** ship French voices — nothing
-  to do.
-- **Chrome on Linux** often has no French voice installed. The app detects this,
-  warns you, and always offers the **transcription** as a fallback.
-- To add French voices: macOS → *System Settings → Accessibility → Spoken
-  Content → System Voice → Manage Voices*; Windows → *Settings → Time & Language →
-  Language → add French*.
+## Listening and voices
 
-A speed slider (0.6×–1.1×) lets you slow audio down — but answer at normal speed
-first, exactly like the real exam, and only then slow it down to check.
+Audio comes from the browser's speech synthesis. Dialogues alternate two voices
+when the device has several French voices.
 
-## Verify the exam format before you book
-
-The exam format, the required level, and the version you need (**Tout Public**,
-**Canada**, **Québec**, **IRN**, **DAP**) all change over time and differ by
-programme. This site is an **independent practice tool with no affiliation to
-France Éducation international**. Always confirm the current format, the score
-required, and the validity period on the official FEI website and with the
-institution asking you for the test.
+- macOS, iOS, Windows and most Android devices ship a French voice.
+- Chrome on Linux often has none. The app says so and shows the text instead, in
+  exercises and in the mock exam.
+- *Réglages → Audio* lists the available voices and explains how to install one.
 
 ## Editing the content
 
-Everything lives inside `index.html`. Open it in a text editor:
+Everything lives in `index.html`; search for the constant you need.
 
-- **Styling** — the `<style>` block near the top.
-- **Content** — the `<script>` block; search for `const SECTIONS = [`.
+| Constant | Content |
+| --- | --- |
+| `SECTIONS` | sections, lessons (`content` is HTML) and their drills |
+| `EXAM_BANK` | exam-only questions, with `skill: "co" \| "msl" \| "ce"` |
+| `WRITING_TASKS`, `SPEAKING_TASKS` | task types, each with a `prompts` array |
+| `FLASHCARDS` | vocabulary cards (`ex` adds an example sentence) |
+| `TCF_VERSIONS` | exam structure per version |
+| `ACHIEVEMENTS` | achievements |
 
-### Content schema
-
-```js
-const SECTIONS = [{
-  id: "msl", icon: "🔧", title: "…", tagline: "…",
-  lessons: [{
-    id: "l1",
-    title: "…",
-    minutes: 14,
-    content: `<p>The teaching — explain WHY, not just the rule.</p>`,
-    drill: { title: "…", items: [ /* see below */ ] }   // optional
-  }]
-}];
-```
-
-An exercise `item` is one of four types:
+An exercise item is one of:
 
 ```js
-// Multiple choice
-{ type: "mcq", id: "sb-1", level: "B1",
-  q: "Il faut que tu ___ avant huit heures.",
-  options: ["pars", "partes", "partiras", "partais"],
-  a: 1,                       // index of the correct option
-  why: "Explication en français, affichée après la réponse.",
-  gloss: "Optional one-line clarification in English." }
-
-// Fill in the blank (accepts several answers; ignores case, spacing,
-// final punctuation, and tells the learner when only an accent is missing)
-{ type: "gap", id: "sb-5", level: "B2",
-  q: "Il est important que vous ___ (savoir) la vérité.",
-  answers: ["sachiez"], why: "…" }
-
-// Reading: same as mcq, plus a text
-{ type: "read", id: "ce-1", level: "A2",
-  context: "Texte du document…\nLes retours à la ligne sont conservés.",
-  q: "…", options: [...], a: 2, why: "…" }
-
-// Listening: same as mcq, plus text read aloud by the browser
-{ type: "listen", id: "co-1", level: "A1",
-  audio: "Le train partira à quatorze heures trente-cinq.",
-  q: "…", options: [...], a: 1, why: "…",
-  transcript: "Shown as a fallback and after answering." }
+{ type: "mcq",    id, level, q, options: [...], a: <index>, why, gloss? }
+{ type: "gap",    id, level, q, answers: [...], why, gloss? }
+{ type: "read",   id, level, context: "<text>", q, options, a, why }
+{ type: "listen", id, level, audio: "<French read aloud>", q, options, a, why }
 ```
 
-`level` must be one of `A1 A2 B1 B2 C1 C2` — it drives the badge on each question
-and the difficulty ordering in the mock exam. New `mcq`, `read` and `listen` items
-are added to the mock exam pool automatically (`gap` items are excluded).
+- `level` is one of `A1 A2 B1 B2 C1 C2`. Ids must be unique across the whole file.
+- Options are shuffled each time a question is shown (`fixed: true` keeps their order).
+- In `audio`, `—` separates the speakers of a dialogue; don't use it as punctuation.
+- Never rename an existing id: saved progress refers to it.
 
-Writing tasks (`WRITING_TASKS`), speaking tasks (`SPEAKING_TASKS`), flashcards
-(`FLASHCARDS`) and achievements (`ACHIEVEMENTS`) are separate arrays in the same
-script, each with the same shape as the existing entries.
+After editing, open **`index.html#/diagnostic`**: it lists duplicate ids, answers out
+of range, unbalanced HTML tags, model answers outside their word range, and shows the
+number of exam questions per skill and level.
 
-## Resetting progress
+## Tests
 
-Use the **Réinitialiser ma progression** button at the bottom of the *Succès*
-page, or run in the browser console:
+`tests/e2e.js` drives the app in a real browser: every route, saving and reloading,
+multi-tab sync, blocked storage, the mock exam (including resume), backup round trip,
+loading a save from the previous version. It needs [Playwright](https://playwright.dev):
 
-```js
-localStorage.removeItem("tcf.state.v1")
+```bash
+node tests/e2e.js
 ```
-
-## Study advice built into the app
-
-1. **Do the *Comprendre le TCF* section first.** Knowing there's no pass mark and
-   no penalty for wrong answers changes how you answer 76 questions.
-2. **Never leave a blank.** A wrong answer and a blank both score zero, so a guess
-   is free expected value.
-3. **Read the explanation on every question you got right by luck** — that's where
-   the level actually gets built.
-4. **Take the mock exam twice**: once to discover your pace, once to control it.
-5. **Five cards a day beats fifty on Sunday.** The vocabulary trainer schedules
-   reviews for you; the day-streak counter is there to make that visible.
