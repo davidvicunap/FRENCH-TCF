@@ -1,0 +1,408 @@
+[
+  {
+    "id": "ee1",
+    "n": 1,
+    "title": "Tâche 1 — Message personnel",
+    "minutes": 15,
+    "min": 60,
+    "max": 120,
+    "audience": "Un ou plusieurs destinataires précisés dans la consigne. Registre adapté.",
+    "goal": "Décrire, raconter ou expliquer — dans un message simple mais structuré.",
+    "official": "rédaction d'un message pour décrire, raconter et/ou expliquer, adressé à un ou plusieurs destinataires dont le statut est précisé dans la consigne.",
+    "plan": [
+      "Salutation adaptée au destinataire",
+      "La nouvelle ou la raison du message, dès la première phrase",
+      "2 ou 3 détails concrets, pas une liste",
+      "Ce que vous attendez du destinataire : invitation, question, proposition",
+      "Formule de clôture"
+    ],
+    "connectors": [
+      "Ça y est,",
+      "d'abord",
+      "ensuite",
+      "en revanche",
+      "par contre",
+      "du coup",
+      "en tout cas",
+      "À très vite,"
+    ],
+    "checklist": [
+      {
+        "id": "c1",
+        "text": "J'ai respecté la longueur demandée (60 à 120 mots) — comptée, pas estimée."
+      },
+      {
+        "id": "c2",
+        "text": "J'ai traité TOUS les points de la consigne, sans en oublier un."
+      },
+      {
+        "id": "c3",
+        "text": "J'ai utilisé un registre adapté au destinataire (tu ou vous, sans mélange) et une formule d'ouverture et de clôture."
+      },
+      {
+        "id": "c4",
+        "text": "J'ai relu en cherchant uniquement les accords (sujet-verbe, adjectifs) — ma faute la plus fréquente."
+      },
+      {
+        "id": "c5",
+        "text": "J'ai vérifié les temps du passé : passé composé pour les événements, imparfait pour les descriptions."
+      }
+    ],
+    "prompts": [
+      {
+        "id": "ee1",
+        "prompt": "Vous venez d'emménager dans une nouvelle ville. Vous écrivez à un(e) ami(e)\nfrancophone pour lui décrire votre nouveau quartier, lui dire ce que vous aimez et ce qui\nvous manque, puis l'inviter à venir vous rendre visite.",
+        "model": "Salut Camille,\n\nÇa y est, j'ai emménagé ! Je suis installée à Lyon depuis samedi dernier et je commence\nenfin à me repérer.\n\nLe quartier me plaît beaucoup : il y a un marché le mercredi, une boulangerie au coin de\nla rue et un grand parc à cinq minutes à pied. En revanche, c'est assez bruyant le soir,\net mes anciens voisins me manquent un peu.\n\nEst-ce que tu voudrais venir passer un week-end ici ? Je peux te loger sans problème et je\nte ferai visiter la vieille ville. Dis-moi quelles dates t'arrangent en septembre.\n\nÀ très vite,\nLéa",
+        "promptEn": "You have just moved to a new city. Write to a French-speaking friend: describe your neighbourhood, say what you like and what you miss, and invite them to visit."
+      },
+      {
+        "id": "ee1-b",
+        "prompt": "Un ami vous a invité(e) à son anniversaire samedi soir, mais vous ne pouvez pas y\naller. Écrivez-lui un message pour vous excuser, expliquer pourquoi vous serez absent(e) et\nlui proposer de vous voir un autre jour.",
+        "model": "Salut Karim,\n\nMerci beaucoup pour ton invitation ! Malheureusement, je ne pourrai pas venir à ton\nanniversaire samedi soir, et j'en suis vraiment désolé.\n\nMa sœur déménage ce week-end à Bordeaux et je lui ai promis de l'aider il y a déjà un\nmois. Nous partons vendredi avec le camion et nous ne rentrerons que dimanche soir.\n\nPour me faire pardonner, je t'invite au restaurant la semaine prochaine. Est-ce que tu es\nlibre mercredi ou jeudi soir ? Je connais un endroit qui va te plaire.\n\nPasse une excellente soirée, et bon anniversaire en avance !\n\nThomas",
+        "promptEn": "A friend invited you to their birthday on Saturday evening but you can't go. Apologise, explain why, and suggest meeting another day."
+      },
+      {
+        "id": "ee1-c",
+        "prompt": "Vous cherchez un(e) colocataire pour partager votre appartement. Rédigez une annonce\npour un site Internet : décrivez l'appartement et le quartier, indiquez le loyer, et précisez\nle type de personne que vous recherchez.",
+        "model": "Colocation — chambre libre à partir du 1er octobre\n\nBonjour,\n\nJe cherche un ou une colocataire pour partager un appartement de 70 m² au troisième étage,\nprès de la gare de Nantes. La chambre, lumineuse et meublée, donne sur une cour calme. Nous\npartagerons le salon, la cuisine équipée et la salle de bains.\n\nLe quartier est très pratique : tramway à deux minutes, supermarché et marché le samedi.\n\nLe loyer est de 450 euros par mois, charges et Internet compris.\n\nJe travaille à l'hôpital, avec des horaires décalés : je recherche donc une personne\ncalme, non-fumeuse et respectueuse. Les étudiants sont les bienvenus.\n\nContactez-moi par courriel pour visiter.\n\nJulie",
+        "promptEn": "You are looking for a flatmate. Write an online ad: describe the flat and the area, give the rent, and say what kind of person you are looking for."
+      },
+      {
+        "id": "ee1-d",
+        "prompt": "Vous venez de commencer un nouveau travail. Vous écrivez un courriel à un(e) ami(e) pour lui raconter votre première semaine : vos collègues, vos tâches, ce qui vous plaît et ce qui est difficile.",
+        "promptEn": "You've just started a new job. Email a friend about your first week: colleagues, tasks, what you like and what is hard.",
+        "model": "Salut Clara,\n\nÇa y est, j'ai terminé ma première semaine à la bibliothèque municipale ! Mes collègues sont très sympathiques : le premier jour, ils m'ont fait visiter tous les services et m'ont invitée à déjeuner.\n\nJe m'occupe surtout de l'accueil du public et des inscriptions. Ce qui me plaît le plus, c'est de conseiller des livres aux enfants. En revanche, l'ordinateur de prêt est compliqué et je fais encore beaucoup d'erreurs. Heureusement, tout le monde est patient avec moi.\n\nEt toi, comment vas-tu ? On se voit samedi pour en parler ?\n\nBises,\nAmina"
+      },
+      {
+        "id": "ee1-e",
+        "prompt": "Votre collègue Pierre part à la retraite le mois prochain. Vous écrivez un message à toute l'équipe pour organiser une fête de départ : date, lieu, programme. Vous proposez aussi de participer à un cadeau.",
+        "promptEn": "Your colleague Pierre is retiring next month. Write to the whole team to organise a farewell party (date, place, plan) and suggest chipping in for a gift.",
+        "model": "Bonjour à tous,\n\nComme vous le savez, Pierre part à la retraite le 30 juin, après vingt-cinq ans dans notre entreprise. Je vous propose de lui organiser une petite fête de départ le vendredi 27 juin, à partir de 17 h, dans la salle de réunion du deuxième étage.\n\nAu programme : un discours de la directrice, un buffet et, bien sûr, un cadeau. Pierre adore la randonnée : nous pourrions lui offrir un bon sac à dos. Si vous souhaitez participer, déposez votre contribution dans l'enveloppe qui se trouve sur mon bureau avant le 20 juin.\n\nMerci et à bientôt,\nSophie"
+      }
+    ],
+    "phrases": [
+      {
+        "fr": "Salut [prénom], / Bonjour [prénom],",
+        "en": "Hi [name], — informal opening (tu)"
+      },
+      {
+        "fr": "Madame, Monsieur,",
+        "en": "Dear Sir or Madam, — formal opening (vous)"
+      },
+      {
+        "fr": "Je t'écris pour te dire que…",
+        "en": "I'm writing to tell you that…"
+      },
+      {
+        "fr": "Ça y est, j'ai…",
+        "en": "That's it, I've (finally)…"
+      },
+      {
+        "fr": "Ce qui me plaît le plus, c'est…",
+        "en": "What I like most is…"
+      },
+      {
+        "fr": "En revanche, … me manque.",
+        "en": "On the other hand, I miss…"
+      },
+      {
+        "fr": "Malheureusement, je ne pourrai pas…",
+        "en": "Unfortunately, I won't be able to…"
+      },
+      {
+        "fr": "Est-ce que tu serais libre… ?",
+        "en": "Would you be free…?"
+      },
+      {
+        "fr": "Je te propose de…",
+        "en": "I suggest that we…"
+      },
+      {
+        "fr": "Dis-moi ce qui t'arrange.",
+        "en": "Let me know what suits you."
+      },
+      {
+        "fr": "À très vite, / Bises, / Je t'embrasse,",
+        "en": "See you soon / Love — informal closings"
+      },
+      {
+        "fr": "Cordialement,",
+        "en": "Kind regards — neutral/formal closing"
+      }
+    ],
+    "titleEn": "Task 1 — Personal message (60–120 words)",
+    "goalEn": "Describe, tell or explain in a short, well-organised message to the person named in the prompt."
+  },
+  {
+    "id": "ee2",
+    "n": 2,
+    "title": "Tâche 2 — Récit d'expérience et opinion",
+    "minutes": 20,
+    "min": 120,
+    "max": 150,
+    "audience": "Plusieurs destinataires (lecteurs d'un blog, d'un forum, d'un journal). Registre courant à soutenu.",
+    "goal": "Raconter une expérience ET la commenter : un récit accompagné d'un avis argumenté.",
+    "official": "rédaction d'un article, d'un courrier ou d'une note à l'intention de plusieurs destinataires, pour faire un compte rendu d'expérience ou un récit, accompagné de commentaires, d'opinions ou d'arguments.",
+    "plan": [
+      "Une phrase d'accroche qui situe l'expérience (quand, où, avec qui)",
+      "Le récit : 3 ou 4 faits au passé, dans l'ordre",
+      "Votre avis sur cette expérience, clairement annoncé",
+      "Un ou deux arguments, dont une nuance (« certes… mais… »)",
+      "Une phrase de conclusion : conseil, recommandation ou souhait"
+    ],
+    "connectors": [
+      "L'année dernière,",
+      "tout d'abord",
+      "ensuite",
+      "finalement",
+      "à mon avis",
+      "certes",
+      "cependant",
+      "c'est pourquoi"
+    ],
+    "checklist": [
+      {
+        "id": "c1",
+        "text": "J'ai respecté la longueur (120 à 150 mots)."
+      },
+      {
+        "id": "c2",
+        "text": "Mon texte contient un RÉCIT au passé (ce qui s'est passé) et pas seulement des idées générales."
+      },
+      {
+        "id": "c3",
+        "text": "Mon opinion est explicite et justifiée par au moins un argument."
+      },
+      {
+        "id": "c4",
+        "text": "J'ai utilisé au moins trois connecteurs logiques différents et corrects."
+      },
+      {
+        "id": "c5",
+        "text": "J'ai construit des paragraphes séparés (pas un bloc unique)."
+      },
+      {
+        "id": "c6",
+        "text": "J'ai employé au moins une structure de niveau B2 (subjonctif après « bien que », concession « certes… mais »)."
+      }
+    ],
+    "prompts": [
+      {
+        "id": "ee2",
+        "prompt": "Le site d'un magazine francophone consacre un dossier au téléphone portable à l'école\net invite ses lecteurs à témoigner. Vous rédigez un message pour le forum : vous racontez une\nexpérience vécue (comme élève, parent ou enseignant), puis vous dites si, selon vous, il faut\ninterdire le téléphone dans les établissements scolaires.",
+        "model": "L'année dernière, le collège de ma fille a décidé d'interdire les téléphones portables\npendant toute la journée. Au début, les élèves ont protesté et ma fille est rentrée furieuse\nà la maison. Pourtant, après quelques semaines, elle m'a raconté que tout le monde jouait de\nnouveau aux cartes pendant les pauses et que les disputes sur les réseaux sociaux avaient\npresque disparu.\n\nCette expérience m'a convaincue. À mon avis, l'interdiction pendant les cours est justifiée,\ncar une seule notification suffit à déconcentrer une classe entière.\n\nCertes, le téléphone peut être un outil pédagogique utile. Cependant, rien n'empêche un\nprofesseur de l'autoriser ponctuellement pour une activité précise.\n\nC'est pourquoi je suis favorable à une règle simple : le téléphone reste dans le sac, sauf\nsi l'enseignant demande de le sortir.",
+        "promptEn": "A magazine asks readers about mobile phones at school. Tell an experience you had (as a pupil, parent or teacher), then say whether phones should be banned in schools."
+      },
+      {
+        "id": "ee2-b",
+        "prompt": "Vous avez participé pour la première fois à une action bénévole (aide alimentaire,\nnettoyage d'une plage, soutien scolaire…). Vous écrivez un article pour le journal interne de\nvotre entreprise : racontez cette expérience et expliquez pourquoi vos collègues devraient,\nselon vous, essayer à leur tour.",
+        "model": "Samedi dernier, j'ai participé pour la première fois à une collecte alimentaire dans un\nsupermarché de mon quartier. Avec cinq autres bénévoles, nous avons distribué des sacs à\nl'entrée du magasin, puis trié les dons toute l'après-midi. En quelques heures, nous avons\nrempli quarante cartons de pâtes, de conserves et de produits pour bébés.\n\nJ'avoue que j'hésitais à y aller : je pensais ne pas avoir le temps. Pourtant, cette journée\nm'a apporté bien plus que je ne l'imaginais. J'ai rencontré des gens chaleureux et j'ai\ncompris que beaucoup de familles de notre ville ont réellement besoin d'aide.\n\nCertes, donner un samedi demande un effort. Mais on rentre chez soi avec le sentiment\nd'avoir été utile, ce qui est rare. C'est pourquoi je vous encourage à essayer : la prochaine\ncollecte aura lieu en décembre.",
+        "promptEn": "You volunteered for the first time. Write an article for your company newsletter: tell the experience and explain why colleagues should try it."
+      },
+      {
+        "id": "ee2-c",
+        "prompt": "Vous avez suivi pendant trois mois des cours de français en ligne. Sur un forum\nd'apprenants, vous racontez comment cela s'est passé et vous dites si vous recommandez cette\nfaçon d'apprendre.",
+        "model": "Je voudrais partager mon expérience avec ceux qui hésitent à s'inscrire à des cours en\nligne. En janvier, j'ai commencé une formation de français à distance : deux séances par\nsemaine, le soir, avec une professeure et six autres étudiants.\n\nLes premières semaines ont été difficiles. Je n'osais pas parler devant la caméra et la\nconnexion coupait souvent. Peu à peu, j'ai pris l'habitude, et j'ai surtout apprécié de\npouvoir suivre les cours depuis chez moi, après le travail.\n\nÀ mon avis, cette méthode convient très bien aux personnes organisées. En effet, personne\nne vous oblige à faire les exercices : il faut de la discipline. En revanche, bien que les\néchanges soient agréables, on parle moins qu'en classe.\n\nJe la recommande donc, à condition de pratiquer aussi le français avec de vraies personnes.",
+        "promptEn": "You took online French classes for three months. On a learners' forum, tell how it went and say whether you recommend learning this way."
+      },
+      {
+        "id": "ee2-d",
+        "prompt": "Une association d'aide aux nouveaux arrivants publie sur son blog des témoignages. Vous racontez vos premières semaines dans votre nouvelle ville ou votre nouveau pays, puis vous donnez votre avis : qu'est-ce qui aide le plus à bien s'installer ?",
+        "promptEn": "A newcomers' association collects stories for its blog. Tell your first weeks in your new city or country, then say what helps most to settle in.",
+        "model": "Je suis arrivé à Montréal en janvier, en plein hiver, avec deux valises et beaucoup d'inquiétude. Les premiers jours ont été difficiles : il faisait moins vingt, je ne connaissais personne et je ne comprenais pas l'accent québécois. J'ai passé des heures à remplir des formulaires pour ma carte d'assurance maladie et mon compte bancaire.\n\nTout a changé quand je me suis inscrit à des cours de français dans un centre communautaire. J'y ai rencontré d'autres nouveaux arrivants et une bénévole qui m'a aidé à rédiger mon CV.\n\nÀ mon avis, ce qui aide le plus, ce n'est pas l'argent, mais les contacts humains. Certes, il faut être patient avec l'administration, mais un réseau d'amis rend tout plus simple. C'est pourquoi je conseille à chaque nouvel arrivant de s'inscrire très vite à une activité de groupe."
+      },
+      {
+        "id": "ee2-e",
+        "prompt": "Vous avez assisté récemment à un événement dans votre ville (festival, concert, match, spectacle). Vous écrivez un article pour le journal de votre quartier : vous racontez la soirée et vous dites si vous recommandez cet événement.",
+        "promptEn": "You recently attended an event in your city. Write an article for your local paper: tell the evening and say whether you recommend it.",
+        "model": "Samedi dernier, je suis allée pour la première fois au festival de jazz du parc Lafontaine. Nous sommes arrivés vers dix-neuf heures : la foule était déjà nombreuse, mais l'ambiance était calme et familiale. Trois groupes se sont succédé sur la grande scène, et le dernier, une chanteuse haïtienne, a fait danser tout le public jusqu'à minuit.\n\nJ'ai particulièrement apprécié la gratuité des concerts et la présence de nombreux camions de cuisine du monde. En revanche, les files d'attente pour les toilettes étaient interminables.\n\nMalgré ce petit défaut, je recommande vivement ce festival. Bien qu'il soit très fréquenté, il reste un moment de partage rare, où toutes les générations se retrouvent autour de la musique. N'oubliez pas votre chaise pliante !"
+      }
+    ],
+    "phrases": [
+      {
+        "fr": "L'année dernière, j'ai eu l'occasion de…",
+        "en": "Last year, I had the opportunity to…"
+      },
+      {
+        "fr": "Je voudrais partager mon expérience de…",
+        "en": "I'd like to share my experience of…"
+      },
+      {
+        "fr": "Au début, j'étais un peu inquiet(ète), mais…",
+        "en": "At first I was a bit worried, but…"
+      },
+      {
+        "fr": "Ce qui m'a le plus marqué, c'est…",
+        "en": "What struck me most was…"
+      },
+      {
+        "fr": "Peu à peu, j'ai compris que…",
+        "en": "Little by little, I realised that…"
+      },
+      {
+        "fr": "À mon avis, … parce que…",
+        "en": "In my opinion, … because…"
+      },
+      {
+        "fr": "Je trouve que c'est une expérience enrichissante.",
+        "en": "I find it a rewarding experience."
+      },
+      {
+        "fr": "Certes, …, mais…",
+        "en": "Admittedly, …, but…"
+      },
+      {
+        "fr": "Bien que ce soit difficile, …",
+        "en": "Although it is difficult, … (+ subjunctive)"
+      },
+      {
+        "fr": "Je recommande cette expérience à tous ceux qui…",
+        "en": "I recommend it to anyone who…"
+      },
+      {
+        "fr": "Si c'était à refaire, je…",
+        "en": "If I had to do it again, I would…"
+      }
+    ],
+    "titleEn": "Task 2 — Account of an experience + opinion (120–150 words)",
+    "goalEn": "Tell what happened (past tenses) AND say what you think about it, for several readers."
+  },
+  {
+    "id": "ee3",
+    "n": 3,
+    "title": "Tâche 3 — Comparer deux points de vue et prendre position",
+    "minutes": 25,
+    "min": 120,
+    "max": 180,
+    "audience": "Public large (journal, site Internet, collègues). Registre soutenu, ton objectif puis personnel.",
+    "goal": "Restituer objectivement deux positions opposées, PUIS prendre parti. Les deux mouvements doivent être visibles.",
+    "official": "rédaction d'un texte qui compare deux points de vue portant sur un fait de société, exprimés dans deux documents courts, puis prise de position. Les sujets d'exemple officiels répartissent le texte en deux parties : présenter les deux opinions avec vos propres mots (environ 40 à 60 mots), puis donner la vôtre (environ 80 à 120 mots).",
+    "plan": [
+      "Partie 1 (≈ 40–60 mots) : poser le sujet en une phrase neutre",
+      "Rendre compte du document 1, puis du document 2, en marquant l'opposition — reformuler, ne pas recopier",
+      "Partie 2 (≈ 80–120 mots) : transition explicite vers votre avis (« Pour ma part… »)",
+      "Votre position + un argument + un exemple",
+      "Une nuance ou une proposition pour conclure"
+    ],
+    "connectors": [
+      "Selon le premier auteur,",
+      "à l'inverse",
+      "quant à",
+      "tandis que",
+      "Pour ma part,",
+      "il n'en reste pas moins que",
+      "en revanche",
+      "c'est pourquoi"
+    ],
+    "checklist": [
+      {
+        "id": "c1",
+        "text": "J'ai respecté la longueur (120 à 180 mots)."
+      },
+      {
+        "id": "c2",
+        "text": "J'ai rendu compte des DEUX documents avant de donner mon avis."
+      },
+      {
+        "id": "c3",
+        "text": "J'ai reformulé les documents au lieu de recopier des phrases entières."
+      },
+      {
+        "id": "c4",
+        "text": "La transition vers mon opinion est explicite (« Pour ma part », « Quant à moi »)."
+      },
+      {
+        "id": "c5",
+        "text": "J'ai justifié ma position par un argument ou un exemple, pas seulement affirmé."
+      },
+      {
+        "id": "c6",
+        "text": "J'ai employé des marqueurs d'opposition variés (à l'inverse, tandis que, en revanche)."
+      },
+      {
+        "id": "c7",
+        "text": "J'ai relu une dernière fois uniquement pour la ponctuation et les majuscules."
+      }
+    ],
+    "prompts": [
+      {
+        "id": "ee3",
+        "prompt": "Vous lisez ces deux avis publiés sur un site d'actualité locale.\n\nDOCUMENT 1 — Sophie, 34 ans, usagère :\n« La gratuité des transports en commun devrait être la règle. Dans les villes qui l'ont\nadoptée, la fréquentation a bondi et les habitants les plus modestes ont retrouvé une\nvéritable liberté de déplacement. C'est aussi le moyen le plus simple de réduire le trafic\nautomobile et la pollution en centre-ville. »\n\nDOCUMENT 2 — Marc, économiste :\n« La gratuité n'est jamais gratuite : quelqu'un paie, et c'est le contribuable. L'argent\nqui manque, ce sont les nouvelles lignes et les rames supplémentaires qu'on ne construira\npas. Un réseau ponctuel et fréquent attire davantage d'automobilistes qu'un réseau gratuit\nmais saturé. »\n\nRédigez un texte dans lequel vous présentez les deux points de vue avec vos propres mots,\npuis vous donnez le vôtre en le justifiant.",
+        "model": "La gratuité des transports en commun divise. Pour Sophie, c'est une mesure à la fois\nsociale et écologique, qui rend leur mobilité aux ménages modestes et réduit la circulation\nautomobile. À l'inverse, Marc rappelle qu'elle est financée par l'impôt, au détriment du\ndéveloppement du réseau, alors que la qualité du service compte davantage que son prix.\n\nPour ma part, l'argument économique me paraît le plus solide. J'ai longtemps habité une\nville où le bus était bon marché mais ne passait que toutes les quarante minutes : personne\nne le prenait, et tout le monde gardait sa voiture. Ce qui décide les gens, c'est de pouvoir\ncompter sur un transport rapide et régulier.\n\nIl n'en reste pas moins que la question sociale soulevée par Sophie est réelle. C'est\npourquoi je défendrais plutôt des tarifs très réduits pour les revenus modestes, afin que\nl'argent des autres voyageurs continue de financer un réseau dense et fiable.",
+        "promptEn": "Two opinions on free public transport. Present both in your own words, then give and justify your own view."
+      },
+      {
+        "id": "ee3-b",
+        "prompt": "Vous lisez ces deux témoignages dans le courrier des lecteurs d'un magazine.\n\nDOCUMENT 1 — Inès, graphiste :\n« Depuis que je travaille de chez moi, je gagne deux heures par jour : plus de trajets, plus\nde bruit de bureau. Je suis plus concentrée, je déjeune avec mes enfants et je n'ai jamais\nété aussi efficace. Je ne retournerais pour rien au monde dans un bureau cinq jours par\nsemaine. »\n\nDOCUMENT 2 — Paul, chef d'équipe :\n« Le télétravail a abîmé notre équipe. Les nouveaux n'apprennent plus le métier en\nobservant leurs collègues, les idées ne circulent plus à la machine à café et certains\nse sentent très seuls. Un écran ne remplacera jamais une vraie discussion. »\n\nRédigez un texte dans lequel vous présentez les deux points de vue avec vos propres mots,\npuis vous donnez le vôtre en le justifiant.",
+        "model": "Le télétravail ne fait pas l'unanimité. Inès y voit un gain de temps et de concentration\nqui lui permet de mieux concilier sa vie professionnelle et sa vie de famille. Paul, au\ncontraire, estime qu'il affaiblit les équipes : les débutants se forment moins bien, les\néchanges informels disparaissent et certains salariés souffrent d'isolement.\n\nQuant à moi, je pense que les deux ont raison, parce qu'ils ne parlent pas de la même\nchose. Inès décrit un travail individuel, qui demande du calme, tandis que Paul pense à\nla vie collective de l'entreprise. Dans mon ancien emploi, nous travaillions à distance\ntrois jours par semaine : les tâches avançaient vite, mais il fallait des mois pour\nconnaître un nouveau collègue.\n\nC'est pourquoi une organisation mixte me semble la meilleure solution. Bien que le bureau\nsoit parfois bruyant, deux jours de présence commune suffisent pour former les nouveaux\net garder un esprit d'équipe.",
+        "promptEn": "Two opinions on working from home. Present both in your own words, then give and justify your own view."
+      },
+      {
+        "id": "ee3-c",
+        "prompt": "Vous lisez ces deux opinions sur le forum d'une association de parents d'élèves.\n\nDOCUMENT 1 — Mme Laurent, enseignante :\n« Les tablettes en classe motivent les élèves. Avec elles, chacun avance à son rythme, les\nexercices sont corrigés immédiatement et les enfants en difficulté osent enfin se tromper.\nRefuser le numérique à l'école, c'est préparer les enfants à un monde qui n'existe plus. »\n\nDOCUMENT 2 — M. Benali, pédiatre :\n« Les enfants passent déjà trop d'heures devant les écrans à la maison. L'école devrait\nêtre l'endroit où l'on apprend à écrire à la main, à se concentrer longtemps et à parler\navec les autres. Aucune étude sérieuse ne montre que les tablettes améliorent les résultats\nscolaires. »\n\nRédigez un texte dans lequel vous présentez les deux points de vue avec vos propres mots,\npuis vous donnez le vôtre en le justifiant.",
+        "model": "La place des tablettes à l'école primaire fait débat. Selon Mme Laurent, elles motivent\nles élèves, s'adaptent au rythme de chacun et préparent les enfants au monde d'aujourd'hui.\nM. Benali juge au contraire que l'école doit protéger les enfants des écrans, déjà trop\nprésents à la maison, et il doute de leur efficacité pédagogique.\n\nPour ma part, je partage plutôt l'inquiétude du pédiatre. Mon neveu de huit ans utilise\nune tablette en classe depuis un an : il adore les exercices, mais il écrit de plus en\nplus mal et il se décourage dès qu'un texte est un peu long. Apprendre à se concentrer\nsans stimulation permanente me paraît essentiel à cet âge.\n\nIl n'en reste pas moins que le numérique fait partie de la vie des enfants. Je serais donc\nfavorable à un usage limité, une ou deux heures par semaine, à condition que le reste du\ntemps soit consacré aux livres, à l'écriture et à la discussion.",
+        "promptEn": "Two opinions on tablets in primary schools. Present both in your own words, then give and justify your own view."
+      },
+      {
+        "id": "ee3-d",
+        "prompt": "Vous lisez ces deux opinions sur le site du journal de votre ville.\n\nDOCUMENT 1 — Luc, commerçant :\n« Fermer le centre-ville aux voitures, c'est condamner nos commerces. Mes clients viennent des quartiers voisins et de la banlieue ; sans stationnement, ils iront au centre commercial. Les familles avec des enfants et les personnes âgées ne peuvent pas tout porter à pied. »\n\nDOCUMENT 2 — Julie, mère de famille :\n« Depuis que notre rue est devenue piétonne, les enfants jouent dehors, l'air est plus pur et on entend de nouveau les oiseaux. Les terrasses des cafés sont pleines. Une ville est faite pour ses habitants, pas pour les voitures. »\n\nRédigez un texte dans lequel vous présentez les deux points de vue avec vos propres mots, puis vous donnez le vôtre en le justifiant.",
+        "promptEn": "Two opinions on banning cars from the city centre. Present both in your own words, then give and justify your own view.",
+        "model": "Faut-il interdire les voitures dans les centres-villes ? Pour Luc, commerçant, une telle mesure ruinerait les petits magasins, car les clients venus de loin et les personnes qui ont du mal à marcher iraient plutôt dans les centres commerciaux. Julie, au contraire, constate qu'une rue piétonne améliore la qualité de vie : moins de pollution, plus de sécurité pour les enfants et des cafés animés.\n\nPour ma part, je partage plutôt l'avis de Julie, mais je comprends l'inquiétude de Luc. Dans ma ville, la rue principale est devenue piétonne il y a trois ans. Au début, plusieurs commerçants ont protesté ; aujourd'hui, ils reconnaissent que les clients restent plus longtemps.\n\nIl n'en reste pas moins qu'une telle décision doit être accompagnée. C'est pourquoi il me semble indispensable de prévoir des stationnements à l'entrée du centre et des navettes gratuites pour les personnes âgées."
+      },
+      {
+        "id": "ee3-e",
+        "prompt": "Vous lisez ces deux opinions dans un magazine consacré à l'éducation.\n\nDOCUMENT 1 — Marc, directeur d'école secondaire :\n« Rendre obligatoires quarante heures de bénévolat pour obtenir le diplôme, c'est apprendre aux jeunes la solidarité par l'expérience. Beaucoup découvrent ainsi un métier ou une passion qu'ils n'auraient jamais imaginés. »\n\nDOCUMENT 2 — Nadia, étudiante :\n« Un bénévolat obligatoire n'est plus du bénévolat. Beaucoup d'élèves travaillent déjà le soir pour aider leur famille ; leur imposer des heures supplémentaires est injuste. L'engagement doit rester un choix. »\n\nRédigez un texte dans lequel vous présentez les deux points de vue avec vos propres mots, puis vous donnez le vôtre en le justifiant.",
+        "promptEn": "Two opinions on compulsory volunteering for high-school students. Present both in your own words, then give and justify your own view.",
+        "model": "Ces deux documents portent sur le bénévolat obligatoire au secondaire. Selon Marc, directeur d'école, imposer quelques heures d'engagement permettrait aux jeunes d'apprendre la solidarité et parfois de trouver leur vocation. Nadia estime au contraire qu'une obligation enlève tout son sens au bénévolat et pénalise les élèves qui travaillent déjà pour aider leur famille.\n\nPour ma part, je trouve l'idée de Marc intéressante, mais l'argument de Nadia me paraît décisif. En effet, un engagement forcé risque de devenir une simple formalité. Quand j'étais au lycée, nous devions faire un stage obligatoire : la plupart de mes camarades le vivaient comme une corvée.\n\nC'est pourquoi je serais plutôt favorable à une solution intermédiaire : l'école pourrait proposer et valoriser le bénévolat, par exemple en l'inscrivant sur le bulletin, sans le rendre obligatoire. Ainsi, les élèves disponibles s'engageraient par choix, et les autres ne seraient pas pénalisés."
+      }
+    ],
+    "phrases": [
+      {
+        "fr": "Ces deux documents abordent la question de…",
+        "en": "These two documents deal with…"
+      },
+      {
+        "fr": "Selon le premier document, …",
+        "en": "According to the first document, …"
+      },
+      {
+        "fr": "L'auteur du second document estime au contraire que…",
+        "en": "The author of the second, on the contrary, believes that…"
+      },
+      {
+        "fr": "Tandis que l'un met en avant…, l'autre insiste sur…",
+        "en": "While one highlights…, the other stresses…"
+      },
+      {
+        "fr": "Pour ma part, je pense que…",
+        "en": "For my part, I think that…"
+      },
+      {
+        "fr": "Je partage plutôt l'avis de…, dans la mesure où…",
+        "en": "I rather agree with…, insofar as…"
+      },
+      {
+        "fr": "En effet, …",
+        "en": "Indeed, … (gives a reason/proof)"
+      },
+      {
+        "fr": "Par exemple, dans mon pays, …",
+        "en": "For example, in my country, …"
+      },
+      {
+        "fr": "Il n'en reste pas moins que…",
+        "en": "The fact remains that…"
+      },
+      {
+        "fr": "C'est pourquoi il me semble préférable de…",
+        "en": "That is why it seems better to me to…"
+      },
+      {
+        "fr": "En conclusion, …",
+        "en": "In conclusion, …"
+      }
+    ],
+    "titleEn": "Task 3 — Compare two views, then give yours (120–180 words)",
+    "goalEn": "First summarise both documents in your own words (about 40–60 words), then give and justify your own opinion (about 80–120 words)."
+  }
+]

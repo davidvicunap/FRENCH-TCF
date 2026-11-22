@@ -3517,7 +3517,7 @@ function defaultState() {
     examRun: null,         // examen blanc en cours, repris après une fermeture
     days: {},              // "2026-07-24" -> true (jours travaillés)
     achievements: {},      // id -> timestamp
-    goal: { version: "tp", level: "B2", date: "" },
+    goal: { version: "canada", level: "B2", date: "" },
     settings: { theme: null, rate: 1, newPerDay: 10, voice: "", reverse: false },
     savedAt: 0,            // dernière écriture réussie
     backupAt: 0,           // dernière sauvegarde exportée
@@ -3640,7 +3640,7 @@ function sanitizeState(raw) {
 
   const g = isObj(raw.goal) ? raw.goal : {};
   d.goal = {
-    version: oneOf(g.version, Object.keys(TCF_VERSIONS), "tp"),
+    version: oneOf(g.version, Object.keys(TCF_VERSIONS), "canada"),
     level: oneOf(g.level, LEVELS, "B2"),
     date: typeof g.date === "string" && /^\d{4}-\d{2}-\d{2}$/.test(g.date) ? g.date : "",
   };
@@ -3824,6 +3824,18 @@ function dayStreak() {
   return streak;
 }
 
+/** Score à atteindre aux épreuves à choix multiple pour le niveau visé.
+    Au TCF Canada, « B2 » veut dire NCLC 7 pour l'immigration, et le NCLC 7
+    ne commence pas à 400 points mais à 458 en compréhension orale (453 en
+    compréhension écrite) : on vise donc le plus exigeant des deux seuils. */
+function goalTarget() {
+  if (S.goal.version === "canada" && S.goal.level === "B2") return 458;
+  return 100 + 100 * LEVELS.indexOf(S.goal.level);
+}
+function goalLabel() {
+  return S.goal.version === "canada" && S.goal.level === "B2" ? "NCLC 7" : S.goal.level;
+}
+
 /** Jours restants avant la date d'examen (null si non renseignée). */
 function daysToExam() {
   if (!S.goal.date) return null;
@@ -3848,7 +3860,7 @@ function sectionDone(id) {
 
 function achievementContext() {
   const doneTypes = (tasks, done) => tasks.filter((t) => t.prompts.some((p) => done[p.id])).length;
-  const target = 100 + 100 * LEVELS.indexOf(S.goal.level);
+  const target = goalTarget();
   return {
     lessonsDone: S.lessonsDone,
     drillsDone: S.drillsDone,
@@ -4659,7 +4671,7 @@ function todayPlan() {
 function goalCard() {
   const v = TCF_VERSIONS[S.goal.version];
   const d = daysToExam();
-  const target = 100 + 100 * LEVELS.indexOf(S.goal.level);
+  const target = goalTarget();
   const last = S.exams.slice().reverse().find((e) => typeof e.score === "number");
   const when = d === null ? '<a href="#/reglages">indiquez la date de votre examen</a>'
     : d > 1 ? `examen dans <strong>${d} jours</strong>`
@@ -4669,12 +4681,12 @@ function goalCard() {
   const gap = !last ? "Aucun examen blanc pour l'instant : commencez par situer votre niveau."
     : last.score >= target
       ? `Dernier examen blanc : <strong>${esc(last.level)}</strong> (≈ ${last.score}) — objectif atteint à l'entraînement. Consolidez et refaites-en un.`
-      : `Dernier examen blanc : <strong>${esc(last.level)}</strong> (≈ ${last.score}) — il manque environ ${target - last.score} points pour le ${S.goal.level}.`;
+      : `Dernier examen blanc : <strong>${esc(last.level)}</strong> (≈ ${last.score}) — il manque environ ${target - last.score} points pour le ${goalLabel()} (${target} points).`;
   return `
     <div class="goal">
       <div class="goal-main">
         <span class="goal-label">Mon objectif</span>
-        <strong>${esc(v.name)} · ${S.goal.level}</strong> <span class="goal-when">· ${when}</span>
+        <strong>${esc(v.name)} · ${S.goal.level}${goalLabel() !== S.goal.level ? " (" + goalLabel() + ")" : ""}</strong> <span class="goal-when">· ${when}</span>
       </div>
       <p>${gap}</p>
       <a class="btn btn-sm" href="#/reglages">Modifier</a>
@@ -6312,7 +6324,7 @@ function scoreExam(run, itemsBySection) {
 
 function renderExamResult(result) {
   const r = result.record;
-  const target = 100 + 100 * LEVELS.indexOf(S.goal.level);
+  const target = goalTarget();
   const weakest = Object.keys(result.sec).sort((a, b) => result.sec[a].score - result.sec[b].score)[0];
 
   const secRows = Object.keys(result.sec).map((k) => {
@@ -6358,8 +6370,8 @@ function renderExamResult(result) {
       <p style="margin:.3rem 0;font-size:1.1rem"><strong>${r.correct} / ${r.n}</strong> bonnes réponses</p>
       <p class="result-sub">Score indicatif : ≈ ${r.score} sur 699 — fourchette probable ${r.lo}–${r.hi}<br>
         ${r.score >= target
-          ? `Votre objectif (${S.goal.level}, soit ${target} points) est atteint sur cet examen blanc.`
-          : `Votre objectif (${S.goal.level}) commence à ${target} points : il manque environ ${target - r.score} points.`}</p>
+          ? `Votre objectif (${goalLabel()}, soit ${target} points) est atteint sur cet examen blanc.`
+          : `Votre objectif (${goalLabel()}) commence à ${target} points : il manque environ ${target - r.score} points.`}</p>
     </div>
 
     <h2 style="font-size:1.05rem">Par épreuve</h2>

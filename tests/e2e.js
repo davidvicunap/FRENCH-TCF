@@ -162,7 +162,7 @@ const stored = (page) => page.evaluate((k) => JSON.parse(localStorage.getItem(k)
     && (await page.evaluate(() => importBackup('{"a":1}').ok)) === false);
   check("hostile backup is neutralised", await page.evaluate(() => {
     const s = sanitizeState({ xp: "<img>", exams: [{ level: "<img src=x onerror=alert(1)>", pct: 50, at: 1 }], cards: { v1: { box: 99 } }, goal: { version: "zz" } });
-    return s.xp === 0 && s.exams[0].level === "—" && s.cards.v1.box === 5 && s.goal.version === "tp";
+    return s.xp === 0 && s.exams[0].level === "—" && s.cards.v1.box === 5 && s.goal.version === "canada";
   }));
 
   /* 12. a save file written by the previous version of the app still loads */
@@ -176,7 +176,7 @@ const stored = (page) => page.evaluate((k) => JSON.parse(localStorage.getItem(k)
   await page.reload();
   const old = await page.evaluate(() => S);
   check("v1 save loads intact", old.xp === 260 && old.lessonsDone["msl-l1"] && old.writingDrafts.ee2 === "Mon ancien brouillon."
-    && old.writingDone.ee1 && old.cards.v1.box === 3 && old.exams[0].level === "B1+" && old.settings.rate === 0.8 && old.goal.level === "B2");
+    && old.writingDone.ee1 && old.cards.v1.box === 3 && old.exams[0].level === "B1+" && old.settings.rate === 0.8 && old.goal.level === "B2" && old.goal.version === "canada");
   await go(page, "#/examen");
   await go(page, "#/ecrit/ee2");
   check("old draft shows under its prompt", (await page.inputValue("#editor")) === "Mon ancien brouillon.");
