@@ -1,0 +1,1398 @@
+[
+  {
+    "id": "r-a1-01",
+    "level": "A1",
+    "kind": "notice",
+    "context": "PHARMACIE CENTRALE\nOuverte 7 jours sur 7\nDu lundi au samedi : 8 h 30 – 20 h\nDimanche : 9 h – 13 h",
+    "q": "À quelle heure la pharmacie ferme-t-elle le dimanche ?",
+    "options": [
+      "À 13 h",
+      "À 20 h",
+      "À 8 h 30",
+      "À 9 h"
+    ],
+    "a": 0,
+    "why": "Pour le dimanche, l'affiche indique « 9 h – 13 h » : la pharmacie ferme à 13 h.",
+    "whyEn": "Sunday hours are 9:00–13:00, so it closes at 1 p.m.",
+    "notes": [
+      "Correct: Sunday is 9 h – 13 h.",
+      "20 h is the closing time Monday to Saturday.",
+      "8 h 30 is the weekday opening time.",
+      "9 h is when it opens on Sunday, not when it closes."
+    ],
+    "glossary": [
+      {
+        "fr": "ouvert(e)",
+        "en": "open"
+      },
+      {
+        "fr": "fermer",
+        "en": "to close"
+      },
+      {
+        "fr": "7 jours sur 7",
+        "en": "every day of the week"
+      }
+    ]
+  },
+  {
+    "id": "r-a1-02",
+    "level": "A1",
+    "kind": "message",
+    "context": "Coucou !\nJe suis en retard, le bus ne passe pas. J'arrive dans 20 minutes.\nTu peux commander pour moi ? Une pizza et un jus d'orange.\nBisous,\nInès",
+    "q": "Que demande Inès ?",
+    "options": [
+      "De commander son repas",
+      "D'aller la chercher en voiture",
+      "D'annuler le dîner",
+      "D'attendre le bus avec elle"
+    ],
+    "a": 0,
+    "why": "Inès écrit : « Tu peux commander pour moi ? Une pizza et un jus d'orange. »",
+    "whyEn": "She asks her friend to order for her: a pizza and an orange juice.",
+    "notes": [
+      "Correct: « commander pour moi ».",
+      "She never asks to be picked up; she is coming by bus.",
+      "She is late, but she is still coming.",
+      "The bus is mentioned only to explain why she is late."
+    ],
+    "glossary": [
+      {
+        "fr": "en retard",
+        "en": "late"
+      },
+      {
+        "fr": "commander",
+        "en": "to order"
+      },
+      {
+        "fr": "Bisous",
+        "en": "Love / kisses (informal sign-off)"
+      }
+    ]
+  },
+  {
+    "id": "r-a1-03",
+    "level": "A1",
+    "kind": "ad",
+    "context": "À LOUER\nStudio meublé, 25 m², centre-ville\n650 $ par mois, chauffage compris\nLibre le 1er juillet\nAppeler Marc : 514 555-0142",
+    "q": "Qu'est-ce qui est compris dans le prix ?",
+    "options": [
+      "Le chauffage",
+      "Internet",
+      "Le stationnement",
+      "Le téléphone"
+    ],
+    "a": 0,
+    "why": "L'annonce précise « chauffage compris » : le chauffage est inclus dans les 650 $.",
+    "whyEn": "« chauffage compris » means heating is included in the rent.",
+    "notes": [
+      "Correct: « chauffage compris ».",
+      "Internet is not mentioned.",
+      "Parking is not mentioned.",
+      "The phone number is for contacting Marc, not a service included."
+    ],
+    "glossary": [
+      {
+        "fr": "à louer",
+        "en": "for rent"
+      },
+      {
+        "fr": "meublé",
+        "en": "furnished"
+      },
+      {
+        "fr": "compris",
+        "en": "included"
+      },
+      {
+        "fr": "libre",
+        "en": "available"
+      }
+    ]
+  },
+  {
+    "id": "r-a1-04",
+    "level": "A1",
+    "kind": "notice",
+    "context": "ÉCOLE DES PINS\nRéunion des parents d'élèves\nJeudi 12 octobre, 18 h\nSalle 4 (rez-de-chaussée)",
+    "q": "Qui est invité à cette réunion ?",
+    "options": [
+      "Les parents des élèves",
+      "Les enseignants seulement",
+      "Les enfants",
+      "Les voisins de l'école"
+    ],
+    "a": 0,
+    "why": "Il s'agit d'une « réunion des parents d'élèves ».",
+    "whyEn": "It is a meeting for the parents of the pupils.",
+    "notes": [
+      "Correct: « parents d'élèves ».",
+      "Teachers are not mentioned.",
+      "« élèves » refers to the parents' children; the children are not invited.",
+      "Neighbours are not mentioned."
+    ],
+    "glossary": [
+      {
+        "fr": "une réunion",
+        "en": "a meeting"
+      },
+      {
+        "fr": "un élève",
+        "en": "a pupil"
+      },
+      {
+        "fr": "le rez-de-chaussée",
+        "en": "the ground floor"
+      }
+    ]
+  },
+  {
+    "id": "r-a1-05",
+    "level": "A1",
+    "kind": "email",
+    "context": "Bonjour Paul,\nMerci pour ton invitation !\nSamedi, je ne peux pas : je travaille.\nDimanche, c'est possible pour moi. Ça te va ?\nAnna",
+    "q": "Quand Anna est-elle disponible ?",
+    "options": [
+      "Samedi",
+      "Dimanche",
+      "Samedi et dimanche",
+      "Elle n'est pas disponible"
+    ],
+    "a": 1,
+    "why": "Anna travaille samedi, mais elle écrit : « Dimanche, c'est possible pour moi. »",
+    "whyEn": "She works on Saturday; Sunday is possible.",
+    "notes": [
+      "She works on Saturday: « je ne peux pas ».",
+      "Correct.",
+      "Only Sunday works for her.",
+      "She is free on Sunday."
+    ],
+    "glossary": [
+      {
+        "fr": "je ne peux pas",
+        "en": "I can't"
+      },
+      {
+        "fr": "Ça te va ?",
+        "en": "Does that suit you?"
+      }
+    ]
+  },
+  {
+    "id": "r-a1-06",
+    "level": "A1",
+    "kind": "notice",
+    "context": "MENU DU JOUR — 15 $\nSoupe de légumes\nPoulet et frites OU poisson et riz\nDessert : tarte aux pommes\nCafé non compris",
+    "q": "Qu'est-ce qui n'est pas inclus dans le menu à 15 $ ?",
+    "options": [
+      "La soupe",
+      "Le dessert",
+      "Le café",
+      "Le plat principal"
+    ],
+    "a": 2,
+    "why": "La dernière ligne indique « Café non compris » : il faut le payer en plus.",
+    "whyEn": "« Café non compris » = coffee is not included.",
+    "notes": [
+      "The soup is part of the menu.",
+      "The apple pie dessert is included.",
+      "Correct: « non compris ».",
+      "Chicken or fish is the main course, included."
+    ],
+    "glossary": [
+      {
+        "fr": "non compris",
+        "en": "not included"
+      },
+      {
+        "fr": "ou",
+        "en": "or"
+      },
+      {
+        "fr": "une tarte aux pommes",
+        "en": "an apple pie"
+      }
+    ]
+  },
+  {
+    "id": "r-a2-01",
+    "level": "A2",
+    "kind": "notice",
+    "context": "BIBLIOTHÈQUE MUNICIPALE\nVous pouvez emprunter 5 livres pendant 3 semaines.\nDVD : 2 au maximum, pour 1 semaine.\nEn cas de retard : 0,25 $ par jour et par document.",
+    "q": "Combien de temps peut-on garder un DVD ?",
+    "options": [
+      "Une semaine",
+      "Trois semaines",
+      "Cinq jours",
+      "Deux semaines"
+    ],
+    "a": 0,
+    "why": "Pour les DVD, le règlement indique « pour 1 semaine ».",
+    "whyEn": "DVDs can be kept for one week.",
+    "notes": [
+      "Correct: « pour 1 semaine ».",
+      "Three weeks is for books.",
+      "5 is the number of books, not days.",
+      "2 is the maximum number of DVDs, not weeks."
+    ],
+    "glossary": [
+      {
+        "fr": "emprunter",
+        "en": "to borrow"
+      },
+      {
+        "fr": "un retard",
+        "en": "a late return / delay"
+      },
+      {
+        "fr": "au maximum",
+        "en": "at most"
+      }
+    ]
+  },
+  {
+    "id": "r-a2-02",
+    "level": "A2",
+    "kind": "email",
+    "context": "Objet : Votre premier jour\n\nBonjour Madame Lopez,\n\nNous sommes heureux de vous accueillir lundi prochain. Merci de vous présenter à l'accueil à 8 h 45 avec une pièce d'identité et votre numéro d'assurance sociale. Le repas de midi vous sera offert.\n\nÀ lundi,\nJulien Roy, Ressources humaines",
+    "q": "Que doit apporter Madame Lopez ?",
+    "options": [
+      "Des documents personnels",
+      "Son repas de midi",
+      "Un ordinateur",
+      "Une lettre de motivation"
+    ],
+    "a": 0,
+    "why": "Elle doit venir « avec une pièce d'identité et [son] numéro d'assurance sociale » : ce sont des documents personnels.",
+    "whyEn": "She must bring ID and her social insurance number — personal documents.",
+    "notes": [
+      "Correct: ID + social insurance number.",
+      "Lunch is offered: « vous sera offert ».",
+      "A computer is not mentioned.",
+      "She already has the job; no cover letter needed."
+    ],
+    "glossary": [
+      {
+        "fr": "accueillir",
+        "en": "to welcome"
+      },
+      {
+        "fr": "une pièce d'identité",
+        "en": "an ID document"
+      },
+      {
+        "fr": "offert",
+        "en": "provided free"
+      }
+    ]
+  },
+  {
+    "id": "r-a2-03",
+    "level": "A2",
+    "kind": "ad",
+    "context": "COURS DE NATATION POUR ADULTES\nDébutants : mardi et jeudi, 19 h – 20 h\nNiveau avancé : samedi, 10 h – 11 h 30\nInscription obligatoire à l'accueil de la piscine\n10 séances : 120 $",
+    "q": "Un adulte qui ne sait pas nager peut suivre un cours…",
+    "options": [
+      "le mardi soir",
+      "le samedi matin",
+      "tous les jours",
+      "sans s'inscrire"
+    ],
+    "a": 0,
+    "why": "Une personne qui ne sait pas nager est « débutante » : ses cours ont lieu le mardi et le jeudi, de 19 h à 20 h.",
+    "whyEn": "Someone who can't swim is a beginner: Tuesday and Thursday evenings.",
+    "notes": [
+      "Correct: beginners = Tuesday/Thursday 7–8 p.m.",
+      "Saturday is the advanced level.",
+      "Classes are only on certain days.",
+      "Registration is « obligatoire » (compulsory)."
+    ],
+    "glossary": [
+      {
+        "fr": "un débutant",
+        "en": "a beginner"
+      },
+      {
+        "fr": "obligatoire",
+        "en": "compulsory"
+      },
+      {
+        "fr": "une séance",
+        "en": "a session"
+      }
+    ]
+  },
+  {
+    "id": "r-a2-04",
+    "level": "A2",
+    "kind": "message",
+    "context": "Bonjour à tous !\nJe viens d'arriver à Québec avec ma famille. Nous cherchons une garderie pour notre fils de trois ans, près du quartier Saint-Roch. Vous avez des conseils ?\nMerci !\nKarim",
+    "q": "Que cherche Karim ?",
+    "options": [
+      "Un logement à Saint-Roch",
+      "Un endroit pour faire garder son enfant",
+      "Un travail à Québec",
+      "Une école pour adultes"
+    ],
+    "a": 1,
+    "why": "Karim cherche « une garderie pour [son] fils de trois ans », c'est-à-dire un lieu où l'on s'occupe des jeunes enfants.",
+    "whyEn": "« une garderie » is a daycare: a place to look after his 3-year-old.",
+    "notes": [
+      "Saint-Roch is where he wants the daycare, not a home.",
+      "Correct: « garderie » = daycare.",
+      "Work is not mentioned.",
+      "The child is three; no adult school."
+    ],
+    "glossary": [
+      {
+        "fr": "je viens d'arriver",
+        "en": "I have just arrived"
+      },
+      {
+        "fr": "une garderie",
+        "en": "a daycare (Canada)"
+      },
+      {
+        "fr": "un conseil",
+        "en": "a piece of advice"
+      }
+    ]
+  },
+  {
+    "id": "r-a2-05",
+    "level": "A2",
+    "kind": "notice",
+    "context": "AVIS AUX USAGERS\nDu 3 au 7 mars, les autobus de la ligne 12 ne s'arrêteront pas à l'arrêt Laurier en raison de travaux.\nUtilisez l'arrêt Saint-Denis, situé à 200 mètres.",
+    "q": "Que doivent faire les passagers qui descendent normalement à l'arrêt Laurier ?",
+    "options": [
+      "Prendre une autre ligne",
+      "Descendre à un arrêt voisin",
+      "Ne pas voyager pendant les travaux",
+      "Acheter un nouveau billet"
+    ],
+    "a": 1,
+    "why": "L'avis demande d'utiliser « l'arrêt Saint-Denis, situé à 200 mètres » : un arrêt tout proche.",
+    "whyEn": "They should use the Saint-Denis stop, 200 metres away.",
+    "notes": [
+      "Line 12 still runs; only one stop is skipped.",
+      "Correct: Saint-Denis is 200 m away.",
+      "Nobody is told not to travel.",
+      "Tickets are not mentioned."
+    ],
+    "glossary": [
+      {
+        "fr": "un usager",
+        "en": "a user, passenger"
+      },
+      {
+        "fr": "un arrêt",
+        "en": "a stop"
+      },
+      {
+        "fr": "en raison de",
+        "en": "because of"
+      }
+    ]
+  },
+  {
+    "id": "r-a2-06",
+    "level": "A2",
+    "kind": "letter",
+    "context": "Chers amis,\nNous passons une semaine à Gaspé. Il fait frais, mais le paysage est magnifique. Hier, nous avons vu des baleines ! Demain, nous partons pour Percé.\nGros bisous,\nSarah et Tom",
+    "q": "Qu'ont fait Sarah et Tom hier ?",
+    "options": [
+      "Ils sont partis pour Percé",
+      "Ils ont vu des baleines",
+      "Ils sont rentrés chez eux",
+      "Ils ont nagé dans la mer"
+    ],
+    "a": 1,
+    "why": "« Hier, nous avons vu des baleines ! » Le passé composé décrit ce qui s'est passé hier.",
+    "whyEn": "« Hier » (yesterday) + « nous avons vu des baleines » (we saw whales).",
+    "notes": [
+      "Percé is tomorrow: « Demain ».",
+      "Correct.",
+      "They are still on holiday.",
+      "Swimming is not mentioned (and it is cool: « il fait frais »)."
+    ],
+    "glossary": [
+      {
+        "fr": "hier / demain",
+        "en": "yesterday / tomorrow"
+      },
+      {
+        "fr": "frais",
+        "en": "cool, chilly"
+      },
+      {
+        "fr": "une baleine",
+        "en": "a whale"
+      }
+    ]
+  },
+  {
+    "id": "r-a2-07",
+    "level": "A2",
+    "kind": "notice",
+    "context": "MACHINE À LAVER — MODE D'EMPLOI\n1. Mettez le linge dans la machine.\n2. Ajoutez la lessive.\n3. Choisissez la température.\n4. Insérez 2 $, puis appuyez sur « Départ ».\nNe pas laver de chaussures.",
+    "q": "Que faut-il faire juste avant d'appuyer sur « Départ » ?",
+    "options": [
+      "Ajouter la lessive",
+      "Payer",
+      "Choisir la température",
+      "Mettre ses chaussures dans la machine"
+    ],
+    "a": 1,
+    "why": "Étape 4 : « Insérez 2 $, puis appuyez sur Départ ». On paie juste avant de démarrer.",
+    "whyEn": "Step 4: insert $2, then press Start — paying comes right before.",
+    "notes": [
+      "Detergent is step 2, earlier.",
+      "Correct: « Insérez 2 $, puis… ».",
+      "Temperature is step 3.",
+      "Shoes are forbidden: « Ne pas laver de chaussures »."
+    ],
+    "glossary": [
+      {
+        "fr": "le linge",
+        "en": "laundry"
+      },
+      {
+        "fr": "la lessive",
+        "en": "detergent"
+      },
+      {
+        "fr": "appuyer sur",
+        "en": "to press"
+      }
+    ]
+  },
+  {
+    "id": "r-a2-08",
+    "level": "A2",
+    "kind": "message",
+    "context": "Bonjour,\nJe pars en vacances du 10 au 24 juillet. Pourriez-vous arroser mes plantes deux fois par semaine ? Je laisse la clé chez la concierge.\nMerci beaucoup !\nMme Dubois, appartement 5",
+    "q": "Que demande Mme Dubois à son voisin ?",
+    "options": [
+      "De garder sa clé pendant un an",
+      "De s'occuper de ses plantes pendant son absence",
+      "De partir en vacances avec elle",
+      "De payer la concierge"
+    ],
+    "a": 1,
+    "why": "Elle demande : « Pourriez-vous arroser mes plantes deux fois par semaine ? » pendant ses vacances.",
+    "whyEn": "She asks the neighbour to water her plants twice a week while she is away.",
+    "notes": [
+      "The key is left with the caretaker, only for the holidays.",
+      "Correct.",
+      "She goes on holiday alone.",
+      "Nothing about paying anyone."
+    ],
+    "glossary": [
+      {
+        "fr": "arroser",
+        "en": "to water"
+      },
+      {
+        "fr": "deux fois par semaine",
+        "en": "twice a week"
+      },
+      {
+        "fr": "la concierge",
+        "en": "the caretaker"
+      }
+    ]
+  },
+  {
+    "id": "r-b1-01",
+    "level": "B1",
+    "kind": "email",
+    "context": "Objet : Votre réclamation n° 2281\n\nMadame,\n\nNous avons bien reçu votre message concernant l'aspirateur acheté le 2 mai. Comme il est encore sous garantie, nous vous proposons de le faire réparer gratuitement dans notre atelier. Si la réparation devait prendre plus de quinze jours, nous l'échangerions contre un modèle neuf.\n\nLe service après-vente",
+    "q": "Dans quel cas la cliente recevra-t-elle un appareil neuf ?",
+    "options": [
+      "Si elle paie un supplément",
+      "Si la réparation dure plus de deux semaines",
+      "Si l'appareil a plus d'un an",
+      "Dans tous les cas"
+    ],
+    "a": 1,
+    "why": "« Si la réparation devait prendre plus de quinze jours, nous l'échangerions contre un modèle neuf. » Quinze jours = deux semaines.",
+    "whyEn": "A new one only if the repair takes more than fifteen days (two weeks).",
+    "notes": [
+      "Everything is free: it is under warranty.",
+      "Correct: « plus de quinze jours ».",
+      "It was bought on 2 May and is under warranty.",
+      "The default is a free repair, not a replacement."
+    ],
+    "glossary": [
+      {
+        "fr": "une réclamation",
+        "en": "a complaint"
+      },
+      {
+        "fr": "sous garantie",
+        "en": "under warranty"
+      },
+      {
+        "fr": "le service après-vente",
+        "en": "customer service (after-sales)"
+      }
+    ]
+  },
+  {
+    "id": "r-b1-02",
+    "level": "B1",
+    "kind": "article",
+    "context": "Depuis septembre, la ville de Sherbrooke prête gratuitement des vélos électriques à ses habitants pour une durée d'un mois. L'objectif : leur permettre d'essayer ce moyen de transport avant de l'acheter. Plus de 300 personnes se sont déjà inscrites, et la liste d'attente s'allonge.",
+    "q": "Pourquoi la ville prête-t-elle ces vélos ?",
+    "options": [
+      "Pour les vendre moins cher",
+      "Pour que les habitants puissent les tester avant un éventuel achat",
+      "Pour remplacer les autobus",
+      "Pour organiser une course"
+    ],
+    "a": 1,
+    "why": "« L'objectif : leur permettre d'essayer ce moyen de transport avant de l'acheter. »",
+    "whyEn": "The goal is to let residents try e-bikes before buying one.",
+    "notes": [
+      "The bikes are lent free, not sold.",
+      "Correct: paraphrase of « essayer… avant de l'acheter ».",
+      "Buses are not mentioned.",
+      "No race is mentioned."
+    ],
+    "glossary": [
+      {
+        "fr": "prêter",
+        "en": "to lend"
+      },
+      {
+        "fr": "s'inscrire",
+        "en": "to sign up"
+      },
+      {
+        "fr": "une liste d'attente",
+        "en": "a waiting list"
+      }
+    ]
+  },
+  {
+    "id": "r-b1-03",
+    "level": "B1",
+    "kind": "ad",
+    "context": "La pharmacie Lemieux recherche un(e) caissier(ère) à temps partiel (20 heures par semaine), principalement les soirs et les fins de semaine. Aucune expérience exigée : formation assurée sur place. Bonne maîtrise du français et de l'anglais requise. Envoyez votre CV avant le 15 avril.",
+    "q": "Quelle condition le candidat doit-il remplir ?",
+    "options": [
+      "Avoir déjà travaillé dans une pharmacie",
+      "Parler deux langues",
+      "Être disponible le matin",
+      "Avoir un diplôme en santé"
+    ],
+    "a": 1,
+    "why": "« Bonne maîtrise du français et de l'anglais requise » : il faut parler les deux langues.",
+    "whyEn": "Good French and English are required.",
+    "notes": [
+      "« Aucune expérience exigée »: no experience needed.",
+      "Correct: French and English required.",
+      "The hours are mainly evenings and weekends.",
+      "No diploma is mentioned."
+    ],
+    "glossary": [
+      {
+        "fr": "à temps partiel",
+        "en": "part-time"
+      },
+      {
+        "fr": "exigé / requis",
+        "en": "required"
+      },
+      {
+        "fr": "la maîtrise",
+        "en": "command (of a language)"
+      }
+    ]
+  },
+  {
+    "id": "r-b1-04",
+    "level": "B1",
+    "kind": "review",
+    "context": "Avis de Martin — ★★★★☆\nNous avons loué ce chalet pour une semaine en février. Il est spacieux, bien équipé, et la vue sur le lac est superbe. Seul bémol : le chemin d'accès n'est pas déneigé le matin, il faut donc prévoir de bons pneus d'hiver. Nous y retournerons sans hésiter.",
+    "q": "Quel problème Martin signale-t-il ?",
+    "options": [
+      "Le chalet est trop petit",
+      "L'accès peut être difficile en hiver",
+      "La vue est décevante",
+      "Le chalet manque d'équipement"
+    ],
+    "a": 1,
+    "why": "« Seul bémol » annonce le problème : le chemin n'est pas déneigé le matin.",
+    "whyEn": "« Seul bémol » = the only drawback: the access road isn't cleared of snow in the morning.",
+    "notes": [
+      "It is « spacieux » (spacious).",
+      "Correct.",
+      "The view is « superbe ».",
+      "It is « bien équipé »."
+    ],
+    "glossary": [
+      {
+        "fr": "un bémol",
+        "en": "a drawback (lit. a flat note)"
+      },
+      {
+        "fr": "déneigé",
+        "en": "cleared of snow"
+      },
+      {
+        "fr": "sans hésiter",
+        "en": "without hesitation"
+      }
+    ]
+  },
+  {
+    "id": "r-b1-05",
+    "level": "B1",
+    "kind": "notice",
+    "context": "Chers résidents,\nUne inspection des détecteurs de fumée aura lieu le mardi 14 novembre entre 9 h et 16 h. En votre absence, le concierge entrera dans votre logement avec son passe. Si vous ne souhaitez pas qu'il entre en votre absence, contactez la gestion avant le 10 novembre pour fixer un autre rendez-vous.\nLa gestion",
+    "q": "Que doit faire un résident qui ne veut pas que le concierge entre en son absence ?",
+    "options": [
+      "Rester chez lui toute la journée du 14",
+      "Contacter la gestion avant une date précise",
+      "Changer la serrure",
+      "Retirer son détecteur de fumée"
+    ],
+    "a": 1,
+    "why": "« Contactez la gestion avant le 10 novembre pour fixer un autre rendez-vous. »",
+    "whyEn": "He must contact management before 10 November to book another time.",
+    "notes": [
+      "Possible, but the notice gives another solution: a new appointment.",
+      "Correct.",
+      "Not mentioned — and not allowed.",
+      "Not mentioned."
+    ],
+    "glossary": [
+      {
+        "fr": "un détecteur de fumée",
+        "en": "a smoke detector"
+      },
+      {
+        "fr": "un passe",
+        "en": "a master key"
+      },
+      {
+        "fr": "la gestion",
+        "en": "building management"
+      }
+    ]
+  },
+  {
+    "id": "r-b1-06",
+    "level": "B1",
+    "kind": "article",
+    "context": "Une enquête menée auprès de 1 500 nouveaux arrivants montre que la principale difficulté rencontrée la première année n'est pas la langue, mais la reconnaissance des diplômes. Près d'un répondant sur deux déclare occuper un emploi moins qualifié que dans son pays d'origine.",
+    "q": "Selon l'enquête, quel est le principal obstacle pour les nouveaux arrivants ?",
+    "options": [
+      "Apprendre la langue",
+      "Faire reconnaître leurs qualifications",
+      "Trouver un logement",
+      "S'habituer au climat"
+    ],
+    "a": 1,
+    "why": "« La principale difficulté […] n'est pas la langue, mais la reconnaissance des diplômes. »",
+    "whyEn": "The main difficulty is getting their diplomas recognised, not the language.",
+    "notes": [
+      "Trap: the text says it is NOT the language.",
+      "Correct: « reconnaissance des diplômes ».",
+      "Housing is not mentioned.",
+      "Climate is not mentioned."
+    ],
+    "glossary": [
+      {
+        "fr": "un nouvel arrivant",
+        "en": "a newcomer"
+      },
+      {
+        "fr": "la reconnaissance des diplômes",
+        "en": "recognition of qualifications"
+      },
+      {
+        "fr": "un répondant",
+        "en": "a respondent"
+      }
+    ]
+  },
+  {
+    "id": "r-b1-07",
+    "level": "B1",
+    "kind": "letter",
+    "context": "Salut Léa,\nJe voulais te dire que j'ai finalement refusé le poste à Vancouver. Le salaire était intéressant, mais je ne me voyais pas partir maintenant que mon père est malade. Je resterai donc à Montréal au moins un an encore.\nOn se voit bientôt ?\nNico",
+    "q": "Pourquoi Nico reste-t-il à Montréal ?",
+    "options": [
+      "Le salaire proposé était trop bas",
+      "Il veut rester près de sa famille",
+      "Il n'aime pas Vancouver",
+      "Il a trouvé un meilleur poste à Montréal"
+    ],
+    "a": 1,
+    "why": "Il ne voulait pas partir « maintenant que [son] père est malade ».",
+    "whyEn": "He didn't want to leave while his father is ill.",
+    "notes": [
+      "The salary was « intéressant » (good).",
+      "Correct.",
+      "He says nothing against Vancouver.",
+      "No other job is mentioned."
+    ],
+    "glossary": [
+      {
+        "fr": "refuser un poste",
+        "en": "to turn down a job"
+      },
+      {
+        "fr": "je ne me voyais pas…",
+        "en": "I couldn't see myself…"
+      },
+      {
+        "fr": "malade",
+        "en": "ill"
+      }
+    ]
+  },
+  {
+    "id": "r-b1-08",
+    "level": "B1",
+    "kind": "notice",
+    "context": "PARC NATIONAL — RÈGLEMENT\nLes chiens sont acceptés, à condition d'être tenus en laisse.\nLes feux sont permis uniquement dans les foyers prévus à cet effet.\nLa cueillette de plantes et de fleurs est interdite.\nCamping : réservation obligatoire en été.",
+    "q": "Qu'est-ce qui est interdit dans le parc ?",
+    "options": [
+      "Venir avec un chien",
+      "Faire un feu dans un foyer",
+      "Cueillir des fleurs",
+      "Camper au printemps"
+    ],
+    "a": 2,
+    "why": "« La cueillette de plantes et de fleurs est interdite. »",
+    "whyEn": "Picking plants and flowers is forbidden.",
+    "notes": [
+      "Dogs are allowed on a leash.",
+      "Fires are allowed in fire pits.",
+      "Correct.",
+      "Only summer camping needs a booking; nothing forbids spring camping."
+    ],
+    "glossary": [
+      {
+        "fr": "en laisse",
+        "en": "on a leash"
+      },
+      {
+        "fr": "un foyer",
+        "en": "a fire pit"
+      },
+      {
+        "fr": "la cueillette",
+        "en": "picking"
+      }
+    ]
+  },
+  {
+    "id": "r-b1-09",
+    "level": "B1",
+    "kind": "article",
+    "context": "Bonne nouvelle pour les étudiants : à partir de janvier, le tarif réduit des transports en commun sera étendu aux étudiants à temps partiel. Jusqu'ici, seuls les étudiants à temps plein en bénéficiaient. Il suffira de présenter une attestation d'inscription au guichet.",
+    "q": "Qu'est-ce qui change en janvier ?",
+    "options": [
+      "Le tarif réduit sera supprimé",
+      "Davantage d'étudiants pourront payer moins cher",
+      "Les étudiants à temps plein paieront plus",
+      "Les guichets fermeront"
+    ],
+    "a": 1,
+    "why": "Le tarif réduit « sera étendu aux étudiants à temps partiel » : plus d'étudiants en profiteront.",
+    "whyEn": "Part-time students will also get the reduced fare.",
+    "notes": [
+      "It is extended, not removed.",
+      "Correct: paraphrase of « étendu ».",
+      "Nothing changes for full-time students.",
+      "You go to the ticket office to show your certificate."
+    ],
+    "glossary": [
+      {
+        "fr": "étendre",
+        "en": "to extend"
+      },
+      {
+        "fr": "bénéficier de",
+        "en": "to benefit from"
+      },
+      {
+        "fr": "une attestation",
+        "en": "a certificate"
+      }
+    ]
+  },
+  {
+    "id": "r-b2-01",
+    "level": "B2",
+    "kind": "opinion",
+    "context": "On présente souvent la voiture électrique comme la solution miracle à la pollution urbaine. Elle réduit certes les émissions à l'échappement. Mais elle ne règle ni les embouteillages, ni l'occupation de l'espace public par des véhicules immobiles 95 % du temps. Remplacer chaque voiture à essence par une voiture électrique, c'est changer le moteur sans changer de modèle.",
+    "q": "Quelle est la thèse de l'auteur ?",
+    "options": [
+      "La voiture électrique pollue autant qu'une voiture à essence",
+      "La voiture électrique ne résout pas tous les problèmes liés à l'automobile en ville",
+      "Il faut interdire les voitures électriques",
+      "Les voitures électriques sont trop chères"
+    ],
+    "a": 1,
+    "why": "Après la concession (« certes »), « mais » introduit la thèse : la voiture électrique ne règle ni les embouteillages ni l'occupation de l'espace.",
+    "whyEn": "After « certes… mais », the author argues e-cars don't solve congestion or space use.",
+    "notes": [
+      "Exaggeration: he concedes it reduces exhaust emissions.",
+      "Correct.",
+      "He never asks for a ban.",
+      "Price is not discussed."
+    ],
+    "glossary": [
+      {
+        "fr": "certes… mais",
+        "en": "admittedly… but"
+      },
+      {
+        "fr": "l'échappement",
+        "en": "the exhaust"
+      }
+    ]
+  },
+  {
+    "id": "r-b2-02",
+    "level": "B2",
+    "kind": "article",
+    "context": "Le retour au bureau imposé par plusieurs grandes entreprises se heurte à une résistance inattendue : celle des cadres eux-mêmes. Habitués à organiser leur emploi du temps, nombre d'entre eux préfèrent changer d'employeur plutôt que de renoncer au télétravail. Pour les entreprises, le risque n'est plus seulement le mécontentement, mais la perte de compétences difficiles à remplacer.",
+    "q": "Quel risque les entreprises courent-elles ?",
+    "options": [
+      "Voir partir des employés qualifiés",
+      "Devoir agrandir leurs bureaux",
+      "Payer davantage d'impôts",
+      "Perdre des clients"
+    ],
+    "a": 0,
+    "why": "« La perte de compétences difficiles à remplacer » : des cadres compétents quittent l'entreprise.",
+    "whyEn": "Skilled managers may leave rather than give up remote work.",
+    "notes": [
+      "Correct: paraphrase of « perte de compétences ».",
+      "Office size is not discussed.",
+      "Taxes are not mentioned.",
+      "Customers are not mentioned."
+    ],
+    "glossary": [
+      {
+        "fr": "se heurter à",
+        "en": "to come up against"
+      },
+      {
+        "fr": "un cadre",
+        "en": "a manager, executive"
+      }
+    ]
+  },
+  {
+    "id": "r-b2-03",
+    "level": "B2",
+    "kind": "letter",
+    "context": "Monsieur le Maire,\n\nRésidente du quartier Saint-Michel depuis quinze ans, je me permets de vous écrire au sujet du projet de stationnement sur le terrain de l'ancienne école. Je ne conteste pas le manque de places dans le secteur. Toutefois, ce terrain est le seul espace vert accessible aux enfants du quartier. Ne pourrait-on pas envisager un stationnement souterrain, qui préserverait le parc en surface ?\n\nVeuillez agréer, Monsieur le Maire, mes salutations distinguées.\nClaire Fortin",
+    "q": "Que propose Claire Fortin ?",
+    "options": [
+      "D'abandonner tout projet de stationnement",
+      "Une solution qui concilie stationnement et espace vert",
+      "De construire une nouvelle école",
+      "De déplacer le parc dans un autre quartier"
+    ],
+    "a": 1,
+    "why": "Elle propose « un stationnement souterrain, qui préserverait le parc en surface » : les deux besoins seraient satisfaits.",
+    "whyEn": "An underground car park keeps both the parking and the park.",
+    "notes": [
+      "She accepts the need: « Je ne conteste pas le manque de places ».",
+      "Correct.",
+      "The school is old and gone; no new school.",
+      "She wants to keep the park where it is."
+    ],
+    "glossary": [
+      {
+        "fr": "je me permets de",
+        "en": "I take the liberty of"
+      },
+      {
+        "fr": "souterrain",
+        "en": "underground"
+      },
+      {
+        "fr": "concilier",
+        "en": "to reconcile"
+      }
+    ]
+  },
+  {
+    "id": "r-b2-04",
+    "level": "B2",
+    "kind": "article",
+    "context": "Contrairement à une idée répandue, faire la sieste n'est pas un signe de paresse. Plusieurs études montrent qu'un repos de vingt minutes en début d'après-midi améliore la concentration et réduit les erreurs. Au-delà de trente minutes, en revanche, on risque d'entrer dans un sommeil profond et de se réveiller plus fatigué qu'avant.",
+    "q": "Que conseille implicitement le texte ?",
+    "options": [
+      "Faire une sieste courte",
+      "Dormir au moins une heure l'après-midi",
+      "Éviter toute sieste",
+      "Faire la sieste le soir"
+    ],
+    "a": 0,
+    "why": "Vingt minutes sont bénéfiques ; au-delà de trente, on se réveille plus fatigué. Le conseil implicite : une sieste courte.",
+    "whyEn": "20 minutes helps, more than 30 hurts: so, keep naps short.",
+    "notes": [
+      "Correct.",
+      "The opposite: over 30 minutes is counter-productive.",
+      "The text defends naps.",
+      "It says « en début d'après-midi »."
+    ],
+    "glossary": [
+      {
+        "fr": "une idée répandue",
+        "en": "a widespread idea"
+      },
+      {
+        "fr": "la paresse",
+        "en": "laziness"
+      },
+      {
+        "fr": "au-delà de",
+        "en": "beyond"
+      }
+    ]
+  },
+  {
+    "id": "r-b2-05",
+    "level": "B2",
+    "kind": "review",
+    "context": "Le premier roman de Julie Gagnon raconte le retour d'une femme dans le village de son enfance, trente ans après l'avoir quitté. L'intrigue est mince et la fin se devine dès le deuxième chapitre. Pourtant, on ne lâche pas le livre : l'écriture, précise et pleine d'humour, rend chaque personnage attachant.",
+    "q": "Quel est l'avis du critique ?",
+    "options": [
+      "Le roman est mal écrit, mais l'histoire est passionnante",
+      "L'histoire est faible, mais le style compense",
+      "Le livre est ennuyeux du début à la fin",
+      "La fin est très surprenante"
+    ],
+    "a": 1,
+    "why": "Il critique l'intrigue (« mince », fin prévisible), puis « pourtant » introduit l'éloge du style.",
+    "whyEn": "Weak plot, but « pourtant » introduces praise for the writing.",
+    "notes": [
+      "Reversed: the writing is praised, the plot criticised.",
+      "Correct.",
+      "« on ne lâche pas le livre »: it is gripping.",
+      "The ending is predictable: « se devine »."
+    ],
+    "glossary": [
+      {
+        "fr": "l'intrigue",
+        "en": "the plot"
+      },
+      {
+        "fr": "mince",
+        "en": "thin"
+      },
+      {
+        "fr": "lâcher",
+        "en": "to put down, let go"
+      }
+    ]
+  },
+  {
+    "id": "r-b2-06",
+    "level": "B2",
+    "kind": "notice",
+    "context": "À compter du 1er janvier, les sacs d'emballage en plastique à usage unique seront interdits dans tous les commerces de la province. Les commerçants pourront fournir des sacs en papier ou réutilisables, à condition de les facturer au moins 25 cents. Les sacs servant à emballer la viande et les fruits en vrac restent temporairement autorisés.",
+    "q": "Quelle affirmation est exacte selon le texte ?",
+    "options": [
+      "Tous les sacs en plastique seront interdits, sans exception",
+      "Les sacs de remplacement ne pourront pas être gratuits",
+      "Les commerçants devront fournir des sacs gratuitement",
+      "La mesure ne s'appliquera qu'aux supermarchés"
+    ],
+    "a": 1,
+    "why": "Les sacs en papier ou réutilisables doivent être facturés « au moins 25 cents » : ils ne peuvent pas être gratuits.",
+    "whyEn": "Replacement bags must be charged at least 25 cents.",
+    "notes": [
+      "Exception: bags for meat and loose fruit remain allowed.",
+      "Correct: paraphrase of « facturer au moins 25 cents ».",
+      "The opposite of the rule.",
+      "« tous les commerces »: all shops."
+    ],
+    "glossary": [
+      {
+        "fr": "à usage unique",
+        "en": "single-use"
+      },
+      {
+        "fr": "facturer",
+        "en": "to charge for"
+      },
+      {
+        "fr": "en vrac",
+        "en": "loose, unpackaged"
+      }
+    ]
+  },
+  {
+    "id": "r-b2-07",
+    "level": "B2",
+    "kind": "opinion",
+    "context": "Je lis partout qu'il faut « apprendre aux enfants à coder dès le primaire ». Je suis développeur, et je n'en suis pas convaincu. Ce qui me sert chaque jour, ce n'est pas un langage de programmation — ils changent tous les cinq ans —, c'est la capacité à découper un problème, à lire attentivement et à écrire clairement. Commençons par là.",
+    "q": "Selon l'auteur, qu'est-ce qui est le plus utile aux enfants ?",
+    "options": [
+      "Apprendre un langage de programmation le plus tôt possible",
+      "Développer des compétences générales de raisonnement et d'expression",
+      "Devenir développeurs",
+      "Utiliser un ordinateur tous les jours"
+    ],
+    "a": 1,
+    "why": "Il valorise « découper un problème, lire attentivement et écrire clairement » plutôt qu'un langage qui change.",
+    "whyEn": "General skills — problem-solving, careful reading, clear writing — matter more than a coding language.",
+    "notes": [
+      "This is the view he disagrees with.",
+      "Correct.",
+      "He never says children should become developers.",
+      "Not mentioned."
+    ],
+    "glossary": [
+      {
+        "fr": "découper un problème",
+        "en": "to break a problem down"
+      }
+    ]
+  },
+  {
+    "id": "r-b2-08",
+    "level": "B2",
+    "kind": "article",
+    "context": "La pénurie de main-d'œuvre dans la restauration a eu une conséquence inattendue : plusieurs restaurants ont réduit leurs heures d'ouverture tout en augmentant les salaires. Certains constatent que leur chiffre d'affaires a peu baissé, car les clients se concentrent sur les plages horaires restantes, et que leurs employés, moins épuisés, restent plus longtemps.",
+    "q": "Quel effet positif le texte mentionne-t-il ?",
+    "options": [
+      "Les restaurants attirent beaucoup plus de clients",
+      "Le personnel est plus stable",
+      "Les prix des repas ont baissé",
+      "Les restaurants ouvrent plus tard le soir"
+    ],
+    "a": 1,
+    "why": "Les employés, « moins épuisés, restent plus longtemps » : le personnel est plus stable.",
+    "whyEn": "Less exhausted staff stay longer — lower turnover.",
+    "notes": [
+      "Revenue « a peu baissé » — it fell slightly, no surge of customers.",
+      "Correct.",
+      "Prices are not mentioned.",
+      "They opened fewer hours."
+    ],
+    "glossary": [
+      {
+        "fr": "une pénurie de main-d'œuvre",
+        "en": "a labour shortage"
+      },
+      {
+        "fr": "le chiffre d'affaires",
+        "en": "revenue, turnover"
+      },
+      {
+        "fr": "épuisé",
+        "en": "exhausted"
+      }
+    ]
+  },
+  {
+    "id": "r-b2-09",
+    "level": "B2",
+    "kind": "email",
+    "context": "Objet : Votre demande de congé\n\nBonjour Thomas,\n\nJ'ai bien reçu votre demande de congé sans solde pour juillet et août. Sur le principe, je n'y vois pas d'objection. Il faudra cependant que vous formiez d'ici là un collègue capable de reprendre vos dossiers clients, faute de quoi je ne pourrai pas valider votre absence.\n\nCordialement,\nNathalie Bergeron, directrice",
+    "q": "À quelle condition le congé sera-t-il accepté ?",
+    "options": [
+      "Thomas doit revenir avant août",
+      "Thomas doit préparer quelqu'un pour le remplacer",
+      "Thomas doit renoncer à son salaire de juin",
+      "Aucune condition n'est fixée"
+    ],
+    "a": 1,
+    "why": "« Il faudra […] que vous formiez un collègue […], faute de quoi je ne pourrai pas valider votre absence. »",
+    "whyEn": "He must train a colleague to take over his files; otherwise no leave.",
+    "notes": [
+      "The leave covers July and August.",
+      "Correct.",
+      "« Sans solde » concerns the leave months, not June.",
+      "« faute de quoi » sets a clear condition."
+    ],
+    "glossary": [
+      {
+        "fr": "un congé sans solde",
+        "en": "unpaid leave"
+      },
+      {
+        "fr": "faute de quoi",
+        "en": "failing which"
+      }
+    ]
+  },
+  {
+    "id": "r-c1-01",
+    "level": "C1",
+    "kind": "opinion",
+    "context": "Il est de bon ton de déplorer la disparition des petits commerces de centre-ville et d'en accuser les grandes surfaces de périphérie. Le reproche n'est pas infondé, mais il est incomplet. Car ce sont aussi nos propres habitudes — l'attrait du stationnement gratuit, la commodité de tout trouver au même endroit — qui ont vidé les rues commerçantes. Il serait un peu facile de pleurer ce que nous avons nous-mêmes délaissé.",
+    "q": "Que reproche implicitement l'auteur à ses lecteurs ?",
+    "options": [
+      "De ne pas fréquenter les grandes surfaces",
+      "D'avoir contribué au déclin qu'ils regrettent",
+      "D'exiger des stationnements payants",
+      "D'ignorer l'existence des petits commerces"
+    ],
+    "a": 1,
+    "why": "« Il serait un peu facile de pleurer ce que nous avons nous-mêmes délaissé » : nos habitudes ont causé ce déclin.",
+    "whyEn": "We mourn small shops we ourselves abandoned.",
+    "notes": [
+      "The opposite: we go there too much.",
+      "Correct.",
+      "We like free parking.",
+      "We know them; we just stopped going."
+    ]
+  },
+  {
+    "id": "r-c1-02",
+    "level": "C1",
+    "kind": "opinion",
+    "context": "La multiplication des certifications « durables » sur les emballages devait éclairer le consommateur. Elle l'a surtout désorienté. Faute de savoir distinguer un label exigeant d'un simple argument publicitaire, beaucoup ont fini par n'en croire aucun — ce qui pénalise précisément les producteurs qui avaient fait l'effort de respecter un cahier des charges contraignant.",
+    "q": "Quelle conséquence paradoxale l'auteur souligne-t-il ?",
+    "options": [
+      "Les labels ont fait augmenter les ventes de tous les produits",
+      "La méfiance générale nuit aux producteurs les plus sérieux",
+      "Les consommateurs réclament davantage de labels",
+      "Les producteurs ont abandonné les labels"
+    ],
+    "a": 1,
+    "why": "Les consommateurs ne croient plus aucun label, ce qui « pénalise précisément » les producteurs exigeants.",
+    "whyEn": "General distrust hurts exactly the producers who made the effort.",
+    "notes": [
+      "Not stated.",
+      "Correct.",
+      "They believe none of them.",
+      "Not stated."
+    ]
+  },
+  {
+    "id": "r-c1-03",
+    "level": "C1",
+    "kind": "literary",
+    "context": "Il y avait dans la maison de ma grand-mère une pièce où personne n'entrait. On n'en parlait pas, on ne l'interdisait pas non plus : on passait devant, simplement, comme on passe devant une tombe dont on a oublié le nom. Ce n'est qu'à sa mort que j'ai poussé la porte, et compris que ce silence-là avait été, toute sa vie, sa manière de pleurer.",
+    "q": "Que révèle la dernière phrase ?",
+    "options": [
+      "La grand-mère cachait un trésor dans cette pièce",
+      "Le silence autour de la pièce exprimait un deuil",
+      "Le narrateur avait peur de sa grand-mère",
+      "La pièce servait de cimetière familial"
+    ],
+    "a": 1,
+    "why": "Le silence était « sa manière de pleurer » : la pièce est liée à une perte jamais exprimée.",
+    "whyEn": "The silence was her way of grieving.",
+    "notes": [
+      "Nothing suggests a treasure.",
+      "Correct.",
+      "Not suggested.",
+      "« comme une tombe » is a comparison, not a fact."
+    ]
+  },
+  {
+    "id": "r-c1-04",
+    "level": "C1",
+    "kind": "opinion",
+    "context": "Les défenseurs de la semaine de quatre jours invoquent volontiers les expériences réussies à l'étranger. Encore faudrait-il préciser que la plupart concernent des entreprises de services, aux tâches largement numérisées, et volontaires pour l'expérience. En tirer des conclusions pour un hôpital ou une usine relève moins de l'analyse que du vœu pieux.",
+    "q": "Que reproche l'auteur aux défenseurs de la semaine de quatre jours ?",
+    "options": [
+      "D'ignorer les expériences étrangères",
+      "De généraliser à partir de cas peu représentatifs",
+      "De vouloir l'imposer aux seules entreprises de services",
+      "De refuser toute expérimentation"
+    ],
+    "a": 1,
+    "why": "Les exemples cités concernent des entreprises particulières et volontaires ; les appliquer à un hôpital est un « vœu pieux ».",
+    "whyEn": "They generalise from unrepresentative, volunteer service companies.",
+    "notes": [
+      "They cite them a lot.",
+      "Correct.",
+      "The opposite: they extend it to all sectors.",
+      "They rely on experiments."
+    ]
+  },
+  {
+    "id": "r-c1-05",
+    "level": "C1",
+    "kind": "opinion",
+    "context": "Que la ville veuille végétaliser ses toits, on ne peut que s'en réjouir. On aimerait toutefois que l'enthousiasme municipal s'accompagne d'un minimum de suivi : sur les quarante toitures aménagées il y a cinq ans, la moitié sont aujourd'hui à l'abandon, faute d'entretien. Planter est photogénique ; arroser l'est beaucoup moins.",
+    "q": "Quel est le ton de la dernière phrase ?",
+    "options": [
+      "Admiratif",
+      "Ironique",
+      "Neutre",
+      "Enthousiaste"
+    ],
+    "a": 1,
+    "why": "L'auteur oppose ce qui se voit (planter) et ce qui ne se voit pas (arroser) pour se moquer d'une politique d'image : le ton est ironique.",
+    "whyEn": "Mocking a policy driven by photo opportunities rather than maintenance.",
+    "notes": [
+      "He criticises.",
+      "Correct.",
+      "There is a clear judgement.",
+      "The enthusiasm he mentions is the city's, not his."
+    ]
+  },
+  {
+    "id": "r-c1-06",
+    "level": "C1",
+    "kind": "opinion",
+    "context": "Sous couvert de « flexibilité », le nouveau contrat supprime la majoration des heures travaillées le dimanche. La direction affirme que rien ne change pour les salariés qui ne travaillent pas ce jour-là — ce qui est exact, et parfaitement hors sujet, puisque ce sont précisément ceux qui travaillent le dimanche qui y perdent.",
+    "q": "Que pense l'auteur de l'argument de la direction ?",
+    "options": [
+      "Il est faux",
+      "Il est exact, mais il ne répond pas au problème",
+      "Il est convaincant",
+      "Il concerne tous les salariés"
+    ],
+    "a": 1,
+    "why": "« Ce qui est exact, et parfaitement hors sujet » : vrai, mais sans rapport avec les salariés concernés.",
+    "whyEn": "True but irrelevant: the people affected are those who work Sundays.",
+    "notes": [
+      "He says it is « exact ».",
+      "Correct.",
+      "He rejects it as irrelevant.",
+      "It concerns only non-Sunday workers."
+    ]
+  },
+  {
+    "id": "r-c2-01",
+    "level": "C2",
+    "kind": "opinion",
+    "context": "On a beaucoup glosé sur la mort du livre, annoncée à chaque génération avec une régularité qui finit par rassurer. À croire que le livre est de ces moribonds qui enterrent leurs médecins. Ce qui menace la lecture n'est peut-être pas tant la concurrence des écrans que l'érosion du temps long, ce luxe devenu discret dont le livre n'était que le symptôme le plus visible.",
+    "q": "Selon l'auteur, qu'est-ce qui menace réellement la lecture ?",
+    "options": [
+      "La disparition des librairies",
+      "La raréfaction du temps disponible pour une attention prolongée",
+      "Les écrans en tant que tels",
+      "Le prix des livres"
+    ],
+    "a": 1,
+    "why": "« Pas tant la concurrence des écrans que l'érosion du temps long » : c'est le temps d'attention prolongée qui disparaît.",
+    "whyEn": "Not screens as such, but the loss of long, uninterrupted time.",
+    "notes": [
+      "Not mentioned.",
+      "Correct.",
+      "« pas tant… que » downplays the screens.",
+      "Not mentioned."
+    ]
+  },
+  {
+    "id": "r-c2-02",
+    "level": "C2",
+    "kind": "opinion",
+    "context": "Il serait injuste de reprocher à ce rapport sa prudence : la matière s'y prête mal aux certitudes. On peut en revanche s'étonner qu'à force de ne rien exclure, il finisse par ne rien recommander. Une prudence qui ne débouche sur aucune préconisation cesse d'être une vertu pour devenir une manière élégante de s'abstenir.",
+    "q": "Que reproche l'auteur au rapport ?",
+    "options": [
+      "D'être trop catégorique",
+      "De ne formuler aucune recommandation concrète",
+      "D'avoir été rédigé trop vite",
+      "De contenir des erreurs factuelles"
+    ],
+    "a": 1,
+    "why": "« À force de ne rien exclure, il finit par ne rien recommander » : la prudence devient une façon de s'abstenir.",
+    "whyEn": "By ruling nothing out, it recommends nothing.",
+    "notes": [
+      "The opposite.",
+      "Correct.",
+      "Not mentioned.",
+      "Not mentioned."
+    ]
+  },
+  {
+    "id": "r-c2-03",
+    "level": "C2",
+    "kind": "literary",
+    "context": "Il parlait de son village natal avec cette tendresse un peu contrite qu'on réserve aux êtres qu'on a quittés sans se retourner. Chaque été, il promettait d'y retourner ; chaque été, quelque urgence venait opportunément l'en dispenser. Au fond, il n'aimait ce lieu qu'à la condition de ne plus y être.",
+    "q": "Que suggère la dernière phrase sur le personnage ?",
+    "options": [
+      "Il déteste son village",
+      "Son attachement au village suppose qu'il en reste éloigné",
+      "Il retourne chaque été au village",
+      "Il a été chassé de son village"
+    ],
+    "a": 1,
+    "why": "« Il n'aimait ce lieu qu'à la condition de ne plus y être » : son affection dépend de la distance.",
+    "whyEn": "He loves the place only from afar.",
+    "notes": [
+      "He speaks of it with tenderness.",
+      "Correct.",
+      "Each summer an « urgence » excuses him.",
+      "He left « sans se retourner »: by choice."
+    ]
+  },
+  {
+    "id": "r-c2-04",
+    "level": "C2",
+    "kind": "opinion",
+    "context": "Le débat sur l'intelligence artificielle souffre d'un étrange paradoxe : ceux qui en promettent monts et merveilles et ceux qui en annoncent l'apocalypse partagent au fond la même conviction, celle de sa toute-puissance. Entre l'émerveillement et l'effroi, il reste pourtant une place, moins spectaculaire, pour l'examen patient de ce que ces outils font réellement, et de ce qu'ils ne font pas.",
+    "q": "Quel point commun l'auteur relève-t-il entre les deux camps ?",
+    "options": [
+      "Ils refusent d'utiliser l'intelligence artificielle",
+      "Ils surestiment tous deux la puissance de cette technologie",
+      "Ils réclament une réglementation stricte",
+      "Ils ignorent les risques"
+    ],
+    "a": 1,
+    "why": "Les deux camps partagent « la même conviction, celle de sa toute-puissance ».",
+    "whyEn": "Both believe AI is all-powerful.",
+    "notes": [
+      "Not stated.",
+      "Correct.",
+      "Not stated.",
+      "The pessimists focus on risks."
+    ]
+  },
+  {
+    "id": "r-c2-05",
+    "level": "C2",
+    "kind": "opinion",
+    "context": "Nul ne conteste que la traduction automatique ait fait des progrès considérables. Mais à mesure qu'elle devient plus fluide, ses erreurs deviennent plus insidieuses : un contresens grossier se repère au premier coup d'œil, une phrase élégante et fausse passe inaperçue. La qualité apparente, loin de dispenser de la vigilance, la rend plus nécessaire que jamais.",
+    "q": "Quelle idée l'auteur défend-il ?",
+    "options": [
+      "Les traductions automatiques sont désormais fiables",
+      "La fluidité des traductions rend leurs erreurs plus difficiles à repérer",
+      "Il faut interdire la traduction automatique",
+      "Les erreurs grossières sont les plus dangereuses"
+    ],
+    "a": 1,
+    "why": "Une phrase « élégante et fausse passe inaperçue » : plus la traduction est fluide, plus ses erreurs sont cachées.",
+    "whyEn": "The more fluent the output, the harder its mistakes are to spot.",
+    "notes": [
+      "He concedes progress, not reliability.",
+      "Correct.",
+      "Not stated.",
+      "The opposite: obvious errors are easy to spot."
+    ]
+  },
+  {
+    "id": "r-c2-06",
+    "level": "C2",
+    "kind": "opinion",
+    "context": "On loue volontiers l'entrepreneur « qui a pris des risques ». Encore faudrait-il distinguer celui qui risque son propre patrimoine de celui qui fait porter l'aléa à d'autres — salariés, créanciers, contribuables — tout en se réservant les gains en cas de succès. Le second n'est pas audacieux ; il est seulement bien placé.",
+    "q": "Que signifie « il est seulement bien placé » ?",
+    "options": [
+      "Il a eu la chance d'être au bon endroit",
+      "Sa position lui permet de garder les gains sans assumer les pertes",
+      "Il occupe un poste élevé dans l'entreprise",
+      "Il est plus courageux que les autres"
+    ],
+    "a": 1,
+    "why": "Il fait « porter l'aléa à d'autres » tout en se réservant les gains : sa position le protège, ce n'est pas du courage.",
+    "whyEn": "His position lets others bear the risk while he keeps the gains.",
+    "notes": [
+      "Too literal: this is about risk-shifting, not luck.",
+      "Correct.",
+      "Too literal a reading of « placé ».",
+      "The opposite: « n'est pas audacieux »."
+    ]
+  }
+]

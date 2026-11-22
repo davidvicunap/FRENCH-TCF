@@ -1,0 +1,587 @@
+[
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "ce-1",
+    "level": "A2",
+    "context": "MÉDIATHÈQUE MUNICIPALE\n\nHoraires d'ouverture :\nDu mardi au vendredi : 10 h – 18 h\nSamedi : 10 h – 17 h\nFermée le dimanche et le lundi.\n\nL'inscription est gratuite pour les habitants de la commune et pour les moins de 26 ans.",
+    "q": "Quand la médiathèque est-elle ouverte ?",
+    "options": [
+      "Tous les jours de la semaine",
+      "Du mardi au samedi",
+      "Uniquement le week-end",
+      "Du lundi au vendredi"
+    ],
+    "a": 1,
+    "why": "Le document indique « du mardi au vendredi » et « samedi », puis précise « fermée le dimanche et le lundi ». La médiathèque est donc ouverte du mardi au samedi.",
+    "from": "lesson",
+    "lesson": "ce/l1",
+    "whyEn": "Open Tuesday to Friday and on Saturday; closed Sunday and Monday."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "ce-2",
+    "level": "A2",
+    "context": "MÉDIATHÈQUE MUNICIPALE\n\nHoraires d'ouverture :\nDu mardi au vendredi : 10 h – 18 h\nSamedi : 10 h – 17 h\nFermée le dimanche et le lundi.\n\nL'inscription est gratuite pour les habitants de la commune et pour les moins de 26 ans.",
+    "q": "Qui peut s'inscrire gratuitement ?",
+    "options": [
+      "Tout le monde, sans condition",
+      "Uniquement les étudiants",
+      "Les habitants de la commune et les personnes de moins de 26 ans",
+      "Les personnes de plus de 26 ans seulement"
+    ],
+    "a": 2,
+    "why": "Le texte précise deux catégories : « les habitants de la commune » ET « les moins de 26 ans ». Il faut lire les deux conditions, reliées par « et ».",
+    "from": "lesson",
+    "lesson": "ce/l1",
+    "whyEn": "Two groups get free membership: town residents AND under-26s."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "ce-3",
+    "level": "B1",
+    "context": "De : service-clients@voyaz.fr\nÀ : m.durand@courriel.fr\nObjet : Votre réservation n° 4471\n\nMadame, Monsieur,\n\nNous vous informons que votre vol Paris–Montréal du 14 mars a été modifié. Le départ est avancé de 11 h 20 à 9 h 45. Aucune démarche n'est nécessaire de votre part : votre billet reste valable.\n\nSi ce nouvel horaire ne vous convient pas, vous pouvez demander un remboursement intégral avant le 1er mars en répondant à ce message.\n\nCordialement,\nLe service clients",
+    "q": "Que doit faire le client s'il accepte le nouvel horaire ?",
+    "options": [
+      "Répondre au message avant le 1er mars",
+      "Rien du tout : son billet reste valable",
+      "Réserver un nouveau billet",
+      "Se présenter à l'aéroport trois heures avant"
+    ],
+    "a": 1,
+    "why": "Le message précise : « Aucune démarche n'est nécessaire de votre part : votre billet reste valable. » La réponse avant le 1er mars ne concerne que le cas d'un REFUS du nouvel horaire.",
+    "gloss": "Classic trap: the deadline in the text applies to the other scenario.",
+    "from": "lesson",
+    "lesson": "ce/l1",
+    "whyEn": "If you accept the new time, do nothing: the ticket stays valid. The 1 March deadline is only for a refund."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "ce-4",
+    "level": "B1",
+    "context": "De : service-clients@voyaz.fr\nÀ : m.durand@courriel.fr\nObjet : Votre réservation n° 4471\n\nMadame, Monsieur,\n\nNous vous informons que votre vol Paris–Montréal du 14 mars a été modifié. Le départ est avancé de 11 h 20 à 9 h 45. Aucune démarche n'est nécessaire de votre part : votre billet reste valable.\n\nSi ce nouvel horaire ne vous convient pas, vous pouvez demander un remboursement intégral avant le 1er mars en répondant à ce message.\n\nCordialement,\nLe service clients",
+    "q": "Que s'est-il passé avec le vol ?",
+    "options": [
+      "Il a été annulé",
+      "Il partira plus tôt que prévu",
+      "Il partira plus tard que prévu",
+      "Sa destination a changé"
+    ],
+    "a": 1,
+    "why": "« Le départ est AVANCÉ de 11 h 20 à 9 h 45 » : avancer un horaire, c'est le rendre plus tôt. « Retardé » ou « reporté » signifierait l'inverse.",
+    "gloss": "avancer = to bring forward; retarder = to push back.",
+    "from": "lesson",
+    "lesson": "ce/l1",
+    "whyEn": "« avancé » means brought forward: the flight leaves earlier (9:45 instead of 11:20)."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "ce-5",
+    "level": "B2",
+    "context": "Le télétravail s'est imposé en quelques mois comme une évidence. Certes, il a permis à des millions de salariés d'économiser un temps de transport considérable et de mieux organiser leurs journées. Mais on aurait tort de n'y voir qu'un progrès.\n\nÀ mesure que le bureau entre dans le salon, la frontière entre vie professionnelle et vie privée s'efface. Les études le montrent : les salariés en télétravail travaillent en moyenne plus longtemps, et se déconnectent plus difficilement. Les plus jeunes, privés des échanges informels qui font l'apprentissage d'un métier, en paient le prix le plus fort.\n\nLa vraie question n'est donc pas de savoir s'il faut télétravailler, mais à quelles conditions.",
+    "q": "Quelle est l'opinion de l'auteur sur le télétravail ?",
+    "options": [
+      "Il y est totalement opposé",
+      "Il le considère comme un progrès sans réserve",
+      "Il en reconnaît les avantages mais insiste sur ses risques",
+      "Il estime que le sujet n'a aucune importance"
+    ],
+    "a": 2,
+    "why": "L'auteur emploie la structure « Certes… Mais… » : il concède les avantages (temps de transport) avant d'exposer sa véritable thèse, les risques (effacement de la frontière vie privée / vie professionnelle). Sa position est donc nuancée, ni pour ni contre.",
+    "from": "lesson",
+    "lesson": "ce/l2",
+    "whyEn": "« Certes… mais » — the author admits the advantages but stresses the risks: a nuanced view."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "ce-6",
+    "level": "B2",
+    "context": "Le télétravail s'est imposé en quelques mois comme une évidence. Certes, il a permis à des millions de salariés d'économiser un temps de transport considérable et de mieux organiser leurs journées. Mais on aurait tort de n'y voir qu'un progrès.\n\nÀ mesure que le bureau entre dans le salon, la frontière entre vie professionnelle et vie privée s'efface. Les études le montrent : les salariés en télétravail travaillent en moyenne plus longtemps, et se déconnectent plus difficilement. Les plus jeunes, privés des échanges informels qui font l'apprentissage d'un métier, en paient le prix le plus fort.\n\nLa vraie question n'est donc pas de savoir s'il faut télétravailler, mais à quelles conditions.",
+    "q": "Selon le texte, qui est le plus pénalisé par le télétravail ?",
+    "options": [
+      "Les cadres dirigeants",
+      "Les salariés les plus jeunes",
+      "Les personnes vivant loin de leur travail",
+      "Les employeurs"
+    ],
+    "a": 1,
+    "why": "Le texte précise : « Les plus jeunes, privés des échanges informels qui font l'apprentissage d'un métier, en paient le prix le plus fort. »",
+    "from": "lesson",
+    "lesson": "ce/l2",
+    "whyEn": "The text says the youngest workers « pay the highest price »."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "ce-7",
+    "level": "C1",
+    "context": "Le télétravail s'est imposé en quelques mois comme une évidence. Certes, il a permis à des millions de salariés d'économiser un temps de transport considérable et de mieux organiser leurs journées. Mais on aurait tort de n'y voir qu'un progrès.\n\nÀ mesure que le bureau entre dans le salon, la frontière entre vie professionnelle et vie privée s'efface. Les études le montrent : les salariés en télétravail travaillent en moyenne plus longtemps, et se déconnectent plus difficilement. Les plus jeunes, privés des échanges informels qui font l'apprentissage d'un métier, en paient le prix le plus fort.\n\nLa vraie question n'est donc pas de savoir s'il faut télétravailler, mais à quelles conditions.",
+    "q": "Que signifie la dernière phrase du texte ?",
+    "options": [
+      "Le débat sur le télétravail est définitivement clos",
+      "Il faudrait interdire le télétravail dans certains secteurs",
+      "Le débat doit porter sur les modalités du télétravail, non sur son principe",
+      "Les entreprises devraient laisser chaque salarié décider seul"
+    ],
+    "a": 2,
+    "why": "« Non pas s'il faut télétravailler, mais à quelles conditions » déplace le débat : le principe est acquis, ce qui reste à discuter, ce sont les modalités (encadrement, droit à la déconnexion, accompagnement des jeunes).",
+    "from": "lesson",
+    "lesson": "ce/l2",
+    "whyEn": "The debate is no longer whether to telework, but under what conditions."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "x-ce-01",
+    "level": "A1",
+    "context": "BOULANGERIE DU MARCHÉ\nOuvert du mardi au dimanche\nde 7 h à 13 h\nFermé le lundi",
+    "q": "Quel jour la boulangerie est-elle fermée ?",
+    "options": [
+      "Le dimanche",
+      "Le lundi",
+      "Le mardi",
+      "Le samedi"
+    ],
+    "a": 1,
+    "why": "Le panneau indique « Fermé le lundi ».",
+    "from": "bank",
+    "whyEn": "The sign says « Fermé le lundi » — closed on Monday."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "x-ce-02",
+    "level": "A1",
+    "context": "Salut Tom,\nJe suis au supermarché. Tu veux quelque chose ?\nRéponds-moi vite !\nLéa",
+    "q": "Pourquoi Léa écrit-elle à Tom ?",
+    "options": [
+      "Pour l'inviter au restaurant",
+      "Pour savoir s'il a besoin de quelque chose",
+      "Pour lui demander de l'argent",
+      "Pour annuler un rendez-vous"
+    ],
+    "a": 1,
+    "why": "Léa est au supermarché et demande : « Tu veux quelque chose ? »",
+    "from": "bank",
+    "whyEn": "Léa is at the supermarket and asks if Tom wants anything."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "x-ce-03",
+    "level": "A1",
+    "context": "À VENDRE\nVélo bleu pour enfant (6–8 ans)\nTrès bon état — 40 euros\nTéléphone : 06 12 34 56 78",
+    "q": "Que propose cette annonce ?",
+    "options": [
+      "La location d'un vélo",
+      "La vente d'un vélo d'enfant",
+      "La réparation de vélos",
+      "Un cours de vélo"
+    ],
+    "a": 1,
+    "why": "« À vendre : vélo bleu pour enfant » : il s'agit de la vente d'un vélo d'enfant.",
+    "from": "bank",
+    "whyEn": "« À vendre » = for sale: a child's bike."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "x-ce-04",
+    "level": "A1",
+    "context": "CINÉMA LE REX\nTarif normal : 9 euros\nÉtudiants et moins de 18 ans : 6 euros\nLe mercredi : 5 euros pour tous",
+    "q": "Combien paie un adulte le mercredi ?",
+    "options": [
+      "5 euros",
+      "6 euros",
+      "9 euros",
+      "Rien"
+    ],
+    "a": 0,
+    "why": "Le mercredi, le tarif est de « 5 euros pour tous », donc aussi pour un adulte.",
+    "from": "bank",
+    "whyEn": "On Wednesdays it is 5 euros for everyone, adults included."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "x-ce-05",
+    "level": "A2",
+    "context": "Bonjour Madame Petit,\n\nJe vous écris pour vous informer que mon fils Hugo sera absent demain matin : il a rendez-vous chez le dentiste à 9 h. Il reviendra à l'école pour le déjeuner.\n\nCordialement,\nClaire Morel",
+    "q": "Quand Hugo retournera-t-il à l'école ?",
+    "options": [
+      "Demain à 9 h",
+      "Demain, pour le repas de midi",
+      "Après-demain",
+      "La semaine prochaine"
+    ],
+    "a": 1,
+    "why": "« Il reviendra à l'école pour le déjeuner » : il sera de retour à midi, après son rendez-vous du matin.",
+    "from": "bank",
+    "whyEn": "Hugo comes back to school for lunch, after the dentist."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "x-ce-06",
+    "level": "A2",
+    "context": "PISCINE MUNICIPALE — RÈGLEMENT\n• Le bonnet de bain est obligatoire.\n• Les enfants de moins de 10 ans doivent être accompagnés d'un adulte.\n• Il est interdit de manger au bord des bassins.\n• Douche obligatoire avant la baignade.",
+    "q": "Que doit faire un enfant de 8 ans pour entrer ?",
+    "options": [
+      "Venir avec un adulte",
+      "Présenter une carte d'identité",
+      "Payer un supplément",
+      "Savoir nager"
+    ],
+    "a": 0,
+    "why": "« Les enfants de moins de 10 ans doivent être accompagnés d'un adulte » : un enfant de 8 ans ne peut pas entrer seul.",
+    "from": "bank",
+    "whyEn": "Children under 10 must come with an adult."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "x-ce-07",
+    "level": "A2",
+    "context": "Résidence Les Tilleuls\n\nAVIS AUX HABITANTS\nL'ascenseur sera en panne du lundi 3 au mercredi 5 mars pour travaux d'entretien. Merci d'utiliser les escaliers. Nous nous excusons pour la gêne occasionnée.\n\nLe gardien",
+    "q": "Que doivent faire les habitants pendant trois jours ?",
+    "options": [
+      "Quitter l'immeuble",
+      "Monter à pied",
+      "Appeler le gardien avant de sortir",
+      "Payer les travaux"
+    ],
+    "a": 1,
+    "why": "L'ascenseur est hors service : « Merci d'utiliser les escaliers ». Les habitants doivent donc monter à pied.",
+    "from": "bank",
+    "whyEn": "The lift is out of order: residents must take the stairs."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "x-ce-08",
+    "level": "A2",
+    "context": "Cherche personne sérieuse pour garder deux enfants (4 et 7 ans) le mercredi après-midi, de 13 h à 18 h. Aller les chercher à l'école, aide aux devoirs. Expérience souhaitée. 12 euros de l'heure. Écrire à famille.roux@courriel.fr",
+    "q": "Que recherche cette famille ?",
+    "options": [
+      "Un professeur de mathématiques",
+      "Une personne pour s'occuper des enfants une fois par semaine",
+      "Un chauffeur à plein temps",
+      "Une femme de ménage"
+    ],
+    "a": 1,
+    "why": "L'annonce cherche quelqu'un « pour garder deux enfants le mercredi après-midi » : une garde d'enfants hebdomadaire.",
+    "from": "bank",
+    "whyEn": "They need someone to look after two children on Wednesday afternoons."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "x-ce-09",
+    "level": "B1",
+    "context": "Objet : Votre abonnement\n\nMadame, Monsieur,\n\nVotre abonnement à notre salle de sport arrive à échéance le 30 juin. Sans réponse de votre part avant cette date, il sera renouvelé automatiquement pour un an, au tarif de 39 euros par mois.\n\nSi vous ne souhaitez pas le prolonger, il vous suffit de nous envoyer un courriel au plus tard le 15 juin.\n\nSportivement,\nL'équipe Tonic Club",
+    "q": "Que se passe-t-il si le client ne fait rien ?",
+    "options": [
+      "Son abonnement s'arrête le 30 juin",
+      "Son abonnement est prolongé d'un an",
+      "Il reçoit un remboursement",
+      "Il doit payer une amende"
+    ],
+    "a": 1,
+    "why": "« Sans réponse de votre part […], il sera renouvelé automatiquement pour un an. » Ne rien faire, c'est accepter le renouvellement.",
+    "from": "bank",
+    "whyEn": "Doing nothing means the membership renews automatically for a year."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "x-ce-10",
+    "level": "B1",
+    "context": "Avis de Nadia — ★★☆☆☆\n\nL'hôtel est bien situé, à deux pas de la plage, et le personnel est aimable. Malheureusement, notre chambre donnait sur une rue très passante et nous avons mal dormi. De plus, le petit-déjeuner, annoncé comme « copieux », se limitait à du pain et du café. Pour ce prix, nous attendions mieux.",
+    "q": "Que reproche Nadia à l'hôtel ?",
+    "options": [
+      "Son emplacement et l'accueil",
+      "Le bruit et la qualité du petit-déjeuner",
+      "La saleté de la chambre",
+      "L'éloignement de la plage"
+    ],
+    "a": 1,
+    "why": "Nadia apprécie l'emplacement et le personnel, mais critique la chambre bruyante (« une rue très passante ») et un petit-déjeuner décevant.",
+    "from": "bank",
+    "whyEn": "She criticises the noise and the poor breakfast, not the location or staff."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "x-ce-11",
+    "level": "B1",
+    "context": "La mairie lance une collecte de vêtements du 10 au 20 novembre. Vous pouvez déposer manteaux, pulls et chaussures en bon état dans le hall de l'hôtel de ville, du lundi au vendredi. Les dons seront remis à une association qui les distribuera aux familles en difficulté avant l'hiver. Les vêtements déchirés ou sales ne seront pas acceptés.",
+    "q": "Quel est l'objectif de cette opération ?",
+    "options": [
+      "Vendre des vêtements d'occasion",
+      "Aider des familles à s'habiller pour l'hiver",
+      "Recycler de vieux tissus",
+      "Organiser un défilé de mode"
+    ],
+    "a": 1,
+    "why": "Les dons « seront remis à une association qui les distribuera aux familles en difficulté avant l'hiver » : c'est une action de solidarité.",
+    "from": "bank",
+    "whyEn": "The clothes go to families in need before winter."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "x-ce-12",
+    "level": "B1",
+    "context": "Chère Élise,\n\nJe suis bien arrivée à Montréal. Les premiers jours ont été compliqués : ma valise est restée à Paris et je n'ai pu la récupérer qu'au bout d'une semaine. Heureusement, ma colocataire m'a prêté des vêtements. Depuis, tout va mieux : j'ai commencé mes cours lundi et les étudiants sont très accueillants.\n\nJe t'embrasse,\nManon",
+    "q": "Quel problème Manon a-t-elle rencontré à son arrivée ?",
+    "options": [
+      "Elle n'avait pas de logement",
+      "Ses bagages ne sont pas arrivés avec elle",
+      "Elle a raté son avion",
+      "Ses cours ont été annulés"
+    ],
+    "a": 1,
+    "why": "« Ma valise est restée à Paris et je n'ai pu la récupérer qu'au bout d'une semaine » : ses bagages n'ont pas suivi.",
+    "from": "bank",
+    "whyEn": "Her suitcase stayed in Paris for a week."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "x-ce-13",
+    "level": "B1",
+    "context": "De plus en plus de Français choisissent de faire réparer leurs appareils plutôt que de les remplacer. Dans les « cafés de réparation », des bénévoles aident gratuitement les habitants à remettre en état un grille-pain, un téléphone ou un vélo. On y vient pour économiser de l'argent, mais aussi pour réduire ses déchets et rencontrer ses voisins.",
+    "q": "Pourquoi les gens fréquentent-ils ces cafés ?",
+    "options": [
+      "Pour acheter des appareils neufs moins chers",
+      "Pour des raisons économiques, écologiques et sociales",
+      "Pour apprendre un métier",
+      "Pour vendre leurs vieux objets"
+    ],
+    "a": 1,
+    "why": "Le texte cite trois raisons : « économiser de l'argent », « réduire ses déchets » et « rencontrer ses voisins ».",
+    "from": "bank",
+    "whyEn": "Three reasons: saving money, cutting waste, meeting neighbours."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "x-ce-14",
+    "level": "B2",
+    "context": "Longtemps réservé aux grandes villes, le vélo en libre-service gagne désormais les communes moyennes. Le bilan est pourtant contrasté. Là où les pistes cyclables ont été aménagées en amont, le succès est réel. Ailleurs, les vélos restent sur leurs bornes : les habitants, peu rassurés par la circulation, ne changent pas leurs habitudes. Les élus découvrent qu'il ne suffit pas d'offrir un service pour créer un usage.",
+    "q": "Que montre l'expérience des communes moyennes ?",
+    "options": [
+      "Le vélo en libre-service réussit partout",
+      "Sans aménagements cyclables, le service est peu utilisé",
+      "Les habitants préfèrent acheter leur propre vélo",
+      "Les élus veulent supprimer ces services"
+    ],
+    "a": 1,
+    "why": "Le succès dépend des pistes cyclables « aménagées en amont ». Ailleurs, les vélos ne sont pas utilisés, car les habitants craignent la circulation.",
+    "from": "bank",
+    "whyEn": "Bike sharing only works where cycle lanes were built first."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "x-ce-15",
+    "level": "B2",
+    "context": "Certes, les supermarchés ont fait des efforts pour réduire le plastique, et l'on ne peut que s'en féliciter. Mais remplacer un sachet par une barquette en carton, elle-même enveloppée d'un film, relève davantage de la communication que de l'écologie. Tant que les produits continueront de parcourir des milliers de kilomètres, l'emballage restera le détail qui cache l'essentiel.",
+    "q": "Quelle est l'opinion de l'auteur ?",
+    "options": [
+      "Les supermarchés ont résolu le problème du plastique",
+      "Les efforts sur les emballages détournent l'attention du vrai problème",
+      "Le carton pollue davantage que le plastique",
+      "Il faut interdire tous les emballages"
+    ],
+    "a": 1,
+    "why": "Après la concession (« Certes… »), l'auteur donne sa thèse : ces changements relèvent « de la communication », et l'emballage est « le détail qui cache l'essentiel », le transport des produits.",
+    "from": "bank",
+    "whyEn": "After « certes », the author argues packaging changes are mostly PR and hide the real issue (transport)."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "x-ce-16",
+    "level": "B2",
+    "context": "Une enquête menée auprès de 2 000 salariés révèle un paradoxe. Près de 70 % d'entre eux se disent satisfaits de leur travail ; pourtant, un sur deux affirme qu'il changerait de poste s'il en avait la possibilité. Pour les chercheurs, cette contradiction n'est qu'apparente : on peut aimer son métier tout en souffrant de ses conditions d'exercice, qu'il s'agisse des horaires, du salaire ou du manque de reconnaissance.",
+    "q": "Comment les chercheurs expliquent-ils ce paradoxe ?",
+    "options": [
+      "Les salariés ont menti aux enquêteurs",
+      "On peut apprécier son métier sans apprécier ses conditions de travail",
+      "La majorité des salariés détestent leur travail",
+      "Les salariés satisfaits sont les mieux payés"
+    ],
+    "a": 1,
+    "why": "Pour les chercheurs, « on peut aimer son métier tout en souffrant de ses conditions d'exercice » : la contradiction n'est qu'apparente.",
+    "from": "bank",
+    "whyEn": "You can like your job and still dislike your working conditions."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "x-ce-17",
+    "level": "B2",
+    "context": "Le succès des podcasts tient moins à la nouveauté du format qu'à la place qu'il a su prendre dans nos journées. On l'écoute en cuisinant, en courant, dans les transports — autant de moments où lire est impossible et où l'écran fatigue. Là où la télévision exige qu'on s'arrête, le podcast accompagne. Il ne vole pas de temps : il occupe celui qui était perdu.",
+    "q": "Selon l'auteur, pourquoi les podcasts ont-ils du succès ?",
+    "options": [
+      "Parce que leur format est entièrement nouveau",
+      "Parce qu'ils s'écoutent pendant d'autres activités",
+      "Parce qu'ils sont plus courts que les émissions de télévision",
+      "Parce qu'ils sont gratuits"
+    ],
+    "a": 1,
+    "why": "Le podcast « accompagne » : on l'écoute en cuisinant, en courant, dans les transports. Il occupe un temps « qui était perdu ».",
+    "from": "bank",
+    "whyEn": "Podcasts fill moments when you are doing something else."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "x-ce-18",
+    "level": "B2",
+    "context": "Chers collègues,\n\nÀ la suite de plusieurs remarques, je souhaite rappeler que la salle de réunion du deuxième étage doit être réservée au moins 24 heures à l'avance sur l'intranet. Trop souvent, des équipes se retrouvent devant une porte fermée ou une salle déjà occupée. À compter de lundi, toute réunion non enregistrée pourra être déplacée sans préavis au profit d'une réunion réservée.\n\nMerci de votre compréhension,\nLa direction",
+    "q": "Qu'est-ce qui change à partir de lundi ?",
+    "options": [
+      "La salle de réunion sera fermée",
+      "Une réunion non réservée pourra perdre la salle",
+      "Il faudra réserver une semaine à l'avance",
+      "Les réunions seront limitées à une heure"
+    ],
+    "a": 1,
+    "why": "« Toute réunion non enregistrée pourra être déplacée sans préavis au profit d'une réunion réservée » : sans réservation, on risque de perdre la salle.",
+    "from": "bank",
+    "whyEn": "From Monday, an unbooked meeting can lose the room."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "x-ce-19",
+    "level": "C1",
+    "context": "On aurait tort de réduire l'engouement pour les jardins partagés à une mode citadine. Derrière le plaisir de cultiver quelques tomates se joue une forme discrète de réappropriation : celle d'un espace que la ville avait rendu purement fonctionnel, et d'un temps soustrait à la logique du rendement. Qu'importe, au fond, que la récolte soit maigre ; ce que ces jardiniers viennent chercher ne se pèse pas.",
+    "q": "Que veut dire l'auteur dans la dernière phrase ?",
+    "options": [
+      "Ces jardins ne produisent pas assez pour être utiles",
+      "L'intérêt de ces jardins n'est pas dans la quantité récoltée",
+      "Les jardiniers devraient mesurer leur production",
+      "Les récoltes sont trop légères pour être vendues"
+    ],
+    "a": 1,
+    "why": "« Ce que ces jardiniers viennent chercher ne se pèse pas » : la valeur de l'expérience (espace retrouvé, temps libéré) n'est pas mesurable en kilos de légumes.",
+    "from": "bank",
+    "whyEn": "What these gardeners look for cannot be measured in kilos."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "x-ce-20",
+    "level": "C1",
+    "context": "La prétendue « fuite des cerveaux » mérite d'être nuancée. S'il est exact que de jeunes diplômés partent travailler à l'étranger, la plupart reviennent au bout de quelques années, forts d'une expérience et d'un réseau dont leur pays d'origine tire ensuite profit. Plutôt que de déplorer ces départs, mieux vaudrait se demander ce qui est fait pour faciliter les retours.",
+    "q": "Quelle est la position de l'auteur sur la « fuite des cerveaux » ?",
+    "options": [
+      "C'est une catastrophe qu'il faut empêcher",
+      "Le phénomène est exagéré et l'enjeu réel est le retour des diplômés",
+      "Les diplômés ne devraient jamais revenir",
+      "Le phénomène n'existe pas du tout"
+    ],
+    "a": 1,
+    "why": "« Prétendue » et « mérite d'être nuancée » marquent la distance de l'auteur. Il reconnaît les départs, mais déplace la question vers les conditions du retour.",
+    "from": "bank",
+    "whyEn": "« Prétendue » shows doubt: the real issue is helping graduates come back."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "x-ce-21",
+    "level": "C1",
+    "context": "Le ministre a salué, je cite, « une réforme courageuse et attendue ». Courageuse, sans doute — il en faut, du courage, pour annoncer une hausse des tarifs à trois mois d'une élection. Attendue, c'est moins certain : on cherche encore, parmi les usagers, ceux qui la réclamaient.",
+    "q": "Quel est le ton de ce passage ?",
+    "options": [
+      "Neutre et informatif",
+      "Ironique et critique",
+      "Enthousiaste",
+      "Résigné"
+    ],
+    "a": 1,
+    "why": "L'auteur reprend les mots du ministre pour les retourner contre lui : le « courage » est celui d'annoncer une mesure impopulaire, et personne ne la « réclamait ». Le ton est ironique.",
+    "from": "bank",
+    "whyEn": "The author turns the minister's words against him: ironic and critical."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "x-ce-22",
+    "level": "C1",
+    "context": "Longtemps, l'orthographe a servi de frontière sociale : la faute désignait celui qui n'avait pas fait les « bonnes » études. Les correcteurs automatiques auraient pu abolir cette frontière. Ils l'ont déplacée. Ce qui distingue désormais, ce n'est plus de savoir écrire sans faute, mais de savoir quand la machine se trompe — compétence qui suppose précisément la maîtrise qu'elle était censée rendre inutile.",
+    "q": "Quelle idée l'auteur défend-il ?",
+    "options": [
+      "Les correcteurs automatiques ont supprimé les inégalités face à l'orthographe",
+      "Les correcteurs n'ont pas fait disparaître l'avantage de ceux qui maîtrisent la langue",
+      "Il faut interdire les correcteurs à l'école",
+      "L'orthographe n'a plus aucune importance"
+    ],
+    "a": 1,
+    "why": "La frontière sociale n'a pas été abolie mais « déplacée » : repérer les erreurs de la machine exige justement de maîtriser l'orthographe.",
+    "from": "bank",
+    "whyEn": "Spell-checkers moved the advantage: you must master spelling to spot their errors."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "x-ce-23",
+    "level": "C2",
+    "context": "Il n'est pas de formule plus commode, ni de plus trompeuse, que celle qui oppose la tradition à la modernité. Car ce que nous appelons tradition n'est bien souvent qu'une innovation qui a réussi à faire oublier sa date de naissance ; et ce que nous célébrons comme moderne, une vieille idée qui a changé de costume. À y regarder de près, l'une n'en finit pas de se déguiser en l'autre.",
+    "q": "Que soutient l'auteur ?",
+    "options": [
+      "La tradition doit être défendue contre la modernité",
+      "L'opposition entre tradition et modernité est largement illusoire",
+      "La modernité finira par faire disparaître les traditions",
+      "Les traditions sont toujours plus anciennes qu'on ne le croit"
+    ],
+    "a": 1,
+    "why": "L'opposition est dite « trompeuse » : la tradition est une ancienne innovation, la modernité une vieille idée renouvelée. Les deux notions se confondent sans cesse.",
+    "from": "bank",
+    "whyEn": "Tradition and modernity constantly turn into each other: the contrast is an illusion."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "x-ce-24",
+    "level": "C2",
+    "context": "On reproche volontiers aux experts de se contredire, comme si le désaccord trahissait l'incompétence. C'est méconnaître la nature même du savoir, qui ne progresse qu'en se disputant. Le véritable motif d'inquiétude serait plutôt l'unanimité : là où plus personne n'objecte, il y a fort à parier que l'on a cessé de chercher.",
+    "q": "Selon l'auteur, que révèle le désaccord entre experts ?",
+    "options": [
+      "Leur manque de compétence",
+      "Le fonctionnement normal de la recherche",
+      "Leur volonté de tromper le public",
+      "L'inutilité de leurs travaux"
+    ],
+    "a": 1,
+    "why": "Le savoir « ne progresse qu'en se disputant » : le désaccord est normal. C'est l'unanimité qui devrait inquiéter, car elle signale que l'on a « cessé de chercher ».",
+    "from": "bank",
+    "whyEn": "Disagreement is how knowledge progresses; unanimity is the warning sign."
+  },
+  {
+    "kind": "other",
+    "status": "reviewed",
+    "id": "x-ce-25",
+    "level": "C2",
+    "context": "L'auteur a beau se défendre d'avoir écrit un roman à thèse, chaque page plaide. Les personnages n'existent guère que pour avoir tort ou raison, et le lecteur, dûment informé de ce qu'il convient de penser, referme le livre avec le sentiment d'avoir assisté à un procès dont le verdict était rédigé d'avance. On regrette d'autant plus ce parti pris que le style, lui, ne manque ni de nerf ni d'élégance.",
+    "q": "Quel jugement le critique porte-t-il sur ce roman ?",
+    "options": [
+      "Un livre remarquable en tous points",
+      "Une écriture de qualité au service d'une démonstration trop appuyée",
+      "Un livre mal écrit mais passionnant",
+      "Un roman sans aucune idée"
+    ],
+    "a": 1,
+    "why": "Le critique reproche au roman de « plaider » à chaque page, avec un verdict « rédigé d'avance », tout en reconnaissant un style qui « ne manque ni de nerf ni d'élégance ».",
+    "from": "bank",
+    "whyEn": "Elegant writing serving a heavy-handed, pre-judged argument."
+  }
+]

@@ -1,0 +1,745 @@
+[
+  {
+    "id": "v1",
+    "theme": "Faux amis",
+    "front": "actuellement",
+    "back": "currently, at the moment",
+    "note": "≠ actually. « Actually » se dit « en fait »."
+  },
+  {
+    "id": "v2",
+    "theme": "Faux amis",
+    "front": "éventuellement",
+    "back": "possibly, if need be",
+    "note": "≠ eventually (= finalement, à terme)."
+  },
+  {
+    "id": "v3",
+    "theme": "Faux amis",
+    "front": "assister à",
+    "back": "to attend",
+    "note": "≠ to assist (= aider). « J'ai assisté à la réunion. »"
+  },
+  {
+    "id": "v4",
+    "theme": "Faux amis",
+    "front": "sensible",
+    "back": "sensitive",
+    "note": "≠ sensible (= raisonnable). « Un sujet sensible. »"
+  },
+  {
+    "id": "v5",
+    "theme": "Faux amis",
+    "front": "une librairie",
+    "back": "a bookshop",
+    "note": "≠ a library (= une bibliothèque)."
+  },
+  {
+    "id": "v6",
+    "theme": "Faux amis",
+    "front": "passer un examen",
+    "back": "to sit / take an exam",
+    "note": "Réussir un examen = to pass. Piège classique du TCF."
+  },
+  {
+    "id": "v7",
+    "theme": "Faux amis",
+    "front": "ignorer",
+    "back": "not to know",
+    "note": "« J'ignore son adresse » = I don't know it."
+  },
+  {
+    "id": "v8",
+    "theme": "Faux amis",
+    "front": "prétendre",
+    "back": "to claim",
+    "note": "≠ to pretend (= faire semblant)."
+  },
+  {
+    "id": "v9",
+    "theme": "Faux amis",
+    "front": "un délai",
+    "back": "a deadline, a time frame",
+    "note": "≠ a delay (= un retard)."
+  },
+  {
+    "id": "v10",
+    "theme": "Faux amis",
+    "front": "rester",
+    "back": "to stay, to remain",
+    "note": "≠ to rest (= se reposer)."
+  },
+  {
+    "id": "v11",
+    "theme": "Connecteurs",
+    "front": "en revanche",
+    "back": "on the other hand",
+    "note": "Opposition nette entre deux idées."
+  },
+  {
+    "id": "v12",
+    "theme": "Connecteurs",
+    "front": "en effet",
+    "back": "indeed (confirms)",
+    "note": "Confirme ce qui précède. À ne pas confondre avec « en fait » (rectifie)."
+  },
+  {
+    "id": "v13",
+    "theme": "Connecteurs",
+    "front": "or",
+    "back": "and yet, now (new decisive fact)",
+    "note": "Jamais « or » au sens anglais ! Marqueur d'argumentation."
+  },
+  {
+    "id": "v14",
+    "theme": "Connecteurs",
+    "front": "néanmoins",
+    "back": "nevertheless",
+    "note": "Registre soutenu, idéal à l'écrit."
+  },
+  {
+    "id": "v15",
+    "theme": "Connecteurs",
+    "front": "par ailleurs",
+    "back": "moreover, besides",
+    "note": "Ajoute un argument d'un autre ordre."
+  },
+  {
+    "id": "v16",
+    "theme": "Connecteurs",
+    "front": "d'autant plus que",
+    "back": "all the more so because",
+    "note": "Renforce une cause. Structure très B2."
+  },
+  {
+    "id": "v17",
+    "theme": "Connecteurs",
+    "front": "il n'en reste pas moins que",
+    "back": "the fact remains that",
+    "note": "Concession haut de gamme, C1."
+  },
+  {
+    "id": "v18",
+    "theme": "Connecteurs",
+    "front": "quant à",
+    "back": "as for",
+    "note": "« Quant à moi, je pense que… »"
+  },
+  {
+    "id": "v19",
+    "theme": "Expression écrite",
+    "front": "Je vous serais reconnaissant(e) de…",
+    "back": "I would be grateful if you would…",
+    "note": "Formule soutenue pour une demande écrite."
+  },
+  {
+    "id": "v20",
+    "theme": "Expression écrite",
+    "front": "Veuillez agréer, Madame, Monsieur, mes salutations distinguées.",
+    "back": "Yours faithfully",
+    "note": "Clôture standard d'une lettre formelle."
+  },
+  {
+    "id": "v21",
+    "theme": "Expression écrite",
+    "front": "à pourvoir",
+    "back": "(position) to be filled",
+    "note": "« Le poste est-il toujours à pourvoir ? »"
+  },
+  {
+    "id": "v22",
+    "theme": "Expression écrite",
+    "front": "dans la mesure où",
+    "back": "insofar as, given that",
+    "note": "Justifie une opinion avec élégance."
+  },
+  {
+    "id": "v23",
+    "theme": "Expression écrite",
+    "front": "force est de constater que",
+    "back": "one cannot help but note that",
+    "note": "Registre soutenu, très apprécié en tâche 3."
+  },
+  {
+    "id": "v24",
+    "theme": "Oral courant",
+    "front": "Ça va être compliqué.",
+    "back": "That's going to be difficult (= no)",
+    "note": "Refus poli à l'oral. Le TCF teste ce sous-entendu."
+  },
+  {
+    "id": "v25",
+    "theme": "Oral courant",
+    "front": "J'aimerais bien, mais…",
+    "back": "I'd love to, but… (= polite no)",
+    "note": "Conditionnel + mais = refus."
+  },
+  {
+    "id": "v26",
+    "theme": "Oral courant",
+    "front": "Tu aurais pu me prévenir !",
+    "back": "You could have told me!",
+    "note": "Conditionnel passé = reproche."
+  },
+  {
+    "id": "v27",
+    "theme": "Oral courant",
+    "front": "du coup",
+    "back": "so, as a result",
+    "note": "Très fréquent à l'oral, à éviter à l'écrit formel."
+  },
+  {
+    "id": "v28",
+    "theme": "Oral courant",
+    "front": "ça m'arrange",
+    "back": "that suits me / that works for me",
+    "note": "« Mardi, ça m'arrange. »"
+  },
+  {
+    "id": "v29",
+    "theme": "Vie pratique",
+    "front": "un justificatif de domicile",
+    "back": "proof of address",
+    "note": "Vocabulaire administratif indispensable."
+  },
+  {
+    "id": "v30",
+    "theme": "Vie pratique",
+    "front": "une démarche",
+    "back": "a procedure, an administrative step",
+    "note": "« Aucune démarche n'est nécessaire. »"
+  },
+  {
+    "id": "v31",
+    "theme": "Vie pratique",
+    "front": "un délai de rétractation",
+    "back": "cooling-off period",
+    "note": "Fréquent dans les documents de compréhension écrite."
+  },
+  {
+    "id": "v32",
+    "theme": "Vie pratique",
+    "front": "avancer / retarder un horaire",
+    "back": "to bring forward / to push back",
+    "note": "Le vol est avancé = il part PLUS TÔT."
+  },
+  {
+    "id": "v33",
+    "theme": "Donner son avis",
+    "front": "à mon avis",
+    "back": "in my opinion",
+    "note": "Variante : selon moi, d'après moi. Jamais « dans mon opinion »."
+  },
+  {
+    "id": "v34",
+    "theme": "Donner son avis",
+    "front": "il me semble que",
+    "back": "it seems to me that",
+    "note": "+ indicatif. Plus nuancé que « je pense que »."
+  },
+  {
+    "id": "v35",
+    "theme": "Donner son avis",
+    "front": "je suis favorable à",
+    "back": "I am in favour of",
+    "note": "Contraire : je suis opposé(e) à."
+  },
+  {
+    "id": "v36",
+    "theme": "Donner son avis",
+    "front": "un avantage / un inconvénient",
+    "back": "an advantage / a drawback",
+    "note": "Le couple de base de toute argumentation.",
+    "ex": "Le principal inconvénient, c'est le prix."
+  },
+  {
+    "id": "v37",
+    "theme": "Donner son avis",
+    "front": "un enjeu",
+    "back": "an issue, what is at stake",
+    "note": "« L'enjeu de ce débat » — mot très fréquent en B2-C1."
+  },
+  {
+    "id": "v38",
+    "theme": "Donner son avis",
+    "front": "remettre en cause",
+    "back": "to call into question",
+    "note": "« Cette étude remet en cause une idée reçue. »"
+  },
+  {
+    "id": "v39",
+    "theme": "Donner son avis",
+    "front": "une idée reçue",
+    "back": "a common misconception",
+    "note": "≠ a received idea. = un préjugé, un cliché."
+  },
+  {
+    "id": "v40",
+    "theme": "Donner son avis",
+    "front": "nuancer",
+    "back": "to qualify (a statement)",
+    "note": "« Il faut nuancer ce constat. »"
+  },
+  {
+    "id": "v41",
+    "theme": "Donner son avis",
+    "front": "en ce qui concerne",
+    "back": "as far as … is concerned",
+    "note": "Pour changer de sujet proprement."
+  },
+  {
+    "id": "v42",
+    "theme": "Donner son avis",
+    "front": "avoir tendance à",
+    "back": "to tend to",
+    "note": "« Les jeunes ont tendance à lire moins de romans. »"
+  },
+  {
+    "id": "v43",
+    "theme": "Donner son avis",
+    "front": "à condition que",
+    "back": "provided that",
+    "note": "+ subjonctif : « à condition qu'il soit d'accord »."
+  },
+  {
+    "id": "v44",
+    "theme": "Donner son avis",
+    "front": "tout dépend de",
+    "back": "it all depends on",
+    "note": "Très utile pour nuancer à l'oral, tâche 3."
+  },
+  {
+    "id": "v45",
+    "theme": "Travail",
+    "front": "un entretien d'embauche",
+    "back": "a job interview",
+    "note": "« Passer un entretien. »"
+  },
+  {
+    "id": "v46",
+    "theme": "Travail",
+    "front": "postuler à",
+    "back": "to apply for",
+    "note": "≠ appliquer. « J'ai postulé à ce poste. »"
+  },
+  {
+    "id": "v47",
+    "theme": "Travail",
+    "front": "une lettre de motivation",
+    "back": "a cover letter",
+    "note": "Accompagne le CV."
+  },
+  {
+    "id": "v48",
+    "theme": "Travail",
+    "front": "un CDI / un CDD",
+    "back": "a permanent / fixed-term contract",
+    "note": "Contrat à durée indéterminée / déterminée."
+  },
+  {
+    "id": "v49",
+    "theme": "Travail",
+    "front": "le chômage",
+    "back": "unemployment",
+    "note": "« Être au chômage » ; un chômeur."
+  },
+  {
+    "id": "v50",
+    "theme": "Travail",
+    "front": "démissionner",
+    "back": "to resign",
+    "note": "≠ être licencié (to be laid off)."
+  },
+  {
+    "id": "v51",
+    "theme": "Travail",
+    "front": "un congé",
+    "back": "leave, time off",
+    "note": "« Être en congé », « les congés payés »."
+  },
+  {
+    "id": "v52",
+    "theme": "Travail",
+    "front": "un salarié",
+    "back": "an employee",
+    "note": "≠ un employeur (employer). Féminin : une salariée."
+  },
+  {
+    "id": "v53",
+    "theme": "Travail",
+    "front": "une formation",
+    "back": "a training course",
+    "note": "≠ formation au sens anglais. « Suivre une formation. »"
+  },
+  {
+    "id": "v54",
+    "theme": "Travail",
+    "front": "un stage",
+    "back": "an internship",
+    "note": "≠ a stage (= une scène). Un(e) stagiaire."
+  },
+  {
+    "id": "v55",
+    "theme": "Travail",
+    "front": "à temps partiel",
+    "back": "part-time",
+    "note": "Contraire : à temps plein."
+  },
+  {
+    "id": "v56",
+    "theme": "Travail",
+    "front": "une grève",
+    "back": "a strike",
+    "note": "« Faire grève », « être en grève »."
+  },
+  {
+    "id": "v57",
+    "theme": "Logement",
+    "front": "le loyer",
+    "back": "the rent",
+    "note": "« Payer son loyer. » ≠ louer (to rent)."
+  },
+  {
+    "id": "v58",
+    "theme": "Logement",
+    "front": "les charges",
+    "back": "service charges, utilities",
+    "note": "« Charges comprises » = included."
+  },
+  {
+    "id": "v59",
+    "theme": "Logement",
+    "front": "un locataire / un propriétaire",
+    "back": "a tenant / an owner, landlord",
+    "note": "Le locataire paie le loyer au propriétaire."
+  },
+  {
+    "id": "v60",
+    "theme": "Logement",
+    "front": "une caution",
+    "back": "a deposit; a guarantor",
+    "note": "Somme versée à l'entrée dans le logement."
+  },
+  {
+    "id": "v61",
+    "theme": "Logement",
+    "front": "emménager / déménager",
+    "back": "to move in / to move out",
+    "note": "Piège d'écoute : les deux se ressemblent."
+  },
+  {
+    "id": "v62",
+    "theme": "Logement",
+    "front": "un bail",
+    "back": "a lease",
+    "note": "« Signer un bail. » Pluriel : des baux."
+  },
+  {
+    "id": "v63",
+    "theme": "Logement",
+    "front": "meublé",
+    "back": "furnished",
+    "note": "« Un studio meublé. »"
+  },
+  {
+    "id": "v64",
+    "theme": "Logement",
+    "front": "le rez-de-chaussée",
+    "back": "the ground floor",
+    "note": "Le premier étage français = first floor UK, second floor US."
+  },
+  {
+    "id": "v65",
+    "theme": "Logement",
+    "front": "une panne",
+    "back": "a breakdown, a failure",
+    "note": "« L'ascenseur est en panne. »"
+  },
+  {
+    "id": "v66",
+    "theme": "Logement",
+    "front": "le voisinage",
+    "back": "the neighbourhood, the neighbours",
+    "note": "Un voisin, une voisine."
+  },
+  {
+    "id": "v67",
+    "theme": "Santé et démarches",
+    "front": "une ordonnance",
+    "back": "a prescription",
+    "note": "≠ prescription. Donnée par le médecin."
+  },
+  {
+    "id": "v68",
+    "theme": "Santé et démarches",
+    "front": "prendre rendez-vous",
+    "back": "to make an appointment",
+    "note": "« Déplacer / annuler un rendez-vous. »"
+  },
+  {
+    "id": "v69",
+    "theme": "Santé et démarches",
+    "front": "un arrêt maladie",
+    "back": "sick leave",
+    "note": "« Être en arrêt maladie. »"
+  },
+  {
+    "id": "v70",
+    "theme": "Santé et démarches",
+    "front": "un formulaire",
+    "back": "a form",
+    "note": "« Remplir un formulaire. »"
+  },
+  {
+    "id": "v71",
+    "theme": "Santé et démarches",
+    "front": "un dossier",
+    "back": "a file, an application",
+    "note": "« Déposer un dossier complet. »"
+  },
+  {
+    "id": "v72",
+    "theme": "Santé et démarches",
+    "front": "une pièce d'identité",
+    "back": "an identity document",
+    "note": "Passeport, carte d'identité, titre de séjour."
+  },
+  {
+    "id": "v73",
+    "theme": "Santé et démarches",
+    "front": "un titre de séjour",
+    "back": "a residence permit",
+    "note": "Vocabulaire central du TCF IRN."
+  },
+  {
+    "id": "v74",
+    "theme": "Santé et démarches",
+    "front": "la mairie / la préfecture",
+    "back": "the town hall / the prefecture",
+    "note": "Les deux guichets administratifs les plus cités."
+  },
+  {
+    "id": "v75",
+    "theme": "Santé et démarches",
+    "front": "un remboursement",
+    "back": "a refund",
+    "note": "« Demander un remboursement intégral. »"
+  },
+  {
+    "id": "v76",
+    "theme": "Santé et démarches",
+    "front": "valable",
+    "back": "valid",
+    "note": "« Votre billet reste valable. »"
+  },
+  {
+    "id": "v77",
+    "theme": "Santé et démarches",
+    "front": "au plus tard",
+    "back": "at the latest",
+    "note": "« Avant le 15 juin au plus tard. »"
+  },
+  {
+    "id": "v78",
+    "theme": "Santé et démarches",
+    "front": "à compter de",
+    "back": "as from, starting",
+    "note": "= à partir de. « À compter de lundi. »"
+  },
+  {
+    "id": "v79",
+    "theme": "Transports et ville",
+    "front": "un embouteillage",
+    "back": "a traffic jam",
+    "note": "Synonyme familier : un bouchon."
+  },
+  {
+    "id": "v80",
+    "theme": "Transports et ville",
+    "front": "une correspondance",
+    "back": "a connection (train, metro)",
+    "note": "« J'ai raté ma correspondance. »"
+  },
+  {
+    "id": "v81",
+    "theme": "Transports et ville",
+    "front": "un retard",
+    "back": "a delay",
+    "note": "« Le train a vingt minutes de retard. »"
+  },
+  {
+    "id": "v82",
+    "theme": "Transports et ville",
+    "front": "une déviation",
+    "back": "a diversion, a detour",
+    "note": "Fréquent dans les annonces de trafic."
+  },
+  {
+    "id": "v83",
+    "theme": "Transports et ville",
+    "front": "le centre-ville",
+    "back": "the town centre, downtown",
+    "note": "≠ la banlieue (the suburbs), la périphérie."
+  },
+  {
+    "id": "v84",
+    "theme": "Transports et ville",
+    "front": "un riverain",
+    "back": "a local resident",
+    "note": "Qui habite le long d'une rue."
+  },
+  {
+    "id": "v85",
+    "theme": "Transports et ville",
+    "front": "une piste cyclable",
+    "back": "a cycle lane",
+    "note": "« Aménager des pistes cyclables. »"
+  },
+  {
+    "id": "v86",
+    "theme": "Transports et ville",
+    "front": "les transports en commun",
+    "back": "public transport",
+    "note": "Bus, métro, tramway, train."
+  },
+  {
+    "id": "v87",
+    "theme": "Société",
+    "front": "la hausse / la baisse",
+    "back": "the rise / the fall",
+    "note": "« Une hausse des prix », « une baisse du chômage »."
+  },
+  {
+    "id": "v88",
+    "theme": "Société",
+    "front": "une étude / une enquête",
+    "back": "a study / a survey",
+    "note": "« Selon une enquête récente… »"
+  },
+  {
+    "id": "v89",
+    "theme": "Société",
+    "front": "le pouvoir d'achat",
+    "back": "purchasing power",
+    "note": "Sujet de presse permanent."
+  },
+  {
+    "id": "v90",
+    "theme": "Société",
+    "front": "les déchets",
+    "back": "waste, rubbish",
+    "note": "« Trier, réduire ses déchets. »"
+  },
+  {
+    "id": "v91",
+    "theme": "Société",
+    "front": "le réchauffement climatique",
+    "back": "global warming",
+    "note": "Thème fréquent en tâche 3."
+  },
+  {
+    "id": "v92",
+    "theme": "Société",
+    "front": "un bénévole",
+    "back": "a volunteer",
+    "note": "Le bénévolat = volunteering."
+  },
+  {
+    "id": "v93",
+    "theme": "Société",
+    "front": "une association",
+    "back": "a non-profit organisation, a club",
+    "note": "≠ association au sens large anglais."
+  },
+  {
+    "id": "v94",
+    "theme": "Société",
+    "front": "une mesure",
+    "back": "a measure, a policy",
+    "note": "« Le gouvernement a annoncé une série de mesures. »"
+  },
+  {
+    "id": "v95",
+    "theme": "Société",
+    "front": "interdire / autoriser",
+    "back": "to ban / to allow",
+    "note": "« Il est interdit de… », « être autorisé à… »."
+  },
+  {
+    "id": "v96",
+    "theme": "Société",
+    "front": "se réjouir de / redouter",
+    "back": "to be delighted about / to dread",
+    "note": "Verbes d'attitude, clés des questions d'opinion."
+  },
+  {
+    "id": "v97",
+    "theme": "Société",
+    "front": "déplorer",
+    "back": "to deplore, to regret",
+    "note": "Registre soutenu : « On ne peut que le déplorer. »"
+  },
+  {
+    "id": "v98",
+    "theme": "Société",
+    "front": "sous couvert de",
+    "back": "under the guise of",
+    "note": "C1-C2 : annonce une critique voilée."
+  },
+  {
+    "id": "v99",
+    "theme": "Oral courant",
+    "front": "Ça marche.",
+    "back": "OK, that works.",
+    "note": "Accord familier."
+  },
+  {
+    "id": "v100",
+    "theme": "Oral courant",
+    "front": "Tant pis. / Tant mieux.",
+    "back": "Too bad. / So much the better.",
+    "note": "Deux réactions opposées qu'on confond à l'écoute."
+  },
+  {
+    "id": "v101",
+    "theme": "Oral courant",
+    "front": "J'en ai marre.",
+    "back": "I'm fed up.",
+    "note": "Familier. Courant : j'en ai assez."
+  },
+  {
+    "id": "v102",
+    "theme": "Oral courant",
+    "front": "Ça ne me dit rien.",
+    "back": "I don't feel like it; it doesn't ring a bell",
+    "note": "Deux sens selon le contexte."
+  },
+  {
+    "id": "v103",
+    "theme": "Oral courant",
+    "front": "avoir du mal à",
+    "back": "to have trouble (doing)",
+    "note": "« J'ai du mal à comprendre l'accent québécois. »"
+  },
+  {
+    "id": "v104",
+    "theme": "Oral courant",
+    "front": "Ce n'est pas la peine.",
+    "back": "There's no need; don't bother.",
+    "note": "Refus poli d'une proposition."
+  },
+  {
+    "id": "v105",
+    "theme": "Oral courant",
+    "front": "quand même",
+    "back": "all the same, still",
+    "note": "Renforce un reproche ou une concession."
+  },
+  {
+    "id": "v106",
+    "theme": "Oral courant",
+    "front": "On verra.",
+    "back": "We'll see. (often = probably not)",
+    "note": "Réponse évasive : le TCF teste ce sous-entendu."
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "name": "objectif-tcf-app",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Objectif TCF v2 — TCF Canada reading and writing trainer. No backend.",
+  "scripts": {
+    "dev": "vite",
+    "build": "npm run validate && tsc --noEmit && vite build && node scripts/publish.mjs",
+    "validate": "tsx scripts/validate-content.ts",
+    "extract": "tsx scripts/extract-content.ts",
+    "test": "vitest run",
+    "e2e": "node tests/e2e.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.12.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^6.3.0",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "vite": "^8.3.8",
+    "vite-plugin-singlefile": "^2.3.4",
+    "vitest": "^5.1.1"
+  }
+}

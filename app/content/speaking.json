@@ -1,0 +1,242 @@
+[
+  {
+    "id": "eo1",
+    "n": 1,
+    "title": "Tâche 1 — Entretien dirigé",
+    "prepSec": 0,
+    "speakSec": 120,
+    "goal": "Se présenter et répondre à des questions simples sur soi. Sans préparation.",
+    "listTitle": "Questions de l'examinateur (écoutez-les avec 🔊 plutôt que de les lire)",
+    "speakable": true,
+    "phrases": [
+      "Je m'appelle… et je viens de…",
+      "Actuellement, je travaille comme… / j'étudie…",
+      "Ce qui me plaît le plus, c'est…",
+      "J'ai commencé à apprendre le français parce que…",
+      "À moyen terme, j'aimerais…"
+    ],
+    "tips": [
+      "Ne répondez jamais par une seule phrase : donnez une réponse + une raison ou un exemple. « Oui » est une réponse perdue.",
+      "Préparez à l'avance 4 ou 5 phrases sur vous — elles tomberont forcément.",
+      "Parlez lentement et clairement plutôt que vite et approximativement : l'intelligibilité passe avant la vitesse."
+    ],
+    "checklist": [
+      {
+        "id": "c1",
+        "text": "J'ai parlé pendant les 2 minutes complètes sans blanc prolongé."
+      },
+      {
+        "id": "c2",
+        "text": "J'ai développé chaque réponse (réponse + raison ou exemple), sans jamais m'arrêter à « oui » ou « non »."
+      },
+      {
+        "id": "c3",
+        "text": "Je me suis enregistré(e) et réécouté(e) au moins une fois."
+      },
+      {
+        "id": "c4",
+        "text": "J'ai repéré à la réécoute une erreur récurrente et je l'ai notée pour la corriger."
+      }
+    ],
+    "prompts": [
+      {
+        "id": "eo1",
+        "prompt": "L'examinateur vous pose des questions personnelles : votre parcours, votre travail\nou vos études, vos loisirs, vos projets. Répondez naturellement, en développant.",
+        "questions": [
+          "Pouvez-vous vous présenter en quelques mots ?",
+          "Que faites-vous dans la vie ?",
+          "Qu'est-ce qui vous a amené à apprendre le français ?",
+          "Quels sont vos projets pour les prochaines années ?"
+        ]
+      },
+      {
+        "id": "eo1-b",
+        "prompt": "L'examinateur vous interroge sur votre vie quotidienne : votre famille, votre\nlogement, votre ville, vos habitudes.",
+        "questions": [
+          "Parlez-moi de votre famille.",
+          "Où habitez-vous ? Pouvez-vous décrire votre logement ?",
+          "Qu'est-ce que vous aimez dans votre ville ou votre quartier ?",
+          "Comment se passe une journée ordinaire pour vous ?"
+        ]
+      },
+      {
+        "id": "eo1-c",
+        "prompt": "L'examinateur vous interroge sur vos goûts et vos loisirs.",
+        "questions": [
+          "Que faites-vous pendant votre temps libre ?",
+          "Quel est le dernier film ou le dernier livre qui vous a plu ? Pourquoi ?",
+          "Racontez-moi vos dernières vacances.",
+          "Quel pays aimeriez-vous visiter, et pour quelle raison ?"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "eo2",
+    "n": 2,
+    "title": "Tâche 2 — Exercice en interaction",
+    "prepSec": 120,
+    "speakSec": 210,
+    "goal": "Poser des questions pertinentes pour obtenir des informations précises. 2 minutes de préparation, puis 3 min 30 d'échange.",
+    "listTitle": "Points à couvrir avec vos questions",
+    "speakable": false,
+    "phrases": [
+      "Bonjour, je vous appelle au sujet de…",
+      "Je voudrais savoir si…",
+      "Pourriez-vous me dire combien coûte… ?",
+      "Est-ce qu'il faut apporter quelque chose ?",
+      "Une dernière question : …",
+      "Je vous remercie, c'est très clair."
+    ],
+    "tips": [
+      "C'est VOUS qui menez : l'examinateur attend vos questions. Le silence vous coûte des points, pas lui.",
+      "Pendant les 2 minutes de préparation, notez 6 à 8 questions par mots-clés — jamais des phrases entières que vous liriez.",
+      "Variez les formes interrogatives : « Est-ce que… ? », « Pourriez-vous… ? », « Quel est… ? ». Répéter la même structure plafonne votre note.",
+      "Regardez à qui vous parlez : un ami se tutoie, un employé ou un propriétaire se vouvoie. Le registre fait partie de la note."
+    ],
+    "checklist": [
+      {
+        "id": "c1",
+        "text": "J'ai posé au moins six questions différentes et pertinentes."
+      },
+      {
+        "id": "c2",
+        "text": "J'ai varié les formes interrogatives (inversion, est-ce que, mot interrogatif)."
+      },
+      {
+        "id": "c3",
+        "text": "J'ai réagi aux réponses au lieu de dérouler ma liste mécaniquement."
+      },
+      {
+        "id": "c4",
+        "text": "J'ai ouvert et clôturé l'échange poliment, avec le bon registre (tu ou vous)."
+      },
+      {
+        "id": "c5",
+        "text": "J'ai tenu les 3 min 30 sans blanc prolongé."
+      }
+    ],
+    "prompts": [
+      {
+        "id": "eo2",
+        "prompt": "Vous souhaitez vous inscrire à un cours de cuisine dans une association de votre\nquartier. Vous téléphonez pour obtenir toutes les informations nécessaires avant de vous\ndécider. L'examinateur joue le rôle de l'employé(e) : posez-lui vos questions.",
+        "questions": [
+          "Horaires et jours : quand les cours ont-ils lieu ?",
+          "Tarif, réductions, modalités de paiement",
+          "Niveau requis, matériel à apporter",
+          "Nombre de participants, durée, lieu exact",
+          "Inscription : date limite, annulation possible ?"
+        ]
+      },
+      {
+        "id": "eo2-b",
+        "prompt": "Vous cherchez un appartement à louer. L'examinateur joue le rôle du propriétaire d'un\nlogement qui vous intéresse. Posez-lui des questions pour savoir si cet appartement vous convient.",
+        "questions": [
+          "Surface, nombre de pièces, étage, ascenseur",
+          "Loyer, charges, dépôt de garantie",
+          "Quartier : transports, commerces, bruit",
+          "Meublé ou non, chauffage, état de la cuisine",
+          "Date de disponibilité, documents à fournir, visite"
+        ]
+      },
+      {
+        "id": "eo2-c",
+        "prompt": "Je suis un(e) ami(e) et je reviens d'un voyage de trois semaines au Québec. Vous\naimeriez y aller l'été prochain. Posez-moi des questions pour préparer votre voyage.\n(L'examinateur joue un ami : vous le tutoyez.)",
+        "questions": [
+          "Meilleure période, climat, durée idéale",
+          "Budget : avion, logement, repas",
+          "Villes et lieux à ne pas manquer",
+          "Se déplacer : voiture, train, bus",
+          "Ce qui l'a surpris, ce qu'il ou elle referait autrement"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "eo3",
+    "n": 3,
+    "title": "Tâche 3 — Exprimer un point de vue",
+    "prepSec": 0,
+    "speakSec": 270,
+    "goal": "Répondre à une question choisie par l'examinateur en défendant une opinion de façon structurée et convaincante. Sans préparation : 4 min 30.",
+    "listTitle": "Pistes pour construire votre réponse",
+    "speakable": false,
+    "phrases": [
+      "C'est une question qui se pose de plus en plus…",
+      "À première vue, on pourrait penser que…",
+      "On peut cependant objecter que…",
+      "Personnellement, je suis plutôt favorable à… dans la mesure où…",
+      "Pour conclure, il me semble que tout dépend de…"
+    ],
+    "tips": [
+      "Vous n'avez pas de temps de préparation : gagnez dix secondes en reformulant la question à voix haute, puis annoncez votre plan.",
+      "Structurez à voix haute : « D'abord… ensuite… enfin ». L'examinateur entend la structure autant que la langue.",
+      "Une opinion nuancée vaut mieux qu'une opinion tranchée mal défendue : « favorable, à condition que… » est une phrase de niveau B2.",
+      "4 min 30, c'est long : prévoyez deux arguments, un exemple vécu pour chacun, une objection et une vraie conclusion."
+    ],
+    "checklist": [
+      {
+        "id": "c1",
+        "text": "J'ai annoncé une structure et je m'y suis tenu(e) (d'abord / ensuite / enfin)."
+      },
+      {
+        "id": "c2",
+        "text": "J'ai donné au moins un argument POUR et un argument CONTRE."
+      },
+      {
+        "id": "c3",
+        "text": "J'ai illustré au moins un argument par un exemple concret."
+      },
+      {
+        "id": "c4",
+        "text": "J'ai conclu explicitement avant la fin du temps imparti."
+      },
+      {
+        "id": "c5",
+        "text": "Je me suis enregistré(e) et j'ai vérifié que je tenais environ 4 minutes sans préparation."
+      }
+    ],
+    "prompts": [
+      {
+        "id": "eo3",
+        "prompt": "Question de l'examinateur :\n« De plus en plus de villes limitent la vitesse à 30 km/h dans tout leur centre.\nSelon vous, est-ce une bonne mesure ? Pourquoi ? »",
+        "questions": [
+          "Reformuler la question en une phrase",
+          "Pour : sécurité des piétons et des cyclistes, bruit, pollution",
+          "Contre : trajets plus longs, livraisons, règle peu respectée",
+          "Votre position, nuancée et justifiée par un exemple"
+        ]
+      },
+      {
+        "id": "eo3-b",
+        "prompt": "Question de l'examinateur :\n« Pensez-vous que les réseaux sociaux rapprochent les gens ou qu'ils les isolent ? »",
+        "questions": [
+          "Ils rapprochent : famille à l'étranger, anciens amis, groupes d'entraide",
+          "Ils isolent : relations superficielles, comparaison permanente, temps perdu",
+          "Un exemple personnel, dans un sens ou dans l'autre",
+          "Votre position : tout dépend de l'usage — précisez lequel"
+        ]
+      },
+      {
+        "id": "eo3-c",
+        "prompt": "Question de l'examinateur :\n« À votre avis, vaut-il mieux vivre en ville ou à la campagne ? »",
+        "questions": [
+          "La ville : emploi, transports, culture, services médicaux",
+          "La campagne : calme, espace, coût du logement, nature",
+          "Ce qui change selon l'âge et la situation familiale",
+          "Votre choix personnel et la raison principale"
+        ]
+      },
+      {
+        "id": "eo3-d",
+        "prompt": "Question de l'examinateur :\n« Est-il indispensable, aujourd'hui, de parler plusieurs langues ? »",
+        "questions": [
+          "Oui : travail, voyages, compréhension des autres cultures",
+          "Objection : les outils de traduction automatique",
+          "Votre propre expérience d'apprentissage du français",
+          "Conclusion : ce qu'une langue apporte et qu'une machine ne donne pas"
+        ]
+      }
+    ]
+  }
+]

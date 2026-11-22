@@ -1,0 +1,511 @@
+[
+  {
+    "type": "listen",
+    "id": "co-1",
+    "level": "A1",
+    "audio": "Mesdames et messieurs, le train à destination de Lyon partira à quatorze heures trente-cinq, voie B.",
+    "q": "À quelle heure part le train ?",
+    "options": [
+      "14 h 15",
+      "14 h 35",
+      "4 h 35",
+      "14 h 45"
+    ],
+    "a": 1,
+    "why": "L'annonce précise « quatorze heures trente-cinq », soit 14 h 35. Les nombres sont l'information la plus fréquemment demandée en compréhension orale.",
+    "transcript": "Mesdames et messieurs, le train à destination de Lyon partira à quatorze heures trente-cinq, voie B.",
+    "from": "lesson",
+    "lesson": "co/l1"
+  },
+  {
+    "type": "listen",
+    "id": "co-2",
+    "level": "A2",
+    "audio": "Bonjour, vous êtes bien au cabinet du docteur Meunier. Nous sommes fermés le samedi. Pour une urgence, composez le quinze.",
+    "q": "Que doit faire une personne en cas d'urgence ?",
+    "options": [
+      "Rappeler le samedi matin",
+      "Se rendre directement au cabinet",
+      "Appeler le 15",
+      "Laisser un message après le signal"
+    ],
+    "a": 2,
+    "why": "Le répondeur indique clairement : « Pour une urgence, composez le quinze. » Le samedi est mentionné pour dire que le cabinet est FERMÉ : c'est un distracteur.",
+    "transcript": "Bonjour, vous êtes bien au cabinet du docteur Meunier. Nous sommes fermés le samedi. Pour une urgence, composez le quinze.",
+    "from": "lesson",
+    "lesson": "co/l1"
+  },
+  {
+    "type": "listen",
+    "id": "co-3",
+    "level": "B1",
+    "audio": "Je ne prends plus le métro depuis que j'ai déménagé. Maintenant, je vais au bureau à vélo, c'est plus rapide.",
+    "q": "Comment cette personne se rend-elle au travail aujourd'hui ?",
+    "options": [
+      "En métro",
+      "À vélo",
+      "En voiture",
+      "À pied"
+    ],
+    "a": 1,
+    "why": "« Je ne prends PLUS le métro » signale un changement : c'était le cas avant, ce ne l'est plus. La personne va désormais au bureau à vélo.",
+    "gloss": "ne… plus = not any more — the key word in the whole item.",
+    "transcript": "Je ne prends plus le métro depuis que j'ai déménagé. Maintenant, je vais au bureau à vélo, c'est plus rapide.",
+    "from": "lesson",
+    "lesson": "co/l1"
+  },
+  {
+    "type": "listen",
+    "id": "co-4",
+    "level": "B1",
+    "audio": "Tu viens à la soirée samedi ? — Écoute, j'aimerais bien, mais j'ai un rapport à finir pour lundi matin.",
+    "q": "Que veut dire la deuxième personne ?",
+    "options": [
+      "Elle viendra à la soirée",
+      "Elle refuse poliment de venir",
+      "Elle propose de reporter la soirée à lundi",
+      "Elle demande de l'aide pour son rapport"
+    ],
+    "a": 1,
+    "why": "« J'aimerais bien, mais… » est la formule type du refus poli en français. Le conditionnel exprime le regret, et « mais » introduit l'obstacle réel.",
+    "transcript": "— Tu viens à la soirée samedi ? — Écoute, j'aimerais bien, mais j'ai un rapport à finir pour lundi matin.",
+    "from": "lesson",
+    "lesson": "co/l2"
+  },
+  {
+    "type": "listen",
+    "id": "co-5",
+    "level": "B2",
+    "audio": "Alors, ce nouveau restaurant ? — Ce n'est pas que la cuisine soit mauvaise, mais pour ce prix-là, franchement, j'attendais autre chose.",
+    "q": "Quel est l'avis de la personne sur le restaurant ?",
+    "options": [
+      "Elle a trouvé la cuisine excellente",
+      "Elle est déçue par le rapport qualité-prix",
+      "Elle trouve le restaurant trop bon marché",
+      "Elle n'a pas d'opinion"
+    ],
+    "a": 1,
+    "why": "« Ce n'est pas que… mais… » atténue la critique sans l'annuler. L'ajout « pour ce prix-là » et « j'attendais autre chose » exprime clairement une déception sur le rapport qualité-prix.",
+    "transcript": "— Alors, ce nouveau restaurant ? — Ce n'est pas que la cuisine soit mauvaise, mais pour ce prix-là, franchement, j'attendais autre chose.",
+    "from": "lesson",
+    "lesson": "co/l2"
+  },
+  {
+    "type": "listen",
+    "id": "co-6",
+    "level": "B2",
+    "audio": "Le colis devait arriver mardi et nous sommes vendredi. Vous auriez quand même pu me prévenir du retard !",
+    "q": "Quelle est l'intention de la personne qui parle ?",
+    "options": [
+      "Elle s'excuse d'un retard",
+      "Elle exprime un reproche",
+      "Elle demande un remboursement",
+      "Elle félicite le service de livraison"
+    ],
+    "a": 1,
+    "why": "« Vous auriez pu… » au conditionnel passé exprime le reproche : la personne signale que l'on n'a pas fait ce qu'il fallait. « Quand même » renforce l'agacement.",
+    "transcript": "Le colis devait arriver mardi et nous sommes vendredi. Vous auriez quand même pu me prévenir du retard !",
+    "from": "lesson",
+    "lesson": "co/l2"
+  },
+  {
+    "type": "listen",
+    "id": "x-co-01",
+    "level": "A1",
+    "audio": "Bonjour, je voudrais un café et un croissant, s'il vous plaît.",
+    "q": "Où se passe cette scène ?",
+    "options": [
+      "Dans un café",
+      "Dans une pharmacie",
+      "Dans une gare",
+      "Dans une banque"
+    ],
+    "a": 0,
+    "why": "La personne commande « un café et un croissant » : on est dans un café ou une boulangerie.",
+    "from": "bank"
+  },
+  {
+    "type": "listen",
+    "id": "x-co-02",
+    "level": "A1",
+    "audio": "Salut, c'est Marie. On se retrouve demain à dix-huit heures devant le cinéma ?",
+    "q": "Quand Marie propose-t-elle le rendez-vous ?",
+    "options": [
+      "Ce soir à 18 h",
+      "Demain à 18 h",
+      "Demain à 8 h",
+      "Samedi à 18 h"
+    ],
+    "a": 1,
+    "why": "Marie dit « demain à dix-huit heures ». Dix-huit heures, c'est 18 h, et non 8 h.",
+    "from": "bank"
+  },
+  {
+    "type": "listen",
+    "id": "x-co-03",
+    "level": "A1",
+    "audio": "Ma sœur s'appelle Julie. Elle a vingt-deux ans et elle habite à Marseille.",
+    "q": "Quel âge a Julie ?",
+    "options": [
+      "12 ans",
+      "20 ans",
+      "22 ans",
+      "32 ans"
+    ],
+    "a": 2,
+    "why": "On entend « vingt-deux ans », soit 22.",
+    "from": "bank"
+  },
+  {
+    "type": "listen",
+    "id": "x-co-04",
+    "level": "A1",
+    "audio": "Il fait très froid aujourd'hui. Prends ton manteau et ton écharpe avant de sortir.",
+    "q": "Que conseille la personne ?",
+    "options": [
+      "De rester à la maison",
+      "De s'habiller chaudement",
+      "De prendre un parapluie",
+      "De sortir plus tard"
+    ],
+    "a": 1,
+    "why": "« Prends ton manteau et ton écharpe » : il s'agit de s'habiller chaudement parce qu'il fait froid. Il n'est pas question de pluie.",
+    "from": "bank"
+  },
+  {
+    "type": "listen",
+    "id": "x-co-05",
+    "level": "A2",
+    "audio": "Chers clients, votre magasin fermera ses portes dans quinze minutes. Nous vous invitons à vous diriger vers les caisses. Nous vous souhaitons une bonne soirée.",
+    "q": "Que doivent faire les clients ?",
+    "options": [
+      "Quitter le magasin immédiatement",
+      "Aller payer leurs achats",
+      "Revenir dans quinze minutes",
+      "Attendre l'ouverture des caisses"
+    ],
+    "a": 1,
+    "why": "« Nous vous invitons à vous diriger vers les caisses » : il faut aller payer, car le magasin ferme dans quinze minutes.",
+    "from": "bank"
+  },
+  {
+    "type": "listen",
+    "id": "x-co-06",
+    "level": "A2",
+    "audio": "— Excusez-moi, la poste, s'il vous plaît ? — C'est tout près. Vous continuez tout droit, puis vous prenez la deuxième rue à gauche. La poste est en face de la boulangerie.",
+    "q": "Où se trouve la poste ?",
+    "options": [
+      "À côté de la boulangerie",
+      "En face de la boulangerie",
+      "Dans la première rue à gauche",
+      "Derrière la gare"
+    ],
+    "a": 1,
+    "why": "La personne précise : « La poste est en face de la boulangerie », dans la deuxième rue à gauche.",
+    "from": "bank"
+  },
+  {
+    "type": "listen",
+    "id": "x-co-07",
+    "level": "A2",
+    "audio": "Bonjour, c'est le garage Martin. Votre voiture est prête. Vous pouvez venir la chercher aujourd'hui jusqu'à dix-neuf heures, ou demain matin à partir de huit heures.",
+    "q": "Pourquoi le garage appelle-t-il ?",
+    "options": [
+      "Pour annoncer que la réparation est terminée",
+      "Pour demander un paiement",
+      "Pour proposer un rendez-vous de réparation",
+      "Pour annoncer un retard"
+    ],
+    "a": 0,
+    "why": "« Votre voiture est prête » : la réparation est terminée, le client peut venir la chercher.",
+    "from": "bank"
+  },
+  {
+    "type": "listen",
+    "id": "x-co-08",
+    "level": "A2",
+    "audio": "— Tu as passé de bonnes vacances ? — Oui, super. On est allés en Bretagne. Il a plu presque tous les jours, mais on a mangé des crêpes et on s'est bien reposés.",
+    "q": "Quel temps a-t-il fait pendant les vacances ?",
+    "options": [
+      "Il a fait très chaud",
+      "Il a souvent plu",
+      "Il a neigé",
+      "Il a fait beau tous les jours"
+    ],
+    "a": 1,
+    "why": "« Il a plu presque tous les jours » : le temps était pluvieux, ce qui n'a pas empêché de bonnes vacances.",
+    "from": "bank"
+  },
+  {
+    "type": "listen",
+    "id": "x-co-09",
+    "level": "B1",
+    "audio": "— Allô, bonjour, je voudrais déplacer mon rendez-vous de jeudi. — Bien sûr. Le docteur n'a plus de place cette semaine. Je peux vous proposer lundi prochain à neuf heures ou mercredi à seize heures trente. — Lundi, je travaille. Mercredi, ça ira.",
+    "q": "Quand le patient verra-t-il le médecin ?",
+    "options": [
+      "Jeudi",
+      "Lundi à 9 h",
+      "Mercredi à 16 h 30",
+      "Cette semaine"
+    ],
+    "a": 2,
+    "why": "Le patient refuse lundi (« je travaille ») et accepte mercredi : « Mercredi, ça ira », soit mercredi à seize heures trente.",
+    "from": "bank"
+  },
+  {
+    "type": "listen",
+    "id": "x-co-10",
+    "level": "B1",
+    "audio": "Flash info trafic. En raison d'un accident sur l'autoroute A six, la circulation est interrompue en direction de Paris. Les automobilistes sont invités à sortir à Mâcon et à suivre la déviation. Un retour à la normale est prévu en fin d'après-midi.",
+    "q": "Que recommande-t-on aux automobilistes ?",
+    "options": [
+      "D'attendre sur l'autoroute",
+      "De quitter l'autoroute et de suivre un autre itinéraire",
+      "De reporter leur voyage au lendemain",
+      "De rouler plus lentement"
+    ],
+    "a": 1,
+    "why": "Les automobilistes « sont invités à sortir à Mâcon et à suivre la déviation » : ils doivent quitter l'autoroute et prendre un autre itinéraire.",
+    "from": "bank"
+  },
+  {
+    "type": "listen",
+    "id": "x-co-11",
+    "level": "B1",
+    "audio": "Moi, j'ai arrêté de prendre la voiture pour aller travailler. Avec le prix de l'essence et les embouteillages, ça ne valait plus la peine. Le train me coûte moins cher, et en plus je peux lire pendant le trajet.",
+    "q": "Pourquoi cette personne a-t-elle changé de moyen de transport ?",
+    "options": [
+      "Sa voiture est en panne",
+      "Le train est plus économique et plus agréable",
+      "Elle a déménagé près de son travail",
+      "Son employeur le lui a demandé"
+    ],
+    "a": 1,
+    "why": "Elle cite le prix de l'essence et les embouteillages, puis les avantages du train : « moins cher » et la possibilité de lire.",
+    "from": "bank"
+  },
+  {
+    "type": "listen",
+    "id": "x-co-12",
+    "level": "B1",
+    "audio": "— Alors, tu viens avec nous au concert vendredi ? — J'hésite. Les places sont chères, et je dois me lever tôt samedi. — Allez, ça fait des mois qu'on n'est pas sortis ensemble ! — Bon, d'accord, mais je ne rentre pas tard.",
+    "q": "Que décide finalement la deuxième personne ?",
+    "options": [
+      "Elle refuse de venir",
+      "Elle accepte, à une condition",
+      "Elle propose une autre date",
+      "Elle n'a pas encore décidé"
+    ],
+    "a": 1,
+    "why": "Après avoir hésité, elle dit « Bon, d'accord, mais je ne rentre pas tard » : elle accepte, à condition de ne pas rentrer tard.",
+    "from": "bank"
+  },
+  {
+    "type": "listen",
+    "id": "x-co-13",
+    "level": "B1",
+    "audio": "Votre attention, s'il vous plaît. Le vol à destination de Montréal, initialement prévu à dix heures quarante, est retardé d'une heure en raison des conditions météorologiques. L'embarquement se fera porte vingt-trois et non porte douze.",
+    "q": "Qu'est-ce qui a changé pour ce vol ?",
+    "options": [
+      "Seulement l'heure de départ",
+      "Seulement la porte d'embarquement",
+      "L'heure de départ et la porte d'embarquement",
+      "La destination"
+    ],
+    "a": 2,
+    "why": "Deux changements sont annoncés : le vol est « retardé d'une heure » et l'embarquement se fait « porte vingt-trois et non porte douze ».",
+    "from": "bank"
+  },
+  {
+    "type": "listen",
+    "id": "x-co-14",
+    "level": "B2",
+    "audio": "On nous répète que les jeunes ne lisent plus. C'est faux. Ils lisent autrement : des articles en ligne, des bandes dessinées, des romans sur leur téléphone. Ce qui recule, ce n'est pas la lecture, c'est le temps long qu'on lui consacrait autrefois.",
+    "q": "Quelle est l'idée principale de la personne ?",
+    "options": [
+      "Les jeunes ne lisent plus du tout",
+      "Les jeunes lisent toujours, mais d'une autre manière",
+      "Les écrans ont remplacé les livres à l'école",
+      "Il faut interdire les téléphones aux jeunes"
+    ],
+    "a": 1,
+    "why": "La personne conteste l'idée reçue (« C'est faux ») et précise : « Ils lisent autrement ». Ce qui diminue, c'est le temps long de lecture, pas la lecture elle-même.",
+    "from": "bank"
+  },
+  {
+    "type": "listen",
+    "id": "x-co-15",
+    "level": "B2",
+    "audio": "— Tu as vu le nouveau planning ? On passe tous au travail le samedi matin. — Oui, enfin, c'est provisoire, d'après la direction. — Provisoire, provisoire… La dernière fois, le provisoire a duré deux ans.",
+    "q": "Quelle est l'attitude de la première personne face à l'annonce de la direction ?",
+    "options": [
+      "Elle est rassurée",
+      "Elle est sceptique",
+      "Elle est enthousiaste",
+      "Elle est indifférente"
+    ],
+    "a": 1,
+    "why": "En répétant « provisoire, provisoire… » puis en rappelant que la dernière fois cela avait duré deux ans, elle montre qu'elle ne croit pas la direction.",
+    "from": "bank"
+  },
+  {
+    "type": "listen",
+    "id": "x-co-16",
+    "level": "B2",
+    "audio": "Le maire a annoncé hier la piétonnisation du centre-ville à partir du mois de juin. Si les associations de riverains s'en réjouissent, les commerçants, eux, redoutent une baisse de leur chiffre d'affaires et réclament des parkings supplémentaires en périphérie.",
+    "q": "Comment les commerçants réagissent-ils au projet ?",
+    "options": [
+      "Ils le soutiennent sans réserve",
+      "Ils s'inquiètent de ses conséquences économiques",
+      "Ils demandent qu'il soit avancé",
+      "Ils n'ont pas donné leur avis"
+    ],
+    "a": 1,
+    "why": "Les commerçants « redoutent une baisse de leur chiffre d'affaires » : ils craignent les conséquences économiques. Ce sont les riverains qui se réjouissent.",
+    "from": "bank"
+  },
+  {
+    "type": "listen",
+    "id": "x-co-17",
+    "level": "B2",
+    "audio": "— Je vous rappelle au sujet de ma commande. On m'avait promis une livraison sous quarante-huit heures, et cela fait dix jours. — Je comprends, madame. Votre colis a été bloqué à l'entrepôt. Je vous propose soit un remboursement, soit une nouvelle expédition gratuite en express. — Envoyez-le en express, mais c'est la dernière fois que je commande chez vous.",
+    "q": "Que choisit la cliente ?",
+    "options": [
+      "Le remboursement de sa commande",
+      "Un nouvel envoi rapide",
+      "L'annulation sans remboursement",
+      "Un bon d'achat"
+    ],
+    "a": 1,
+    "why": "Entre le remboursement et la nouvelle expédition, la cliente répond : « Envoyez-le en express ». Elle ajoute seulement qu'elle ne commandera plus.",
+    "from": "bank"
+  },
+  {
+    "type": "listen",
+    "id": "x-co-18",
+    "level": "B2",
+    "audio": "Contrairement à ce qu'on pourrait croire, travailler plus longtemps ne signifie pas produire davantage. Plusieurs entreprises qui ont testé la semaine de quatre jours constatent que la productivité se maintient, tandis que les arrêts maladie diminuent nettement.",
+    "q": "Que montrent les expériences évoquées ?",
+    "options": [
+      "La semaine de quatre jours fait baisser la production",
+      "On peut réduire le temps de travail sans perdre en efficacité",
+      "Les salariés refusent de travailler quatre jours",
+      "Les arrêts maladie augmentent"
+    ],
+    "a": 1,
+    "why": "Avec la semaine de quatre jours, « la productivité se maintient » et les arrêts maladie « diminuent » : moins de temps de travail, sans perte d'efficacité.",
+    "from": "bank"
+  },
+  {
+    "type": "listen",
+    "id": "x-co-19",
+    "level": "C1",
+    "audio": "On présente souvent le télétravail comme une conquête sociale. Je n'en suis pas si sûr. À y regarder de près, il a surtout permis aux entreprises de réduire leurs surfaces de bureaux, en reportant sur les salariés le coût du chauffage, de l'équipement et, disons-le, de l'isolement.",
+    "q": "Que sous-entend l'intervenant ?",
+    "options": [
+      "Le télétravail profite avant tout aux employeurs",
+      "Le télétravail devrait devenir obligatoire",
+      "Les salariés ont obtenu le télétravail par la grève",
+      "Les bureaux coûtent de moins en moins cher"
+    ],
+    "a": 0,
+    "why": "L'intervenant doute que ce soit une « conquête sociale » : selon lui, le télétravail a « surtout permis aux entreprises » de faire des économies, les coûts étant reportés sur les salariés.",
+    "from": "bank"
+  },
+  {
+    "type": "listen",
+    "id": "x-co-20",
+    "level": "C1",
+    "audio": "— Votre dernier roman a été très bien accueilli par la critique. — Oui, enfin, la critique… Disons qu'elle m'a découvert au sixième livre. Les cinq premiers, apparemment, elle ne les avait pas lus.",
+    "q": "Quel est le ton de l'écrivain ?",
+    "options": [
+      "Reconnaissant",
+      "Ironique",
+      "Inquiet",
+      "Admiratif"
+    ],
+    "a": 1,
+    "why": "L'écrivain se moque de la critique, qui l'aurait « découvert au sixième livre » : la remarque est ironique, il lui reproche de l'avoir longtemps ignoré.",
+    "from": "bank"
+  },
+  {
+    "type": "listen",
+    "id": "x-co-21",
+    "level": "C1",
+    "audio": "La gratuité des musées, tout le monde y est favorable sur le principe. Or les études sont formelles : elle profite d'abord à ceux qui y allaient déjà. Si l'on veut vraiment élargir le public, c'est dans les écoles et les quartiers qu'il faut investir, pas dans le prix du billet.",
+    "q": "Quelle est la position de la personne ?",
+    "options": [
+      "La gratuité suffit à attirer de nouveaux visiteurs",
+      "La gratuité n'atteint pas son objectif ; il faut agir autrement",
+      "Les musées devraient augmenter leurs tarifs",
+      "Les écoles n'ont pas à s'occuper de culture"
+    ],
+    "a": 1,
+    "why": "« Or » introduit l'objection : la gratuité profite à ceux qui venaient déjà. Pour élargir le public, il faut investir ailleurs, « pas dans le prix du billet ».",
+    "from": "bank"
+  },
+  {
+    "type": "listen",
+    "id": "x-co-22",
+    "level": "C1",
+    "audio": "— Il paraît que la réunion de ce matin s'est bien passée ? — Bien passée, si l'on veut. Personne n'a claqué la porte, c'est déjà ça. Quant à savoir si quelque chose a été décidé, c'est une autre histoire.",
+    "q": "Que faut-il comprendre de cette réunion ?",
+    "options": [
+      "Elle a abouti à des décisions importantes",
+      "Elle s'est déroulée sans conflit ouvert, mais sans résultat",
+      "Elle a été annulée",
+      "Elle s'est terminée par une dispute"
+    ],
+    "a": 1,
+    "why": "« Personne n'a claqué la porte » : pas de conflit ouvert. Mais « quant à savoir si quelque chose a été décidé, c'est une autre histoire » : rien n'a vraiment été décidé.",
+    "from": "bank"
+  },
+  {
+    "type": "listen",
+    "id": "x-co-23",
+    "level": "C2",
+    "audio": "Que la croissance verte soit possible, je veux bien l'admettre, encore faudrait-il s'entendre sur ce qu'on met derrière les mots. Car enfin, à force de repeindre en vert les mêmes recettes, on finit par croire qu'on a changé de modèle, alors qu'on n'a guère changé que de vocabulaire.",
+    "q": "Que reproche l'intervenant au discours sur la croissance verte ?",
+    "options": [
+      "D'être trop pessimiste sur l'avenir",
+      "De masquer l'absence de changement réel derrière de nouveaux mots",
+      "De proposer des réformes trop rapides",
+      "De nier toute possibilité de croissance"
+    ],
+    "a": 1,
+    "why": "L'intervenant concède que la croissance verte est possible, mais dénonce un changement purement verbal : on n'a « guère changé que de vocabulaire ».",
+    "from": "bank"
+  },
+  {
+    "type": "listen",
+    "id": "x-co-24",
+    "level": "C2",
+    "audio": "Loin de moi l'idée de minimiser le travail accompli par mon prédécesseur. Simplement, on ne m'en voudra pas de constater que les comptes qu'il m'a laissés ne ressemblent que de très loin à ceux qu'il avait présentés au conseil.",
+    "q": "Que laisse entendre la personne qui parle ?",
+    "options": [
+      "Son prédécesseur a remarquablement géré les finances",
+      "Les comptes présentés par son prédécesseur n'étaient pas fidèles à la réalité",
+      "Elle refuse de reprendre le poste",
+      "Le conseil a approuvé les comptes sans les lire"
+    ],
+    "a": 1,
+    "why": "Sous une formule de politesse (« loin de moi l'idée de minimiser… »), la personne affirme que les comptes réels diffèrent fortement de ceux présentés : c'est une critique à peine voilée.",
+    "from": "bank"
+  },
+  {
+    "type": "listen",
+    "id": "x-co-25",
+    "level": "C2",
+    "audio": "On aurait tort de voir dans cette réforme une simple mesure technique. Sous couvert d'harmonisation, elle déplace discrètement le pouvoir de décision des communes vers la région, et ce sans que le moindre débat public ait eu lieu.",
+    "q": "Selon la personne, quel est l'effet réel de la réforme ?",
+    "options": [
+      "Elle simplifie les démarches des habitants",
+      "Elle retire du pouvoir aux communes sans le dire ouvertement",
+      "Elle renforce l'autonomie des communes",
+      "Elle a été longuement débattue en public"
+    ],
+    "a": 1,
+    "why": "« Sous couvert d'harmonisation », la réforme « déplace discrètement le pouvoir de décision des communes vers la région » : un transfert de pouvoir non assumé, et sans débat.",
+    "from": "bank"
+  }
+]

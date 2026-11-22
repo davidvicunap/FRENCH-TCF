@@ -1,0 +1,101 @@
+{
+  "tp": {
+    "name": "TCF Tout Public",
+    "use": "Études, travail, démarche personnelle.",
+    "real": [
+      [
+        "co",
+        29,
+        25
+      ],
+      [
+        "msl",
+        18,
+        15
+      ],
+      [
+        "ce",
+        29,
+        45
+      ]
+    ],
+    "format": "écoute 29 questions / 25 min, structures 18 / 15 min, lecture 29 / 45 min ; expression écrite et orale en option."
+  },
+  "canada": {
+    "name": "TCF Canada",
+    "use": "Immigration au Canada (IRCC), citoyenneté.",
+    "real": [
+      [
+        "co",
+        39,
+        35
+      ],
+      [
+        "ce",
+        39,
+        60
+      ]
+    ],
+    "format": "écoute 39 questions / 35 min, lecture 39 / 60 min, expression écrite (3 tâches, 60 min) et orale (3 tâches, 12 min) — les quatre épreuves sont obligatoires.",
+    "note": "Pas d'épreuve de structures de la langue : la grammaire se joue dans l'écrit et l'oral."
+  },
+  "quebec": {
+    "name": "TCF Québec",
+    "use": "Programmes d'immigration du Québec.",
+    "real": [
+      [
+        "co",
+        39,
+        35
+      ],
+      [
+        "ce",
+        39,
+        60
+      ]
+    ],
+    "format": "écoute 39 questions / 35 min, lecture 39 / 60 min, expression écrite et orale — épreuves au choix selon votre programme.",
+    "note": "Une adaptation du test au contexte québécois est en cours : vérifiez le format en vigueur."
+  },
+  "irn": {
+    "name": "TCF IRN",
+    "use": "Intégration, carte de résident, nationalité française.",
+    "real": [
+      [
+        "co",
+        25,
+        20
+      ],
+      [
+        "ce",
+        25,
+        35
+      ]
+    ],
+    "maxLevel": "B2",
+    "format": "écoute 25 questions / 20 min, lecture 25 / 35 min, expression écrite (3 tâches, 30 min) et orale (3 tâches, 10 min) — tout est obligatoire.",
+    "note": "Les épreuves de compréhension ne dépassent pas le niveau B2 ; les tâches d'expression sont plus courtes que celles proposées ici."
+  },
+  "dap": {
+    "name": "TCF DAP",
+    "use": "Demande d'admission préalable en première année d'université en France.",
+    "real": [
+      [
+        "co",
+        29,
+        25
+      ],
+      [
+        "msl",
+        18,
+        15
+      ],
+      [
+        "ce",
+        29,
+        45
+      ]
+    ],
+    "format": "les trois épreuves du Tout Public (76 questions, 1 h 25) + expression écrite obligatoire (3 tâches, 60 min)."
+  }
+}

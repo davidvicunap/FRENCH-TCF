@@ -1,0 +1,1550 @@
+[
+  {
+    "type": "mcq",
+    "id": "in-1",
+    "level": "A2",
+    "q": "Combien de questions comporte l'épreuve de compréhension orale ?",
+    "options": [
+      "18 questions",
+      "29 questions",
+      "39 questions",
+      "76 questions"
+    ],
+    "a": 1,
+    "why": "La compréhension orale compte 29 questions en 25 minutes. 18 questions correspondent à la maîtrise des structures de la langue, et 76 est le total des trois épreuves obligatoires.",
+    "from": "lesson",
+    "lesson": "intro/l1",
+    "section": "intro"
+  },
+  {
+    "type": "mcq",
+    "id": "in-2",
+    "level": "A2",
+    "q": "Quelle est la durée de validité de l'attestation TCF ?",
+    "options": [
+      "6 mois",
+      "1 an",
+      "2 ans",
+      "5 ans"
+    ],
+    "a": 2,
+    "why": "L'attestation est valable deux ans. Il faut donc choisir la date de l'examen en fonction du calendrier de votre dossier.",
+    "from": "lesson",
+    "lesson": "intro/l1",
+    "section": "intro"
+  },
+  {
+    "type": "mcq",
+    "id": "in-3",
+    "level": "B1",
+    "q": "Que signifie « le TCF est un test de positionnement » ?",
+    "options": [
+      "Il faut obtenir au moins 50 % de bonnes réponses pour réussir",
+      "Le test situe votre niveau de A1 à C2, sans note éliminatoire",
+      "On ne peut le passer qu'une seule fois dans sa vie",
+      "Seules les épreuves obligatoires sont notées"
+    ],
+    "a": 1,
+    "why": "Le TCF ne comporte ni réussite ni échec : il situe le candidat sur l'échelle du CECRL (A1 à C2). C'est l'organisme qui vous demande le test qui fixe le niveau exigé.",
+    "gloss": "There is no pass mark in the test itself — only the level you land on.",
+    "from": "lesson",
+    "lesson": "intro/l1",
+    "section": "intro"
+  },
+  {
+    "type": "mcq",
+    "id": "sc-1",
+    "level": "A2",
+    "q": "Un candidat obtient 430 points en compréhension écrite. Quel est son niveau ?",
+    "options": [
+      "A2",
+      "B1",
+      "B2",
+      "C1"
+    ],
+    "a": 2,
+    "why": "La tranche 400–499 correspond au niveau B2. B1 va de 300 à 399 et C1 commence à 500.",
+    "from": "lesson",
+    "lesson": "intro/l2",
+    "section": "intro"
+  },
+  {
+    "type": "mcq",
+    "id": "sc-2",
+    "level": "B1",
+    "q": "Il vous reste 40 secondes et deux questions sans réponse. Que faire ?",
+    "options": [
+      "Laisser les deux questions vides pour éviter les erreurs",
+      "Répondre aux deux, même en devinant",
+      "Répondre soigneusement à une seule et laisser l'autre vide",
+      "Cocher systématiquement la réponse B"
+    ],
+    "a": 1,
+    "why": "Une mauvaise réponse ne fait perdre aucun point : elle vaut autant qu'une case vide. Il faut donc toujours répondre à toutes les questions.",
+    "gloss": "Wrong answers cost nothing, so a blank is a wasted 25% chance.",
+    "from": "lesson",
+    "lesson": "intro/l2",
+    "section": "intro"
+  },
+  {
+    "type": "mcq",
+    "id": "sc-3",
+    "level": "B2",
+    "q": "Un candidat obtient 10 sur 20 en expression écrite. Que signifie cette note ?",
+    "options": [
+      "Il a tout juste la moyenne : son niveau est insuffisant",
+      "Il se situe au niveau B2",
+      "Il se situe au niveau A2",
+      "Il doit repasser l'épreuve"
+    ],
+    "a": 1,
+    "why": "Les épreuves d'expression sont notées sur 20, puis converties en niveau : 6 à 9 correspond au B1, 10 à 13 au B2, 14 à 17 au C1. Un 10 n'est donc pas « la moyenne », c'est le début du B2.",
+    "from": "lesson",
+    "lesson": "intro/l2",
+    "section": "intro"
+  },
+  {
+    "type": "mcq",
+    "id": "tm-1",
+    "level": "B1",
+    "q": "En compréhension écrite, vous bloquez depuis presque deux minutes sur une question. Que faire ?",
+    "options": [
+      "Continuer jusqu'à trouver : abandonner serait perdre le travail déjà fait",
+      "Cocher la meilleure hypothèse, la repérer, et passer à la suite",
+      "Sauter les trois questions suivantes pour rattraper le retard",
+      "Relire le texte entier depuis le début"
+    ],
+    "a": 1,
+    "why": "Le temps perdu sur une question difficile est pris sur des questions plus faciles qui restent à lire. On coche une hypothèse raisonnable et on avance, quitte à revenir s'il reste du temps.",
+    "gloss": "Sunk cost is not a reason to keep spending.",
+    "from": "lesson",
+    "lesson": "intro/l3",
+    "section": "intro"
+  },
+  {
+    "type": "mcq",
+    "id": "tm-2",
+    "level": "B1",
+    "q": "Pendant la compréhension orale, vous ratez une question. Quel est le vrai danger ?",
+    "options": [
+      "Perdre confiance et rater aussi la question suivante",
+      "Devoir recommencer l'épreuve depuis le début",
+      "Être pénalisé de deux points",
+      "Ne plus pouvoir modifier vos réponses précédentes"
+    ],
+    "a": 0,
+    "why": "L'audio continue sans vous attendre. Rester bloqué sur la question ratée fait manquer l'enregistrement suivant : une erreur en entraîne alors plusieurs.",
+    "from": "lesson",
+    "lesson": "intro/l3",
+    "section": "intro"
+  },
+  {
+    "type": "mcq",
+    "id": "pres-1",
+    "level": "A1",
+    "q": "Mon frère ___ médecin à Toulouse.",
+    "options": [
+      "es",
+      "est",
+      "a",
+      "sont"
+    ],
+    "a": 1,
+    "why": "Verbe « être » avec « il / mon frère » : il est. Pour une profession, pas d'article : il est médecin.",
+    "gloss": "il est médecin — no article before a profession.",
+    "from": "lesson",
+    "lesson": "bases/l1",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "pres-2",
+    "level": "A1",
+    "q": "J'___ très faim, on mange ?",
+    "options": [
+      "suis",
+      "ai",
+      "es",
+      "fais"
+    ],
+    "a": 1,
+    "why": "On dit « avoir faim » : j'ai faim.",
+    "gloss": "French says « to have hunger », never « je suis faim ».",
+    "from": "lesson",
+    "lesson": "bases/l1",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "pres-3",
+    "level": "A1",
+    "q": "Les enfants ___ à l'école à pied.",
+    "options": [
+      "va",
+      "allons",
+      "vont",
+      "allez"
+    ],
+    "a": 2,
+    "why": "Verbe « aller » avec « ils / les enfants » : ils vont.",
+    "gloss": "ils vont — third person plural of aller.",
+    "from": "lesson",
+    "lesson": "bases/l1",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "pres-4",
+    "level": "A2",
+    "q": "Vous ___ quoi ce week-end ?",
+    "options": [
+      "faisez",
+      "faites",
+      "faisons",
+      "font"
+    ],
+    "a": 1,
+    "why": "« Faire » est irrégulier : vous faites (et non « faisez »).",
+    "gloss": "vous faites, vous êtes, vous dites: the three « -tes » forms.",
+    "from": "lesson",
+    "lesson": "bases/l1",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "pres-5",
+    "level": "A2",
+    "q": "Ils ne ___ pas venir ce soir : ils travaillent.",
+    "options": [
+      "peut",
+      "pouvons",
+      "peuvent",
+      "pouvez"
+    ],
+    "a": 2,
+    "why": "« Pouvoir » avec « ils » : ils peuvent.",
+    "gloss": "je peux, il peut, ils peuvent — but nous pouvons, vous pouvez.",
+    "from": "lesson",
+    "lesson": "bases/l1",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "pres-6",
+    "level": "A2",
+    "q": "Ce soir, on ___ le dernier train.",
+    "options": [
+      "prenons",
+      "prend",
+      "prennent",
+      "prends"
+    ],
+    "a": 1,
+    "why": "« On » se conjugue comme « il » : on prend.",
+    "gloss": "on = we, but with the il/elle verb form.",
+    "from": "lesson",
+    "lesson": "bases/l1",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "art-1",
+    "level": "A1",
+    "q": "Le matin, je bois ___ thé.",
+    "options": [
+      "le",
+      "du",
+      "de",
+      "un peu"
+    ],
+    "a": 1,
+    "why": "Une quantité indéterminée d'un produit : article partitif « du » (masculin).",
+    "gloss": "du = some: an unspecified amount.",
+    "from": "lesson",
+    "lesson": "bases/l2",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "art-2",
+    "level": "A1",
+    "q": "Elle adore ___ chocolat.",
+    "options": [
+      "du",
+      "le",
+      "un",
+      "de"
+    ],
+    "a": 1,
+    "why": "Après « aimer, adorer, détester, préférer », on parle de la chose en général : article défini « le ».",
+    "gloss": "liking verbs take le / la / les.",
+    "from": "lesson",
+    "lesson": "bases/l2",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "art-3",
+    "level": "A2",
+    "q": "Nous n'avons pas ___ voiture.",
+    "options": [
+      "une",
+      "la",
+      "de",
+      "des"
+    ],
+    "a": 2,
+    "why": "Après une négation, « un / une / des » deviennent « de » : nous n'avons pas de voiture.",
+    "gloss": "pas de — the article collapses after a negation.",
+    "from": "lesson",
+    "lesson": "bases/l2",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "art-4",
+    "level": "A2",
+    "q": "Il y a beaucoup ___ monde dans le métro ce matin.",
+    "options": [
+      "du",
+      "de",
+      "des",
+      "le"
+    ],
+    "a": 1,
+    "why": "Après une expression de quantité (beaucoup, peu, trop, assez), on emploie « de » seul.",
+    "gloss": "beaucoup de, never beaucoup du / des.",
+    "from": "lesson",
+    "lesson": "bases/l2",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "art-5",
+    "level": "A2",
+    "q": "Je rentre ___ bureau vers dix-huit heures.",
+    "options": [
+      "de le",
+      "du",
+      "de la",
+      "au"
+    ],
+    "a": 1,
+    "why": "« Rentrer de » + « le bureau » : de + le se contracte en « du ».",
+    "gloss": "de + le = du.",
+    "from": "lesson",
+    "lesson": "bases/l2",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "art-6",
+    "level": "A2",
+    "q": "Tu penses souvent ___ vacances ?",
+    "options": [
+      "à les",
+      "aux",
+      "au",
+      "des"
+    ],
+    "a": 1,
+    "why": "« Penser à » + « les vacances » : à + les se contracte en « aux ».",
+    "gloss": "à + les = aux.",
+    "from": "lesson",
+    "lesson": "bases/l2",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "qn-1",
+    "level": "A1",
+    "q": "___ habitez-vous ? — À Bruxelles.",
+    "options": [
+      "Quand",
+      "Où",
+      "Qui",
+      "Combien"
+    ],
+    "a": 1,
+    "why": "La réponse donne un lieu (« à Bruxelles ») : la question porte sur « où ».",
+    "gloss": "où = where.",
+    "from": "lesson",
+    "lesson": "bases/l3",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "qn-2",
+    "level": "A1",
+    "q": "___ heure est-il ?",
+    "options": [
+      "Quel",
+      "Quelle",
+      "Quels",
+      "Qu'est-ce que"
+    ],
+    "a": 1,
+    "why": "« Heure » est féminin singulier : quelle heure.",
+    "gloss": "quel agrees with its noun: quelle heure, quel jour.",
+    "from": "lesson",
+    "lesson": "bases/l3",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "qn-3",
+    "level": "A2",
+    "q": "Tu n'as pas faim ? — ___, j'ai très faim !",
+    "options": [
+      "Oui",
+      "Si",
+      "Non",
+      "Pas"
+    ],
+    "a": 1,
+    "why": "Pour répondre affirmativement à une question négative, on emploie « si » et non « oui ».",
+    "gloss": "si = yes, contradicting a negative.",
+    "from": "lesson",
+    "lesson": "bases/l3",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "qn-4",
+    "level": "A2",
+    "q": "Depuis son accident, il ne conduit ___.",
+    "options": [
+      "pas encore",
+      "plus",
+      "rien",
+      "personne"
+    ],
+    "a": 1,
+    "why": "« Ne… plus » indique qu'une habitude a cessé : il ne conduit plus.",
+    "gloss": "ne… plus = no longer.",
+    "from": "lesson",
+    "lesson": "bases/l3",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "qn-5",
+    "level": "A2",
+    "q": "Je suis arrivé trop tard : il n'y avait ___ dans la salle.",
+    "options": [
+      "rien",
+      "personne",
+      "jamais",
+      "pas"
+    ],
+    "a": 1,
+    "why": "On parle de gens absents : « ne… personne ». « Rien » s'emploie pour les choses.",
+    "gloss": "personne = nobody; rien = nothing.",
+    "from": "lesson",
+    "lesson": "bases/l3",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "qn-6",
+    "level": "A2",
+    "q": "Où ___ ? (registre soutenu)",
+    "options": [
+      "travaille il",
+      "travaille-t-il",
+      "il travaille-t",
+      "est-ce il travaille"
+    ],
+    "a": 1,
+    "why": "À l'inversion, un « -t- » s'intercale quand le verbe se termine par une voyelle : travaille-t-il.",
+    "gloss": "the -t- is only there to make it pronounceable.",
+    "from": "lesson",
+    "lesson": "bases/l3",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "fut-1",
+    "level": "A1",
+    "q": "Ce soir, nous ___ regarder un film.",
+    "options": [
+      "allons",
+      "avons",
+      "sommes",
+      "faisons"
+    ],
+    "a": 0,
+    "why": "Futur proche : « aller » au présent + infinitif → nous allons regarder.",
+    "gloss": "aller + infinitive = going to.",
+    "from": "lesson",
+    "lesson": "bases/l4",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "fut-2",
+    "level": "A2",
+    "q": "L'année prochaine, je ___ en Belgique.",
+    "options": [
+      "habite",
+      "habiterai",
+      "habitais",
+      "ai habité"
+    ],
+    "a": 1,
+    "why": "« L'année prochaine » situe l'action dans l'avenir : futur simple, j'habiterai.",
+    "gloss": "infinitive + -ai.",
+    "from": "lesson",
+    "lesson": "bases/l4",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "fut-3",
+    "level": "A2",
+    "q": "Tu ___ me voir quand tu seras à Paris ?",
+    "options": [
+      "viendras",
+      "venais",
+      "es venu",
+      "viens de"
+    ],
+    "a": 0,
+    "why": "Futur simple de « venir », radical irrégulier : tu viendras.",
+    "gloss": "venir → viendr-.",
+    "from": "lesson",
+    "lesson": "bases/l4",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "fut-4",
+    "level": "A2",
+    "q": "Le directeur n'est pas là : il ___ sortir.",
+    "options": [
+      "va de",
+      "vient de",
+      "est",
+      "a"
+    ],
+    "a": 1,
+    "why": "Passé récent : « venir de » + infinitif → il vient de sortir (= il est sorti il y a un instant).",
+    "gloss": "venir de + infinitive = to have just.",
+    "from": "lesson",
+    "lesson": "bases/l4",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "fut-5",
+    "level": "B1",
+    "q": "Je vous écrirai dès que j'___ des nouvelles.",
+    "options": [
+      "ai",
+      "aurai",
+      "avais",
+      "aurais"
+    ],
+    "a": 1,
+    "why": "Après « quand, dès que, lorsque », une action future se met au futur en français : dès que j'aurai.",
+    "gloss": "English: « as soon as I have »; French: future.",
+    "from": "lesson",
+    "lesson": "bases/l4",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "fut-6",
+    "level": "B1",
+    "q": "Si tu ___ avant midi, on déjeunera ensemble.",
+    "options": [
+      "arriveras",
+      "arrives",
+      "arriverais",
+      "arrivais"
+    ],
+    "a": 1,
+    "why": "Après « si » exprimant une condition réelle, on emploie le présent, jamais le futur : si tu arrives…, on déjeunera.",
+    "gloss": "si + present → future. Never « si tu arriveras ».",
+    "from": "lesson",
+    "lesson": "bases/l4",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "ppc-1",
+    "level": "A2",
+    "q": "Hier soir, j'___ un très bon film.",
+    "options": [
+      "ai vu",
+      "suis vu",
+      "ai voir",
+      "voyais vu"
+    ],
+    "a": 0,
+    "why": "« Voir » se conjugue avec « avoir » ; participe passé irrégulier « vu » : j'ai vu.",
+    "gloss": "voir → vu.",
+    "from": "lesson",
+    "lesson": "bases/l5",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "ppc-2",
+    "level": "A2",
+    "q": "Ma mère ___ à Dakar en 1970.",
+    "options": [
+      "a né",
+      "est née",
+      "est né",
+      "a née"
+    ],
+    "a": 1,
+    "why": "« Naître » se conjugue avec « être » et le participe s'accorde avec le sujet féminin : elle est née.",
+    "gloss": "être verbs agree with the subject.",
+    "from": "lesson",
+    "lesson": "bases/l5",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "ppc-3",
+    "level": "A2",
+    "q": "Ce matin, je ___ à six heures.",
+    "options": [
+      "m'ai levé",
+      "me suis levé",
+      "suis levé",
+      "ai levé"
+    ],
+    "a": 1,
+    "why": "Les verbes pronominaux (se lever) prennent toujours l'auxiliaire « être » : je me suis levé.",
+    "gloss": "all reflexive verbs take être.",
+    "from": "lesson",
+    "lesson": "bases/l5",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "ppc-4",
+    "level": "A2",
+    "q": "Quand j'étais petit, nous ___ un chien.",
+    "options": [
+      "avons",
+      "avions",
+      "aurons",
+      "avez"
+    ],
+    "a": 1,
+    "why": "Imparfait de « avoir » : nous avions (radical « av- » + -ions).",
+    "gloss": "imparfait endings: -ais, -ais, -ait, -ions, -iez, -aient.",
+    "from": "lesson",
+    "lesson": "bases/l5",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "ppc-5",
+    "level": "B1",
+    "q": "Elles ___ tard à cause des embouteillages.",
+    "options": [
+      "sont arrivé",
+      "ont arrivé",
+      "sont arrivées",
+      "ont arrivées"
+    ],
+    "a": 2,
+    "why": "« Arriver » prend « être » ; le sujet est féminin pluriel, donc « arrivées ».",
+    "gloss": "elles sont arrivées — feminine plural agreement.",
+    "from": "lesson",
+    "lesson": "bases/l5",
+    "section": "bases"
+  },
+  {
+    "type": "gap",
+    "id": "ppc-6",
+    "level": "B1",
+    "q": "Complétez au passé composé : « Je n'___ pas ___ (comprendre) la question. » Écrivez les deux mots.",
+    "answers": [
+      "ai compris",
+      "ai pas compris"
+    ],
+    "why": "« Comprendre » suit le modèle de « prendre » : participe passé « compris ». La négation entoure l'auxiliaire : je n'ai pas compris.",
+    "gloss": "prendre → pris; comprendre → compris; apprendre → appris.",
+    "from": "lesson",
+    "lesson": "bases/l5",
+    "section": "bases"
+  },
+  {
+    "type": "mcq",
+    "id": "pc-1",
+    "level": "A2",
+    "q": "Quand je suis arrivé à la maison, ma sœur ___ la télévision.",
+    "options": [
+      "a regardé",
+      "regardait",
+      "regarde",
+      "regardera"
+    ],
+    "a": 1,
+    "why": "L'action de la sœur est le décor, en cours au moment où l'on arrive : c'est l'imparfait. « Je suis arrivé » est l'événement ponctuel qui vient l'interrompre.",
+    "from": "lesson",
+    "lesson": "msl/l1",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "pc-2",
+    "level": "A2",
+    "q": "Quand j'étais enfant, nous ___ à la mer chaque été.",
+    "options": [
+      "sommes allés",
+      "allions",
+      "irons",
+      "allâmes"
+    ],
+    "a": 1,
+    "why": "« Chaque été » signale une habitude passée : l'imparfait s'impose. Le passé composé décrirait un voyage unique et terminé.",
+    "from": "lesson",
+    "lesson": "msl/l1",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "pc-3",
+    "level": "B1",
+    "q": "Il faisait très beau, les oiseaux chantaient, et soudain l'orage ___.",
+    "options": [
+      "éclatait",
+      "a éclaté",
+      "éclate",
+      "avait éclaté"
+    ],
+    "a": 1,
+    "why": "« Soudain » annonce une rupture ponctuelle dans le décor décrit à l'imparfait : c'est le passé composé qui fait avancer le récit.",
+    "from": "lesson",
+    "lesson": "msl/l1",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "pc-4",
+    "level": "B2",
+    "q": "Je ne savais pas qu'elle avait déménagé : je l'___ hier par un ami commun.",
+    "options": [
+      "savais",
+      "ai su",
+      "connaissais",
+      "aurais su"
+    ],
+    "a": 1,
+    "why": "Au passé composé, « savoir » exprime le moment où l'on apprend une information : « j'ai su » = j'ai appris. À l'imparfait, il décrirait un état de connaissance déjà installé.",
+    "gloss": "j'ai su = I found out; je savais = I knew.",
+    "from": "lesson",
+    "lesson": "msl/l1",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "pc-5",
+    "level": "B2",
+    "q": "Malgré la grève, il ___ arriver à l'heure à son entretien.",
+    "options": [
+      "pouvait",
+      "a pu",
+      "peut",
+      "pourrait"
+    ],
+    "a": 1,
+    "why": "« Il a pu » exprime une réussite effective malgré l'obstacle. « Il pouvait » décrirait seulement une capacité, sans dire si l'action a réellement eu lieu.",
+    "gloss": "il a pu = he managed to; il pouvait = he was able to (in principle).",
+    "from": "lesson",
+    "lesson": "msl/l1",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "sb-1",
+    "level": "B1",
+    "q": "Il faut que tu ___ avant huit heures.",
+    "options": [
+      "pars",
+      "partes",
+      "partiras",
+      "partais"
+    ],
+    "a": 1,
+    "why": "« Il faut que » exprime la nécessité et entraîne toujours le subjonctif : que tu partes.",
+    "from": "lesson",
+    "lesson": "msl/l2",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "sb-2",
+    "level": "B1",
+    "q": "Bien qu'il ___ fatigué, il a terminé la réunion.",
+    "options": [
+      "est",
+      "était",
+      "soit",
+      "sera"
+    ],
+    "a": 2,
+    "why": "« Bien que » (concession) est suivi du subjonctif : bien qu'il soit fatigué. C'est l'un des déclencheurs les plus fréquents au TCF.",
+    "from": "lesson",
+    "lesson": "msl/l2",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "sb-3",
+    "level": "B2",
+    "q": "J'espère que vous ___ passer nous voir cet été.",
+    "options": [
+      "puissiez",
+      "pourrez",
+      "pussiez",
+      "ayez pu"
+    ],
+    "a": 1,
+    "why": "Piège classique : « espérer que » à la forme affirmative est suivi de l'INDICATIF, ici le futur (« vous pourrez »). C'est « souhaiter que » qui demande le subjonctif.",
+    "gloss": "espérer que + indicative; souhaiter que + subjunctive.",
+    "from": "lesson",
+    "lesson": "msl/l2",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "sb-4",
+    "level": "B2",
+    "q": "Je ne pense pas qu'il ___ raison sur ce point.",
+    "options": [
+      "a",
+      "ait",
+      "aura",
+      "avait"
+    ],
+    "a": 1,
+    "why": "À la forme négative, « penser que » introduit un doute : le subjonctif s'impose. À la forme affirmative (« je pense qu'il a raison »), on garde l'indicatif.",
+    "from": "lesson",
+    "lesson": "msl/l2",
+    "section": "msl"
+  },
+  {
+    "type": "gap",
+    "id": "sb-5",
+    "level": "B2",
+    "q": "Complétez au subjonctif : « Il est important que vous ___ (savoir) la vérité. »",
+    "answers": [
+      "sachiez"
+    ],
+    "why": "« Savoir » est irrégulier au subjonctif : que je sache, que tu saches, qu'il sache, que nous sachions, que vous sachiez, qu'ils sachent.",
+    "from": "lesson",
+    "lesson": "msl/l2",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "pr-1",
+    "level": "A2",
+    "q": "Tu as téléphoné à tes parents ? — Oui, je ___ ai téléphoné hier.",
+    "options": [
+      "les",
+      "leur",
+      "y",
+      "en"
+    ],
+    "a": 1,
+    "why": "« Téléphoner à quelqu'un » est une construction indirecte : le pronom est « leur » (pluriel de « lui »). En anglais, on téléphone quelqu'un directement — d'où l'erreur fréquente.",
+    "from": "lesson",
+    "lesson": "msl/l3",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "pr-2",
+    "level": "B1",
+    "q": "Tu attends le bus ? — Oui, je ___ attends depuis dix minutes.",
+    "options": [
+      "lui",
+      "y",
+      "l'",
+      "en"
+    ],
+    "a": 2,
+    "why": "« Attendre quelque chose » est direct en français (sans préposition) : je l'attends. L'anglais « to wait for » induit en erreur.",
+    "from": "lesson",
+    "lesson": "msl/l3",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "pr-3",
+    "level": "B1",
+    "q": "Tu as besoin de mon aide ? — Oui, j'___ ai vraiment besoin.",
+    "options": [
+      "y",
+      "en",
+      "la",
+      "lui"
+    ],
+    "a": 1,
+    "why": "« Avoir besoin DE quelque chose » : la préposition « de » impose le pronom « en ».",
+    "from": "lesson",
+    "lesson": "msl/l3",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "pr-4",
+    "level": "B2",
+    "q": "Ce document, tu l'as envoyé au directeur ? — Oui, je ___ ai envoyé ce matin.",
+    "options": [
+      "lui le",
+      "le lui",
+      "l'y",
+      "lui en"
+    ],
+    "a": 1,
+    "why": "L'ordre des pronoms est fixe : le/la/les précèdent lui/leur. On dit donc « je le lui ai envoyé ».",
+    "from": "lesson",
+    "lesson": "msl/l3",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "pr-5",
+    "level": "B2",
+    "q": "Voici les photos que j'ai ___ pendant le voyage.",
+    "options": [
+      "pris",
+      "prise",
+      "prises",
+      "prisent"
+    ],
+    "a": 2,
+    "why": "Le COD « que » (= les photos, féminin pluriel) est placé AVANT le verbe : avec l'auxiliaire « avoir », le participe s'accorde donc → prises.",
+    "from": "lesson",
+    "lesson": "msl/l3",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "rc-1",
+    "level": "B1",
+    "q": "C'est le collègue ___ je t'ai parlé la semaine dernière.",
+    "options": [
+      "que",
+      "qui",
+      "dont",
+      "où"
+    ],
+    "a": 2,
+    "why": "On dit « parler DE quelqu'un ». Le pronom relatif qui remplace « de + complément » est « dont ».",
+    "from": "lesson",
+    "lesson": "msl/l4",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "rc-2",
+    "level": "B1",
+    "q": "Je n'ai pas bien compris ___ vous voulez dire.",
+    "options": [
+      "ce qui",
+      "ce que",
+      "ce dont",
+      "qui"
+    ],
+    "a": 1,
+    "why": "« Vouloir dire quelque chose » : le complément est direct, et l'antécédent est indéfini → « ce que ». « Ce qui » serait sujet (ex. : ce qui m'inquiète).",
+    "from": "lesson",
+    "lesson": "msl/l4",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "rc-3",
+    "level": "B2",
+    "q": "Le train était annulé ; ___, nous sommes arrivés avec trois heures de retard.",
+    "options": [
+      "en revanche",
+      "par conséquent",
+      "bien que",
+      "en effet"
+    ],
+    "a": 1,
+    "why": "La deuxième proposition est la conséquence de la première : « par conséquent ». « En revanche » marquerait une opposition, ce qui n'a pas de sens ici.",
+    "from": "lesson",
+    "lesson": "msl/l4",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "rc-4",
+    "level": "C1",
+    "q": "Il prétendait n'avoir jamais quitté son bureau. ___, plusieurs témoins l'ont aperçu dehors.",
+    "options": [
+      "Or",
+      "Ou",
+      "Donc",
+      "Ainsi"
+    ],
+    "a": 0,
+    "why": "« Or » introduit un fait nouveau qui contredit ce qui précède — rien à voir avec l'anglais « or ». C'est un marqueur d'argumentation très fréquent aux niveaux C1-C2.",
+    "gloss": "French « or » = and yet / now, never « or » in the English sense.",
+    "from": "lesson",
+    "lesson": "msl/l4",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "rc-5",
+    "level": "B2",
+    "q": "« Ce quartier a mauvaise réputation. ___, je m'y sens parfaitement en sécurité. » Quel connecteur convient ?",
+    "options": [
+      "En effet",
+      "Par ailleurs",
+      "En fait",
+      "C'est pourquoi"
+    ],
+    "a": 2,
+    "why": "Le locuteur corrige l'impression donnée : « en fait » rectifie. « En effet » confirmerait la mauvaise réputation, ce qui contredirait la suite de la phrase.",
+    "from": "lesson",
+    "lesson": "msl/l4",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "fa-1",
+    "level": "B1",
+    "q": "« Actuellement, je travaille dans une école. » Que signifie « actuellement » ?",
+    "options": [
+      "En réalité",
+      "En ce moment",
+      "Finalement",
+      "Autrefois"
+    ],
+    "a": 1,
+    "why": "« Actuellement » signifie « en ce moment, à présent ». Pour traduire l'anglais « actually », on emploie « en fait » ou « en réalité ».",
+    "from": "lesson",
+    "lesson": "msl/l5",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "fa-2",
+    "level": "B1",
+    "q": "Choisissez la phrase correcte pour dire que l'examen a été un succès.",
+    "options": [
+      "J'ai passé mon examen.",
+      "J'ai réussi mon examen.",
+      "J'ai supporté mon examen.",
+      "J'ai assisté mon examen."
+    ],
+    "a": 1,
+    "why": "« Passer un examen » signifie seulement s'y présenter. Le succès se dit « réussir un examen » (ou « être reçu »).",
+    "gloss": "passer = to sit; réussir = to pass.",
+    "from": "lesson",
+    "lesson": "msl/l5",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "fa-3",
+    "level": "B2",
+    "q": "Dans une lettre de motivation, quelle formule est la plus appropriée ?",
+    "options": [
+      "Je veux savoir si le poste est toujours libre.",
+      "Est-ce que vous pouvez me dire si le poste est libre ?",
+      "Je souhaiterais savoir si le poste est toujours à pourvoir.",
+      "Dites-moi vite si le poste est encore dispo."
+    ],
+    "a": 2,
+    "why": "Le registre soutenu emploie le conditionnel de politesse (« je souhaiterais ») et un vocabulaire précis (« à pourvoir »). Les autres formulations relèvent du courant ou du familier.",
+    "from": "lesson",
+    "lesson": "msl/l5",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "fa-4",
+    "level": "B2",
+    "q": "« J'ignore la date de son arrivée. » Cela signifie que :",
+    "options": [
+      "je ne connais pas la date",
+      "je refuse de tenir compte de la date",
+      "j'oublie souvent la date",
+      "je conteste la date"
+    ],
+    "a": 0,
+    "why": "« Ignorer » signifie « ne pas savoir ». Le sens anglais « to ignore » se rend par « ne pas tenir compte de » ou « faire abstraction de ».",
+    "from": "lesson",
+    "lesson": "msl/l5",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "fa-5",
+    "level": "C1",
+    "q": "Quelle phrase relève du registre familier ?",
+    "options": [
+      "Je vous prie de bien vouloir m'excuser.",
+      "Il m'a prêté sa bagnole pour le week-end.",
+      "Nous vous remercions de votre compréhension.",
+      "Veuillez patienter quelques instants."
+    ],
+    "a": 1,
+    "why": "« Bagnole » est le mot familier pour « voiture ». Les trois autres phrases relèvent du registre soutenu (formules de politesse administratives).",
+    "from": "lesson",
+    "lesson": "msl/l5",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "cond-1",
+    "level": "B1",
+    "q": "Si tu ___ plus tôt, tu ne serais pas fatigué.",
+    "options": [
+      "te couches",
+      "te couchais",
+      "te coucherais",
+      "te coucheras"
+    ],
+    "a": 1,
+    "why": "Hypothèse imaginaire sur le présent : si + imparfait, puis conditionnel présent. Après « si », jamais de conditionnel.",
+    "from": "lesson",
+    "lesson": "msl/l6",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "cond-2",
+    "level": "B1",
+    "q": "Quelle forme est la plus polie ? « Bonjour, je ___ réserver une table pour deux personnes. »",
+    "options": [
+      "veux",
+      "voudrais",
+      "veuille",
+      "voudrai"
+    ],
+    "a": 1,
+    "why": "Le conditionnel de politesse adoucit une demande : je voudrais. « Je veux » est trop direct avec un inconnu.",
+    "from": "lesson",
+    "lesson": "msl/l6",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "cond-3",
+    "level": "B1",
+    "q": "S'il pleut demain, nous ___ le pique-nique.",
+    "options": [
+      "annulerions",
+      "annulerons",
+      "annulions",
+      "avons annulé"
+    ],
+    "a": 1,
+    "why": "Hypothèse réelle : si + présent, puis futur simple. « Annulerions » supposerait « s'il pleuvait ».",
+    "from": "lesson",
+    "lesson": "msl/l6",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "cond-4",
+    "level": "B2",
+    "q": "Si j'___ que tu venais, j'aurais préparé un dîner.",
+    "options": [
+      "aurais su",
+      "avais su",
+      "savais",
+      "ai su"
+    ],
+    "a": 1,
+    "why": "Regret sur le passé : si + plus-que-parfait (j'avais su), puis conditionnel passé (j'aurais préparé).",
+    "gloss": "Never « si j'aurais su » — the most famous mistake in French.",
+    "from": "lesson",
+    "lesson": "msl/l6",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "cond-5",
+    "level": "B2",
+    "q": "« Selon nos informations, l'entreprise fermerait deux usines. » Que signifie le conditionnel ?",
+    "options": [
+      "La fermeture est certaine",
+      "L'information n'est pas confirmée",
+      "La fermeture a déjà eu lieu",
+      "Le journaliste souhaite cette fermeture"
+    ],
+    "a": 1,
+    "why": "Dans la presse, le conditionnel signale une information non vérifiée, rapportée avec prudence.",
+    "from": "lesson",
+    "lesson": "msl/l6",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "cond-6",
+    "level": "B2",
+    "q": "À ta place, je ne lui ___ rien.",
+    "options": [
+      "dirai",
+      "dirais",
+      "disais",
+      "dis"
+    ],
+    "a": 1,
+    "why": "« À ta place » introduit un conseil, donc une situation imaginaire : conditionnel présent, je dirais.",
+    "from": "lesson",
+    "lesson": "msl/l6",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "dr-1",
+    "level": "B1",
+    "q": "« Tu as faim ? » → Il me demande ___ j'ai faim.",
+    "options": [
+      "que",
+      "si",
+      "est-ce que",
+      "ce que"
+    ],
+    "a": 1,
+    "why": "Une question à laquelle on répond par oui ou non se rapporte avec « si ».",
+    "from": "lesson",
+    "lesson": "msl/l7",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "dr-2",
+    "level": "B1",
+    "q": "« Qu'est-ce que vous cherchez ? » → Elle veut savoir ___ nous cherchons.",
+    "options": [
+      "qu'est-ce que",
+      "ce que",
+      "quoi",
+      "que"
+    ],
+    "a": 1,
+    "why": "Au discours indirect, « qu'est-ce que » devient « ce que ».",
+    "from": "lesson",
+    "lesson": "msl/l7",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "dr-3",
+    "level": "B2",
+    "q": "« Je viendrai demain. » → Il a promis qu'il ___ le lendemain.",
+    "options": [
+      "viendra",
+      "viendrait",
+      "venait",
+      "est venu"
+    ],
+    "a": 1,
+    "why": "Verbe introducteur au passé : le futur devient un conditionnel (futur dans le passé), et « demain » devient « le lendemain ».",
+    "from": "lesson",
+    "lesson": "msl/l7",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "dr-4",
+    "level": "B2",
+    "q": "« J'ai perdu mes clés. » → Elle a expliqué qu'elle ___ ses clés.",
+    "options": [
+      "a perdu",
+      "avait perdu",
+      "perdait",
+      "perdrait"
+    ],
+    "a": 1,
+    "why": "Verbe introducteur au passé : le passé composé devient un plus-que-parfait.",
+    "from": "lesson",
+    "lesson": "msl/l7",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "dr-5",
+    "level": "B1",
+    "q": "Ce roman ___ en vingt langues l'année dernière.",
+    "options": [
+      "a traduit",
+      "a été traduit",
+      "est traduisant",
+      "traduisait"
+    ],
+    "a": 1,
+    "why": "Le roman subit l'action : passif au passé composé, « a été » + participe passé.",
+    "from": "lesson",
+    "lesson": "msl/l7",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "dr-6",
+    "level": "B2",
+    "q": "Les résultats ___ demain par le jury.",
+    "options": [
+      "seront annoncés",
+      "annonceront",
+      "sont annonçant",
+      "auront annoncé"
+    ],
+    "a": 0,
+    "why": "Passif au futur : « seront » + participe accordé avec le sujet masculin pluriel → seront annoncés.",
+    "from": "lesson",
+    "lesson": "msl/l7",
+    "section": "msl"
+  },
+  {
+    "type": "mcq",
+    "id": "x-ms-01",
+    "level": "A1",
+    "q": "Nous ___ français et espagnol.",
+    "options": [
+      "parle",
+      "parlons",
+      "parlez",
+      "parlent"
+    ],
+    "a": 1,
+    "why": "Avec « nous », le verbe se termine par -ons : nous parlons.",
+    "from": "bank"
+  },
+  {
+    "type": "mcq",
+    "id": "x-ms-02",
+    "level": "A1",
+    "q": "Elle ___ trente ans.",
+    "options": [
+      "est",
+      "a",
+      "fait",
+      "va"
+    ],
+    "a": 1,
+    "why": "En français, on « a » un âge : elle a trente ans.",
+    "gloss": "French uses avoir for age, not être.",
+    "from": "bank"
+  },
+  {
+    "type": "mcq",
+    "id": "x-ms-03",
+    "level": "A1",
+    "q": "Je vais ___ cinéma ce soir.",
+    "options": [
+      "à la",
+      "au",
+      "à l'",
+      "en"
+    ],
+    "a": 1,
+    "why": "« Cinéma » est masculin : à + le = au. On dit « au cinéma ».",
+    "from": "bank"
+  },
+  {
+    "type": "mcq",
+    "id": "x-ms-04",
+    "level": "A1",
+    "q": "Tu ___ un frère ou une sœur ?",
+    "options": [
+      "es",
+      "as",
+      "a",
+      "ont"
+    ],
+    "a": 1,
+    "why": "Verbe « avoir » avec « tu » : tu as.",
+    "from": "bank"
+  },
+  {
+    "type": "mcq",
+    "id": "x-ms-05",
+    "level": "A2",
+    "q": "Hier, nous ___ au restaurant avec des amis.",
+    "options": [
+      "avons allé",
+      "sommes allés",
+      "allons",
+      "irons"
+    ],
+    "a": 1,
+    "why": "« Aller » se conjugue avec l'auxiliaire « être » au passé composé, et le participe s'accorde : nous sommes allés.",
+    "from": "bank"
+  },
+  {
+    "type": "mcq",
+    "id": "x-ms-06",
+    "level": "A2",
+    "q": "Je ne mange pas ___ viande.",
+    "options": [
+      "de la",
+      "de",
+      "la",
+      "des"
+    ],
+    "a": 1,
+    "why": "Après une négation, « du, de la, des » deviennent « de » : je ne mange pas de viande.",
+    "from": "bank"
+  },
+  {
+    "type": "mcq",
+    "id": "x-ms-07",
+    "level": "B1",
+    "q": "Si j'avais plus de temps, je ___ du piano.",
+    "options": [
+      "ferai",
+      "ferais",
+      "faisais",
+      "fais"
+    ],
+    "a": 1,
+    "why": "Hypothèse sur le présent : si + imparfait, puis conditionnel présent. « Si j'avais…, je ferais… »",
+    "from": "bank"
+  },
+  {
+    "type": "mcq",
+    "id": "x-ms-08",
+    "level": "B1",
+    "q": "J'habite à Lyon ___ cinq ans.",
+    "options": [
+      "il y a",
+      "depuis",
+      "pendant",
+      "dans"
+    ],
+    "a": 1,
+    "why": "L'action dure encore : « depuis » + durée avec un verbe au présent. « Il y a cinq ans » situerait un événement terminé.",
+    "from": "bank"
+  },
+  {
+    "type": "mcq",
+    "id": "x-ms-09",
+    "level": "B2",
+    "q": "Elle m'a demandé ___ je voulais venir avec eux.",
+    "options": [
+      "que",
+      "si",
+      "est-ce que",
+      "quoi"
+    ],
+    "a": 1,
+    "why": "Au discours indirect, une question fermée (réponse oui / non) est introduite par « si ».",
+    "from": "bank"
+  },
+  {
+    "type": "mcq",
+    "id": "x-ms-10",
+    "level": "B2",
+    "q": "Le projet ___ par le conseil municipal la semaine dernière.",
+    "options": [
+      "a adopté",
+      "a été adopté",
+      "est adoptant",
+      "avait adopté"
+    ],
+    "a": 1,
+    "why": "Le projet subit l'action : voix passive, « être » + participe passé, ici au passé composé : a été adopté.",
+    "from": "bank"
+  },
+  {
+    "type": "mcq",
+    "id": "x-ms-11",
+    "level": "C1",
+    "q": "C'est une décision ___ je ne m'attendais pas du tout.",
+    "options": [
+      "dont",
+      "que",
+      "à laquelle",
+      "pour laquelle"
+    ],
+    "a": 2,
+    "why": "On dit « s'attendre à quelque chose » : le relatif reprend la préposition « à » → à laquelle.",
+    "from": "bank"
+  },
+  {
+    "type": "mcq",
+    "id": "x-ms-12",
+    "level": "C1",
+    "q": "Quoi qu'il ___, je ne changerai pas d'avis.",
+    "options": [
+      "dit",
+      "dise",
+      "dira",
+      "disait"
+    ],
+    "a": 1,
+    "why": "« Quoi que » (en deux mots, = quelle que soit la chose que) est toujours suivi du subjonctif : quoi qu'il dise.",
+    "from": "bank"
+  },
+  {
+    "type": "mcq",
+    "id": "x-ms-13",
+    "level": "C1",
+    "q": "Il a agi ___ personne ne s'en aperçoive.",
+    "options": [
+      "sans que",
+      "sans",
+      "après que",
+      "parce que"
+    ],
+    "a": 0,
+    "why": "« Sans que » introduit une subordonnée au subjonctif (« s'en aperçoive »). « Sans » seul serait suivi d'un infinitif ou d'un nom.",
+    "from": "bank"
+  },
+  {
+    "type": "mcq",
+    "id": "x-ms-14",
+    "level": "C2",
+    "q": "Je crains qu'il ___ trop tard pour intervenir.",
+    "options": [
+      "n'est",
+      "ne soit",
+      "ne sera",
+      "n'était"
+    ],
+    "a": 1,
+    "why": "« Craindre que » demande le subjonctif ; le « ne » est ici explétif (langue soutenue) et n'a pas de valeur négative : je crains qu'il ne soit trop tard.",
+    "from": "bank"
+  },
+  {
+    "type": "mcq",
+    "id": "x-ms-15",
+    "level": "C2",
+    "q": "___ brillant qu'il soit, il lui arrive de se tromper.",
+    "options": [
+      "Si",
+      "Bien",
+      "Tant",
+      "Autant"
+    ],
+    "a": 0,
+    "why": "La concession soutenue se construit avec « si + adjectif + que + subjonctif » : si brillant qu'il soit (= bien qu'il soit très brillant).",
+    "from": "bank"
+  },
+  {
+    "type": "mcq",
+    "id": "x-ms-16",
+    "level": "C2",
+    "q": "À peine ___ que le téléphone s'est mis à sonner.",
+    "options": [
+      "il était rentré",
+      "était-il rentré",
+      "il rentrait",
+      "est-il rentrant"
+    ],
+    "a": 1,
+    "why": "Placé en tête de phrase, « à peine » entraîne l'inversion du sujet dans la langue soutenue : à peine était-il rentré que…",
+    "from": "bank"
+  }
+]
